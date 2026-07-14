@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Mailbox mark">
+  <rect width="96" height="96" fill="#0f3f42"/>
+  <path d="M30 39c0-11.05 8.95-20 20-20h6c11.05 0 20 8.95 20 20v27H30V39Z" fill="none" stroke="#fbf7ef" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M22 66h62" stroke="#fbf7ef" stroke-width="6" stroke-linecap="round"/>
+  <path d="M41 44h24v16H41V44Z" fill="none" stroke="#d6a64c" stroke-width="5" stroke-linejoin="round"/>
+  <path d="m42 45 11 9 11-9" fill="none" stroke="#d6a64c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 19V9" stroke="#fbf7ef" stroke-width="6" stroke-linecap="round"/>
+</svg>
