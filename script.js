@@ -81,7 +81,7 @@ const translations = {
     galleryCaptionOne: "Making space for people to think together",
     galleryCaptionTwo: "Intercultural communication in practice",
     galleryCaptionThree: "Preparation, technology, and presence",
-    galleryCaptionFour: "Hybrid facilitation before it became ordinary",
+    galleryCaptionFour: "A classroom made of many perspectives",
     heroPrimary: "Explore workshop offer",
     heroSecondary: "View case studies",
     identityStrip:
@@ -358,7 +358,7 @@ const translations = {
     galleryCaptionOne: "Przestrzeń, w której można myśleć razem",
     galleryCaptionTwo: "Komunikacja międzykulturowa w praktyce",
     galleryCaptionThree: "Przygotowanie, technologia i obecność",
-    galleryCaptionFour: "Facylitacja hybrydowa, zanim stała się codziennością",
+    galleryCaptionFour: "Sala zbudowana z wielu perspektyw",
     heroPrimary: "Zobacz ofertę warsztatów",
     heroSecondary: "Zobacz case studies",
     identityStrip:
@@ -594,6 +594,27 @@ const setLanguage = (lang) => {
 
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.lang));
+});
+
+document.querySelectorAll("[data-workshop-carousel]").forEach((carousel) => {
+  const slides = [...carousel.querySelectorAll("[data-carousel-slide]")];
+  const previous = carousel.querySelector("[data-carousel-prev]");
+  const next = carousel.querySelector("[data-carousel-next]");
+  const status = carousel.querySelector("[data-carousel-status]");
+  let activeIndex = 0;
+
+  const showSlide = (index) => {
+    activeIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === activeIndex;
+      slide.hidden = !isActive;
+      slide.classList.toggle("is-active", isActive);
+    });
+    if (status) status.textContent = `${activeIndex + 1} / ${slides.length}`;
+  };
+
+  previous?.addEventListener("click", () => showSlide(activeIndex - 1));
+  next?.addEventListener("click", () => showSlide(activeIndex + 1));
 });
 
 syncHeader();
