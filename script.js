@@ -950,55 +950,118 @@ document.querySelectorAll("[data-record-player]").forEach((player) => {
 const coMixExamples = {
   "en-ja": {
     language: "en",
-    light: [
-      "After class, a ",
-      { word: "学生", meaning: "student" },
-      " walked to the ",
-      { word: "図書館", meaning: "library" },
-      " with a friend. They opened a notebook and planned a small project.",
-    ],
-    rich: [
-      "After class, a ",
-      { word: "学生", meaning: "student" },
-      " walked to the ",
-      { word: "図書館", meaning: "library" },
-      " with a ",
-      { word: "友達", meaning: "friend" },
-      ". They opened a ",
-      { word: "ノート", meaning: "notebook" },
-      " and planned a small project.",
-    ],
-    answer: ["図書館", "としょかん"],
+    scenes: {
+      exchange: {
+        light: [
+          "Maya joined a small language-exchange group after class. She carried a ",
+          { word: "ノート", meaning: "notebook" },
+          " to the ",
+          { word: "図書館", meaning: "library" },
+          " and met a new friend.",
+        ],
+        rich: [
+          "Maya joined a small language-exchange ",
+          { word: "グループ", meaning: "group" },
+          " after class. She carried a ",
+          { word: "ノート", meaning: "notebook" },
+          " to the ",
+          { word: "図書館", meaning: "library" },
+          " and met a new ",
+          { word: "友達", meaning: "friend" },
+          ".",
+        ],
+        answer: ["図書館", "としょかん", "toshokan", "tosyokan"],
+      },
+      classroom: {
+        light: [
+          "During a workshop, the ",
+          { word: "先生", meaning: "teacher" },
+          " gave each student a ",
+          { word: "地図", meaning: "map" },
+          " for a city project.",
+        ],
+        rich: [
+          "During a ",
+          { word: "ワークショップ", meaning: "workshop" },
+          ", the ",
+          { word: "先生", meaning: "teacher" },
+          " gave each ",
+          { word: "学生", meaning: "student" },
+          " a ",
+          { word: "地図", meaning: "map" },
+          " for a city project.",
+        ],
+        answer: ["地図", "ちず", "chizu", "tizu"],
+      },
+    },
   },
   "jp-en": {
     language: "ja",
-    light: [
-      "授業のあと、学生は ",
-      { word: "friend", meaning: "友達" },
-      " と ",
-      { word: "library", meaning: "図書館" },
-      " へ行きました。二人はノートを開いて、小さな計画を立てました。",
-    ],
-    rich: [
-      "授業のあと、学生は ",
-      { word: "friend", meaning: "友達" },
-      " と ",
-      { word: "library", meaning: "図書館" },
-      " へ行きました。二人は ",
-      { word: "notebook", meaning: "ノート" },
-      " を開いて、小さな ",
-      { word: "project", meaning: "プロジェクト" },
-      " の計画を立てました。",
-    ],
-    answer: ["library"],
+    scenes: {
+      exchange: {
+        light: [
+          "放課後、マヤは小さなグループに参加しました。彼女は ",
+          { word: "notebook", meaning: "ノート" },
+          " を持って ",
+          { word: "library", meaning: "図書館" },
+          " へ行き、新しい友達に会いました。",
+        ],
+        rich: [
+          "放課後、マヤは小さな ",
+          { word: "group", meaning: "グループ" },
+          " に参加しました。彼女は ",
+          { word: "notebook", meaning: "ノート" },
+          " を持って ",
+          { word: "library", meaning: "図書館" },
+          " へ行き、新しい ",
+          { word: "friend", meaning: "友達" },
+          " に会いました。",
+        ],
+        answer: ["library"],
+      },
+      classroom: {
+        light: [
+          "ワークショップで、",
+          { word: "teacher", meaning: "先生" },
+          " は学生に町の ",
+          { word: "map", meaning: "地図" },
+          " を渡しました。",
+        ],
+        rich: [
+          { word: "workshop", meaning: "ワークショップ" },
+          " で、",
+          { word: "teacher", meaning: "先生" },
+          " は ",
+          { word: "student", meaning: "学生" },
+          " に町の ",
+          { word: "map", meaning: "地図" },
+          " を渡しました。",
+        ],
+        answer: ["map"],
+      },
+    },
   },
 };
 
 const coMixCopy = {
   en: {
     questions: {
-      "en-ja": "What is the Japanese target for “library”?",
-      "jp-en": "What is the English target for “図書館”?",
+      "en-ja": {
+        exchange: "What is the Japanese target for “library”?",
+        classroom: "What is the Japanese target for “map”?",
+      },
+      "jp-en": {
+        exchange: "What is the English target for “図書館”?",
+        classroom: "What is the English target for “地図”?",
+      },
+    },
+    summaries: {
+      "en-ja": "{count} reviewed Japanese noun targets sit inside an otherwise English scene.",
+      "jp-en": "{count} reviewed English noun targets sit inside an otherwise Japanese scene.",
+    },
+    answerNotes: {
+      "en-ja": "Japanese answers may be typed in kanji, kana, or romaji.",
+      "jp-en": "Type the English target word.",
     },
     correct: "Correct. The target is visible in context, not as an isolated word list.",
     incorrect: "Not quite. Read the passage again, then reveal the target meaning if you need it.",
@@ -1006,8 +1069,22 @@ const coMixCopy = {
   },
   pl: {
     questions: {
-      "en-ja": "Jak brzmi japońskie słowo docelowe dla „library”?",
-      "jp-en": "Jak brzmi angielskie słowo docelowe dla „図書館”?",
+      "en-ja": {
+        exchange: "Jak brzmi japońskie słowo docelowe dla „library”?",
+        classroom: "Jak brzmi japońskie słowo docelowe dla „map”?",
+      },
+      "jp-en": {
+        exchange: "Jak brzmi angielskie słowo docelowe dla „図書館”?",
+        classroom: "Jak brzmi angielskie słowo docelowe dla „地図”?",
+      },
+    },
+    summaries: {
+      "en-ja": "{count} sprawdzone japońskie rzeczowniki docelowe pojawiają się w angielskiej scenie.",
+      "jp-en": "{count} sprawdzone angielskie rzeczowniki docelowe pojawiają się w japońskiej scenie.",
+    },
+    answerNotes: {
+      "en-ja": "Japońskie odpowiedzi możesz wpisać kanji, kana albo rōmaji.",
+      "jp-en": "Podaj angielskie słowo docelowe.",
     },
     correct: "Dobrze. Słowo docelowe występuje w kontekście, a nie na oderwanej liście.",
     incorrect: "Jeszcze nie. Przeczytaj tekst ponownie, a jeśli trzeba — pokaż znaczenie słowa docelowego.",
@@ -1018,19 +1095,24 @@ const coMixCopy = {
 document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
   const ui = coMixCopy[demo.dataset.comixUi] || coMixCopy.en;
   const modeButtons = [...demo.querySelectorAll("[data-comix-mode]")];
+  const sceneButtons = [...demo.querySelectorAll("[data-comix-scene]")];
   const densityButtons = [...demo.querySelectorAll("[data-comix-density]")];
   const passage = demo.querySelector("[data-comix-passage]");
+  const methodNote = demo.querySelector("[data-comix-method-note]");
   const targetList = demo.querySelector("[data-comix-target-list]");
   const question = demo.querySelector("[data-comix-question]");
+  const answerNote = demo.querySelector("[data-comix-answer-note]");
   const answer = demo.querySelector("[data-comix-answer]");
   const check = demo.querySelector("[data-comix-check]");
   const feedback = demo.querySelector("[data-comix-feedback]");
   const reveal = demo.querySelector("[data-comix-reveal]");
   let mode = "en-ja";
+  let scene = "exchange";
   let density = "light";
   let meaningsVisible = false;
 
-  const currentExample = () => coMixExamples[mode];
+  const currentMode = () => coMixExamples[mode];
+  const currentExample = () => currentMode().scenes[scene];
 
   const setFeedback = (message = "", isIncorrect = false) => {
     if (!feedback) return;
@@ -1056,7 +1138,7 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
     if (!passage || !question || !answer) return;
 
     passage.replaceChildren();
-    passage.lang = example.language;
+    passage.lang = currentMode().language;
     parts.forEach((part) => {
       if (typeof part === "string") {
         passage.append(document.createTextNode(part));
@@ -1074,7 +1156,11 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
       passage.append(word);
     });
 
-    question.textContent = ui.questions[mode];
+    question.textContent = ui.questions[mode][scene];
+    if (answerNote) answerNote.textContent = ui.answerNotes[mode];
+    if (methodNote) {
+      methodNote.textContent = ui.summaries[mode].replace("{count}", String(targets.length));
+    }
     answer.value = "";
     setFeedback();
     renderTargets(targets);
@@ -1086,6 +1172,11 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
       button.classList.toggle("is-active", active);
       button.setAttribute("aria-pressed", String(active));
     });
+    sceneButtons.forEach((button) => {
+      const active = button.dataset.comixScene === scene;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
     densityButtons.forEach((button) => {
       const active = button.dataset.comixDensity === density;
       button.classList.toggle("is-active", active);
@@ -1094,18 +1185,34 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
   };
 
   const checkAnswer = () => {
-    const value = answer?.value.normalize("NFKC").trim().toLowerCase();
+    const normaliseAnswer = (candidate) => candidate
+      .normalize("NFKD")
+      .replace(/\p{Diacritic}/gu, "")
+      .normalize("NFKC")
+      .toLowerCase()
+      .replace(/[\s\-_'’·.]+/g, "")
+      .trim();
+    const value = normaliseAnswer(answer?.value || "");
     if (!value) {
       setFeedback(ui.empty, true);
       return;
     }
-    const isCorrect = currentExample().answer.some((accepted) => accepted.normalize("NFKC").toLowerCase() === value);
+    const isCorrect = currentExample().answer.some((accepted) => normaliseAnswer(accepted) === value);
     setFeedback(isCorrect ? ui.correct : ui.incorrect, !isCorrect);
   };
 
   modeButtons.forEach((button) => {
     button.addEventListener("click", () => {
       mode = button.dataset.comixMode;
+      meaningsVisible = false;
+      updateButtons();
+      render();
+    });
+  });
+
+  sceneButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      scene = button.dataset.comixScene;
       meaningsVisible = false;
       updateButtons();
       render();

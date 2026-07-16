@@ -1080,6 +1080,157 @@ dd {
   aspect-ratio: 16 / 7;
 }
 
+.writing-publication-context {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+  gap: 44px;
+  padding: 52px 0 54px;
+  border-bottom: 1px solid var(--line);
+}
+
+.writing-publication-heading h2 {
+  max-width: 520px;
+  margin: 16px 0 0;
+  color: var(--teal-deep);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.9rem, 3.2vw, 3.5rem);
+  font-weight: 650;
+  line-height: 1;
+}
+
+.writing-publication-mark {
+  display: inline-flex;
+  align-items: center;
+  width: min(100%, 216px);
+  min-height: 68px;
+  margin-top: 16px;
+  padding: 10px 14px;
+  background: var(--teal-deep);
+  border: 1px solid var(--teal-deep);
+}
+
+.writing-publication-mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 62px;
+  object-fit: contain;
+}
+
+.writing-publication-mark:hover,
+.writing-publication-mark:focus-visible {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.writing-publication-copy {
+  max-width: 760px;
+}
+
+.writing-publication-copy > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+.writing-publication-copy a {
+  color: var(--teal-deep);
+  font-weight: 700;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 3px;
+}
+
+.writing-publication-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 28px 0 16px;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--line);
+}
+
+.writing-publication-stats div {
+  display: grid;
+  gap: 7px;
+  min-height: 132px;
+  padding: 20px 18px;
+  align-content: center;
+}
+
+.writing-publication-stats div + div {
+  border-left: 1px solid var(--line);
+}
+
+.writing-publication-stats strong {
+  color: var(--teal-deep);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(2.35rem, 4vw, 4.15rem);
+  font-weight: 650;
+  line-height: 0.84;
+}
+
+.writing-publication-stats span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.writing-publication-copy .writing-publication-source {
+  color: var(--muted);
+  font-size: 0.77rem;
+  line-height: 1.45;
+}
+
+.psx-movie-card {
+  display: grid;
+  grid-template-columns: minmax(152px, 0.58fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  margin: 22px 0 16px;
+  padding: 12px;
+  color: var(--ink);
+  text-decoration: none;
+  background: #f6f0e7;
+  border: 1px solid var(--line);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.psx-movie-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  filter: grayscale(0.12);
+}
+
+.psx-movie-card-copy {
+  display: grid;
+  gap: 7px;
+}
+
+.psx-movie-card-copy strong {
+  color: var(--teal-deep);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 650;
+  line-height: 1.05;
+}
+
+.psx-movie-card-copy > span {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.48;
+}
+
+.psx-movie-card:hover,
+.psx-movie-card:focus-visible {
+  border-color: var(--teal);
+  box-shadow: 0 10px 24px rgba(17, 67, 64, 0.12);
+  transform: translateY(-2px);
+}
+
 .writing-profile {
   display: grid;
   grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
@@ -1665,6 +1816,16 @@ dd {
   line-height: 1.58;
 }
 
+.comix-demo-method-note {
+  margin: 16px 0 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--gold);
+  background: #f7f0df;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.42;
+}
+
 .comix-target-word {
   display: inline;
   margin: 0 0.08em;
@@ -1698,14 +1859,19 @@ dd {
 }
 
 .comix-demo-actions p,
-.comix-demo-privacy {
+.comix-demo-privacy,
+.comix-demo-input-note {
   margin: 0;
   color: var(--muted);
   font-size: 0.78rem;
   line-height: 1.4;
 }
 
-.comix-demo-recall > p:not(.comix-demo-feedback):not(.comix-demo-privacy) {
+.comix-demo-input-note {
+  margin-top: 8px;
+}
+
+.comix-demo-recall > p:not(.comix-demo-feedback):not(.comix-demo-privacy):not(.comix-demo-input-note) {
   min-height: 58px;
   margin: 0 0 16px;
   color: var(--teal-deep);
@@ -3552,6 +3718,53 @@ dd {
   text-underline-offset: 4px;
 }
 
+.teaching-video-sample {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+  gap: 44px;
+  padding: 58px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.teaching-video-sample-copy h2 {
+  max-width: 520px;
+  margin: 16px 0;
+  color: var(--teal-deep);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.9rem, 3.2vw, 3.5rem);
+  font-weight: 650;
+  line-height: 1;
+}
+
+.teaching-video-sample-copy > p:not(.eyebrow) {
+  max-width: 540px;
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.55;
+}
+
+.teaching-video-sample-copy .text-link {
+  color: var(--teal-deep);
+  font-weight: 800;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 4px;
+}
+
+.teaching-video-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: var(--teal-deep);
+}
+
+.teaching-video-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .workshop-start {
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(310px, 0.88fr);
@@ -4166,6 +4379,7 @@ dd {
   .intro-grid,
   .bridge-section,
   .trajectory-section,
+  .writing-publication-context,
   .writing-profile,
   .service-hero,
   .case-study,
@@ -4182,6 +4396,7 @@ dd {
   .workshop-evidence-grid,
   .workshop-testimonial-grid,
   .workshop-quick-feedback,
+  .teaching-video-sample,
   .archive-groups,
   .profile-statement,
   .contact-intro,
@@ -4484,6 +4699,29 @@ dd {
   .service-page,
   .writing-page {
     padding-top: 24px;
+  }
+
+  .writing-publication-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-publication-stats div {
+    min-height: 0;
+    padding: 17px 0;
+  }
+
+  .writing-publication-stats div + div {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .psx-movie-card {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .psx-movie-card img {
+    max-width: 360px;
   }
 
   .case-study {

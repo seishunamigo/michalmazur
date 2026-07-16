@@ -16,7 +16,7 @@
     <meta name="twitter:description" content="Research connecting classroom evidence, system design, field encounters, and programme implementation.">
     <meta name="twitter:image" content="assets/identity-hero.png">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=32">
+  <link rel="stylesheet" href="styles.css?v=41">
   </head>
   <body>
     <header class="site-header essay-header is-scrolled" data-header>
@@ -152,7 +152,7 @@
         <section class="comix-demo" data-comix-demo data-comix-ui="en" aria-labelledby="comix-demo-title-en">
           <div class="comix-demo-heading">
             <p class="eyebrow">Try the idea</p>
-            <h2 id="comix-demo-title-en">A miniature Co-MIX reading experiment.</h2>
+            <h2 id="comix-demo-title-en">A small Co-MIX reader, built from two scenes.</h2>
             <p>Co-MIX is not random replacement. It places a small number of reviewed target nouns inside a readable passage, so a learner can stay with the meaning while noticing new vocabulary.</p>
           </div>
           <div class="comix-demo-shell">
@@ -162,6 +162,13 @@
                 <div class="comix-demo-button-row" role="group" aria-label="Reading direction">
                   <button type="button" class="is-active" data-comix-mode="en-ja" aria-pressed="true">English → Japanese</button>
                   <button type="button" data-comix-mode="jp-en" aria-pressed="false">Japanese → English</button>
+                </div>
+              </div>
+              <div>
+                <span>Choose a scene</span>
+                <div class="comix-demo-button-row" role="group" aria-label="Choose a scene">
+                  <button type="button" class="is-active" data-comix-scene="exchange" aria-pressed="true">Language exchange</button>
+                  <button type="button" data-comix-scene="classroom" aria-pressed="false">Classroom project</button>
                 </div>
               </div>
               <div>
@@ -176,6 +183,7 @@
             <div class="comix-demo-reading">
               <span>1 · Read for meaning</span>
               <p class="comix-demo-passage" data-comix-passage lang="en"></p>
+              <p class="comix-demo-method-note" data-comix-method-note></p>
               <div class="comix-demo-actions">
                 <button type="button" class="comix-demo-reveal" data-comix-reveal>Show word meanings</button>
                 <p>Or click any highlighted word in the passage.</p>
@@ -189,6 +197,7 @@
                 <input id="comix-answer-en" data-comix-answer type="text" autocomplete="off">
                 <button type="button" data-comix-check>Check</button>
               </div>
+              <p class="comix-demo-input-note" data-comix-answer-note></p>
               <p class="comix-demo-feedback" data-comix-feedback aria-live="polite"></p>
               <p class="comix-demo-privacy">This public illustration saves no answers or personal data.</p>
             </div>
@@ -278,7 +287,7 @@
         <section class="comix-demo" data-comix-demo data-comix-ui="pl" aria-labelledby="comix-demo-title-pl">
           <div class="comix-demo-heading">
             <p class="eyebrow">Wypróbuj ideę</p>
-            <h2 id="comix-demo-title-pl">Miniaturowy eksperyment czytelniczy Co-MIX.</h2>
+            <h2 id="comix-demo-title-pl">Mały czytnik Co-MIX zbudowany z dwóch scen.</h2>
             <p>Co-MIX nie polega na losowej podmianie słów. Wstawia niewielką liczbę sprawdzonych rzeczowników do zrozumiałego tekstu, dzięki czemu osoba ucząca się może śledzić sens i jednocześnie zauważać nowe słownictwo.</p>
           </div>
           <div class="comix-demo-shell">
@@ -288,6 +297,13 @@
                 <div class="comix-demo-button-row" role="group" aria-label="Kierunek czytania">
                   <button type="button" class="is-active" data-comix-mode="en-ja" aria-pressed="true">Angielski → japoński</button>
                   <button type="button" data-comix-mode="jp-en" aria-pressed="false">Japoński → angielski</button>
+                </div>
+              </div>
+              <div>
+                <span>Wybierz scenę</span>
+                <div class="comix-demo-button-row" role="group" aria-label="Wybierz scenę">
+                  <button type="button" class="is-active" data-comix-scene="exchange" aria-pressed="true">Wymiana językowa</button>
+                  <button type="button" data-comix-scene="classroom" aria-pressed="false">Projekt klasowy</button>
                 </div>
               </div>
               <div>
@@ -302,6 +318,7 @@
             <div class="comix-demo-reading">
               <span>1 · Przeczytaj dla sensu</span>
               <p class="comix-demo-passage" data-comix-passage lang="en"></p>
+              <p class="comix-demo-method-note" data-comix-method-note></p>
               <div class="comix-demo-actions">
                 <button type="button" class="comix-demo-reveal" data-comix-reveal>Pokaż znaczenia słów</button>
                 <p>Możesz też kliknąć wyróżnione słowo w tekście.</p>
@@ -315,6 +332,7 @@
                 <input id="comix-answer-pl" data-comix-answer type="text" autocomplete="off">
                 <button type="button" data-comix-check>Sprawdź</button>
               </div>
+              <p class="comix-demo-input-note" data-comix-answer-note></p>
               <p class="comix-demo-feedback" data-comix-feedback aria-live="polite"></p>
               <p class="comix-demo-privacy">Ta publiczna ilustracja nie zapisuje odpowiedzi ani danych osobowych.</p>
             </div>
@@ -369,6 +387,6 @@
       <a href="research.html#top" data-i18n="backTop">Back to top</a>
     </footer>
 
-  <script src="script.js?v=32"></script>
+  <script src="script.js?v=41"></script>
   </body>
 </html>
