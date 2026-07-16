@@ -16,7 +16,7 @@
     <meta name="twitter:description" content="Research connecting classroom evidence, system design, field encounters, and programme implementation.">
     <meta name="twitter:image" content="assets/identity-hero.png">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=16">
+  <link rel="stylesheet" href="styles.css?v=32">
   </head>
   <body>
     <header class="site-header essay-header is-scrolled" data-header>
@@ -25,8 +25,7 @@
         <span>Michal Maciej Mazur</span>
       </a>
       <nav class="nav" aria-label="Main navigation">
-        <a href="index.html#work" data-i18n="navWork">Practice</a>
-        <a href="workshops.html" data-i18n="navWorkshops">Workshops</a>
+        <a href="workshops.html" data-i18n="navTeaching">Teaching</a>
         <a href="writing.html" data-i18n="navWriting">Writing</a>
         <a href="research.html" data-i18n="navResearch">Research</a>
         <a href="achievements.html" data-i18n="navAchievements">Public Record</a>
@@ -34,6 +33,7 @@
       </nav>
       <div class="language-switch" aria-label="Language">
         <button type="button" class="is-active" data-lang="en">EN</button>
+        <button type="button" data-lang="ja">JP</button>
         <button type="button" data-lang="pl">PL</button>
       </div>
     </header>
@@ -149,6 +149,54 @@
           <a class="text-link" href="https://scholar.google.com/citations?user=whmY4pYAAAAJ" target="_blank" rel="noreferrer">View publications on Google Scholar</a>
         </article>
 
+        <section class="comix-demo" data-comix-demo data-comix-ui="en" aria-labelledby="comix-demo-title-en">
+          <div class="comix-demo-heading">
+            <p class="eyebrow">Try the idea</p>
+            <h2 id="comix-demo-title-en">A miniature Co-MIX reading experiment.</h2>
+            <p>Co-MIX is not random replacement. It places a small number of reviewed target nouns inside a readable passage, so a learner can stay with the meaning while noticing new vocabulary.</p>
+          </div>
+          <div class="comix-demo-shell">
+            <div class="comix-demo-controls" aria-label="Co-MIX controls">
+              <div>
+                <span>Reading direction</span>
+                <div class="comix-demo-button-row" role="group" aria-label="Reading direction">
+                  <button type="button" class="is-active" data-comix-mode="en-ja" aria-pressed="true">English → Japanese</button>
+                  <button type="button" data-comix-mode="jp-en" aria-pressed="false">Japanese → English</button>
+                </div>
+              </div>
+              <div>
+                <span>Target density</span>
+                <div class="comix-demo-button-row" role="group" aria-label="Target density">
+                  <button type="button" class="is-active" data-comix-density="light" aria-pressed="true">Light · 2 words</button>
+                  <button type="button" data-comix-density="rich" aria-pressed="false">More · 4 words</button>
+                </div>
+              </div>
+              <p class="comix-demo-principle"><strong>Core rule</strong> Keep the surrounding story readable; add only enough unfamiliar vocabulary to make noticing possible.</p>
+            </div>
+            <div class="comix-demo-reading">
+              <span>1 · Read for meaning</span>
+              <p class="comix-demo-passage" data-comix-passage lang="en"></p>
+              <div class="comix-demo-actions">
+                <button type="button" class="comix-demo-reveal" data-comix-reveal>Show word meanings</button>
+                <p>Or click any highlighted word in the passage.</p>
+              </div>
+            </div>
+            <div class="comix-demo-recall">
+              <span>2 · Try one word</span>
+              <p data-comix-question></p>
+              <label for="comix-answer-en">Your answer</label>
+              <div class="comix-demo-answer-row">
+                <input id="comix-answer-en" data-comix-answer type="text" autocomplete="off">
+                <button type="button" data-comix-check>Check</button>
+              </div>
+              <p class="comix-demo-feedback" data-comix-feedback aria-live="polite"></p>
+              <p class="comix-demo-privacy">This public illustration saves no answers or personal data.</p>
+            </div>
+          </div>
+          <div class="comix-demo-targets" data-comix-target-list aria-label="Target word meanings"></div>
+          <p class="comix-demo-caption">This is a compact, browser-only illustration of the original research logic. The full Co-MIX workflow also included reviewed material creation, staged recall, contextual second attempts, and learner-result recording.</p>
+        </section>
+
         <article class="research-project">
           <div class="research-project-meta"><span>2017 · Higher-education research</span><span>Recognition of teaching professionalism</span></div>
           <h2>How can universities recognise professional teaching?</h2>
@@ -227,6 +275,54 @@
           <a class="text-link" href="https://scholar.google.com/citations?user=whmY4pYAAAAJ" target="_blank" rel="noreferrer">Zobacz publikacje w Google Scholar</a>
         </article>
 
+        <section class="comix-demo" data-comix-demo data-comix-ui="pl" aria-labelledby="comix-demo-title-pl">
+          <div class="comix-demo-heading">
+            <p class="eyebrow">Wypróbuj ideę</p>
+            <h2 id="comix-demo-title-pl">Miniaturowy eksperyment czytelniczy Co-MIX.</h2>
+            <p>Co-MIX nie polega na losowej podmianie słów. Wstawia niewielką liczbę sprawdzonych rzeczowników do zrozumiałego tekstu, dzięki czemu osoba ucząca się może śledzić sens i jednocześnie zauważać nowe słownictwo.</p>
+          </div>
+          <div class="comix-demo-shell">
+            <div class="comix-demo-controls" aria-label="Ustawienia Co-MIX">
+              <div>
+                <span>Kierunek czytania</span>
+                <div class="comix-demo-button-row" role="group" aria-label="Kierunek czytania">
+                  <button type="button" class="is-active" data-comix-mode="en-ja" aria-pressed="true">Angielski → japoński</button>
+                  <button type="button" data-comix-mode="jp-en" aria-pressed="false">Japoński → angielski</button>
+                </div>
+              </div>
+              <div>
+                <span>Gęstość słów docelowych</span>
+                <div class="comix-demo-button-row" role="group" aria-label="Gęstość słów docelowych">
+                  <button type="button" class="is-active" data-comix-density="light" aria-pressed="true">Lekka · 2 słowa</button>
+                  <button type="button" data-comix-density="rich" aria-pressed="false">Większa · 4 słowa</button>
+                </div>
+              </div>
+              <p class="comix-demo-principle"><strong>Główna zasada</strong> Kontekst opowieści ma pozostać zrozumiały; nowych słów powinno być tylko tyle, by można było je zauważyć.</p>
+            </div>
+            <div class="comix-demo-reading">
+              <span>1 · Przeczytaj dla sensu</span>
+              <p class="comix-demo-passage" data-comix-passage lang="en"></p>
+              <div class="comix-demo-actions">
+                <button type="button" class="comix-demo-reveal" data-comix-reveal>Pokaż znaczenia słów</button>
+                <p>Możesz też kliknąć wyróżnione słowo w tekście.</p>
+              </div>
+            </div>
+            <div class="comix-demo-recall">
+              <span>2 · Sprawdź jedno słowo</span>
+              <p data-comix-question></p>
+              <label for="comix-answer-pl">Twoja odpowiedź</label>
+              <div class="comix-demo-answer-row">
+                <input id="comix-answer-pl" data-comix-answer type="text" autocomplete="off">
+                <button type="button" data-comix-check>Sprawdź</button>
+              </div>
+              <p class="comix-demo-feedback" data-comix-feedback aria-live="polite"></p>
+              <p class="comix-demo-privacy">Ta publiczna ilustracja nie zapisuje odpowiedzi ani danych osobowych.</p>
+            </div>
+          </div>
+          <div class="comix-demo-targets" data-comix-target-list aria-label="Znaczenia słów docelowych"></div>
+          <p class="comix-demo-caption">To krótka, działająca w przeglądarce ilustracja logiki oryginalnego projektu. Pełny workflow Co-MIX obejmował także recenzowane tworzenie materiałów, etapową próbę przypomnienia słów, drugą próbę z pomocą kontekstu i zapisywanie wyników uczenia się.</p>
+        </section>
+
         <article class="research-project">
           <div class="research-project-meta"><span>2017 · Badania szkolnictwa wyższego</span><span>Rozpoznawanie profesjonalizmu dydaktycznego</span></div>
           <h2>Jak uniwersytety mogą rozpoznawać profesjonalne nauczanie?</h2>
@@ -273,6 +369,6 @@
       <a href="research.html#top" data-i18n="backTop">Back to top</a>
     </footer>
 
-    <script src="script.js?v=15"></script>
+  <script src="script.js?v=32"></script>
   </body>
 </html>

@@ -8,6 +8,7 @@ const translations = {
   en: {
     navWork: "Practice",
     navWorkshops: "Workshops",
+    navTeaching: "Teaching",
     navWriting: "Writing",
     navBio: "Bio",
     navResearch: "Research",
@@ -49,6 +50,7 @@ const translations = {
       "Living and working in Japan since 2009 has taught me that communication across cultures is not a slogan; it is daily work. At Ritsumeikan Asia Pacific University, I turn that experience and my research into courses, faculty workshops, and multilingual learning environments where people can participate with greater confidence.",
     japanYearsLabel: "years living and working in Japan",
     japanSinceLabel: "since 2009",
+    japanDaysLabel: "days in Japan — and counting",
     visualTeaching: "Teaching and facilitating across cultures",
     visualPublic: "A public voice shaped by games and Japan",
     visualJapan: "Japan, observed through ordinary details",
@@ -92,14 +94,26 @@ const translations = {
       "I began with language and literature in Krakow, came to Japan on a MEXT scholarship, and completed a PhD in information science at Hokkaido University, specialising in natural language processing. That unusual route taught me to move comfortably between humanities, technology, and education.",
     trajectoryBodyTwo:
       "Games opened one of my first routes into Japan. For nearly three decades I have written as Mazzi for Polish readers, while my university work has taken me from language-learning systems to intercultural classrooms and faculty development. Both began with the same impulse: understand how a world works, then explain it clearly without sanding away what makes it different.",
-    bioEyebrow: "Official Biography",
-    bioTitle: "Michal Maciej Mazur is an educator, researcher, and public writer working across cultures.",
+    timelineEyebrow: "A few coordinates",
+    timelineTitle: "The route matters because it changed what I can help other people do.",
+    timelineOneTitle: "Japan begins",
+    timelineOneBody: "I arrive on a MEXT scholarship and start learning the everyday work of living between languages.",
+    timelineTwoTitle: "Language meets technology",
+    timelineTwoBody: "Research on NLP and language-learning systems makes context, choice, and learner experience central questions.",
+    timelineThreeTitle: "Teaching becomes the focus",
+    timelineThreeBody: "Invited workshops on teaching in English and intercultural communication turn research questions into live classroom work.",
+    timelineFourTitle: "Evidence from the classroom",
+    timelineFourBody: "A 15-week study makes intercultural learning visible through students’ reflection and practice.",
+    timelineFiveTitle: "APU, Beppu",
+    timelineFiveBody: "At APU, I bring teaching, research, and public communication into the same room.",
+    bioEyebrow: "How I work",
+    bioTitle: "I work where language, culture, and learning meet.",
     bioBodyOne:
-      "Michal Maciej Mazur is an Assistant Professor at Ritsumeikan Asia Pacific University in Japan. His work focuses on intercultural communication, global learning, faculty development, and teaching in multilingual higher-education environments. He designs courses and professional-development programmes that help educators and students interpret difference, participate more fully, and turn reflection into practical action.",
+      "I am an Assistant Professor at Ritsumeikan Asia Pacific University in Japan. My work focuses on intercultural communication, global learning, faculty development, and teaching in multilingual higher education. I design courses and professional-development programmes that help educators and students interpret difference, participate more fully, and turn reflection into practical action.",
     bioBodyTwo:
-      "His academic path connects language and literature, Japanese studies, information science, and natural language processing. Before joining APU, he worked and taught at Hokkaido University, where he developed courses and faculty-development activities related to English-medium instruction, intercultural communication, curriculum design, and the changing role of generative AI in higher education.",
+      "My academic path connects language and literature, Japanese studies, information science, and natural language processing. Before joining APU, I worked and taught at Hokkaido University, developing courses and faculty-development activities around English-medium instruction, intercultural communication, curriculum design, and the changing role of generative AI in higher education.",
     bioBodyThree:
-      "Alongside his university work, Mazur writes as Mazzi about Japan, video games, media culture, and everyday life. His public writing brings cultural interpretation and accessible explanation to a wider audience, connecting his academic interests with journalism, games, and contemporary Japanese culture.",
+      "Alongside university work, I write as Mazzi about Japan, video games, media culture, and everyday life. That public writing brings cultural interpretation and accessible explanation to a wider audience, connecting my academic interests with journalism, games, and contemporary Japanese culture.",
     academicEyebrow: "What I Do",
     academicTitle: "I help people learn across cultures, media, and institutions.",
     featureOneTitle: "Design Learning",
@@ -129,7 +143,7 @@ const translations = {
     caseStudiesEyebrow: "Selected Practice",
     caseStudiesTitle: "Four projects, four different rooms, one habit: make learning visible.",
     caseStudiesDeck:
-      "Four examples showing how I work when the audience changes: future university teachers, multilingual classes, students writing for real readers, and international teams tackling space-sector challenges.",
+      "Each case begins with a concrete learning problem, shows the design response, and ends with evidence of what participants could do, make, or carry forward.",
     caseStudiesCtaTitle: "Bring this approach into your programme, teaching team, or classroom.",
     teachingEyebrow: "Teaching Practice",
     teachingTitle: "The bridge becomes visible in the classroom.",
@@ -210,6 +224,8 @@ const translations = {
       "The classroom asks for the same care. Whether students are discussing culture, pitching a game, or planning an international space-sector project, my job is to help them see assumptions, find language for difficult ideas, and communicate to people who do not already think like they do.",
     writingPageLink: "Browse the writing portfolio",
     bridgeQuote: "“I have spent my career learning how to enter unfamiliar worlds, read their rules, and help other people find their way in.”",
+    editorialEvidenceNagoshi: "Interview · Toshihiro Nagoshi",
+    editorialEvidenceValkyrie: "Interview visit · Valkyrie Profile creators",
     identityAcademicTerm: "Academic identity",
     identityAcademicDesc: "Assistant Professor, higher education researcher, faculty developer.",
     identityPublicTerm: "Public identity",
@@ -267,14 +283,33 @@ const translations = {
     contactResearch: "Research profile",
     contactProfessional: "Professional profile",
     contactPublic: "Public communication",
-    serviceEyebrow: "Workshop Offer",
-    serviceTitle: "Workshops built around real teaching problems, not generic advice",
+    serviceEyebrow: "Teaching Portfolio",
+    serviceTitle: "Courses, workshops, and seminars built around real learning problems",
     serviceDeck:
-      "I draw on work at Hokkaido University, APU, and the Ritsumeikan Space Management Program. Each session starts with a problem participants recognise and ends with a class plan, facilitation choice, or next step they can use.",
+      "I teach credit-bearing courses, lead practical workshops, and give seminars for university communities. Across a decade of work to improve teaching quality at Hokkaido University and APU, the common thread has been the same: start with a problem people recognise and end with a usable next step.",
+    workshopHeroContact: "Tell me what you want to improve",
+    workshopHeroBrief: "Read the one-page brief",
+    workshopStartEmail: "Start a workshop conversation",
     serviceCtaEyebrow: "Collaboration",
     serviceCtaTitle: "Commission a workshop for your institution.",
     serviceCtaBody:
       "I can adapt the topic, examples, timing, and participant outputs to your programme, teaching context, and audience.",
+    teachingMaterialsEyebrow: "Teaching materials in practice",
+    teachingMaterialsTitle: "Four examples of how I turn ideas into usable learning.",
+    teachingMaterialsDeck:
+      "These are selected pages from original decks I designed and delivered. They show how visual structure, guided reflection, and a clear decision point can support the learning process.",
+    teachingMaterialOneTitle: "Giving a presentation a clear story",
+    teachingMaterialOneBody:
+      "A four-part structure turns presentation advice into a memorable planning tool that participants can use immediately.",
+    teachingMaterialTwoTitle: "Designing activities people can actually do",
+    teachingMaterialTwoBody:
+      "Purpose, task, time, grouping, and product give participants a practical test for whether an activity will be clear and workable.",
+    teachingMaterialThreeTitle: "Making listening visible",
+    teachingMaterialThreeBody:
+      "An intercultural principle becomes language people can practise: attend openly, then paraphrase with cultural sensitivity.",
+    teachingMaterialFourTitle: "Deciding when AI is safe to use",
+    teachingMaterialFourBody:
+      "A decision flow replaces blanket rules with verification, responsibility, and attention to the stakes of the task.",
     essayBack: "Back to homepage",
     essayPageEyebrow: "Position Essay",
     essayPageTitle: "Games, culture, and intercultural learning",
@@ -285,6 +320,7 @@ const translations = {
   pl: {
     navWork: "Praktyka",
     navWorkshops: "Warsztaty",
+    navTeaching: "Dydaktyka",
     navWriting: "Teksty",
     navBio: "Bio",
     navResearch: "Badania",
@@ -326,6 +362,7 @@ const translations = {
       "Życie i praca w Japonii od 2009 roku nauczyły mnie, że komunikacja ponad kulturami nie jest hasłem, lecz codzienną pracą. Na Ritsumeikan Asia Pacific University przekładam to doświadczenie i badania na kursy, warsztaty dla kadry i wielojęzyczne środowiska, w których ludzie mogą uczestniczyć z większą pewnością.",
     japanYearsLabel: "lat życia i pracy w Japonii",
     japanSinceLabel: "od 2009 roku",
+    japanDaysLabel: "dni w Japonii — licznik działa",
     visualTeaching: "Uczenie i facylitacja ponad kulturami",
     visualPublic: "Publiczny głos ukształtowany przez gry i Japonię",
     visualJapan: "Japonia obserwowana przez zwyczajne szczegóły",
@@ -369,14 +406,26 @@ const translations = {
       "Zacząłem od języka i literatury w Krakowie, przyjechałem do Japonii jako stypendysta MEXT, a na Hokkaido University ukończyłem doktorat z information science, specjalizując się w przetwarzaniu języka naturalnego. Ta nietypowa droga nauczyła mnie swobodnie łączyć humanistykę, technologię i edukację.",
     trajectoryBodyTwo:
       "Gry otworzyły mi jedną z pierwszych dróg do Japonii. Od blisko trzech dekad piszę jako Mazzi dla polskich czytelników, a moja praca uniwersytecka prowadziła od systemów nauki języka do klas międzykulturowych i faculty development. Obie ścieżki zaczęły się od tego samego odruchu: zrozumieć, jak działa dany świat, i wyjaśnić go bez ścierania tego, co czyni go odmiennym.",
-    bioEyebrow: "Oficjalna biografia",
-    bioTitle: "Michal Maciej Mazur jest edukatorem, badaczem i autorem pracującym ponad granicami kultur.",
+    timelineEyebrow: "Kilka współrzędnych",
+    timelineTitle: "Ta droga ma znaczenie, bo zmieniła to, w czym mogę dziś pomagać innym.",
+    timelineOneTitle: "Początek Japonii",
+    timelineOneBody: "Przyjeżdżam na stypendium MEXT i zaczynam uczyć się codziennej pracy życia pomiędzy językami.",
+    timelineTwoTitle: "Język spotyka technologię",
+    timelineTwoBody: "Badania nad NLP i systemami nauki języka stawiają w centrum kontekst, wybór i doświadczenie uczących się.",
+    timelineThreeTitle: "Nauczanie staje się głównym polem",
+    timelineThreeBody: "Zaproszone warsztaty o nauczaniu po angielsku i komunikacji międzykulturowej przenoszą pytania badawcze do prawdziwej pracy w klasie.",
+    timelineFourTitle: "Dowody z klasy",
+    timelineFourBody: "Piętnastotygodniowe badanie uwidacznia uczenie międzykulturowe poprzez refleksję i praktykę studentów.",
+    timelineFiveTitle: "APU, Beppu",
+    timelineFiveBody: "Na APU łączę nauczanie, badania i komunikację publiczną w jednej przestrzeni.",
+    bioEyebrow: "Jak pracuję",
+    bioTitle: "Pracuję na styku języka, kultury i uczenia się.",
     bioBodyOne:
-      "Michal Maciej Mazur jest Assistant Professor na Ritsumeikan Asia Pacific University w Japonii. Jego praca koncentruje się na komunikacji międzykulturowej, global learning, faculty development oraz nauczaniu w wielojęzycznym szkolnictwie wyższym. Projektuje kursy i programy rozwoju dydaktycznego, które pomagają edukatorom i studentom interpretować różnice, pełniej uczestniczyć w uczeniu się oraz przekładać refleksję na praktyczne działanie.",
+      "Jestem Assistant Professor na Ritsumeikan Asia Pacific University w Japonii. Moja praca koncentruje się na komunikacji międzykulturowej, global learning, faculty development oraz nauczaniu w wielojęzycznym szkolnictwie wyższym. Projektuję kursy i programy rozwoju dydaktycznego, które pomagają edukatorom i studentom interpretować różnice, pełniej uczestniczyć w uczeniu się oraz przekładać refleksję na praktyczne działanie.",
     bioBodyTwo:
-      "Jego droga akademicka łączy język i literaturę, japonistykę, informatykę oraz przetwarzanie języka naturalnego. Przed dołączeniem do APU pracował i prowadził zajęcia na Hokkaido University, gdzie rozwijał kursy i działania faculty development związane z nauczaniem po angielsku, komunikacją międzykulturową, projektowaniem programu oraz zmieniającą się rolą generatywnej AI w szkolnictwie wyższym.",
+      "Moja droga akademicka łączy język i literaturę, japonistykę, informatykę oraz przetwarzanie języka naturalnego. Przed dołączeniem do APU pracowałem i prowadziłem zajęcia na Hokkaido University, rozwijając kursy i działania faculty development związane z nauczaniem po angielsku, komunikacją międzykulturową, projektowaniem programu oraz zmieniającą się rolą generatywnej AI w szkolnictwie wyższym.",
     bioBodyThree:
-      "Równolegle z pracą uniwersytecką Mazur pisze jako Mazzi o Japonii, grach wideo, kulturze mediów i codziennym życiu. Jego publicystyka przekłada interpretację kultury i złożone konteksty na przystępny język, łącząc zainteresowania akademickie z dziennikarstwem, grami i współczesną kulturą Japonii.",
+      "Równolegle z pracą uniwersytecką piszę jako Mazzi o Japonii, grach wideo, kulturze mediów i codziennym życiu. Ta publicystyka przekłada interpretację kultury i złożone konteksty na przystępny język, łącząc moje zainteresowania akademickie z dziennikarstwem, grami i współczesną kulturą Japonii.",
     academicEyebrow: "Co robię",
     academicTitle: "Pomagam ludziom uczyć się ponad granicami kultur, mediów i instytucji.",
     featureOneTitle: "Projektuję uczenie",
@@ -406,7 +455,7 @@ const translations = {
     caseStudiesEyebrow: "Wybrana praktyka",
     caseStudiesTitle: "Cztery projekty, cztery różne sale, jeden nawyk: uwidocznić uczenie.",
     caseStudiesDeck:
-      "Cztery przykłady pokazujące, jak pracuję, gdy zmienia się grupa: przyszli nauczyciele akademiccy, wielojęzyczne klasy, studenci piszący dla prawdziwych czytelników i międzynarodowe zespoły mierzące się z wyzwaniami sektora kosmicznego.",
+      "Każde case study zaczyna się od konkretnego problemu dydaktycznego, pokazuje odpowiedź projektową i kończy się dowodem na to, co uczestnicy mogli zrobić, stworzyć lub zabrać ze sobą dalej.",
     caseStudiesCtaTitle: "Wprowadź to podejście do swojego programu, zespołu dydaktycznego albo klasy.",
     teachingEyebrow: "Praktyka dydaktyczna",
     teachingTitle: "Most staje się widoczny w klasie.",
@@ -487,6 +536,8 @@ const translations = {
       "Klasa wymaga tej samej uważności. Niezależnie od tego, czy studenci rozmawiają o kulturze, pitchują grę czy planują międzynarodowy projekt dla sektora kosmicznego, pomagam im dostrzec założenia, znaleźć język dla trudnych idei i mówić do osób, które nie myślą tak samo jak oni.",
     writingPageLink: "Zobacz portfolio pisarskie",
     bridgeQuote: "„Przez całą karierę uczę się wchodzić do nieznanych światów, czytać ich zasady i pomagać innym odnaleźć w nich drogę.”",
+    editorialEvidenceNagoshi: "Wywiad · Toshihiro Nagoshi",
+    editorialEvidenceValkyrie: "Spotkanie redakcyjne · twórcy Valkyrie Profile",
     identityAcademicTerm: "Tożsamość akademicka",
     identityAcademicDesc: "Assistant Professor, badacz szkolnictwa wyższego, faculty developer.",
     identityPublicTerm: "Tożsamość publiczna",
@@ -544,14 +595,33 @@ const translations = {
     contactResearch: "Profil badawczy",
     contactProfessional: "Profil zawodowy",
     contactPublic: "Komunikacja publiczna",
-    serviceEyebrow: "Oferta warsztatów",
-    serviceTitle: "Warsztaty zbudowane wokół prawdziwych problemów dydaktycznych",
+    serviceEyebrow: "Portfolio dydaktyczne",
+    serviceTitle: "Kursy, warsztaty i seminaria zbudowane wokół prawdziwych problemów uczenia się",
     serviceDeck:
-      "Korzystam z doświadczeń Hokkaido University, APU i Ritsumeikan Space Management Program. Każda sesja zaczyna się od problemu, który uczestnicy rozpoznają, i kończy planem zajęć, decyzją facylitacyjną albo następnym krokiem, którego mogą użyć.",
+      "Prowadzę kursy akademickie, praktyczne warsztaty i seminaria dla społeczności uniwersyteckich. W ciągu dekady pracy nad jakością dydaktyki na Hokkaido University i APU powtarza się jeden motyw: zaczynać od problemu, który ludzie rozpoznają, i kończyć użytecznym kolejnym krokiem.",
+    workshopHeroContact: "Napisz, co chcesz ulepszyć",
+    workshopHeroBrief: "Przeczytaj jednostronicowy brief",
+    workshopStartEmail: "Rozpocznij rozmowę o warsztacie",
     serviceCtaEyebrow: "Współpraca",
     serviceCtaTitle: "Zamów warsztat dla swojej instytucji.",
     serviceCtaBody:
       "Mogę dopasować temat, przykłady, czas i rezultaty uczestników do programu, kontekstu dydaktycznego oraz odbiorców.",
+    teachingMaterialsEyebrow: "Materiały dydaktyczne w praktyce",
+    teachingMaterialsTitle: "Cztery przykłady tego, jak zamieniam idee w użyteczne uczenie się.",
+    teachingMaterialsDeck:
+      "To wybrane strony z oryginalnych decków, które sam projektowałem i prowadziłem. Pokazują, jak struktura wizualna, prowadzona refleksja i jasny moment decyzyjny wspierają proces uczenia się.",
+    teachingMaterialOneTitle: "Nadać prezentacji wyraźną historię",
+    teachingMaterialOneBody:
+      "Czteroczęściowa struktura zamienia wskazówki dotyczące prezentacji w zapamiętywalne narzędzie planowania, z którego uczestnicy mogą od razu skorzystać.",
+    teachingMaterialTwoTitle: "Projektowanie aktywności, które da się naprawdę poprowadzić",
+    teachingMaterialTwoBody:
+      "Cel, zadanie, czas, grupowanie i produkt dają uczestnikom praktyczny test tego, czy aktywność będzie jasna i wykonalna.",
+    teachingMaterialThreeTitle: "Uwidocznić uważne słuchanie",
+    teachingMaterialThreeBody:
+      "Zasada międzykulturowa staje się językiem, który można ćwiczyć: słuchaj otwarcie, a potem parafrazuj z wrażliwością kulturową.",
+    teachingMaterialFourTitle: "Decydowanie, kiedy AI można użyć bezpiecznie",
+    teachingMaterialFourBody:
+      "Schemat decyzji zastępuje ogólne zakazy weryfikacją, odpowiedzialnością i uwagą na stawkę danego zadania.",
     essayBack: "Wróć na stronę główną",
     essayPageEyebrow: "Esej programowy",
     essayPageTitle: "Gry, kultura i uczenie międzykulturowe",
@@ -561,6 +631,150 @@ const translations = {
   },
 };
 
+translations.ja = {
+  ...translations.en,
+  navWork: "実践",
+  navWorkshops: "ワークショップ",
+  navTeaching: "教育",
+  navWriting: "執筆",
+  navBio: "略歴",
+  navResearch: "研究",
+  navAchievements: "活動記録",
+  navContact: "お問い合わせ",
+  heroKicker: "日本の大学教員・異文化教育者・Mazziとして執筆",
+  heroLede: "2009年から日本で暮らし働くなかで、文化を越えたコミュニケーションはスローガンではなく、日々向き合う仕事だと学びました。立命館アジア太平洋大学では、その経験と研究を授業、教職員向けワークショップ、多言語の学習環境へとつなげ、人々がより自信をもって参加できる場をつくっています。",
+  japanYearsLabel: "日本で暮らし、働いてきた年数",
+  japanSinceLabel: "2009年から",
+  japanDaysLabel: "日本で過ごした日数 — 更新中",
+  visualTeaching: "文化を越えて教え、場をつくる",
+  visualPublic: "ゲームと日本から生まれたパブリックな声",
+  visualJapan: "日常の細部から見る日本",
+  apuBandEyebrow: "現在のアカデミック・ホーム",
+  apuBandTitle: "APUにとってグローバル・ラーニングは抽象的な理念ではありません。私が毎日入る教室そのものです。",
+  apuBandBody: "別府では、異文化教育、ファカルティ・ディベロップメント、そしてパブリック・コミュニケーションの仕事が一つにつながっています。",
+  heroPrimary: "ワークショップを見る",
+  heroSecondary: "事例を見る",
+  identityStrip: "教育開発センター・国際プログラム・大学院・多言語で教えるチームのために",
+  trajectoryEyebrow: "背景",
+  trajectoryTitle: "クラクフから北海道、そして別府へ。ずっと軸にあったのは言葉です。",
+  trajectoryBodyOne: "クラクフで言語と文学を学んだ後、MEXT奨学生として来日し、北海道大学で情報科学の博士号を取得しました。専門は自然言語処理です。この少し珍しい経歴が、人文学、テクノロジー、教育を行き来する視点を育てました。",
+  trajectoryBodyTwo: "ゲームは、私にとって日本へ向かう最初の入口の一つでした。約30年にわたりMazziとしてポーランドの読者に執筆する一方、大学では語学学習システムから異文化クラスルーム、ファカルティ・ディベロップメントまで取り組んできました。両方に共通するのは、ある世界がどう働いているかを理解し、その固有の魅力をならさずに、他者へ分かりやすく伝えることです。",
+  timelineEyebrow: "いくつかの座標",
+  timelineTitle: "この道のりが大切なのは、いま他の人のためにできることを変えてくれたからです。",
+  timelineOneTitle: "日本での出発",
+  timelineOneBody: "MEXT奨学生として来日し、言語のあいだで生きる日々の仕事を学び始めます。",
+  timelineTwoTitle: "言語とテクノロジーの接点",
+  timelineTwoBody: "NLPと言語学習システムの研究を通じて、文脈、選択、学習者経験を中心的な問いにしました。",
+  timelineThreeTitle: "教育が中心になる",
+  timelineThreeBody: "英語で教えることと異文化コミュニケーションについての招待ワークショップが、研究の問いを生きた教室の仕事へつなげます。",
+  timelineFourTitle: "教室からの根拠",
+  timelineFourBody: "15週間の研究が、学生の振り返りと実践を通じて異文化学習を可視化しました。",
+  timelineFiveTitle: "APU・別府",
+  timelineFiveBody: "APUでは、教育、研究、パブリック・コミュニケーションを同じ場に結びつけています。",
+  bioEyebrow: "仕事の進め方",
+  bioTitle: "言語、文化、学びが交わる場所で働いています。",
+  bioBodyOne: "私は、立命館アジア太平洋大学の助教です。異文化コミュニケーション、グローバル・ラーニング、ファカルティ・ディベロップメント、多言語高等教育における教育に取り組んでいます。教育者と学生が違いを解釈し、より深く参加し、振り返りを実践へ移せるよう、授業と専門能力開発プログラムを設計しています。",
+  bioBodyTwo: "私のアカデミックな経歴は、言語と文学、日本研究、情報科学、自然言語処理を横断しています。APU着任前は北海道大学で教育・研究に携わり、英語による専門教育（EMI）、異文化コミュニケーション、カリキュラム設計、高等教育における生成AIの変化に関する授業とファカルティ・ディベロップメントを展開しました。",
+  bioBodyThree: "大学での仕事と並行して、Mazziの筆名で日本、ビデオゲーム、メディア文化、日常について執筆しています。この執筆では文化を読み解く視点と分かりやすい説明をより広い読者へ届け、研究関心をジャーナリズム、ゲーム、現代日本文化と結びつけています。",
+  academicEyebrow: "取り組んでいること",
+  academicTitle: "文化、メディア、制度を越えて学ぶ人を支えます。",
+  featureOneTitle: "学びをデザインする",
+  featureOneBody: "アイデアをすぐ使える教育実践へ変える授業、活動、ファカルティ・ディベロップメントを設計します。",
+  featureTwoTitle: "文化を読み解く",
+  featureTwoBody: "研究と教育では、異文化コミュニケーション、意味の生成、言語と制度を越えた学びに取り組んでいます。",
+  featureThreeTitle: "社会に伝える",
+  featureThreeBody: "Mazziとしての執筆を通じ、大学の外の読者へ日本、ゲーム、メディア文化、日常の解釈を届けています。",
+  caseEyebrow: "実践の例",
+  caseTitle: "この仕事が教室に届くと、どのような形になるのか。",
+  caseOneTitle: "大学教員を目指す大学院生のためのPre-FD",
+  caseOneBody: "APUでは、大学院生が専門知識から出発し、1枚の授業設計図と、実際に実施・試行・改善できる活動へと進みます。",
+  caseTwoTitle: "多言語クラスルームにおける異文化学習",
+  caseTwoBody: "15週間の授業研究では、critical incidentsと振り返りを用い、共感、解釈、文化的自己認識を可視化しました。その成果は2023年に査読論文として発表されました。",
+  caseThreeTitle: "文化を真剣に考える教材としてのゲームとメディア",
+  caseThreeBody: "Video Games in Societyでは、学生が実際のレビューを書き、ゲーム企画をピッチしました。選ばれた作品はPSX Extremeに掲載され、授業は学生アンケートで4.58/5を得ました。",
+  caseFourTitle: "教育デザインのための責任あるAI",
+  caseFourBody: "北海道大学でのワークショップから2024年の北見工業大学での招待講演まで、AIを設計と探究の道具として扱いながら、検証と学術的判断を欠かさない姿勢を伝えています。",
+  casePageLink: "事例を読む",
+  workshopEyebrow: "ワークショップのご案内",
+  workshopTitle: "教職員、大学院生、教育チームのための依頼型セッション。",
+  workshopModelEyebrow: "設計の原則",
+  workshopModelTitle: "月曜日にすぐ使えるものを持ち帰れるように。",
+  workshopModelBody: "理論は簡潔にし、実際の授業、難しい対話、プログラム上の判断に取り組む時間を十分に取ります。テンプレート、仲間からのフィードバック、リハーサル、振り返りによって、所属機関に合った実用的な成果物と次の一歩をつくります。",
+  workshopOutputOne: "1枚の授業設計図",
+  workshopOutputTwo: "整合性のある学習活動",
+  workshopOutputThree: "明確なファシリテーション指示",
+  workshopOutputFour: "改善のための出口チケット",
+  workshopPageLink: "ワークショップ形式を見る",
+  proofEyebrow: "実績",
+  proofTitle: "この仕事を具体的に示す4つのプロジェクト。",
+  proofOneLabel: "2023年・北海道大学",
+  proofOneTitle: "4つの実践的課題を扱うファカルティ・ディベロップメント",
+  proofOneBody: "英語で教えること、異文化コミュニケーション、シラバス設計、教室におけるChatGPTへの備えを扱いました。",
+  proofTwoLabel: "2024年表彰・2023年授業評価",
+  proofTwoTitle: "Video Games in Society におけるExcellent Teacher選出",
+  proofTwoBody: "北海道大学の2023年度Excellent Teacher選考において、授業は学生アンケート総合4.58/5を得ました。",
+  proofThreeLabel: "2022年・AGH科学技術大学",
+  proofThreeTitle: "国際的な教育についての招待講演",
+  proofThreeBody: "ポーランド、日本、イタリアにおける教育を比較し、異文化的な文脈を議論の中心に置いたウェビナーです。",
+  proofFourLabel: "2025–26年・立命館スペースマネジメントプログラム",
+  proofFourTitle: "学際的な宇宙分野教育のファシリテーター",
+  proofFourBody: "2年間にわたり、異文化コミュニケーション、リーダーシップ、プレゼンテーション、フィードバック、国際プロジェクト協働を、多様な学生コホートとともに支えてきました。",
+  bridgeEyebrow: "一つの好奇心、二つの読者層",
+  bridgeTitle: "大学での仕事と、約30年にわたるゲームについての執筆を動かしているのは同じ好奇心です。",
+  bridgeBodyOne: "Mazziとして、日本からレポートを書き、制作者に取材し、現地のゲーム文化を追い、ポーランドの読者へ長文記事を届けてきました。その仕事から、印象的な細部に気づくこと、読者を尊重すること、日本を異国趣味の背景にせず文脈を伝えることを学びました。",
+  bridgeBodyTwo: "教室でも同じ配慮が求められます。学生が文化を議論するとき、ゲームをピッチするとき、国際的な宇宙プロジェクトを計画するとき、私は前提に気づき、難しい考えのための言葉を見つけ、異なる考えをもつ人へ伝えることを支えます。",
+  writingPageLink: "執筆ポートフォリオを見る",
+  bridgeQuote: "「私はずっと、知らない世界に入り、そのルールを読み、他の人がそこに自分の道を見つけられるよう手助けすることを学んできました。」",
+  identityAcademicTerm: "アカデミックな顔",
+  identityAcademicDesc: "助教、高等教育研究者、ファカルティ・ディベロッパー。",
+  identityPublicTerm: "パブリックな顔",
+  identityPublicDesc: "日本を拠点に、ゲーム、メディア、ポップカルチャー、日常の解釈について書くライター。",
+  identityAxisTerm: "共通する軸",
+  identityAxisDesc: "国境を越えるコミュニケーション、学び、文化、意味。",
+  essayEyebrow: "ポジション・エッセイ",
+  essayTitle: "ゲームは、文化の世界をどう読むかを教えてくれる。",
+  essayBody: "ゲーム、日本、パブリック・ライティング、異文化教育が、なぜ同じ知的・職業的ポートフォリオに属するのかを簡潔にまとめています。",
+  essayLink: "エッセイを読む",
+  archiveEyebrow: "経歴と出版物",
+  archiveTitle: "根拠を確かめたい方のための、機関の記録とパブリックな仕事。",
+  archiveAcademic: "研究・教育",
+  archiveInstitutional: "機関での執筆",
+  archivePublic: "パブリック・コミュニケーション",
+  contactEyebrow: "お問い合わせ",
+  contactTitle: "現実の課題を起点に、ワークショップ、授業、協働をつくりましょう。",
+  contactBody: "教育開発センター、国際プログラム、大学院、多言語または異文化の学習を育てるアカデミック・チームとの協働に特に関心があります。",
+  contactWorkshop: "ワークショップ形式を見る",
+  contactEmail: "協働についてメールする",
+  contactLinkedIn: "LinkedInを見る",
+  downloadBrief: "ワークショップ概要（1ページ）をダウンロード",
+  contactInstitution: "大学公式プロフィール",
+  contactResearch: "研究プロフィール",
+  contactProfessional: "職歴プロフィール",
+  contactPublic: "パブリック・コミュニケーション",
+  serviceEyebrow: "教育ポートフォリオ",
+  serviceTitle: "現実の学びの課題からつくる授業、ワークショップ、セミナー",
+  serviceDeck: "正課授業を担当し、実践的なワークショップを行い、大学コミュニティのためのセミナーも実施しています。北海道大学とAPUで教育の質向上に約10年取り組むなかで、一貫してきたのは、誰もが認識できる課題から始め、すぐに使える次の一歩で終えることです。",
+  workshopHeroContact: "改善したいことを教えてください",
+  workshopHeroBrief: "1ページの概要を見る",
+  workshopStartEmail: "ワークショップについて相談する",
+  serviceCtaEyebrow: "協働のご相談",
+  serviceCtaTitle: "貴機関のためのワークショップをご依頼ください。",
+  serviceCtaBody: "テーマ、事例、時間、参加者が持ち帰る成果物は、プログラム、教育の文脈、対象者に合わせて調整できます。",
+  teachingMaterialsEyebrow: "教材デザインの実例",
+  teachingMaterialsTitle: "アイデアを、使える学びへ変える4つの例。",
+  teachingMaterialsDeck: "いずれも私自身が設計し、実施したオリジナルのスライドから選びました。視覚的な構造、導かれた振り返り、明確な判断の場面が、学びのプロセスをどう支えるかを示しています。",
+  teachingMaterialOneTitle: "プレゼンテーションに明確な物語を与える",
+  teachingMaterialOneBody: "4部構成によって、プレゼンテーションの助言を、参加者がすぐ使える記憶に残る計画ツールへ変えます。",
+  teachingMaterialTwoTitle: "実際に行える活動を設計する",
+  teachingMaterialTwoBody: "目的、課題、時間、グループ編成、成果物は、活動が明確で実行可能かを確かめる実践的な基準になります。",
+  teachingMaterialThreeTitle: "丁寧な聴き方を見える形にする",
+  teachingMaterialThreeBody: "異文化的な原則を、実際に練習できる言葉へ変えます。開かれた姿勢で聴き、文化的な配慮をもって言い換えます。",
+  teachingMaterialFourTitle: "AIを安全に使える場面を判断する",
+  teachingMaterialFourBody: "判断の流れは、一律のルールの代わりに、検証、責任、課題の重要性への注意を促します。",
+  essayBack: "トップページへ戻る",
+  backTop: "ページ上部へ",
+};
+
 if (year) {
   year.textContent = new Date().getFullYear();
 }
@@ -568,6 +782,32 @@ if (year) {
 document.querySelectorAll("[data-japan-years]").forEach((node) => {
   node.textContent = new Date().getFullYear() - 2009;
 });
+
+const updateJapanDayCounter = () => {
+  const arrival = Date.UTC(2009, 2, 28);
+  const dateParts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date()).reduce((parts, part) => {
+    if (part.type !== "literal") parts[part.type] = part.value;
+    return parts;
+  }, {});
+  const today = Date.UTC(
+    Number(dateParts.year),
+    Number(dateParts.month) - 1,
+    Number(dateParts.day),
+  );
+  const days = Math.max(0, Math.floor((today - arrival) / 86400000));
+
+  document.querySelectorAll("[data-japan-days]").forEach((node) => {
+    node.textContent = new Intl.NumberFormat("en-US").format(days);
+  });
+};
+
+updateJapanDayCounter();
+setInterval(updateJapanDayCounter, 60000);
 
 const syncHeader = () => {
   const usesPaperHeader = header?.classList.contains("essay-header");
@@ -586,9 +826,12 @@ const setLanguage = (lang) => {
   languageButtons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.lang === lang);
   });
+  const hasRequestedPanels = [...languagePanels].some((panel) => panel.dataset.langPanel === lang);
   languagePanels.forEach((panel) => {
-    panel.hidden = panel.dataset.langPanel !== lang;
+    const usesEnglishFallback = lang === "ja" && !hasRequestedPanels && panel.dataset.langPanel === "en";
+    panel.hidden = panel.dataset.langPanel !== lang && !usesEnglishFallback;
   });
+  updateJapanDayCounter();
   localStorage.setItem("identity-language", lang);
 };
 
@@ -615,6 +858,280 @@ document.querySelectorAll("[data-workshop-carousel]").forEach((carousel) => {
 
   previous?.addEventListener("click", () => showSlide(activeIndex - 1));
   next?.addEventListener("click", () => showSlide(activeIndex + 1));
+});
+
+document.querySelectorAll("[data-record-player]").forEach((player) => {
+  const slides = [...player.querySelectorAll("[data-record-slide]")];
+  const channels = [...player.querySelectorAll("[data-record-index]")];
+  const filters = [...player.querySelectorAll("[data-record-filter]")];
+  const previous = player.querySelector("[data-record-prev]");
+  const next = player.querySelector("[data-record-next]");
+  const screen = player.querySelector("[data-record-screen]");
+  const status = player.querySelector("[data-record-status]");
+  let activeIndex = 0;
+  let activeFilter = "all";
+  let startX = null;
+
+  const visibleIndexes = () => slides
+    .map((slide, index) => ({ slide, index }))
+    .filter(({ slide }) => activeFilter === "all" || slide.dataset.recordCategory.split(" ").includes(activeFilter))
+    .map(({ index }) => index);
+
+  const showSlide = (index) => {
+    const visible = visibleIndexes();
+    if (!visible.length) return;
+    activeIndex = visible.includes(index) ? index : visible[0];
+    slides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === activeIndex;
+      slide.hidden = !isActive;
+      slide.classList.toggle("is-active", isActive);
+    });
+    channels.forEach((channel, channelIndex) => {
+      const isVisible = visible.includes(channelIndex);
+      const isActive = channelIndex === activeIndex;
+      channel.hidden = !isVisible;
+      channel.classList.toggle("is-active", isActive);
+      channel.setAttribute("aria-pressed", String(isActive));
+    });
+    const visiblePosition = visible.indexOf(activeIndex) + 1;
+    if (status) status.textContent = `${String(visiblePosition).padStart(2, "0")} / ${String(visible.length).padStart(2, "0")}`;
+  };
+
+  const moveSlide = (direction) => {
+    const visible = visibleIndexes();
+    const position = visible.indexOf(activeIndex);
+    showSlide(visible[(position + direction + visible.length) % visible.length]);
+  };
+
+  previous?.addEventListener("click", () => moveSlide(-1));
+  next?.addEventListener("click", () => moveSlide(1));
+  channels.forEach((channel) => {
+    channel.addEventListener("click", () => showSlide(Number(channel.dataset.recordIndex)));
+  });
+  filters.forEach((filter) => {
+    filter.addEventListener("click", () => {
+      activeFilter = filter.dataset.recordFilter;
+      filters.forEach((item) => {
+        const isActive = item === filter;
+        item.classList.toggle("is-active", isActive);
+        item.setAttribute("aria-pressed", String(isActive));
+      });
+      showSlide(visibleIndexes()[0]);
+    });
+  });
+
+  screen?.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      moveSlide(-1);
+    }
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      moveSlide(1);
+    }
+  });
+
+  screen?.addEventListener("pointerdown", (event) => {
+    startX = event.clientX;
+  });
+  screen?.addEventListener("pointerup", (event) => {
+    if (startX === null) return;
+    const distance = event.clientX - startX;
+    if (Math.abs(distance) > 44) moveSlide(distance < 0 ? 1 : -1);
+    startX = null;
+  });
+  screen?.addEventListener("pointercancel", () => {
+    startX = null;
+  });
+
+  showSlide(0);
+});
+
+const coMixExamples = {
+  "en-ja": {
+    language: "en",
+    light: [
+      "After class, a ",
+      { word: "学生", meaning: "student" },
+      " walked to the ",
+      { word: "図書館", meaning: "library" },
+      " with a friend. They opened a notebook and planned a small project.",
+    ],
+    rich: [
+      "After class, a ",
+      { word: "学生", meaning: "student" },
+      " walked to the ",
+      { word: "図書館", meaning: "library" },
+      " with a ",
+      { word: "友達", meaning: "friend" },
+      ". They opened a ",
+      { word: "ノート", meaning: "notebook" },
+      " and planned a small project.",
+    ],
+    answer: ["図書館", "としょかん"],
+  },
+  "jp-en": {
+    language: "ja",
+    light: [
+      "授業のあと、学生は ",
+      { word: "friend", meaning: "友達" },
+      " と ",
+      { word: "library", meaning: "図書館" },
+      " へ行きました。二人はノートを開いて、小さな計画を立てました。",
+    ],
+    rich: [
+      "授業のあと、学生は ",
+      { word: "friend", meaning: "友達" },
+      " と ",
+      { word: "library", meaning: "図書館" },
+      " へ行きました。二人は ",
+      { word: "notebook", meaning: "ノート" },
+      " を開いて、小さな ",
+      { word: "project", meaning: "プロジェクト" },
+      " の計画を立てました。",
+    ],
+    answer: ["library"],
+  },
+};
+
+const coMixCopy = {
+  en: {
+    questions: {
+      "en-ja": "What is the Japanese target for “library”?",
+      "jp-en": "What is the English target for “図書館”?",
+    },
+    correct: "Correct. The target is visible in context, not as an isolated word list.",
+    incorrect: "Not quite. Read the passage again, then reveal the target meaning if you need it.",
+    empty: "Type an answer first.",
+  },
+  pl: {
+    questions: {
+      "en-ja": "Jak brzmi japońskie słowo docelowe dla „library”?",
+      "jp-en": "Jak brzmi angielskie słowo docelowe dla „図書館”?",
+    },
+    correct: "Dobrze. Słowo docelowe występuje w kontekście, a nie na oderwanej liście.",
+    incorrect: "Jeszcze nie. Przeczytaj tekst ponownie, a jeśli trzeba — pokaż znaczenie słowa docelowego.",
+    empty: "Najpierw wpisz odpowiedź.",
+  },
+};
+
+document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
+  const ui = coMixCopy[demo.dataset.comixUi] || coMixCopy.en;
+  const modeButtons = [...demo.querySelectorAll("[data-comix-mode]")];
+  const densityButtons = [...demo.querySelectorAll("[data-comix-density]")];
+  const passage = demo.querySelector("[data-comix-passage]");
+  const targetList = demo.querySelector("[data-comix-target-list]");
+  const question = demo.querySelector("[data-comix-question]");
+  const answer = demo.querySelector("[data-comix-answer]");
+  const check = demo.querySelector("[data-comix-check]");
+  const feedback = demo.querySelector("[data-comix-feedback]");
+  const reveal = demo.querySelector("[data-comix-reveal]");
+  let mode = "en-ja";
+  let density = "light";
+  let meaningsVisible = false;
+
+  const currentExample = () => coMixExamples[mode];
+
+  const setFeedback = (message = "", isIncorrect = false) => {
+    if (!feedback) return;
+    feedback.textContent = message;
+    feedback.classList.toggle("is-incorrect", isIncorrect);
+  };
+
+  const renderTargets = (targets) => {
+    if (!targetList) return;
+    targetList.replaceChildren();
+    targetList.hidden = !meaningsVisible;
+    targets.forEach((target) => {
+      const item = document.createElement("span");
+      item.textContent = `${target.word} · ${target.meaning}`;
+      targetList.append(item);
+    });
+  };
+
+  const render = () => {
+    const example = currentExample();
+    const parts = example[density];
+    const targets = parts.filter((part) => typeof part !== "string");
+    if (!passage || !question || !answer) return;
+
+    passage.replaceChildren();
+    passage.lang = example.language;
+    parts.forEach((part) => {
+      if (typeof part === "string") {
+        passage.append(document.createTextNode(part));
+        return;
+      }
+      const word = document.createElement("button");
+      word.type = "button";
+      word.className = "comix-target-word";
+      word.textContent = part.word;
+      word.setAttribute("aria-label", `${part.word}: ${part.meaning}`);
+      word.addEventListener("click", () => {
+        word.classList.add("is-revealed");
+        word.textContent = `${part.word} · ${part.meaning}`;
+      });
+      passage.append(word);
+    });
+
+    question.textContent = ui.questions[mode];
+    answer.value = "";
+    setFeedback();
+    renderTargets(targets);
+  };
+
+  const updateButtons = () => {
+    modeButtons.forEach((button) => {
+      const active = button.dataset.comixMode === mode;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+    densityButtons.forEach((button) => {
+      const active = button.dataset.comixDensity === density;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+  };
+
+  const checkAnswer = () => {
+    const value = answer?.value.normalize("NFKC").trim().toLowerCase();
+    if (!value) {
+      setFeedback(ui.empty, true);
+      return;
+    }
+    const isCorrect = currentExample().answer.some((accepted) => accepted.normalize("NFKC").toLowerCase() === value);
+    setFeedback(isCorrect ? ui.correct : ui.incorrect, !isCorrect);
+  };
+
+  modeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      mode = button.dataset.comixMode;
+      meaningsVisible = false;
+      updateButtons();
+      render();
+    });
+  });
+
+  densityButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      density = button.dataset.comixDensity;
+      meaningsVisible = false;
+      updateButtons();
+      render();
+    });
+  });
+
+  reveal?.addEventListener("click", () => {
+    meaningsVisible = true;
+    render();
+  });
+  check?.addEventListener("click", checkAnswer);
+  answer?.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") checkAnswer();
+  });
+
+  updateButtons();
+  render();
 });
 
 syncHeader();
