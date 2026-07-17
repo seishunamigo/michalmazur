@@ -16,13 +16,13 @@
     <meta name="twitter:description" content="Research connecting classroom evidence, system design, field encounters, and programme implementation.">
     <meta name="twitter:image" content="assets/identity-hero.png">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=41">
+  <link rel="stylesheet" href="styles.css?v=47">
   </head>
   <body>
     <header class="site-header essay-header is-scrolled" data-header>
-      <a class="brand" href="index.html#top" aria-label="Michal Maciej Mazur home">
+      <a class="brand" href="index.html#top" aria-label="Michal Maciej Mazur home" data-person-home>
         <span class="brand-mark">MM</span>
-        <span>Michal Maciej Mazur</span>
+        <span data-person-name>Michal Maciej Mazur</span>
       </a>
       <nav class="nav" aria-label="Main navigation">
         <a href="workshops.html" data-i18n="navTeaching">Teaching</a>
@@ -152,8 +152,8 @@
         <section class="comix-demo" data-comix-demo data-comix-ui="en" aria-labelledby="comix-demo-title-en">
           <div class="comix-demo-heading">
             <p class="eyebrow">Try the idea</p>
-            <h2 id="comix-demo-title-en">A small Co-MIX reader, built from two scenes.</h2>
-            <p>Co-MIX is not random replacement. It places a small number of reviewed target nouns inside a readable passage, so a learner can stay with the meaning while noticing new vocabulary.</p>
+            <h2 id="comix-demo-title-en">Read a small mystery. Learn four words. Bring one back.</h2>
+            <p>This five-minute version of Co-MIX follows a small clue from an old game magazine to a Tokyo station. The story stays readable while a few carefully chosen words return in new contexts.</p>
           </div>
           <div class="comix-demo-shell">
             <div class="comix-demo-controls" aria-label="Co-MIX controls">
@@ -165,10 +165,10 @@
                 </div>
               </div>
               <div>
-                <span>Choose a scene</span>
-                <div class="comix-demo-button-row" role="group" aria-label="Choose a scene">
-                  <button type="button" class="is-active" data-comix-scene="exchange" aria-pressed="true">Language exchange</button>
-                  <button type="button" data-comix-scene="classroom" aria-pressed="false">Classroom project</button>
+                <span>Follow the story</span>
+                <div class="comix-demo-button-row" role="group" aria-label="Follow the story">
+                  <button type="button" class="is-active" data-comix-scene="magazine" aria-pressed="true">1 · The old magazine</button>
+                  <button type="button" data-comix-scene="station" aria-pressed="false">2 · The station clue</button>
                 </div>
               </div>
               <div>
@@ -178,19 +178,26 @@
                   <button type="button" data-comix-density="rich" aria-pressed="false">More · 4 words</button>
                 </div>
               </div>
-              <p class="comix-demo-principle"><strong>Core rule</strong> Keep the surrounding story readable; add only enough unfamiliar vocabulary to make noticing possible.</p>
+              <p class="comix-demo-principle"><strong>Core rule</strong> First understand the scene. Then notice a word, see its reading and a second example, recall it, and use it once more.</p>
             </div>
             <div class="comix-demo-reading">
-              <span>1 · Read for meaning</span>
+              <span>1 · Read for meaning, then notice</span>
               <p class="comix-demo-passage" data-comix-passage lang="en"></p>
               <p class="comix-demo-method-note" data-comix-method-note></p>
+              <aside class="comix-demo-word-card" data-comix-word-card hidden aria-live="polite">
+                <span data-comix-word-kicker>Word in context</span>
+                <strong data-comix-word-title></strong>
+                <p data-comix-word-meaning></p>
+                <p data-comix-word-example></p>
+                <p data-comix-word-why></p>
+              </aside>
               <div class="comix-demo-actions">
                 <button type="button" class="comix-demo-reveal" data-comix-reveal>Show word meanings</button>
                 <p>Or click any highlighted word in the passage.</p>
               </div>
             </div>
             <div class="comix-demo-recall">
-              <span>2 · Try one word</span>
+              <span>2 · Recall, then reuse</span>
               <p data-comix-question></p>
               <label for="comix-answer-en">Your answer</label>
               <div class="comix-demo-answer-row">
@@ -199,8 +206,22 @@
               </div>
               <p class="comix-demo-input-note" data-comix-answer-note></p>
               <p class="comix-demo-feedback" data-comix-feedback aria-live="polite"></p>
+              <div class="comix-demo-reuse" data-comix-reuse hidden>
+                <p data-comix-reuse-question></p>
+                <div class="comix-demo-reuse-options" data-comix-reuse-options></div>
+                <p class="comix-demo-reuse-feedback" data-comix-reuse-feedback aria-live="polite"></p>
+              </div>
               <p class="comix-demo-privacy">This public illustration saves no answers or personal data.</p>
             </div>
+          </div>
+          <div class="comix-demo-progress" aria-label="Learning path" data-comix-progress>
+            <span data-comix-progress-label>Learning path · 1 of 4</span>
+            <ol>
+              <li class="is-active" data-comix-step="read"><b>1</b> Read</li>
+              <li data-comix-step="notice"><b>2</b> Notice</li>
+              <li data-comix-step="recall"><b>3</b> Recall</li>
+              <li data-comix-step="reuse"><b>4</b> Reuse</li>
+            </ol>
           </div>
           <div class="comix-demo-targets" data-comix-target-list aria-label="Target word meanings"></div>
           <p class="comix-demo-caption">This is a compact, browser-only illustration of the original research logic. The full Co-MIX workflow also included reviewed material creation, staged recall, contextual second attempts, and learner-result recording.</p>
@@ -251,7 +272,7 @@
           <div class="research-project-meta"><span>2026 · Wystąpienie konferencyjne</span><span>Interdyscyplinarna edukacja w zarządzaniu kosmosem</span></div>
           <h2>Initial Results from the Implementation of an Interdisciplinary Space Management Human Resource Development Program</h2>
           <p class="research-question"><strong>Moja rola:</strong> Facylitator grup z 2025 i 2026 roku oraz współautor prezentacji o interdyscyplinarnej edukacji dla sektora kosmicznego.</p>
-          <p>Przez dwie edycje pomagałem studentom Ritsumeikan University i APU pracować ponad językami, instytucjami i dyscyplinami. Moje sesje dotyczyły stylów komunikacji, obserwacji przywództwa, feedbacku, ćwiczenia prezentacji i ludzkiej strony międzynarodowej współpracy projektowej.</p>
+          <p>Przez dwie edycje pomagałem studentom Ritsumeikan University i APU pracować ponad językami, instytucjami i dyscyplinami. Moje sesje dotyczyły stylów komunikacji, obserwacji przywództwa, informacji zwrotnej, ćwiczenia prezentacji i ludzkiej strony międzynarodowej współpracy projektowej.</p>
           <p>Prezentacja została uwzględniona w programie 57. konferencji Japan Society for Aeronautical and Space Sciences w kwietniu 2026 roku. Mój udział jest odnotowany jako część wspólnego zespołu badawczego i prezentacji konferencyjnej.</p>
           <p>Program był szczególnie wymagającym sprawdzianem mojej praktyki: trzeba było pomóc mieszanym zespołom komunikować się na tyle dobrze, by mogły mierzyć się z problemami na styku inżynierii, zarządzania, polityki i odpowiedzialności społecznej.</p>
           <a class="text-link" href="https://www.ritsumei.ac.jp/rsmp/news/article.html?id=22" target="_blank" rel="noreferrer">Odwiedź Ritsumeikan Space Management Program</a>
@@ -287,8 +308,8 @@
         <section class="comix-demo" data-comix-demo data-comix-ui="pl" aria-labelledby="comix-demo-title-pl">
           <div class="comix-demo-heading">
             <p class="eyebrow">Wypróbuj ideę</p>
-            <h2 id="comix-demo-title-pl">Mały czytnik Co-MIX zbudowany z dwóch scen.</h2>
-            <p>Co-MIX nie polega na losowej podmianie słów. Wstawia niewielką liczbę sprawdzonych rzeczowników do zrozumiałego tekstu, dzięki czemu osoba ucząca się może śledzić sens i jednocześnie zauważać nowe słownictwo.</p>
+            <h2 id="comix-demo-title-pl">Przeczytaj małą zagadkę. Poznaj cztery słowa. Użyj jednego ponownie.</h2>
+            <p>Ta pięciominutowa wersja Co-MIX prowadzi od starego magazynu o grach do wskazówki na tokijskiej stacji. Opowieść pozostaje zrozumiała, a kilka starannie dobranych słów wraca w nowych kontekstach.</p>
           </div>
           <div class="comix-demo-shell">
             <div class="comix-demo-controls" aria-label="Ustawienia Co-MIX">
@@ -300,10 +321,10 @@
                 </div>
               </div>
               <div>
-                <span>Wybierz scenę</span>
-                <div class="comix-demo-button-row" role="group" aria-label="Wybierz scenę">
-                  <button type="button" class="is-active" data-comix-scene="exchange" aria-pressed="true">Wymiana językowa</button>
-                  <button type="button" data-comix-scene="classroom" aria-pressed="false">Projekt klasowy</button>
+                <span>Śledź historię</span>
+                <div class="comix-demo-button-row" role="group" aria-label="Śledź historię">
+                  <button type="button" class="is-active" data-comix-scene="magazine" aria-pressed="true">1 · Stary magazyn</button>
+                  <button type="button" data-comix-scene="station" aria-pressed="false">2 · Wskazówka na stacji</button>
                 </div>
               </div>
               <div>
@@ -313,19 +334,26 @@
                   <button type="button" data-comix-density="rich" aria-pressed="false">Większa · 4 słowa</button>
                 </div>
               </div>
-              <p class="comix-demo-principle"><strong>Główna zasada</strong> Kontekst opowieści ma pozostać zrozumiały; nowych słów powinno być tylko tyle, by można było je zauważyć.</p>
+              <p class="comix-demo-principle"><strong>Główna zasada</strong> Najpierw zrozum scenę. Potem zauważ słowo, sprawdź jego zapis i drugi przykład, przypomnij je sobie i użyj raz jeszcze.</p>
             </div>
             <div class="comix-demo-reading">
-              <span>1 · Przeczytaj dla sensu</span>
+              <span>1 · Przeczytaj dla sensu, potem zauważ</span>
               <p class="comix-demo-passage" data-comix-passage lang="en"></p>
               <p class="comix-demo-method-note" data-comix-method-note></p>
+              <aside class="comix-demo-word-card" data-comix-word-card hidden aria-live="polite">
+                <span data-comix-word-kicker>Słowo w kontekście</span>
+                <strong data-comix-word-title></strong>
+                <p data-comix-word-meaning></p>
+                <p data-comix-word-example></p>
+                <p data-comix-word-why></p>
+              </aside>
               <div class="comix-demo-actions">
                 <button type="button" class="comix-demo-reveal" data-comix-reveal>Pokaż znaczenia słów</button>
                 <p>Możesz też kliknąć wyróżnione słowo w tekście.</p>
               </div>
             </div>
             <div class="comix-demo-recall">
-              <span>2 · Sprawdź jedno słowo</span>
+              <span>2 · Przypomnij sobie, potem użyj</span>
               <p data-comix-question></p>
               <label for="comix-answer-pl">Twoja odpowiedź</label>
               <div class="comix-demo-answer-row">
@@ -334,8 +362,22 @@
               </div>
               <p class="comix-demo-input-note" data-comix-answer-note></p>
               <p class="comix-demo-feedback" data-comix-feedback aria-live="polite"></p>
+              <div class="comix-demo-reuse" data-comix-reuse hidden>
+                <p data-comix-reuse-question></p>
+                <div class="comix-demo-reuse-options" data-comix-reuse-options></div>
+                <p class="comix-demo-reuse-feedback" data-comix-reuse-feedback aria-live="polite"></p>
+              </div>
               <p class="comix-demo-privacy">Ta publiczna ilustracja nie zapisuje odpowiedzi ani danych osobowych.</p>
             </div>
+          </div>
+          <div class="comix-demo-progress" aria-label="Etapy nauki" data-comix-progress>
+            <span data-comix-progress-label>Etapy nauki · 1 z 4</span>
+            <ol>
+              <li class="is-active" data-comix-step="read"><b>1</b> Czytaj</li>
+              <li data-comix-step="notice"><b>2</b> Zauważ</li>
+              <li data-comix-step="recall"><b>3</b> Przypomnij</li>
+              <li data-comix-step="reuse"><b>4</b> Użyj</li>
+            </ol>
           </div>
           <div class="comix-demo-targets" data-comix-target-list aria-label="Znaczenia słów docelowych"></div>
           <p class="comix-demo-caption">To krótka, działająca w przeglądarce ilustracja logiki oryginalnego projektu. Pełny workflow Co-MIX obejmował także recenzowane tworzenie materiałów, etapową próbę przypomnienia słów, drugą próbę z pomocą kontekstu i zapisywanie wyników uczenia się.</p>
@@ -345,7 +387,7 @@
           <div class="research-project-meta"><span>2017 · Badania szkolnictwa wyższego</span><span>Rozpoznawanie profesjonalizmu dydaktycznego</span></div>
           <h2>Jak uniwersytety mogą rozpoznawać profesjonalne nauczanie?</h2>
           <p class="research-question"><strong>Wkład:</strong> Wspólne badanie systemu fellowship i accreditation Higher Education Academy, oparte na rozmowie z jej międzynarodowym zespołem.</p>
-          <p>Artykuł analizował, jak UK Professional Standards Framework łączy działania dydaktyczne, wiedzę i wartości zawodowe. Dotyczył pytania, które nadal prowadzi moją pracę faculty development: jak instytucja może uwidocznić dobre nauczanie bez sprowadzania go do jednej liczby?</p>
+          <p>Artykuł analizował, jak UK Professional Standards Framework łączy działania dydaktyczne, wiedzę i wartości zawodowe. Dotyczył pytania, które nadal prowadzi moją pracę nad rozwojem dydaktycznym kadry: jak instytucja może uwidocznić dobre nauczanie bez sprowadzania go do jednej liczby?</p>
           <a class="text-link" href="https://doi.org/10.14943/J.HighEdu.24.131" target="_blank" rel="noreferrer">Zobacz publikację</a>
         </article>
 
@@ -368,7 +410,7 @@
           <div class="research-project-meta"><span>Kierunek bieżący</span><span>Szkolnictwo wyższe i uczestnictwo uczących się</span></div>
           <h2>Wybór języka, media cyfrowe i uczestnictwo w globalnych klasach</h2>
           <p class="research-question"><strong>Pytanie:</strong> Jak wybór języka, narzędzia cyfrowe i projekt zajęć wpływają na uczestnictwo studentów i ich poczucie przynależności?</p>
-          <p>Ten rozwijany kierunek łączy pracę nad English-medium instruction, wyborem języka przez studentów, uczeniem międzykulturowym, narzędziami online i faculty development. Traktuje klasę zarówno jako przestrzeń nauczania, jak i miejsce, w którym można badać i ulepszać programy edukacyjne.</p>
+          <p>Ten rozwijany kierunek łączy pracę nad nauczaniem przedmiotowym po angielsku (EMI), wyborem języka przez studentów, uczeniem międzykulturowym, narzędziami cyfrowymi i rozwojem dydaktycznym kadry. Traktuje klasę zarazem jako przestrzeń nauczania i miejsce, w którym można badać oraz ulepszać programy edukacyjne.</p>
           <p>Celem jest połączenie dowodów z doświadczeń uczących się z praktycznymi decyzjami projektowymi, które czynią wielojęzyczną i międzynarodową edukację bardziej inkluzywną.</p>
           <a class="text-link" href="https://researchmap.jp/mazzi" target="_blank" rel="noreferrer">Zobacz profil badawczy</a>
         </article>
@@ -383,10 +425,10 @@
     </main>
 
     <footer class="site-footer">
-      <p>© <span data-year></span> Michal Maciej Mazur</p>
+      <p>© <span data-year></span> <span data-person-name>Michal Maciej Mazur</span></p>
       <a href="research.html#top" data-i18n="backTop">Back to top</a>
     </footer>
 
-  <script src="script.js?v=41"></script>
+  <script src="script.js?v=47"></script>
   </body>
 </html>
