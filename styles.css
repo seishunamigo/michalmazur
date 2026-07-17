@@ -3401,12 +3401,12 @@ dd {
 }
 
 .achievement-photo-strip figure.achievement-photo--safe,
-.achievement-photo-strip figure.achievement-photo--prefd {
+.achievement-photo-strip figure.achievement-photo--utokyo-programme {
   background: #eef1ed;
 }
 
 .achievement-photo-strip figure.achievement-photo--safe img,
-.achievement-photo-strip figure.achievement-photo--prefd img {
+.achievement-photo-strip figure.achievement-photo--utokyo-programme img {
   object-fit: contain;
   object-position: center;
 }
