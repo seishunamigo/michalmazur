@@ -1689,52 +1689,15 @@ dd {
 }
 
 .comix-demo {
-  position: relative;
   max-width: 980px;
   margin: 56px 0;
   padding: 42px;
   overflow: hidden;
-  border: 2px solid var(--teal-deep);
+  border: 1px solid rgba(3, 73, 73, 0.32);
   background:
     radial-gradient(circle at 92% 8%, rgba(209, 161, 59, 0.2), transparent 27%),
     linear-gradient(135deg, #e8f4ef 0%, #f8f2e7 100%);
-  box-shadow:
-    10px 10px 0 rgba(3, 73, 73, 0.9),
-    0 18px 36px rgba(8, 41, 46, 0.11);
-}
-
-.comix-demo::before {
-  position: absolute;
-  z-index: 2;
-  top: 18px;
-  right: 20px;
-  padding: 6px 9px;
-  border: 1px solid var(--teal-deep);
-  background: var(--gold);
-  color: var(--teal-deep);
-  content: "CO-MIX · MINI LESSON";
-  font-size: 0.66rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  line-height: 1;
-}
-
-.comix-demo[data-comix-ui="pl"]::before {
-  content: "CO-MIX · MINI-LEKCJA";
-}
-
-.comix-demo::after {
-  position: absolute;
-  z-index: 0;
-  inset: 10px;
-  border: 1px dashed rgba(3, 73, 73, 0.42);
-  content: "";
-  pointer-events: none;
-}
-
-.comix-demo > * {
-  position: relative;
-  z-index: 1;
+  box-shadow: 0 18px 36px rgba(8, 41, 46, 0.11);
 }
 
 .comix-demo-heading {
@@ -1888,44 +1851,6 @@ dd {
   line-height: 1.42;
 }
 
-.comix-demo-word-card {
-  margin-top: 18px;
-  padding: 16px;
-  border: 1px solid rgba(3, 73, 73, 0.28);
-  border-left: 4px solid var(--teal);
-  background: #eaf5f1;
-}
-
-.comix-demo-word-card > span {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--red);
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.comix-demo-word-card strong {
-  display: block;
-  color: var(--teal-deep);
-  font-family: "Source Serif 4", Georgia, serif;
-  font-size: 1.28rem;
-  line-height: 1.12;
-}
-
-.comix-demo-word-card p {
-  margin: 8px 0 0;
-  color: var(--muted);
-  font-size: 0.82rem;
-  line-height: 1.42;
-}
-
-.comix-demo-word-card p:nth-of-type(1) {
-  color: var(--teal-deep);
-  font-weight: 800;
-}
-
 .comix-target-word {
   display: inline;
   margin: 0 0.08em;
@@ -2023,128 +1948,6 @@ dd {
   color: var(--red);
 }
 
-.comix-demo-reuse {
-  margin-top: 18px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(3, 73, 73, 0.24);
-}
-
-.comix-demo-reuse > p:first-child {
-  min-height: 0;
-  margin-bottom: 10px;
-  font-family: inherit;
-  font-size: 0.9rem;
-  font-weight: 700;
-  line-height: 1.38;
-}
-
-.comix-demo-reuse-options {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 6px;
-}
-
-.comix-demo-reuse-options button {
-  border: 1px solid rgba(3, 73, 73, 0.45);
-  padding: 8px 6px;
-  background: #fffaf0;
-  color: var(--teal-deep);
-  font: inherit;
-  font-size: 0.76rem;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.comix-demo-reuse-options button:hover,
-.comix-demo-reuse-options button:focus-visible {
-  background: var(--teal-deep);
-  color: #fff;
-}
-
-.comix-demo-reuse-options button:disabled {
-  cursor: default;
-  opacity: 0.72;
-}
-
-.comix-demo-reuse-feedback {
-  min-height: 0;
-  margin: 10px 0 0;
-  color: var(--teal-deep);
-  font-size: 0.78rem;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-.comix-demo-reuse-feedback.is-incorrect {
-  color: var(--red);
-}
-
-.comix-demo-progress {
-  margin-top: 16px;
-  padding: 16px 18px 18px;
-  border: 1px solid rgba(3, 73, 73, 0.28);
-  background: #fffaf0;
-}
-
-.comix-demo-progress > span {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--teal-deep);
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.comix-demo-progress ol {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 7px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.comix-demo-progress li {
-  min-width: 0;
-  padding: 8px;
-  border: 1px solid var(--line);
-  background: #f4ecdf;
-  color: var(--muted);
-  font-size: 0.76rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.comix-demo-progress li b {
-  display: inline-grid;
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-right: 4px;
-  place-items: center;
-  border-radius: 50%;
-  background: rgba(3, 73, 73, 0.12);
-  color: var(--teal-deep);
-  font-size: 0.68rem;
-}
-
-.comix-demo-progress li.is-active {
-  border-color: var(--gold);
-  box-shadow: inset 0 -3px 0 var(--gold);
-  color: var(--teal-deep);
-}
-
-.comix-demo-progress li.is-complete {
-  border-color: var(--teal-deep);
-  background: var(--teal-deep);
-  color: #fff;
-}
-
-.comix-demo-progress li.is-complete b {
-  background: var(--gold);
-  color: var(--teal-deep);
-}
-
 .comix-demo-targets {
   display: flex;
   flex-wrap: wrap;
@@ -2188,14 +1991,7 @@ dd {
 @media (max-width: 520px) {
   .comix-demo {
     margin: 42px 0;
-    padding: 48px 20px 30px;
-    box-shadow: 6px 6px 0 rgba(3, 73, 73, 0.9), 0 18px 36px rgba(8, 41, 46, 0.11);
-  }
-
-  .comix-demo::before {
-    top: 16px;
-    left: 20px;
-    right: auto;
+    padding: 30px 20px;
   }
 
   .comix-demo-controls,
@@ -2210,11 +2006,6 @@ dd {
 
   .comix-demo-answer-row button {
     width: 100%;
-  }
-
-  .comix-demo-reuse-options,
-  .comix-demo-progress ol {
-    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -3401,12 +3192,12 @@ dd {
 }
 
 .achievement-photo-strip figure.achievement-photo--safe,
-.achievement-photo-strip figure.achievement-photo--utokyo-programme {
+.achievement-photo-strip figure.achievement-photo--prefd {
   background: #eef1ed;
 }
 
 .achievement-photo-strip figure.achievement-photo--safe img,
-.achievement-photo-strip figure.achievement-photo--utokyo-programme img {
+.achievement-photo-strip figure.achievement-photo--prefd img {
   object-fit: contain;
   object-position: center;
 }

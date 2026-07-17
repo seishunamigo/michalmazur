@@ -340,20 +340,20 @@ const translations = {
     researchEyebrow: "Badania",
     researchPageTitle: "Co pomaga ludziom uczestniczyć, kiedy spotykają się języki, kultury i systemy?",
     researchPageDeck:
-      "Moje badania wyrastają z sytuacji, których doświadczyłem w praktyce: wielojęzycznych klas, systemów nauki języka, spotkań w turystyce i interdyscyplinarnego programu kosmicznego. Pytam, co pomaga ludziom odczytywać różnice, współpracować i uczyć się z większym poczuciem sprawczości.",
+      "Moje badania wyrastają z sytuacji, z którymi naprawdę pracowałem: wielojęzycznych klas, systemów nauki języka, spotkań w turystyce i interdyscyplinarnego programu kosmicznego. Badam, co pomaga ludziom interpretować różnice, współpracować i uczyć się z większą sprawczością.",
     researchMapEyebrow: "Mapa badań",
     researchMapTitle: "Jedno pytanie, cztery konteksty badawcze.",
-    researchMapDeck: "Tematy się zmieniają, lecz pytanie pozostaje to samo: jak projekt, język i kontekst wpływają na możliwość uczestnictwa.",
+    researchMapDeck: "Tematy się zmieniają, ale sedno pozostaje: jak projekt, język i kontekst wpływają na możliwość uczestnictwa.",
     researchMapCoreLabel: "Wspólne pytanie",
     researchMapCore: "Co pomaga ludziom uczestniczyć ponad różnicą?",
     researchMapContextLabel: "Kontekst",
     researchMapEvidenceLabel: "Dowód / metoda",
     researchMapOneTitle: "Wielojęzyczne klasy",
-    researchMapOneBody: "Różnica, pewność siebie i poczucie przynależności widziane przez pryzmat aktywności klasowych i refleksji.",
+    researchMapOneBody: "Interpretowanie różnicy, pewność siebie i przynależność badane przez aktywności klasowe i refleksję.",
     researchMapOneEvidenceTitle: "15-tygodniowe badanie klasowe",
-    researchMapOneEvidenceBody: "Sytuacje krytyczne, zadania refleksyjne i recenzowany artykuł opublikowany w 2023 roku.",
+    researchMapOneEvidenceBody: "Critical incidents, zadania refleksyjne i recenzowany artykuł opublikowany w 2023 roku.",
     researchMapTwoTitle: "Systemy nauki języka",
-    researchMapTwoBody: "Słownictwo angielskie i japońskie badane za pomocą NLP, projektowania systemu i ewaluacji użytkowników.",
+    researchMapTwoBody: "Słownictwo angielskie i japońskie badane przez NLP, projektowanie systemu i ewaluację użytkowników.",
     researchMapTwoEvidenceTitle: "Projektowanie systemu NLP",
     researchMapTwoEvidenceBody: "Code-switching, graded readers i ewaluacja użytkowników w publikacjach z lat 2016–18.",
     researchMapThreeTitle: "Kontakty w turystyce",
@@ -365,9 +365,9 @@ const translations = {
     researchMapFourEvidenceTitle: "Dwie roczne edycje",
     researchMapFourEvidenceBody: "Facylitacja, obserwacja i wspólne wystąpienie konferencyjne w latach 2025–26.",
     researchMapCaption: "Razem projekty łączą dowody z klasy, projektowanie systemów, badania terenowe i wdrażanie programów.",
-    heroKicker: "Adiunkt w Japonii · Edukator międzykulturowy · Autor piszący jako Mazzi",
+    heroKicker: "Assistant Professor w Japonii · Edukator międzykulturowy · Autor jako Mazzi",
     heroLede:
-      "Życie i praca w Japonii od 2009 roku nauczyły mnie, że komunikacja między kulturami nie jest hasłem, lecz codzienną praktyką. Na Ritsumeikan Asia Pacific University przekładam to doświadczenie i badania na kursy, warsztaty dla kadry oraz wielojęzyczne środowiska, w których ludzie mogą uczestniczyć pewniej i pełniej.",
+      "Życie i praca w Japonii od 2009 roku nauczyły mnie, że komunikacja ponad kulturami nie jest hasłem, lecz codzienną pracą. Na Ritsumeikan Asia Pacific University przekładam to doświadczenie i badania na kursy, warsztaty dla kadry i wielojęzyczne środowiska, w których ludzie mogą uczestniczyć z większą pewnością.",
     japanYearsLabel: "lat życia i pracy w Japonii",
     japanSinceLabel: "od 2009 roku",
     japanDaysLabel: "dni w Japonii — licznik działa",
@@ -375,8 +375,8 @@ const translations = {
     visualPublic: "Publiczny głos ukształtowany przez gry i Japonię",
     visualJapan: "Japonia obserwowana przez zwyczajne szczegóły",
     apuBandEyebrow: "Mój obecny dom akademicki",
-    apuBandTitle: "Na APU edukacja globalna nie jest abstrakcyjną ideą. To sala, do której wchodzę każdego dnia.",
-    apuBandBody: "Beppu to miejsce, w którym łączą się dziś moja praca nad edukacją międzykulturową, rozwojem dydaktycznym kadry i komunikacją publiczną.",
+    apuBandTitle: "Na APU global learning nie jest abstrakcyjną ideą. To sala, do której wchodzę każdego dnia.",
+    apuBandBody: "Beppu jest miejscem, w którym moja praca nad edukacją międzykulturową, faculty development i komunikacją publiczną spotyka się dziś w całość.",
     videoEyebrow: "Zobacz i posłuchaj",
     videoTitle: "Niektóre części tej historii najlepiej usłyszeć moim własnym głosem.",
     videoDeck: "Kursy, rozmowy i wystąpienia pokazujące, jak wyjaśniam idee, prowadzę dyskusję i łączę pracę akademicką z szerszą publicznością.",
@@ -405,22 +405,22 @@ const translations = {
     galleryCaptionThree: "Przygotowanie, technologia i obecność",
     galleryCaptionFour: "Sala zbudowana z wielu perspektyw",
     heroPrimary: "Zobacz ofertę warsztatów",
-    heroSecondary: "Zobacz studia przypadków",
+    heroSecondary: "Zobacz case studies",
     identityStrip:
       "Dla centrów dydaktyki · programów międzynarodowych · szkół doktorskich · wielojęzycznych zespołów dydaktycznych",
     trajectoryEyebrow: "Doświadczenie",
     trajectoryTitle: "Od Krakowa przez Hokkaido do Beppu: wspólnym wątkiem zawsze był język.",
     trajectoryBodyOne:
-      "Zacząłem od języka i literatury w Krakowie, przyjechałem do Japonii jako stypendysta MEXT, a na Hokkaido University obroniłem doktorat z informatyki, specjalizując się w przetwarzaniu języka naturalnego. Ta nietypowa droga nauczyła mnie swobodnie łączyć humanistykę, technologię i edukację.",
+      "Zacząłem od języka i literatury w Krakowie, przyjechałem do Japonii jako stypendysta MEXT, a na Hokkaido University ukończyłem doktorat z information science, specjalizując się w przetwarzaniu języka naturalnego. Ta nietypowa droga nauczyła mnie swobodnie łączyć humanistykę, technologię i edukację.",
     trajectoryBodyTwo:
-      "Gry otworzyły mi jedną z pierwszych dróg do Japonii. Od blisko trzech dekad piszę jako Mazzi dla polskich czytelników, a praca uniwersytecka prowadziła mnie od systemów nauki języka do klas międzykulturowych i rozwoju dydaktycznego kadry. Obie ścieżki wyrastają z tego samego odruchu: zrozumieć, jak działa dany świat, i wyjaśnić go bez ścierania tego, co czyni go odmiennym.",
+      "Gry otworzyły mi jedną z pierwszych dróg do Japonii. Od blisko trzech dekad piszę jako Mazzi dla polskich czytelników, a moja praca uniwersytecka prowadziła od systemów nauki języka do klas międzykulturowych i faculty development. Obie ścieżki zaczęły się od tego samego odruchu: zrozumieć, jak działa dany świat, i wyjaśnić go bez ścierania tego, co czyni go odmiennym.",
     timelineEyebrow: "Kilka współrzędnych",
     timelineTitle: "Ta droga ma znaczenie, bo zmieniła to, w czym mogę dziś pomagać innym.",
     timelineOneTitle: "Początek Japonii",
-    timelineOneBody: "Przyjeżdżam na stypendium MEXT i zaczynam rozumieć codzienną pracę życia pomiędzy językami.",
+    timelineOneBody: "Przyjeżdżam na stypendium MEXT i zaczynam uczyć się codziennej pracy życia pomiędzy językami.",
     timelineTwoTitle: "Język spotyka technologię",
     timelineTwoBody: "Badania nad NLP i systemami nauki języka stawiają w centrum kontekst, wybór i doświadczenie uczących się.",
-    timelineThreeTitle: "Nauczanie wysuwa się na pierwszy plan",
+    timelineThreeTitle: "Nauczanie staje się głównym polem",
     timelineThreeBody: "Zaproszone warsztaty o nauczaniu po angielsku i komunikacji międzykulturowej przenoszą pytania badawcze do prawdziwej pracy w klasie.",
     timelineFourTitle: "Dowody z klasy",
     timelineFourBody: "Piętnastotygodniowe badanie uwidacznia uczenie międzykulturowe poprzez refleksję i praktykę studentów.",
@@ -429,16 +429,16 @@ const translations = {
     bioEyebrow: "Jak pracuję",
     bioTitle: "Pracuję na styku języka, kultury i uczenia się.",
     bioBodyOne:
-      "Jestem adiunktem na Ritsumeikan Asia Pacific University w Japonii. Zajmuję się komunikacją międzykulturową, edukacją globalną, rozwojem dydaktycznym kadry oraz nauczaniem w wielojęzycznym szkolnictwie wyższym. Projektuję kursy i programy rozwoju dydaktycznego, które pomagają edukatorom i studentom odczytywać różnice, pełniej uczestniczyć w uczeniu się oraz przekładać refleksję na działanie.",
+      "Jestem Assistant Professor na Ritsumeikan Asia Pacific University w Japonii. Moja praca koncentruje się na komunikacji międzykulturowej, global learning, faculty development oraz nauczaniu w wielojęzycznym szkolnictwie wyższym. Projektuję kursy i programy rozwoju dydaktycznego, które pomagają edukatorom i studentom interpretować różnice, pełniej uczestniczyć w uczeniu się oraz przekładać refleksję na praktyczne działanie.",
     bioBodyTwo:
-      "Moja droga akademicka łączy język i literaturę, japonistykę, informatykę oraz przetwarzanie języka naturalnego. Przed dołączeniem do APU pracowałem i prowadziłem zajęcia na Hokkaido University, rozwijając kursy oraz działania wspierające dydaktykę kadry: nauczanie po angielsku, komunikację międzykulturową, projektowanie programów i krytyczne wykorzystanie generatywnej AI w szkolnictwie wyższym.",
+      "Moja droga akademicka łączy język i literaturę, japonistykę, informatykę oraz przetwarzanie języka naturalnego. Przed dołączeniem do APU pracowałem i prowadziłem zajęcia na Hokkaido University, rozwijając kursy i działania faculty development związane z nauczaniem po angielsku, komunikacją międzykulturową, projektowaniem programu oraz zmieniającą się rolą generatywnej AI w szkolnictwie wyższym.",
     bioBodyThree:
       "Równolegle z pracą uniwersytecką piszę jako Mazzi o Japonii, grach wideo, kulturze mediów i codziennym życiu. Ta publicystyka przekłada interpretację kultury i złożone konteksty na przystępny język, łącząc moje zainteresowania akademickie z dziennikarstwem, grami i współczesną kulturą Japonii.",
     academicEyebrow: "Co robię",
     academicTitle: "Pomagam ludziom uczyć się ponad granicami kultur, mediów i instytucji.",
-    featureOneTitle: "Projektuję proces uczenia się",
+    featureOneTitle: "Projektuję uczenie",
     featureOneBody:
-      "Projektuję zajęcia, aktywności i warsztaty dla kadry, które przekuwają ideę w użyteczną praktykę dydaktyczną.",
+      "Projektuję zajęcia, aktywności i warsztaty faculty development, które przechodzą od idei do użytecznej praktyki dydaktycznej.",
     featureTwoTitle: "Tłumaczę kulturę",
     featureTwoBody:
       "Moje badania i nauczanie dotyczą komunikacji międzykulturowej, budowania znaczenia i uczenia się ponad językami oraz instytucjami.",
@@ -452,45 +452,45 @@ const translations = {
       "Na APU doktoranci przechodzą od wiedzy eksperckiej do jednostronicowego szkicu zajęć i aktywności, którą mogą naprawdę poprowadzić, sprawdzić z grupą i poprawić.",
     caseTwoTitle: "Uczenie międzykulturowe w wielojęzycznych klasach",
     caseTwoBody:
-      "Piętnastotygodniowe badanie klasowe wykorzystało sytuacje krytyczne i refleksję, aby uwidocznić empatię, interpretację i samoświadomość kulturową; w 2023 roku praca ukazała się jako recenzowany artykuł.",
+      "Piętnastotygodniowe badanie klasowe wykorzystało critical incidents i refleksję, aby uwidocznić empatię, interpretację i samoświadomość kulturową; w 2023 roku praca ukazała się jako recenzowany artykuł.",
     caseThreeTitle: "Gry i media jako poważny materiał kulturowy",
     caseThreeBody:
-      "Na kursie Video Games in Society studenci pisali prawdziwe recenzje i prezentowali koncepcje gier. Wybrane prace trafiły do PSX Extreme, a kurs otrzymał średnią ocenę 4,58/5.",
+      "Na kursie Video Games in Society studenci pisali prawdziwe recenzje i pitchowali pomysły na gry. Wybrane prace trafiły do PSX Extreme, a kurs otrzymał ocenę 4,58/5.",
     caseFourTitle: "Odpowiedzialna AI w projektowaniu dydaktyki",
     caseFourBody:
       "Od warsztatów na Hokkaido University po zaproszony wykład w Kitami Institute of Technology w 2024 roku pokazuję AI jako narzędzie projektowania i dociekania, które nadal wymaga weryfikacji i akademickiego osądu.",
-    casePageLink: "Przeczytaj studia przypadków",
+    casePageLink: "Przeczytaj case studies",
     caseStudiesEyebrow: "Wybrana praktyka",
     caseStudiesTitle: "Cztery projekty, cztery różne sale, jeden nawyk: uwidocznić uczenie.",
     caseStudiesDeck:
-      "Każde studium przypadku zaczyna się od konkretnego problemu dydaktycznego, pokazuje odpowiedź projektową i kończy się dowodem na to, co uczestnicy mogli zrobić, stworzyć lub zabrać ze sobą dalej.",
+      "Każde case study zaczyna się od konkretnego problemu dydaktycznego, pokazuje odpowiedź projektową i kończy się dowodem na to, co uczestnicy mogli zrobić, stworzyć lub zabrać ze sobą dalej.",
     caseStudiesCtaTitle: "Wprowadź to podejście do swojego programu, zespołu dydaktycznego albo klasy.",
     teachingEyebrow: "Praktyka dydaktyczna",
-    teachingTitle: "Ten most staje się widoczny w klasie.",
+    teachingTitle: "Most staje się widoczny w klasie.",
     teachingOneTitle: "Komunikacja międzykulturowa jako praktyka życia",
     teachingOneBody:
-      "Na zajęciach z komunikacji międzykulturowej wykorzystuję refleksję, sytuacje krytyczne, doświadczenia studentów i różnorodne głosy, aby pomóc uczącym się wyjść poza samą poprawność językową ku rozumieniu kultury.",
+      "Moje zajęcia z komunikacji międzykulturowej wykorzystują refleksję, critical incidents, doświadczenia studentów i różnorodne głosy, aby pomóc uczącym się wyjść poza poprawność językową ku rozumieniu kultury.",
     teachingTwoTitle: "Gry wideo jako systemy kulturowe",
     teachingTwoBody:
-      "Na zajęciach o grach wideo i społeczeństwie studenci analizują gry krytycznie, badają ich role społeczne i wykonują zadania zbliżone do pracy branżowej: piszą o grach i prezentują własne koncepcje.",
-    teachingThreeTitle: "Rozwój dydaktyczny kadry przez projektowanie",
+      "Na zajęciach o grach wideo i społeczeństwie studenci analizują gry krytycznie, badają ich role społeczne i wykonują zadania zbliżone do branżowych, takie jak publicystyka growa i pitching konceptów.",
+    teachingThreeTitle: "Faculty development przez projektowanie",
     teachingThreeBody:
-      "W pracy nad rozwojem dydaktycznym kadry koncentruję się na nauczaniu inkluzywnym, EMI, projektowaniu programów, informacji zwrotnej i środowiskach uczenia się, które nadają uczestnictwu sens.",
+      "Moja praca w faculty development koncentruje się na nauczaniu inkluzywnym, EMI, projektowaniu programu, feedbacku i środowiskach uczenia się, które czynią uczestnictwo bardziej znaczącym.",
     workshopEyebrow: "Oferta warsztatów",
     workshopTitle: "Sesje dla kadry, doktorantów i zespołów dydaktycznych gotowe do zamówienia.",
     workshopModelEyebrow: "Zasada projektowa",
     workshopModelTitle: "Uczestnicy powinni wyjść z czymś, czego użyją już w poniedziałek.",
     workshopModelBody:
-      "Teorię podaję zwięźle, a większość czasu przeznaczam na pracę nad realnymi zajęciami, trudną rozmową albo decyzją programową. Szablony, informacja zwrotna, próba i refleksja prowadzą do użytecznego materiału oraz następnego kroku dopasowanego do instytucji.",
+      "Teorię utrzymuję zwięzłą, a większość czasu oddaję na pracę nad prawdziwymi zajęciami, trudną rozmową albo decyzją programową. Szablony, feedback, próba i refleksja prowadzą do użytecznego materiału oraz następnego kroku dopasowanego do instytucji.",
     workshopOutputOne: "Jednostronicowe szkice zajęć",
     workshopOutputTwo: "Spójne aktywności dydaktyczne",
     workshopOutputThree: "Jasne instrukcje facylitacji",
-    workshopOutputFour: "Krótkie podsumowania na wyjście, które pomagają ulepszać projekt",
+    workshopOutputFour: "Exit tickets do ulepszania projektu",
     workshopPageLink: "Zobacz formaty warsztatów",
     proofEyebrow: "Udokumentowane doświadczenie",
     proofTitle: "Cztery projekty pokazujące tę pracę w działaniu.",
     proofOneLabel: "2023 · Hokkaido University",
-    proofOneTitle: "Rozwój dydaktyczny kadry wokół czterech praktycznych problemów",
+    proofOneTitle: "Faculty development wokół czterech praktycznych problemów",
     proofOneBody:
       "Najnowsze sesje dotyczyły nauczania po angielsku, komunikacji międzykulturowej, projektowania sylabusa i przygotowania do ChatGPT w klasie.",
     proofTwoLabel: "Wyróżnienie 2024 · Ewaluacja kursu 2023",
@@ -504,21 +504,21 @@ const translations = {
     proofFourLabel: "2025–26 · Ritsumeikan Space Management Program",
     proofFourTitle: "Facylitator interdyscyplinarnej edukacji dla sektora kosmicznego",
     proofFourBody:
-      "Od dwóch lat współprowadzę proces uczenia obejmujący komunikację międzykulturową, przywództwo, umiejętności prezentacyjne, informację zwrotną i międzynarodową współpracę projektową w mieszanych grupach studentów.",
+      "Od dwóch lat współprowadzę proces uczenia obejmujący komunikację międzykulturową, leadership, umiejętności prezentacyjne, feedback i międzynarodową współpracę projektową w mieszanych grupach studentów.",
     portfolioOneTitle: "Pre-FD dla doktorantów",
     portfolioOneBody:
-      "Podstawy nauczania akademickiego: efekty uczenia się, projektowanie zajęć, aktywne uczenie się, facylitacja, wymiana doświadczeń i refleksja dla przyszłych edukatorów.",
+      "Podstawy nauczania akademickiego: efekty uczenia się, projektowanie zajęć, active learning, facylitacja, wymiana peer-to-peer i refleksja dla przyszłych edukatorów.",
     portfolioTwoTitle: "Projektowanie uczenia międzykulturowego",
     portfolioTwoBody:
-      "Warsztaty i zajęcia pomagające pracować z różnicą kulturową, dialogiem, sytuacjami krytycznymi, inkluzywnym uczestnictwem i budowaniem znaczenia.",
+      "Warsztaty i zajęcia pomagające pracować z różnicą kulturową, dialogiem, critical incidents, inkluzywnym uczestnictwem i budowaniem znaczenia.",
     portfolioThreeTitle: "AI, krytyczność i szkolnictwo wyższe",
     portfolioThreeBody:
-      "Rozwój dydaktyczny kadry wokół generatywnej AI jako partnera w nauczaniu, projektowaniu, syntezie i refleksji — z naciskiem na krytyczne myślenie i odpowiedzialność.",
-    portfolioFourTitle: "Doskonalenie dydaktyki i SoTL",
+      "Faculty development wokół generatywnej AI jako partnera w nauczaniu, projektowaniu, syntezie i refleksji, z naciskiem na krytyczne myślenie i odpowiedzialność.",
+    portfolioFourTitle: "Teaching Excellence i SoTL",
     portfolioFourBody:
-      "Wsparcie dla edukatorów, którzy chcą przekuć pytania dydaktyczne w pracę opartą na danych, lepszą informację zwrotną i projekty uczenia się, którymi można się dzielić.",
-    samplerEyebrow: "Przegląd możliwości",
-    samplerTitle: "Co mogę przygotować dla uniwersytetu, klasy albo szerszej publiczności.",
+      "Wsparcie dla edukatorów, którzy chcą zmienić pytania dydaktyczne w pracę opartą na danych, lepszy feedback i projekty uczenia się możliwe do pokazania innym.",
+    samplerEyebrow: "Sampler pracy",
+    samplerTitle: "Co mogę zbudować dla uniwersytetu, klasy albo publiczności.",
     samplerOneLabel: "Format warsztatu",
     samplerOneTitle: "Od ekspertyzy do świadomego projektu zajęć",
     samplerOneBody:
@@ -530,24 +530,24 @@ const translations = {
     samplerThreeLabel: "Pedagogika mediów",
     samplerThreeTitle: "Gry jako systemy kulturowe i społeczne",
     samplerThreeBody:
-      "Buduję uczenie wokół gier jako przestrzeni, w których ludzie ćwiczą język, tożsamość, myślenie projektowe, interpretację i publiczną analizę kultury.",
-    samplerFourLabel: "Rozwój dydaktyczny kadry",
+      "Buduję uczenie wokół gier jako przestrzeni, w których ludzie ćwiczą język, tożsamość, design thinking, interpretację i publiczną analizę kultury.",
+    samplerFourLabel: "Faculty development",
     samplerFourTitle: "AI z odpowiedzialnością i krytycznością",
     samplerFourBody:
-      "Mogę pomagać edukatorom używać AI do burzy mózgów, syntezy, prototypowania, informacji zwrotnej i projektowania kursów — bez rezygnacji z osądu, etyki i celu danej dyscypliny.",
+      "Mogę pomagać edukatorom używać AI do brainstormingu, syntezy, prototypowania, feedbacku i projektowania kursów bez rezygnacji z osądu, etyki i celu dyscypliny.",
     bridgeEyebrow: "Jedna ciekawość, dwie publiczności",
     bridgeTitle:
       "Ta sama ciekawość łączy pracę uniwersytecką z niemal trzema dekadami pisania o grach.",
     bridgeBodyOne:
       "Jako Mazzi relacjonowałem wydarzenia z Japonii, rozmawiałem z twórcami, obserwowałem kulturę gier na miejscu i pisałem rozbudowane teksty dla polskich czytelników. Nauczyło mnie to zauważać znaczące szczegóły, szanować odbiorcę i wyjaśniać kontekst bez zamieniania Japonii w egzotyczne tło.",
     bridgeBodyTwo:
-      "Klasa wymaga tej samej uważności. Niezależnie od tego, czy studenci rozmawiają o kulturze, prezentują pomysł na grę czy planują międzynarodowy projekt dla sektora kosmicznego, pomagam im dostrzec założenia, znaleźć język dla trudnych idei i rozmawiać z osobami, które myślą inaczej.",
+      "Klasa wymaga tej samej uważności. Niezależnie od tego, czy studenci rozmawiają o kulturze, pitchują grę czy planują międzynarodowy projekt dla sektora kosmicznego, pomagam im dostrzec założenia, znaleźć język dla trudnych idei i mówić do osób, które nie myślą tak samo jak oni.",
     writingPageLink: "Zobacz portfolio pisarskie",
     bridgeQuote: "„Przez całą karierę uczę się wchodzić do nieznanych światów, czytać ich zasady i pomagać innym odnaleźć w nich drogę.”",
     editorialEvidenceNagoshi: "Wywiad · Toshihiro Nagoshi",
     editorialEvidenceValkyrie: "Spotkanie redakcyjne · twórcy Valkyrie Profile",
     identityAcademicTerm: "Tożsamość akademicka",
-    identityAcademicDesc: "Adiunkt, badacz szkolnictwa wyższego, projektant rozwoju dydaktycznego kadry.",
+    identityAcademicDesc: "Assistant Professor, badacz szkolnictwa wyższego, faculty developer.",
     identityPublicTerm: "Tożsamość publiczna",
     identityPublicDesc: "Autor piszący z Japonii o grach, mediach, popkulturze i codziennej interpretacji kultury.",
     identityAxisTerm: "Wspólna oś",
@@ -560,7 +560,7 @@ const translations = {
     writingPageEyebrow: "Portfolio pisarskie",
     writingPageTitle: "Relacje z Japonii, historia gier i ciche rzeczy, które gry potrafią odsłonić.",
     writingPageDeck:
-      "Wybór z moich oryginalnych tekstów dla PSX Extreme: relacje z wydarzeń, historia japońskich gier, analiza technologii i rynku, reportażowa publicystyka oraz refleksje o tym, co gry robią w codziennym życiu.",
+      "Wybrany sampler z moich oryginalnych tekstów PSX Extreme: relacje z wydarzeń, historia japońskich gier, analiza technologii i rynku, feature writing oraz refleksje o tym, co gry robią w codziennym życiu.",
     writingNote: "Dwa wybrane fragmenty z każdego rękopisu służą jako próbki stylu. Pełne artykuły pozostają własnością PSX Extreme.",
     writingCtaEyebrow: "Komunikacja publiczna",
     writingCtaTitle: "Piszę dla odbiorców, którzy chcą kontekstu, nie tylko informacji.",
@@ -571,7 +571,7 @@ const translations = {
     mapTitle: "Profil publiczny staje się czytelniejszy, kiedy każdy wątek ma swoją rolę.",
     mapOneTitle: "Dom akademicki",
     mapOneBody:
-      "APU, komunikacja międzykulturowa, edukacja globalna, EMI, projektowanie programów i rozwój dydaktyczny kadry pozostają środkiem ciężkości.",
+      "APU, komunikacja międzykulturowa, global learning, EMI, projektowanie programu i faculty development pozostają środkiem ciężkości.",
     mapTwoTitle: "Głos publiczny",
     mapTwoBody:
       "Mazzi i PSX Extreme stają się warstwą komunikacji publicznej: wieloletnią praktyką wyjaśniania Japonii, gier i kultury mediów.",
@@ -586,15 +586,15 @@ const translations = {
     archiveAcademic: "Akademia",
     archiveInstitutional: "Teksty instytucjonalne",
     archivePublic: "Komunikacja publiczna",
-    statementEyebrow: "Krótko o profilu",
+    statementEyebrow: "Statement profilu",
     statementTitle:
-      "Adiunkt na Ritsumeikan Asia Pacific University, pracujący na styku komunikacji międzykulturowej, edukacji globalnej, rozwoju dydaktycznego kadry i japońskiej kultury medialnej.",
+      "Assistant Professor na Ritsumeikan Asia Pacific University, pracujący na styku komunikacji międzykulturowej, global learning, faculty development i japońskiej kultury medialnej.",
     statementBody:
       "Moja praca łączy badania nad szkolnictwem wyższym z komunikacją publiczną, korzystając z doświadczenia edukatora, badacza i autora piszącego z Japonii dla polskich mediów growych.",
     contactEyebrow: "Kontakt",
     contactTitle: "Zbudujmy warsztat, kurs albo współpracę wokół prawdziwego problemu.",
     contactBody:
-      "Szczególnie interesuje mnie współpraca z centrami doskonalenia dydaktyki, programami międzynarodowymi, szkołami doktorskimi i zespołami rozwijającymi wielojęzyczne lub międzykulturowe uczenie się.",
+      "Szczególnie interesuje mnie współpraca z centrami teaching and learning, programami międzynarodowymi, szkołami doktorskimi i zespołami rozwijającymi wielojęzyczne lub międzykulturowe uczenie.",
     contactWorkshop: "Przejrzyj formaty warsztatów",
     contactEmail: "Napisz do mnie o współpracy",
     contactLinkedIn: "Zobacz profil LinkedIn",
@@ -606,7 +606,7 @@ const translations = {
     serviceEyebrow: "Portfolio dydaktyczne",
     serviceTitle: "Kursy, warsztaty i seminaria zbudowane wokół prawdziwych problemów uczenia się",
     serviceDeck:
-      "Prowadzę kursy akademickie, praktyczne warsztaty i seminaria dla społeczności uniwersyteckich. W ciągu dekady pracy nad jakością dydaktyki na Hokkaido University i APU powtarza się jeden motyw: zaczynać od problemu, który ludzie naprawdę rozpoznają, i kończyć konkretnym krokiem, z którego można skorzystać.",
+      "Prowadzę kursy akademickie, praktyczne warsztaty i seminaria dla społeczności uniwersyteckich. W ciągu dekady pracy nad jakością dydaktyki na Hokkaido University i APU powtarza się jeden motyw: zaczynać od problemu, który ludzie rozpoznają, i kończyć użytecznym kolejnym krokiem.",
     workshopHeroContact: "Napisz, co chcesz ulepszyć",
     workshopHeroBrief: "Przeczytaj jednostronicowy brief",
     workshopStartEmail: "Rozpocznij rozmowę o warsztacie",
@@ -617,7 +617,7 @@ const translations = {
     teachingMaterialsEyebrow: "Materiały dydaktyczne w praktyce",
     teachingMaterialsTitle: "Cztery przykłady tego, jak zamieniam idee w użyteczne uczenie się.",
     teachingMaterialsDeck:
-      "To wybrane slajdy z oryginalnych prezentacji, które sam zaprojektowałem i przeprowadziłem. Pokazują, jak struktura wizualna, prowadzona refleksja i jasno postawiony moment decyzji wspierają proces uczenia się.",
+      "To wybrane strony z oryginalnych decków, które sam projektowałem i prowadziłem. Pokazują, jak struktura wizualna, prowadzona refleksja i jasny moment decyzyjny wspierają proces uczenia się.",
     teachingMaterialOneTitle: "Nadać prezentacji wyraźną historię",
     teachingMaterialOneBody:
       "Czteroczęściowa struktura zamienia wskazówki dotyczące prezentacji w zapamiętywalne narzędzie planowania, z którego uczestnicy mogą od razu skorzystać.",
@@ -970,126 +970,97 @@ document.querySelectorAll("[data-record-player]").forEach((player) => {
   showSlide(0);
 });
 
-const coMixWord = (word, meaning, reading, romaji, example, translation, why) => ({
-  word, meaning, reading, romaji, example, translation, why,
-});
-
 const coMixExamples = {
   "en-ja": {
     language: "en",
     scenes: {
-      magazine: {
+      exchange: {
         light: [
-          "On a rainy afternoon in Tokyo, Maya finds an old ",
-          coMixWord("雑誌", "magazine", "ざっし", "zasshi", "この雑誌は古いゲームについてです。", "This magazine is about an old game.", "The shop, the cover, and the story help you predict the object before revealing it."),
-          " in a small game shop. Inside is a ",
-          coMixWord("地図", "map", "ちず", "chizu", "この地図で駅を見つけます。", "I find the station with this map.", "Maya needs directions, so the surrounding story makes the meaning easier to infer."),
-          " with a circle around a station.",
+          "Maya joined a small language-exchange group after class. She carried a ",
+          { word: "ノート", meaning: "notebook" },
+          " to the ",
+          { word: "図書館", meaning: "library" },
+          " and met a new friend.",
         ],
         rich: [
-          "On a rainy afternoon in Tokyo, Maya finds an old ",
-          coMixWord("雑誌", "magazine", "ざっし", "zasshi", "この雑誌は古いゲームについてです。", "This magazine is about an old game.", "The shop, the cover, and the story help you predict the object before revealing it."),
-          " in a small ",
-          coMixWord("店", "shop", "みせ", "mise", "この店は駅の近くです。", "This shop is near the station.", "A familiar place word is kept inside a clear English sentence."),
-          ". Inside is a short ",
-          coMixWord("手紙", "letter / note", "てがみ", "tegami", "手紙を読みました。", "I read the letter.", "The letter moves the story forward, so its function is clear even before translation."),
-          " and a ",
-          coMixWord("地図", "map", "ちず", "chizu", "この地図で駅を見つけます。", "I find the station with this map.", "Maya needs directions, so the surrounding story makes the meaning easier to infer."),
-          " with a circle around a station.",
+          "Maya joined a small language-exchange ",
+          { word: "グループ", meaning: "group" },
+          " after class. She carried a ",
+          { word: "ノート", meaning: "notebook" },
+          " to the ",
+          { word: "図書館", meaning: "library" },
+          " and met a new ",
+          { word: "友達", meaning: "friend" },
+          ".",
+        ],
+        answer: ["図書館", "としょかん", "toshokan", "tosyokan"],
+      },
+      classroom: {
+        light: [
+          "During a workshop, the ",
+          { word: "先生", meaning: "teacher" },
+          " gave each student a ",
+          { word: "地図", meaning: "map" },
+          " for a city project.",
+        ],
+        rich: [
+          "During a ",
+          { word: "ワークショップ", meaning: "workshop" },
+          ", the ",
+          { word: "先生", meaning: "teacher" },
+          " gave each ",
+          { word: "学生", meaning: "student" },
+          " a ",
+          { word: "地図", meaning: "map" },
+          " for a city project.",
         ],
         answer: ["地図", "ちず", "chizu", "tizu"],
-        focus: "地図",
-        reuse: {
-          question: "At the station, Maya checks the ___ again. Choose the word that fits.",
-          options: ["地図", "雑誌", "店"],
-          answer: "地図",
-        },
-      },
-      station: {
-        light: [
-          "At the ",
-          coMixWord("駅", "station", "えき", "eki", "駅で友達に会います。", "I meet a friend at the station.", "The destination in the first scene makes this place word easy to anchor."),
-          ", Maya follows the map to a quiet café. A student is waiting with the old ",
-          coMixWord("雑誌", "magazine", "ざっし", "zasshi", "この雑誌は古いゲームについてです。", "This magazine is about an old game.", "The word returns in a second scene, which gives the learner another meaningful encounter."),
-          ".",
-        ],
-        rich: [
-          "At the ",
-          coMixWord("駅", "station", "えき", "eki", "駅で友達に会います。", "I meet a friend at the station.", "The destination in the first scene makes this place word easy to anchor."),
-          ", Maya follows the ",
-          coMixWord("地図", "map", "ちず", "chizu", "この地図で駅を見つけます。", "I find the station with this map.", "The word from the first scene returns in a new situation instead of being drilled in isolation."),
-          " to a quiet café. A ",
-          coMixWord("学生", "student", "がくせい", "gakusei", "学生はゲームを勉強しています。", "The student is studying games.", "The character is introduced through what she is doing, not through a vocabulary list."),
-          " is waiting with the old magazine and the ",
-          coMixWord("手紙", "letter / note", "てがみ", "tegami", "手紙を読みました。", "I read the letter.", "The note connects both scenes and gives this word a clear narrative role."),
-          ".",
-        ],
-        answer: ["手紙", "てがみ", "tegami"],
-        focus: "手紙",
-        reuse: {
-          question: "Inside the magazine, Maya finds a short ___. Choose the word that fits.",
-          options: ["手紙", "駅", "学生"],
-          answer: "手紙",
-        },
       },
     },
   },
   "jp-en": {
     language: "ja",
     scenes: {
-      magazine: {
+      exchange: {
         light: [
-          "雨の午後、マヤは東京の小さなゲーム店で古い ",
-          coMixWord("magazine", "雑誌", "ざっし", "zasshi", "この雑誌は古いゲームについてです。", "This magazine is about an old game.", "The shop, the cover, and the story help you predict the object before revealing it."),
-          " を見つけました。中には駅を丸で囲んだ ",
-          coMixWord("map", "地図", "ちず", "chizu", "この地図で駅を見つけます。", "I find the station with this map.", "Maya needs directions, so the surrounding story makes the meaning easier to infer."),
-          " がありました。",
+          "放課後、マヤは小さなグループに参加しました。彼女は ",
+          { word: "notebook", meaning: "ノート" },
+          " を持って ",
+          { word: "library", meaning: "図書館" },
+          " へ行き、新しい友達に会いました。",
         ],
         rich: [
-          "雨の午後、マヤは東京の小さな ",
-          coMixWord("shop", "店", "みせ", "mise", "この店は駅の近くです。", "This shop is near the station.", "A familiar place word is kept inside a clear Japanese sentence."),
-          " で古い ",
-          coMixWord("magazine", "雑誌", "ざっし", "zasshi", "この雑誌は古いゲームについてです。", "This magazine is about an old game.", "The shop, the cover, and the story help you predict the object before revealing it."),
-          " を見つけました。中には短い ",
-          coMixWord("letter", "手紙", "てがみ", "tegami", "手紙を読みました。", "I read the letter.", "The letter moves the story forward, so its function is clear even before translation."),
-          " と、駅を丸で囲んだ ",
-          coMixWord("map", "地図", "ちず", "chizu", "この地図で駅を見つけます。", "I find the station with this map.", "Maya needs directions, so the surrounding story makes the meaning easier to infer."),
-          " がありました。",
+          "放課後、マヤは小さな ",
+          { word: "group", meaning: "グループ" },
+          " に参加しました。彼女は ",
+          { word: "notebook", meaning: "ノート" },
+          " を持って ",
+          { word: "library", meaning: "図書館" },
+          " へ行き、新しい ",
+          { word: "friend", meaning: "友達" },
+          " に会いました。",
+        ],
+        answer: ["library"],
+      },
+      classroom: {
+        light: [
+          "ワークショップで、",
+          { word: "teacher", meaning: "先生" },
+          " は学生に町の ",
+          { word: "map", meaning: "地図" },
+          " を渡しました。",
+        ],
+        rich: [
+          { word: "workshop", meaning: "ワークショップ" },
+          " で、",
+          { word: "teacher", meaning: "先生" },
+          " は ",
+          { word: "student", meaning: "学生" },
+          " に町の ",
+          { word: "map", meaning: "地図" },
+          " を渡しました。",
         ],
         answer: ["map"],
-        focus: "map",
-        reuse: {
-          question: "駅で、マヤはもう一度 ___ を見ます。正しい英単語を選んでください。",
-          options: ["map", "magazine", "shop"],
-          answer: "map",
-        },
-      },
-      station: {
-        light: [
-          "マヤは ",
-          coMixWord("station", "駅", "えき", "eki", "駅で友達に会います。", "I meet a friend at the station.", "The destination in the first scene makes this place word easy to anchor."),
-          " で地図を頼りに静かなカフェへ行きました。学生が古い ",
-          coMixWord("magazine", "雑誌", "ざっし", "zasshi", "この雑誌は古いゲームについてです。", "This magazine is about an old game.", "The word returns in a second scene, which gives the learner another meaningful encounter."),
-          " を持って待っています。",
-        ],
-        rich: [
-          "マヤは ",
-          coMixWord("station", "駅", "えき", "eki", "駅で友達に会います。", "I meet a friend at the station.", "The destination in the first scene makes this place word easy to anchor."),
-          " で ",
-          coMixWord("map", "地図", "ちず", "chizu", "この地図で駅を見つけます。", "I find the station with this map.", "The word from the first scene returns in a new situation instead of being drilled in isolation."),
-          " を頼りに静かなカフェへ行きました。ひとりの ",
-          coMixWord("student", "学生", "がくせい", "gakusei", "学生はゲームを勉強しています。", "The student is studying games.", "The character is introduced through what she is doing, not through a vocabulary list."),
-          " が古い雑誌と短い ",
-          coMixWord("letter", "手紙", "てがみ", "tegami", "手紙を読みました。", "I read the letter.", "The note connects both scenes and gives this word a clear narrative role."),
-          " を持って待っています。",
-        ],
-        answer: ["letter", "note"],
-        focus: "letter",
-        reuse: {
-          question: "雑誌の中で、マヤは短い ___ を見つけます。正しい英単語を選んでください。",
-          options: ["letter", "station", "student"],
-          answer: "letter",
-        },
       },
     },
   },
@@ -1098,37 +1069,49 @@ const coMixExamples = {
 const coMixCopy = {
   en: {
     questions: {
-      "en-ja": { magazine: "What is the Japanese target for “map”?", station: "What is the Japanese target for “letter / note”?" },
-      "jp-en": { magazine: "What is the English target for “地図”?", station: "What is the English target for “手紙”?" },
+      "en-ja": {
+        exchange: "What is the Japanese target for “library”?",
+        classroom: "What is the Japanese target for “map”?",
+      },
+      "jp-en": {
+        exchange: "What is the English target for “図書館”?",
+        classroom: "What is the English target for “地図”?",
+      },
     },
     summaries: {
       "en-ja": "{count} reviewed Japanese noun targets sit inside an otherwise English scene.",
       "jp-en": "{count} reviewed English noun targets sit inside an otherwise Japanese scene.",
     },
-    answerNotes: { "en-ja": "Japanese answers may be typed in kanji, kana, or romaji.", "jp-en": "Type the English target word." },
-    correct: "Correct. Now use the word once more in a fresh part of the story.",
-    incorrect: "Not quite. Read the story again, then click a highlighted word for its reading, meaning, and a second example.",
+    answerNotes: {
+      "en-ja": "Japanese answers may be typed in kanji, kana, or romaji.",
+      "jp-en": "Type the English target word.",
+    },
+    correct: "Correct. The target is visible in context, not as an isolated word list.",
+    incorrect: "Not quite. Read the passage again, then reveal the target meaning if you need it.",
     empty: "Type an answer first.",
-    reuseCorrect: "Exactly. You have met the word in a second context — that is the learning move Co-MIX is designed to support.",
-    reuseIncorrect: "Try again. Use the story, not a guess: which object helps Maya find her way?",
-    progress: "Learning path · {count} of 4",
   },
   pl: {
     questions: {
-      "en-ja": { magazine: "Jak brzmi japońskie słowo docelowe dla „map”?", station: "Jak brzmi japońskie słowo docelowe dla „letter / note”?" },
-      "jp-en": { magazine: "Jak brzmi angielskie słowo docelowe dla „地図”?", station: "Jak brzmi angielskie słowo docelowe dla „手紙”?" },
+      "en-ja": {
+        exchange: "Jak brzmi japońskie słowo docelowe dla „library”?",
+        classroom: "Jak brzmi japońskie słowo docelowe dla „map”?",
+      },
+      "jp-en": {
+        exchange: "Jak brzmi angielskie słowo docelowe dla „図書館”?",
+        classroom: "Jak brzmi angielskie słowo docelowe dla „地図”?",
+      },
     },
     summaries: {
       "en-ja": "{count} sprawdzone japońskie rzeczowniki docelowe pojawiają się w angielskiej scenie.",
       "jp-en": "{count} sprawdzone angielskie rzeczowniki docelowe pojawiają się w japońskiej scenie.",
     },
-    answerNotes: { "en-ja": "Japońskie odpowiedzi możesz wpisać kanji, kana albo rōmaji.", "jp-en": "Podaj angielskie słowo docelowe." },
-    correct: "Dobrze. Teraz użyj słowa jeszcze raz w nowym fragmencie historii.",
-    incorrect: "Jeszcze nie. Przeczytaj historię ponownie, a potem kliknij wyróżnione słowo — zobaczysz zapis, znaczenie i drugi przykład.",
+    answerNotes: {
+      "en-ja": "Japońskie odpowiedzi możesz wpisać kanji, kana albo rōmaji.",
+      "jp-en": "Podaj angielskie słowo docelowe.",
+    },
+    correct: "Dobrze. Słowo docelowe występuje w kontekście, a nie na oderwanej liście.",
+    incorrect: "Jeszcze nie. Przeczytaj tekst ponownie, a jeśli trzeba — pokaż znaczenie słowa docelowego.",
     empty: "Najpierw wpisz odpowiedź.",
-    reuseCorrect: "Dokładnie. Spotykasz słowo w drugim kontekście — właśnie taki ruch uczenia wspiera Co-MIX.",
-    reuseIncorrect: "Spróbuj jeszcze raz. Oprzyj się na historii, nie na zgadywaniu: który przedmiot pomaga Mai znaleźć drogę?",
-    progress: "Etapy nauki · {count} z 4",
   },
 };
 
@@ -1146,58 +1129,18 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
   const check = demo.querySelector("[data-comix-check]");
   const feedback = demo.querySelector("[data-comix-feedback]");
   const reveal = demo.querySelector("[data-comix-reveal]");
-  const wordCard = demo.querySelector("[data-comix-word-card]");
-  const wordTitle = demo.querySelector("[data-comix-word-title]");
-  const wordMeaning = demo.querySelector("[data-comix-word-meaning]");
-  const wordExample = demo.querySelector("[data-comix-word-example]");
-  const wordWhy = demo.querySelector("[data-comix-word-why]");
-  const reuse = demo.querySelector("[data-comix-reuse]");
-  const reuseQuestion = demo.querySelector("[data-comix-reuse-question]");
-  const reuseOptions = demo.querySelector("[data-comix-reuse-options]");
-  const reuseFeedback = demo.querySelector("[data-comix-reuse-feedback]");
-  const progressLabel = demo.querySelector("[data-comix-progress-label]");
-  const steps = [...demo.querySelectorAll("[data-comix-step]")];
   let mode = "en-ja";
-  let scene = "magazine";
+  let scene = "exchange";
   let density = "light";
   let meaningsVisible = false;
-  let learning = { read: true, notice: false, recall: false, reuse: false };
 
   const currentMode = () => coMixExamples[mode];
   const currentExample = () => currentMode().scenes[scene];
-  const normaliseAnswer = (candidate) => candidate
-    .normalize("NFKD")
-    .replace(/\p{Diacritic}/gu, "")
-    .normalize("NFKC")
-    .toLowerCase()
-    .replace(/[\s\-_'’·.]+/g, "")
-    .trim();
-
-  const updateProgress = () => {
-    const complete = Object.values(learning).filter(Boolean).length;
-    steps.forEach((step) => {
-      const completeStep = learning[step.dataset.comixStep];
-      step.classList.toggle("is-complete", completeStep);
-      step.classList.toggle("is-active", !completeStep && ["notice", "recall", "reuse"].find((name) => !learning[name]) === step.dataset.comixStep);
-    });
-    if (progressLabel) progressLabel.textContent = ui.progress.replace("{count}", String(complete));
-  };
 
   const setFeedback = (message = "", isIncorrect = false) => {
     if (!feedback) return;
     feedback.textContent = message;
     feedback.classList.toggle("is-incorrect", isIncorrect);
-  };
-
-  const showWordCard = (target) => {
-    if (!wordCard) return;
-    wordCard.hidden = false;
-    if (wordTitle) wordTitle.textContent = [target.word, target.reading && `· ${target.reading}`, target.romaji && `(${target.romaji})`].filter(Boolean).join(" ");
-    if (wordMeaning) wordMeaning.textContent = `Meaning: ${target.meaning}`;
-    if (wordExample) wordExample.textContent = target.example ? `${target.example} — ${target.translation}` : "";
-    if (wordWhy) wordWhy.textContent = target.why || "";
-    learning.notice = true;
-    updateProgress();
   };
 
   const renderTargets = (targets) => {
@@ -1211,38 +1154,12 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
     });
   };
 
-  const renderReuse = () => {
-    const example = currentExample();
-    if (!reuse || !reuseQuestion || !reuseOptions) return;
-    reuse.hidden = !learning.recall;
-    reuseQuestion.textContent = example.reuse.question;
-    reuseOptions.replaceChildren();
-    if (reuseFeedback) reuseFeedback.textContent = "";
-    example.reuse.options.forEach((option) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.textContent = option;
-      button.addEventListener("click", () => {
-        const correct = option === example.reuse.answer;
-        if (reuseFeedback) {
-          reuseFeedback.textContent = correct ? ui.reuseCorrect : ui.reuseIncorrect;
-          reuseFeedback.classList.toggle("is-incorrect", !correct);
-        }
-        if (correct) {
-          learning.reuse = true;
-          reuseOptions.querySelectorAll("button").forEach((item) => { item.disabled = true; });
-          updateProgress();
-        }
-      });
-      reuseOptions.append(button);
-    });
-  };
-
   const render = () => {
     const example = currentExample();
     const parts = example[density];
     const targets = parts.filter((part) => typeof part !== "string");
     if (!passage || !question || !answer) return;
+
     passage.replaceChildren();
     passage.lang = currentMode().language;
     parts.forEach((part) => {
@@ -1258,24 +1175,18 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
       word.addEventListener("click", () => {
         word.classList.add("is-revealed");
         word.textContent = `${part.word} · ${part.meaning}`;
-        showWordCard(part);
       });
       passage.append(word);
     });
+
     question.textContent = ui.questions[mode][scene];
     if (answerNote) answerNote.textContent = ui.answerNotes[mode];
-    if (methodNote) methodNote.textContent = ui.summaries[mode].replace("{count}", String(targets.length));
+    if (methodNote) {
+      methodNote.textContent = ui.summaries[mode].replace("{count}", String(targets.length));
+    }
     answer.value = "";
     setFeedback();
-    if (wordCard) wordCard.hidden = true;
     renderTargets(targets);
-    renderReuse();
-    updateProgress();
-  };
-
-  const resetLearning = () => {
-    meaningsVisible = false;
-    learning = { read: true, notice: false, recall: false, reuse: false };
   };
 
   const updateButtons = () => {
@@ -1297,45 +1208,58 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
   };
 
   const checkAnswer = () => {
+    const normaliseAnswer = (candidate) => candidate
+      .normalize("NFKD")
+      .replace(/\p{Diacritic}/gu, "")
+      .normalize("NFKC")
+      .toLowerCase()
+      .replace(/[\s\-_'’·.]+/g, "")
+      .trim();
     const value = normaliseAnswer(answer?.value || "");
-    if (!value) return setFeedback(ui.empty, true);
-    const correct = currentExample().answer.some((accepted) => normaliseAnswer(accepted) === value);
-    setFeedback(correct ? ui.correct : ui.incorrect, !correct);
-    if (correct) {
-      learning.recall = true;
-      renderReuse();
-      updateProgress();
+    if (!value) {
+      setFeedback(ui.empty, true);
+      return;
     }
+    const isCorrect = currentExample().answer.some((accepted) => normaliseAnswer(accepted) === value);
+    setFeedback(isCorrect ? ui.correct : ui.incorrect, !isCorrect);
   };
 
-  modeButtons.forEach((button) => button.addEventListener("click", () => {
-    mode = button.dataset.comixMode;
-    resetLearning();
-    updateButtons();
-    render();
-  }));
-  sceneButtons.forEach((button) => button.addEventListener("click", () => {
-    scene = button.dataset.comixScene;
-    resetLearning();
-    updateButtons();
-    render();
-  }));
-  densityButtons.forEach((button) => button.addEventListener("click", () => {
-    density = button.dataset.comixDensity;
-    resetLearning();
-    updateButtons();
-    render();
-  }));
+  modeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      mode = button.dataset.comixMode;
+      meaningsVisible = false;
+      updateButtons();
+      render();
+    });
+  });
+
+  sceneButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      scene = button.dataset.comixScene;
+      meaningsVisible = false;
+      updateButtons();
+      render();
+    });
+  });
+
+  densityButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      density = button.dataset.comixDensity;
+      meaningsVisible = false;
+      updateButtons();
+      render();
+    });
+  });
+
   reveal?.addEventListener("click", () => {
     meaningsVisible = true;
-    const target = currentExample()[density].find((part) => typeof part !== "string" && part.word === currentExample().focus);
-    if (target) showWordCard(target);
-    renderTargets(currentExample()[density].filter((part) => typeof part !== "string"));
+    render();
   });
   check?.addEventListener("click", checkAnswer);
   answer?.addEventListener("keydown", (event) => {
     if (event.key === "Enter") checkAnswer();
   });
+
   updateButtons();
   render();
 });
