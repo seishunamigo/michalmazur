@@ -4341,7 +4341,7 @@ dd {
   color: #fff;
 }
 
-.teaching-chapter-nav {
+.portfolio-chapter-nav {
   position: sticky;
   top: 74px;
   z-index: 12;
@@ -4353,7 +4353,7 @@ dd {
   backdrop-filter: blur(14px);
 }
 
-.teaching-chapter-nav-inner {
+.portfolio-chapter-nav-inner {
   display: flex;
   align-items: center;
   gap: 28px;
@@ -4362,7 +4362,7 @@ dd {
   padding: 12px 0;
 }
 
-.teaching-chapter-label {
+.portfolio-chapter-label {
   flex: 0 0 164px;
   margin: 0;
   color: var(--muted);
@@ -4373,14 +4373,14 @@ dd {
   text-transform: uppercase;
 }
 
-.teaching-chapter-links {
+.portfolio-chapter-links {
   display: grid;
   flex: 1;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 6px;
 }
 
-.teaching-chapter-links a {
+.portfolio-chapter-links a {
   display: flex;
   min-width: 0;
   align-items: center;
@@ -4395,31 +4395,31 @@ dd {
   transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
-.teaching-chapter-links a:hover,
-.teaching-chapter-links a:focus-visible {
+.portfolio-chapter-links a:hover,
+.portfolio-chapter-links a:focus-visible {
   border-color: var(--gold);
   background: var(--surface);
   outline: none;
 }
 
-.teaching-chapter-links a b {
+.portfolio-chapter-links a b {
   flex: 0 0 auto;
   color: var(--red);
   font-size: 0.67rem;
   letter-spacing: 0.08em;
 }
 
-.teaching-chapter-links a.is-active {
+.portfolio-chapter-links a.is-active {
   border-color: var(--teal-deep);
   background: var(--teal-deep);
   color: #fff;
 }
 
-.teaching-chapter-links a.is-active b {
+.portfolio-chapter-links a.is-active b {
   color: #f2c76c;
 }
 
-[data-teaching-chapter-target] {
+[data-portfolio-chapter-target] {
   scroll-margin-top: 150px;
 }
 
@@ -5613,20 +5613,20 @@ dd {
     padding: 14px 20px;
   }
 
-  .teaching-chapter-nav {
+  .portfolio-chapter-nav {
     top: 66px;
   }
 
-  .teaching-chapter-nav-inner {
+  .portfolio-chapter-nav-inner {
     display: block;
     padding: 10px 0 11px;
   }
 
-  .teaching-chapter-label {
+  .portfolio-chapter-label {
     margin: 0 0 8px;
   }
 
-  .teaching-chapter-links {
+  .portfolio-chapter-links {
     display: flex;
     gap: 7px;
     overflow-x: auto;
@@ -5634,7 +5634,7 @@ dd {
     scrollbar-width: thin;
   }
 
-  .teaching-chapter-links a {
+  .portfolio-chapter-links a {
     flex: 0 0 auto;
     min-width: 154px;
   }
@@ -5890,15 +5890,15 @@ dd {
     gap: 8px 14px;
   }
 
-  .teaching-chapter-nav {
+  .portfolio-chapter-nav {
     top: 108px;
   }
 
-  .teaching-chapter-nav-inner {
+  .portfolio-chapter-nav-inner {
     width: min(var(--max), calc(100% - 28px));
   }
 
-  .teaching-chapter-links a {
+  .portfolio-chapter-links a {
     min-width: 144px;
     padding: 8px 9px;
     font-size: 0.75rem;
@@ -6505,5 +6505,23 @@ dd {
 @media (max-width: 520px) {
   .hero-content {
     padding-top: 196px;
+  }
+}
+
+/* Final small-screen repairs: these sit after the teaching-studio base rules. */
+@media (max-width: 780px) {
+  .design-studio-heading {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .achievement-photo-strip {
+    margin: 32px 0 56px;
+  }
+}
+
+@media (max-width: 520px) {
+  .design-studio-heading h2 {
+    font-size: clamp(2rem, 10vw, 2.65rem);
   }
 }

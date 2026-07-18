@@ -19,7 +19,7 @@
     <meta name="twitter:description" content="A writing sampler drawn from Michal Maciej Mazur's PSX Extreme archive.">
     <meta name="twitter:image" content="assets/public-voice-podcast.jpg">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=65">
+    <link rel="stylesheet" href="styles.css?v=67">
   </head>
   <body>
     <header class="site-header essay-header is-scrolled" data-header>
@@ -53,7 +53,19 @@
         <img class="writing-hero-image" src="assets/public-voice-podcast.jpg" alt="Michal Mazur speaking during a recorded conversation about games, Japan, and academic life.">
       </section>
 
-      <section class="writing-publication-context" data-lang-panel="en" aria-labelledby="psx-context-title-en">
+      <nav class="portfolio-chapter-nav" data-portfolio-chapter-nav aria-label="Writing portfolio sections">
+        <div class="portfolio-chapter-nav-inner">
+          <p class="portfolio-chapter-label" data-i18n="writingChapterLabel">Explore this writing portfolio</p>
+          <div class="portfolio-chapter-links">
+            <a href="#writing-psx" data-portfolio-chapter-link="psx" aria-current="location"><b>01</b><span data-i18n="writingChapterPsx">PSX Extreme</span></a>
+            <a href="#writing-editorial" data-portfolio-chapter-link="editorial"><b>02</b><span data-i18n="writingChapterEditorial">Editorial practice</span></a>
+            <a href="#writing-fieldnotes" data-portfolio-chapter-link="fieldnotes"><b>03</b><span data-i18n="writingChapterFieldnotes">Field reporting &amp; TGS</span></a>
+            <a href="#writing-archive" data-portfolio-chapter-link="archive"><b>04</b><span data-i18n="writingChapterArchive">Articles &amp; books</span></a>
+          </div>
+        </div>
+      </nav>
+
+      <section class="writing-publication-context" id="writing-psx" data-portfolio-chapter-target="psx" data-lang-panel="en" aria-labelledby="psx-context-title-en">
         <div class="writing-publication-heading">
           <p class="eyebrow">The publication behind the byline</p>
           <a class="writing-publication-mark" href="https://www.psxextreme.pl/" target="_blank" rel="noreferrer" aria-label="Visit the official PSX Extreme website">
@@ -76,7 +88,7 @@
         </div>
       </section>
 
-      <section class="writing-publication-context" data-lang-panel="pl" hidden aria-labelledby="psx-context-title-pl">
+      <section class="writing-publication-context" data-portfolio-chapter-target="psx" data-lang-panel="pl" hidden aria-labelledby="psx-context-title-pl">
         <div class="writing-publication-heading">
           <p class="eyebrow">Redakcja stojąca za podpisem</p>
           <a class="writing-publication-mark" href="https://www.psxextreme.pl/" target="_blank" rel="noreferrer" aria-label="Odwiedź oficjalną stronę PSX Extreme">
@@ -99,7 +111,7 @@
         </div>
       </section>
 
-      <section class="writing-profile" data-lang-panel="en" aria-label="Editorial profile">
+      <section class="writing-profile" id="writing-editorial" data-portfolio-chapter-target="editorial" data-lang-panel="en" aria-label="Editorial profile">
         <div class="writing-profile-heading">
           <p class="eyebrow">Editorial Profile</p>
           <h2>The writing moves between reporting, cultural history, and close reading.</h2>
@@ -120,7 +132,7 @@
         </div>
       </section>
 
-      <section class="writing-profile" data-lang-panel="pl" hidden aria-label="Profil redakcyjny">
+      <section class="writing-profile" data-portfolio-chapter-target="editorial" data-lang-panel="pl" hidden aria-label="Profil redakcyjny">
         <div class="writing-profile-heading">
           <p class="eyebrow">Profil pisarski</p>
           <h2>Moje teksty poruszają się między reportażem, historią kultury i close reading.</h2>
@@ -141,7 +153,7 @@
         </div>
       </section>
 
-      <section class="writing-field-notes" data-lang-panel="en" aria-labelledby="writing-field-notes-title-en">
+      <section class="writing-field-notes" id="writing-fieldnotes" data-portfolio-chapter-target="fieldnotes" data-lang-panel="en" aria-labelledby="writing-field-notes-title-en">
         <div class="writing-field-notes-heading">
           <p class="eyebrow">Field notes</p>
           <h2 id="writing-field-notes-title-en">The show floor is never only a spectacle.</h2>
@@ -163,7 +175,7 @@
         </div>
       </section>
 
-      <section class="writing-field-notes" data-lang-panel="pl" hidden aria-labelledby="writing-field-notes-title-pl">
+      <section class="writing-field-notes" data-portfolio-chapter-target="fieldnotes" data-lang-panel="pl" hidden aria-labelledby="writing-field-notes-title-pl">
         <div class="writing-field-notes-heading">
           <p class="eyebrow">Notatki z terenu</p>
           <h2 id="writing-field-notes-title-pl">Teren targów to nigdy tylko spektakl.</h2>
@@ -219,7 +231,7 @@
         </div>
       </section>
 
-      <section class="writing-books" data-lang-panel="en">
+      <section class="writing-books" id="writing-archive" data-portfolio-chapter-target="archive" data-lang-panel="en">
         <div class="section-heading compact">
           <p class="eyebrow">Books &amp; longer-form writing</p>
           <h2>Public writing that found a more permanent form.</h2>
@@ -250,7 +262,7 @@
         </div>
       </section>
 
-      <section class="writing-books" data-lang-panel="pl" hidden>
+      <section class="writing-books" data-portfolio-chapter-target="archive" data-lang-panel="pl" hidden>
         <div class="section-heading compact">
           <p class="eyebrow">Książki i dłuższe formy</p>
           <h2>Publicystyka, która znalazła bardziej trwałą formę.</h2>
@@ -472,6 +484,6 @@
       <a href="writing.html#top" data-i18n="backTop">Back to top</a>
     </footer>
 
-  <script src="script.js?v=65"></script>
+  <script src="script.js?v=67"></script>
   </body>
 </html>

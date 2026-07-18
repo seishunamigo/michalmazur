@@ -249,6 +249,11 @@ const translations = {
     writingPageTitle: "Dispatches from Japan, game history, and the quiet things games reveal.",
     writingPageDeck:
       "A selected sampler drawn from my original PSX Extreme manuscripts: event reporting, Japanese game history, technology and market analysis, feature writing, and reflections on what games do in everyday life.",
+    writingChapterLabel: "Explore this writing portfolio",
+    writingChapterPsx: "PSX Extreme",
+    writingChapterEditorial: "Editorial practice",
+    writingChapterFieldnotes: "Field reporting & TGS",
+    writingChapterArchive: "Articles & books",
     writingNote: "Two selected excerpts from each manuscript are included as writing samples. The full articles remain with PSX Extreme.",
     writingCtaEyebrow: "Public Communication",
     writingCtaTitle: "I write for readers who want context, not just information.",
@@ -578,6 +583,11 @@ const translations = {
     writingPageTitle: "Relacje z Japonii, historia gier i ciche rzeczy, które gry potrafią odsłonić.",
     writingPageDeck:
       "Wybór z moich oryginalnych tekstów dla PSX Extreme: relacje z wydarzeń, historia japońskich gier, analiza technologii i rynku, reportażowa publicystyka oraz refleksje o tym, co gry robią w codziennym życiu.",
+    writingChapterLabel: "Przeglądaj portfolio pisarskie",
+    writingChapterPsx: "PSX Extreme",
+    writingChapterEditorial: "Praktyka redakcyjna",
+    writingChapterFieldnotes: "Reportaż i TGS",
+    writingChapterArchive: "Artykuły i książki",
     writingNote: "Dwa wybrane fragmenty z każdego rękopisu służą jako próbki stylu. Pełne artykuły pozostają własnością PSX Extreme.",
     writingCtaEyebrow: "Komunikacja publiczna",
     writingCtaTitle: "Piszę dla odbiorców, którzy chcą kontekstu, nie tylko informacji.",
@@ -2077,16 +2087,14 @@ document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
   render();
 });
 
-const teachingChapterNavigation = document.querySelector("[data-teaching-chapter-nav]");
-
-if (teachingChapterNavigation) {
-  const chapterLinks = [...teachingChapterNavigation.querySelectorAll("[data-teaching-chapter-link]")];
-  const getVisibleChapterTargets = () => [...document.querySelectorAll("[data-teaching-chapter-target]")]
+document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNavigation) => {
+  const chapterLinks = [...chapterNavigation.querySelectorAll("[data-portfolio-chapter-link]")];
+  const getVisibleChapterTargets = () => [...document.querySelectorAll("[data-portfolio-chapter-target]")]
     .filter((target) => !target.hidden && target.getClientRects().length > 0);
 
-  const setActiveTeachingChapter = (chapter) => {
+  const setActiveChapter = (chapter) => {
     chapterLinks.forEach((link) => {
-      const isActive = link.dataset.teachingChapterLink === chapter;
+      const isActive = link.dataset.portfolioChapterLink === chapter;
       link.classList.toggle("is-active", isActive);
       if (isActive) {
         link.setAttribute("aria-current", "location");
@@ -2096,11 +2104,11 @@ if (teachingChapterNavigation) {
     });
   };
 
-  const updateTeachingChapter = () => {
+  const updateChapter = () => {
     const targets = getVisibleChapterTargets();
     if (targets.length === 0) return;
     const headerOffset = header?.getBoundingClientRect().height || 0;
-    const chapterOffset = teachingChapterNavigation.getBoundingClientRect().height || 0;
+    const chapterOffset = chapterNavigation.getBoundingClientRect().height || 0;
     const marker = headerOffset + chapterOffset + 36;
     let activeTarget = targets[0];
 
@@ -2108,32 +2116,32 @@ if (teachingChapterNavigation) {
       if (target.getBoundingClientRect().top <= marker) activeTarget = target;
     });
 
-    setActiveTeachingChapter(activeTarget.dataset.teachingChapterTarget);
+    setActiveChapter(activeTarget.dataset.portfolioChapterTarget);
   };
 
   chapterLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
-      const chapter = link.dataset.teachingChapterLink;
+      const chapter = link.dataset.portfolioChapterLink;
       const target = getVisibleChapterTargets()
-        .find((item) => item.dataset.teachingChapterTarget === chapter);
+        .find((item) => item.dataset.portfolioChapterTarget === chapter);
       if (!target) return;
 
       event.preventDefault();
       const headerOffset = header?.getBoundingClientRect().height || 0;
-      const chapterOffset = teachingChapterNavigation.getBoundingClientRect().height || 0;
+      const chapterOffset = chapterNavigation.getBoundingClientRect().height || 0;
       const top = window.scrollY + target.getBoundingClientRect().top - headerOffset - chapterOffset - 24;
       window.scrollTo({ top, behavior: "smooth" });
-      setActiveTeachingChapter(chapter);
+      setActiveChapter(chapter);
     });
   });
 
-  window.addEventListener("scroll", updateTeachingChapter, { passive: true });
-  window.addEventListener("resize", updateTeachingChapter);
+  window.addEventListener("scroll", updateChapter, { passive: true });
+  window.addEventListener("resize", updateChapter);
   document.addEventListener("identity:languagechange", () => {
-    window.requestAnimationFrame(updateTeachingChapter);
+    window.requestAnimationFrame(updateChapter);
   });
-  updateTeachingChapter();
-}
+  updateChapter();
+});
 
 syncHeader();
 setLanguage(localStorage.getItem("identity-language") || "en");
