@@ -1621,150 +1621,316 @@ document.querySelectorAll("[data-design-studio]").forEach((studio) => {
 
 const writingGamebookCopy = {
   en: {
-    progress: "Decision {step} of 2",
+    scene: "Scene {step}",
+    notebook: "Notebook",
+    energy: "Field energy",
+    energyLow: "last reserves",
+    pressPass: "Press pass",
+    notebookEmpty: "No observations yet — which is already an observation.",
+    possibleLead: "A possible opening line",
+    editorialMove: "What the route taught you",
+    restart: "Start with a clean notebook",
+    replay: "Try a different route",
+    notes: {
+      crowd: "the moving crowd",
+      queue: "the queue as ritual",
+      missingInvite: "the vanished invitation",
+      quietBooth: "the quiet booth",
+      water: "very shiny water",
+      student: "a young developer",
+      redWire: "the red wire",
+      merch: "the merchandise queue",
+      train: "the train past Chiba",
+      player: "what players actually do",
+    },
     start: {
-      title: "The doors open. What catches your eye first?",
-      body: "A queue curls around a major publisher, a small booth is almost empty, and a creator waves you over from the edge of the hall.",
+      title: "Makuhari Messe. One press pass; too many stories.",
+      body: "You arrive with a notebook, a badge, four hours, and the unreasonable belief that you can be everywhere. The public entrance resembles a moving wall of people. Somewhere inside, a scheduled invitation may or may not still exist. At the far edge of the hall, a small booth looks almost calm.",
       choices: [
-        { label: "Follow the impossible queue", detail: "Start with scale, anticipation, and what people are willing to wait for.", next: "crowd" },
-        { label: "Turn toward the quiet booth", detail: "Look for an idea that might be missed by the main flow of the show.", next: "booth" },
-        { label: "Take the unexpected conversation", detail: "Let a person, rather than a product, become the way in.", next: "conversation" },
+        { label: "Read the crowd before fighting it", detail: "Treat the entrance as the first scene, not an obstacle on the way to one.", next: "crowd", note: "crowd", energy: -1 },
+        { label: "Chase the invitation that may have vanished", detail: "Your name is on an old email. That is not the same as having a meeting.", next: "invite", note: "missingInvite", energy: -1 },
+        { label: "Walk toward the quiet end of the hall", detail: "Ignore the loudest thing for now and look for the person with time to talk.", next: "sideHall", note: "quietBooth", energy: 0 },
       ],
     },
     crowd: {
-      title: "The queue moves slowly, but it is telling you something.",
-      body: "You can treat it as a number, or listen for what the waiting reveals about expectation, fandom, and ritual.",
+      title: "The crowd has a logic. It is just not your logic.",
+      body: "The line moves three metres, stops for eleven minutes, and then reveals that half of it is waiting for a limited tote bag. A staff member points in three directions at once. You can now either document the absurdity, attempt to enter like a professional, or accept that your real story may be happening at the door.",
       choices: [
-        { label: "Map the scale", detail: "Notice the booth, the launch strategy, and the industry logic behind the spectacle.", next: "industry" },
-        { label: "Listen to the people waiting", detail: "Follow a small remark, costume, or shared joke into a human scene.", next: "people" },
+        { label: "Ask how the line actually works", detail: "There is a difference between a queue and a social experiment with lanyards.", next: "queueLogic", note: "queue", energy: -1 },
+        { label: "Use the press entrance and listen as you go", detail: "You may get inside. You may also learn why the entrance is the whole story.", next: "showFloor", note: "player", energy: -1 },
+        { label: "Leave the battle for a smaller story", detail: "The show is large enough that walking away can be a reporting decision.", next: "sideHall", note: "quietBooth", energy: 0 },
       ],
     },
-    booth: {
-      title: "A tiny booth has no crowd — just a game that invites a second look.",
-      body: "The useful question is not whether it is big. It is what its design choice makes possible for a player.",
+    queueLogic: {
+      title: "The queue is not failing. It is doing exactly what a spectacle needs it to do.",
+      body: "People compare wait times, trade tips, and take photos of the sign that warns them that the wait will be long. You write down a line that might become a lead. Then a new wave of visitors arrives, and the entrance becomes its own boss fight.",
       choices: [
-        { label: "Ask about one mechanic", detail: "Turn a specific design decision into the spine of the story.", next: "design" },
-        { label: "Watch people play", detail: "Let hesitation, surprise, and explanation show what the game is doing.", next: "meaning" },
+        { label: "Enter before the next wave closes the gap", detail: "You have one clean opening. It will not remain clean.", next: "showFloor", note: "crowd", energy: -1 },
+        { label: "Stay outside and write the crowd story", detail: "Sometimes the honest ending is that the event was too large to enter properly.", next: "crowdEnd", note: "queue", energy: -1 },
+        { label: "Remember the missing invitation", detail: "A named contact sounds suddenly more useful than a perfectly observed queue.", next: "invite", note: "missingInvite", energy: -1 },
       ],
     },
-    conversation: {
-      title: "One offhand remark could be your opening. Or it could be a detour.",
-      body: "You need to decide whether to protect the texture of the moment or test it against a wider context.",
+    invite: {
+      title: "The invitation exists. The person who sent it has disappeared into the global PR cloud.",
+      body: "Your inbox contains an old confirmation, a venue name, and no useful reply. At the desk, nobody can quite decide whether this makes you an honoured guest or a man with an unusually optimistic phone. You could negotiate, stop refreshing, or retreat to the part of the show where no one has a schedule.",
       choices: [
-        { label: "Keep the strange detail", detail: "Build a scene that lets the reader enter the room before you explain it.", next: "scene" },
-        { label: "Ask the larger question", detail: "Use the encounter to investigate how games move between markets and cultures.", next: "context" },
+        { label: "Show the email and politely improvise", detail: "A press badge, a careful smile, and the phrase ‘perhaps there has been a misunderstanding’. ", next: "showFloor", note: "missingInvite", energy: -1 },
+        { label: "Stop refreshing and find an indie booth", detail: "The small stories do not usually require a calendar invitation.", next: "sideHall", note: "quietBooth", energy: 0 },
+        { label: "Refresh one more time", detail: "It is never just one more time. It is a whole afternoon of refreshes.", next: "inboxEnd", note: "missingInvite", energy: -2 },
       ],
     },
-    industry: {
-      kind: "Industry context",
-      title: "You build a feature from the spectacle outward.",
-      body: "The queue becomes evidence: of risk, marketing, platform strategy, and the scale required to turn a game into an event. The reader gets the machinery without losing the excitement.",
-      lesson: "Editorial move: use a concrete scene to make an industry system legible.",
+    sideHall: {
+      title: "At the edge of the hall, the volume drops — and the details get louder.",
+      body: "A student team is explaining a handmade game to three people. Nearby, a booth sells a shirt that has somehow acquired a two-hour queue. Farther on, a giant display promises a demo so spectacular that even the queue has a queue. Your notebook is finally useful; your feet are less convinced.",
+      choices: [
+        { label: "Ask the student team how they made the game", detail: "Start with the maker rather than the marketing copy.", next: "studentProject", note: "student", energy: 0 },
+        { label: "Investigate the merchandise queue", detail: "A physical object can explain a fandom, or consume the rest of your day.", next: "merchLine", note: "merch", energy: -1 },
+        { label: "Return to the enormous demo", detail: "You have avoided it long enough. The spectacle has noticed.", next: "showFloor", note: "crowd", energy: -1 },
+      ],
     },
-    people: {
-      kind: "Human reportage",
-      title: "You find the event in the people waiting for it.",
-      body: "A comment in a queue, a costume, or a shared ritual becomes the lead. The large show stays in the background, while the reader understands why it matters to someone in the foreground.",
-      lesson: "Editorial move: let a small human detail carry the scale of a larger story.",
+    showFloor: {
+      title: "Inside, every screen is trying to become your whole article.",
+      body: "A closed demonstration offers new hardware, a major game promises a legendary fifteen-minute slot, and a student project on a folding table has a suspicious-looking box with one red wire. You do not have time for all of them. That is the point.",
+      choices: [
+        { label: "Enter the closed demo about ‘very shiny water’", detail: "Technical progress is real; so is the question of how to describe it without sounding like a brochure.", next: "waterDemo", note: "water", energy: -1 },
+        { label: "Sit down at the red-wire student project", detail: "There may be a bomb. There is definitely a cardboard controller.", next: "studentProject", note: "redWire", energy: 0 },
+        { label: "Join the legendary game queue", detail: "Twenty minutes of play may cost you several hours and your remaining personality.", next: "monsterLine", note: "queue", energy: -2 },
+      ],
     },
-    design: {
-      kind: "Close reading",
-      title: "You make one design choice do the explanatory work.",
-      body: "The article starts with a mechanic, then follows its consequences: what it asks of a player, what it borrows from other games, and why it changes the experience.",
-      lesson: "Editorial move: begin with the specific before making a wider cultural claim.",
+    waterDemo: {
+      title: "The water is, undeniably, very shiny.",
+      body: "A host explains light, droplets, reflections, and the future. Someone repeats that the water is ‘very shiny now’. You could ask for specifications, make a small joke about fishing in it, or watch the room instead of the screen. Each option gives you a different article — and a different degree of social risk.",
+      choices: [
+        { label: "Ask what changed technically", detail: "Useful information, though the answer may sound like a press release in a lab coat.", next: "detail", note: "water", energy: -1 },
+        { label: "Ask whether you can fish in the water now", detail: "An unnecessary question can still reveal whether a room is capable of laughing.", next: "humanMoment", note: "water", energy: 0 },
+        { label: "Watch the people, not the pixels", detail: "A collective lean forward is sometimes better evidence than a spec sheet.", next: "humanMoment", note: "player", energy: 0 },
+      ],
     },
-    meaning: {
-      kind: "Cultural observation",
-      title: "You watch meaning appear in real time.",
-      body: "Players stop, try, explain, and react. Those small gestures tell the reader more than a press release could about who the game is for and how it is being understood.",
-      lesson: "Editorial move: observe first; interpretation becomes stronger when it has somewhere to stand.",
+    studentProject: {
+      title: "The student project has a red wire. Naturally, you are invited to choose.",
+      body: "The team explains that the wrong decision will trigger a theatrical consequence. The right decision will probably do the same, but with less steam. Their enthusiasm is immediate, slightly chaotic, and much more memorable than the huge booth behind them.",
+      choices: [
+        { label: "Cut the red wire", detail: "It is the obvious choice. That is why it is almost certainly the wrong one.", next: "redWireEnd", note: "redWire", energy: 0 },
+        { label: "Ask how they built the controller", detail: "Follow the labour, the uncertainty, and the reasons someone makes a game at all.", next: "detail", note: "student", energy: 0 },
+        { label: "Hand the tool back and observe players", detail: "Watch what happens when strangers become a temporary audience.", next: "humanMoment", note: "player", energy: 0 },
+      ],
     },
-    scene: {
-      kind: "Scene-led feature",
-      title: "You keep the odd moment intact.",
-      body: "The piece opens with an image, a voice, and the physical texture of the show floor. Context arrives later, once the reader has been allowed to enter the scene with you.",
-      lesson: "Editorial move: atmosphere is not decoration when it helps the reader understand a place.",
+    monsterLine: {
+      title: "The demo is fifteen minutes. The waiting time is an entire minor novel.",
+      body: "You have progressed far enough to see the screen and not far enough to remember why you began. Around you, strangers debate combat systems, compare snacks, and calculate whether the game is worth the loss of an afternoon. This is excellent material. It is also your last useful hour.",
+      choices: [
+        { label: "Stay and write from inside the queue", detail: "The wait becomes the feature: anticipation, devotion, and logistics in one air-conditioned corridor.", next: "detail", note: "queue", energy: -1 },
+        { label: "Escape toward the train before your body protests", detail: "The report can survive. Your connection at Chiba may not.", next: "trainEnd", note: "train", energy: -1 },
+        { label: "Leave and buy the ridiculous shirt instead", detail: "There are worse editorial decisions, although they are difficult to name right now.", next: "merchLine", note: "merch", energy: -1 },
+      ],
     },
-    context: {
-      kind: "Cultural translation",
-      title: "You turn one encounter into a question about circulation.",
-      body: "The conversation leads outwards: between Japan and other markets, between local assumptions and imported expectations, and between a game as a product and a game as culture.",
-      lesson: "Editorial move: connect local detail to a wider question without flattening either one.",
+    merchLine: {
+      title: "The shirt is limited. Your time is more limited.",
+      body: "The line contains collectors, tired journalists, and at least one person who has clearly done this before. You begin to understand that objects are not souvenirs here: they are proof that someone was present. Your notebook catches the thought just as your energy starts to leave the building.",
+      choices: [
+        { label: "Write about the object and walk away", detail: "A small purchase can be a portable history of a much larger event.", next: "detail", note: "merch", energy: -1 },
+        { label: "Stay until the last train becomes a rumour", detail: "You know exactly how this story ends: sleeping past your station.", next: "trainEnd", note: "train", energy: -2 },
+      ],
     },
-    restart: "Take another route",
+    humanMoment: {
+      title: "The room laughs. That is more useful than the perfect quotation.",
+      body: "For a moment, the event becomes a room full of people rather than a machine for releasing products. You write down the response — the pause, the grin, the person translating a joke for a friend. This is the material that makes context feel lived rather than announced.",
+      choices: [
+        { label: "Keep the small detail and turn it into a lead", detail: "Trust the scene. Explain the industry later.", next: "detail", note: "player", energy: 0 },
+        { label: "Chase one more major story", detail: "The desire to be everywhere is the final boss of field reporting.", next: "trainEnd", note: "train", energy: -2 },
+      ],
+    },
+    detail: {
+      kind: "Your field note became a feature",
+      title: "You stop looking for the definitive story and find the usable one.",
+      body: "The notebook now contains fragments instead of a grand theory: a queue, an awkward invitation, a young maker, an absurd wire, a line about water. Back at the desk, that is enough. The work is to arrange these details until the reader can enter the place and see why it mattered.",
+      lesson: "Editorial move: strong reporting is not collecting everything. It is choosing the details that allow a larger world to appear.",
+      lead: "The Tokyo Game Show did not begin with a trailer. It began with",
+    },
+    crowdEnd: {
+      kind: "Your field note became a crowd story",
+      title: "You never really get inside. The story gets inside anyway.",
+      body: "The doors remain somewhere beyond a human weather system of bags, signs, and patient determination. Rather than pretending the obstacle did not exist, you write from it. The scale of the event becomes visible precisely because it refuses to be convenient.",
+      lesson: "Editorial move: a limitation can be a truthful angle when you describe what it reveals rather than what it prevents.",
+      lead: "Before the first screen could be seen, Tokyo Game Show had already become",
+    },
+    inboxEnd: {
+      kind: "Your field note became a comic failure",
+      title: "The inbox wins. It never writes back.",
+      body: "By the time you admit that the invitation is not coming, you have acquired a new professional skill: recognising when an email thread has become a small tragicomedy. You leave with no exclusive demonstration, but with a precise memory of how international events occasionally run on optimism and expired contact details.",
+      lesson: "Editorial move: keep the administrative absurdity when it says something honest about the work around an event.",
+      lead: "The most exclusive room at Tokyo Game Show was not behind a velvet rope. It was behind",
+    },
+    redWireEnd: {
+      kind: "Your field note became a small explosion",
+      title: "You cut the red wire. Steam, noise, applause.",
+      body: "No actual danger occurs, except perhaps to your dignity. The team laughs, the cardboard device performs exactly as promised, and the giant booths around you suddenly look less alive. You have not found the biggest game at the show. You have found a reason people make games in the first place.",
+      lesson: "Editorial move: let a playful failure reveal the labour, risk, and generosity behind a creative project.",
+      lead: "At Tokyo Game Show, the loudest explosion I heard came from",
+    },
+    trainEnd: {
+      kind: "Your field note became a journey home",
+      title: "You wake up one stop past where you meant to be. Then several more.",
+      body: "The train has carried you beyond Chiba while your notebook slips off your knee. It is not a glamorous ending, but it is the correct one: field reporting has a body, a timetable, and limits. Tomorrow, the notes will still contain a story. Tonight, they contain a map back.",
+      lesson: "Editorial move: allow the logistics of a day to remain in the frame; they are part of how a place is actually experienced.",
+      lead: "By the time the Tokyo Game Show day ended, the most ambitious piece of navigation involved",
+    },
   },
   pl: {
-    progress: "Decyzja {step} z 2",
+    scene: "Scena {step}",
+    notebook: "Notatnik",
+    energy: "Energia w terenie",
+    energyLow: "ostatnie rezerwy",
+    pressPass: "Akredytacja prasowa",
+    notebookEmpty: "Jeszcze bez obserwacji — co samo w sobie jest już obserwacją.",
+    possibleLead: "Możliwy lead tekstu",
+    editorialMove: "Czego uczy ta trasa",
+    restart: "Zacznij z czystym notatnikiem",
+    replay: "Spróbuj innej trasy",
+    notes: {
+      crowd: "ruchomy tłum",
+      queue: "kolejka jako rytuał",
+      missingInvite: "zaginione zaproszenie",
+      quietBooth: "ciche stoisko",
+      water: "bardzo błyszcząca woda",
+      student: "młody twórca",
+      redWire: "czerwony kabel",
+      merch: "kolejka po gadżety",
+      train: "pociąg za Chibą",
+      player: "to, co naprawdę robią gracze",
+    },
     start: {
-      title: "Drzwi się otwierają. Co najpierw przykuwa twoją uwagę?",
-      body: "Kolejka do wielkiego wydawcy zawija się przez halę, przy niewielkim stoisku prawie nikogo nie ma, a twórca z obrzeża sali macha, żeby podejść.",
+      title: "Makuhari Messe. Jedna akredytacja, za dużo historii.",
+      body: "Przyjeżdżasz z notatnikiem, identyfikatorem, czterema godzinami i nieracjonalnym przekonaniem, że da się być wszędzie. Wejście dla publiczności przypomina ruchomy mur ludzi. Gdzieś w środku istnieje — albo już nie istnieje — spotkanie z zaproszenia. Na skraju hali niewielkie stoisko wygląda niemal spokojnie.",
       choices: [
-        { label: "Idź za niemożliwie długą kolejką", detail: "Zacznij od skali, oczekiwania i tego, na co ludzie są gotowi czekać.", next: "crowd" },
-        { label: "Skręć w stronę cichego stoiska", detail: "Poszukaj pomysłu, który mógłby umknąć głównemu strumieniowi targów.", next: "booth" },
-        { label: "Podejmij nieoczekiwaną rozmowę", detail: "Niech punktem wejścia będzie człowiek, a nie produkt.", next: "conversation" },
+        { label: "Najpierw przeczytaj tłum, zamiast z nim walczyć", detail: "Potraktuj wejście jak pierwszą scenę reportażu, a nie przeszkodę w drodze do niej.", next: "crowd", note: "crowd", energy: -1 },
+        { label: "Ścigaj zaproszenie, które mogło zniknąć", detail: "Twoje nazwisko jest w starym mailu. To nie to samo co umówione spotkanie.", next: "invite", note: "missingInvite", energy: -1 },
+        { label: "Idź w stronę cichego końca hali", detail: "Na razie zignoruj najgłośniejsze rzeczy i znajdź kogoś, kto ma czas porozmawiać.", next: "sideHall", note: "quietBooth", energy: 0 },
       ],
     },
     crowd: {
-      title: "Kolejka przesuwa się powoli, ale już coś opowiada.",
-      body: "Możesz potraktować ją jak liczbę albo wsłuchać się w to, co czekanie mówi o oczekiwaniu, fandomie i rytuale.",
+      title: "Tłum ma swoją logikę. Po prostu nie jest to twoja logika.",
+      body: "Kolejka przesuwa się o trzy metry, zatrzymuje na jedenaście minut, a potem okazuje się, że połowa czeka na limitowaną torbę. Pracownik jednocześnie wskazuje trzy kierunki. Możesz opisać absurd, spróbować wejść jak profesjonalista albo przyjąć, że prawdziwa historia dzieje się już przy drzwiach.",
       choices: [
-        { label: "Rozrysuj skalę zjawiska", detail: "Zauważ stoisko, strategię premiery i branżową logikę stojącą za widowiskiem.", next: "industry" },
-        { label: "Posłuchaj ludzi w kolejce", detail: "Pójdź za drobną uwagą, kostiumem albo wspólnym żartem i znajdź ludzką scenę.", next: "people" },
+        { label: "Zapytaj, jak właściwie działa ta kolejka", detail: "Jest różnica między kolejką a eksperymentem społecznym z identyfikatorami.", next: "queueLogic", note: "queue", energy: -1 },
+        { label: "Wejdź wejściem prasowym i słuchaj po drodze", detail: "Może uda się wejść. Może dowiesz się też, dlaczego samo wejście jest całą historią.", next: "showFloor", note: "player", energy: -1 },
+        { label: "Porzuć bitwę na rzecz mniejszej historii", detail: "Targi są na tyle wielkie, że odejście od nich może być decyzją reporterską.", next: "sideHall", note: "quietBooth", energy: 0 },
       ],
     },
-    booth: {
-      title: "Przy małym stoisku nie ma tłumu — jest tylko gra, która prosi o drugie spojrzenie.",
-      body: "Pożyteczne pytanie nie brzmi: czy to jest duże? Ważniejsze jest to, co konkretna decyzja projektowa umożliwia graczowi.",
+    queueLogic: {
+      title: "Kolejka nie zawodzi. Robi dokładnie to, czego potrzebuje widowisko.",
+      body: "Ludzie porównują czasy oczekiwania, wymieniają się wskazówkami i fotografują znak ostrzegający, że czekanie będzie długie. Zapisujesz zdanie, z którego może powstać lead. Wtedy nadchodzi kolejna fala odwiedzających i wejście zmienia się w bossa, którego nie da się ominąć.",
       choices: [
-        { label: "Zapytaj o jeden mechanizm", detail: "Niech konkretna decyzja projektowa stanie się osią tekstu.", next: "design" },
-        { label: "Popatrz, jak ludzie grają", detail: "Niech zawahanie, zaskoczenie i objaśnienia pokażą, co robi ta gra.", next: "meaning" },
+        { label: "Wejdź, zanim kolejna fala zamknie przejście", detail: "Masz jedno czyste okno. Nie pozostanie czyste długo.", next: "showFloor", note: "crowd", energy: -1 },
+        { label: "Zostań na zewnątrz i napisz historię tłumu", detail: "Czasem uczciwe zakończenie brzmi: wydarzenie było za wielkie, by naprawdę do niego wejść.", next: "crowdEnd", note: "queue", energy: -1 },
+        { label: "Przypomnij sobie o zaginionym zaproszeniu", detail: "Nagle kontakt z imienia i nazwiska brzmi użyteczniej niż perfekcyjnie zaobserwowana kolejka.", next: "invite", note: "missingInvite", energy: -1 },
       ],
     },
-    conversation: {
-      title: "Jedna rzucona mimochodem uwaga może otworzyć tekst. Albo wyprowadzić cię w pole.",
-      body: "Trzeba zdecydować, czy zachować fakturę chwili, czy sprawdzić ją w szerszym kontekście.",
+    invite: {
+      title: "Zaproszenie istnieje. Osoba, która je wysłała, zniknęła w globalnej chmurze PR-u.",
+      body: "W skrzynce masz stare potwierdzenie, nazwę miejsca i brak odpowiedzi. Przy stanowisku nikt nie potrafi zdecydować, czy to czyni cię honorowym gościem, czy człowiekiem z wyjątkowo optymistycznym telefonem. Możesz negocjować, przestać odświeżać pocztę albo uciec tam, gdzie nikt nie pilnuje harmonogramu.",
       choices: [
-        { label: "Zachowaj dziwny szczegół", detail: "Zbuduj scenę, która wpuszcza czytelnika do sali, zanim zaczniesz ją wyjaśniać.", next: "scene" },
-        { label: "Zadaj większe pytanie", detail: "Niech spotkanie prowadzi do pytania o to, jak gry krążą między rynkami i kulturami.", next: "context" },
+        { label: "Pokaż mail i uprzejmie improwizuj", detail: "Identyfikator prasowy, ostrożny uśmiech i fraza: „być może doszło do nieporozumienia”.", next: "showFloor", note: "missingInvite", energy: -1 },
+        { label: "Przestań odświeżać i znajdź stoisko indie", detail: "Mniejsze historie zwykle nie wymagają wpisu w kalendarzu.", next: "sideHall", note: "quietBooth", energy: 0 },
+        { label: "Odśwież pocztę jeszcze raz", detail: "To nigdy nie jest tylko raz. To całe popołudnie odświeżeń.", next: "inboxEnd", note: "missingInvite", energy: -2 },
       ],
     },
-    industry: {
-      kind: "Kontekst branżowy",
-      title: "Budujesz reportaż od widowiska na zewnątrz.",
-      body: "Kolejka staje się dowodem: ryzyka, marketingu, strategii platform i skali potrzebnej, by zamienić grę w wydarzenie. Czytelnik dostaje mechanizm, ale nie traci ekscytacji.",
-      lesson: "Ruch redakcyjny: użyj konkretnej sceny, żeby uczynić system branżowy zrozumiałym.",
+    sideHall: {
+      title: "Na skraju hali głośność spada — a szczegóły robią się wyraźniejsze.",
+      body: "Zespół studencki tłumaczy trzem osobom działanie własnej gry. Obok stoisko sprzedaje koszulkę, która w tajemniczy sposób dorobiła się dwugodzinnej kolejki. Dalej gigantyczny ekran obiecuje demo tak spektakularne, że nawet kolejka ma kolejkę. Notatnik wreszcie się przydaje. Stopy są mniej zachwycone.",
+      choices: [
+        { label: "Zapytaj studentów, jak zrobili swoją grę", detail: "Zacznij od twórcy, a nie od tekstu marketingowego.", next: "studentProject", note: "student", energy: 0 },
+        { label: "Zbadaj kolejkę po gadżety", detail: "Fizyczny przedmiot może objaśnić fandom — albo pożreć resztę dnia.", next: "merchLine", note: "merch", energy: -1 },
+        { label: "Wróć do wielkiego dema", detail: "Wystarczająco długo go unikałeś. Widowisko cię zauważyło.", next: "showFloor", note: "crowd", energy: -1 },
+      ],
     },
-    people: {
-      kind: "Reportaż o ludziach",
-      title: "Odnajdujesz wydarzenie w tych, którzy na nie czekają.",
-      body: "Komentarz w kolejce, kostium albo wspólny rytuał stają się leadem. Wielkie targi pozostają w tle, a czytelnik rozumie, dlaczego dla kogoś na pierwszym planie naprawdę mają znaczenie.",
-      lesson: "Ruch redakcyjny: pozwól, aby mały ludzki szczegół uniósł skalę większej historii.",
+    showFloor: {
+      title: "W środku każdy ekran próbuje zostać całym twoim artykułem.",
+      body: "Zamknięte demo pokazuje nowy sprzęt, wielka gra obiecuje legendarny piętnastominutowy slot, a projekt studencki na składanym stoliku ma podejrzanie wyglądające pudełko z jednym czerwonym kablem. Nie masz czasu na wszystko. I właśnie o to chodzi.",
+      choices: [
+        { label: "Wejdź na zamknięte demo o „bardzo błyszczącej wodzie”", detail: "Postęp techniczny jest realny, ale pozostaje pytanie, jak opisać go bez brzmienia jak folder reklamowy.", next: "waterDemo", note: "water", energy: -1 },
+        { label: "Usiądź przy studenckim projekcie z czerwonym kablem", detail: "Może to bomba. Na pewno kartonowy kontroler.", next: "studentProject", note: "redWire", energy: 0 },
+        { label: "Stań w kolejce do legendarnej gry", detail: "Dwadzieścia minut gry może kosztować kilka godzin i resztkę osobowości.", next: "monsterLine", note: "queue", energy: -2 },
+      ],
     },
-    design: {
-      kind: "Close reading",
-      title: "Pozwalasz jednej decyzji projektowej wykonać pracę objaśnienia.",
-      body: "Artykuł zaczyna się od mechanizmu, a potem śledzi jego konsekwencje: czego wymaga od gracza, co zapożycza z innych gier i dlaczego zmienia doświadczenie.",
-      lesson: "Ruch redakcyjny: zacznij od szczegółu, zanim postawisz szerszą tezę kulturową.",
+    waterDemo: {
+      title: "Woda jest, bez dwóch zdań, bardzo błyszcząca.",
+      body: "Prowadzący opowiada o świetle, kroplach, odbiciach i przyszłości. Ktoś powtarza, że „teraz woda naprawdę mocno błyszczy”. Możesz zapytać o specyfikację, zażartować, że może dałoby się w niej łowić ryby, albo patrzeć na salę zamiast na ekran. Każda opcja daje inny tekst — i inny poziom ryzyka towarzyskiego.",
+      choices: [
+        { label: "Zapytaj, co technicznie się zmieniło", detail: "Pożyteczna informacja, choć odpowiedź może brzmieć jak informacja prasowa w fartuchu laboratoryjnym.", next: "detail", note: "water", energy: -1 },
+        { label: "Zapytaj, czy można już łowić ryby w tej wodzie", detail: "Niekonieczne pytanie też może pokazać, czy sala umie się śmiać.", next: "humanMoment", note: "water", energy: 0 },
+        { label: "Patrz na ludzi, nie na piksele", detail: "Wspólne pochylenie się do przodu bywa lepszym dowodem niż tabelka ze specyfikacją.", next: "humanMoment", note: "player", energy: 0 },
+      ],
     },
-    meaning: {
-      kind: "Obserwacja kulturowa",
-      title: "Patrzysz, jak znaczenie pojawia się w czasie rzeczywistym.",
-      body: "Gracze zatrzymują się, próbują, objaśniają i reagują. Te drobne gesty mówią o odbiorcach i rozumieniu gry więcej niż informacja prasowa.",
-      lesson: "Ruch redakcyjny: najpierw obserwuj; interpretacja jest mocniejsza, gdy ma się na czym oprzeć.",
+    studentProject: {
+      title: "Projekt studencki ma czerwony kabel. Oczywiście możesz go wybrać.",
+      body: "Zespół tłumaczy, że zła decyzja wywoła teatralną konsekwencję. Dobra decyzja prawdopodobnie też, tylko z mniejszą ilością pary. Ich entuzjazm jest natychmiastowy, lekko chaotyczny i znacznie bardziej zapamiętywalny niż wielkie stoisko za ich plecami.",
+      choices: [
+        { label: "Przetnij czerwony kabel", detail: "To oczywisty wybór. Właśnie dlatego prawie na pewno zły.", next: "redWireEnd", note: "redWire", energy: 0 },
+        { label: "Zapytaj, jak zbudowali kontroler", detail: "Pójdź za pracą, niepewnością i powodami, dla których ktoś w ogóle tworzy grę.", next: "detail", note: "student", energy: 0 },
+        { label: "Oddaj narzędzie i obserwuj graczy", detail: "Zobacz, co dzieje się, gdy obcy ludzie na chwilę stają się publicznością.", next: "humanMoment", note: "player", energy: 0 },
+      ],
     },
-    scene: {
-      kind: "Tekst prowadzony sceną",
-      title: "Zachowujesz dziwny moment w całości.",
-      body: "Tekst otwiera obraz, głos i fizyczna faktura hali targowej. Kontekst przychodzi później — gdy czytelnik miał już okazję wejść w tę scenę razem z tobą.",
-      lesson: "Ruch redakcyjny: atmosfera nie jest ozdobnikiem, jeśli pomaga zrozumieć miejsce.",
+    monsterLine: {
+      title: "Demo trwa piętnaście minut. Czekanie to cała mała powieść.",
+      body: "Doszedłeś do miejsca, z którego widać ekran, ale nie tak daleko, by pamiętać, po co tu stanąłeś. Wokół obcy ludzie dyskutują o systemie walki, porównują przekąski i wyliczają, czy gra jest warta straconego popołudnia. To znakomity materiał. To także twoja ostatnia użyteczna godzina.",
+      choices: [
+        { label: "Zostań i napisz tekst z wnętrza kolejki", detail: "Czekanie staje się reportażem: oczekiwanie, oddanie i logistyka w jednym klimatyzowanym korytarzu.", next: "detail", note: "queue", energy: -1 },
+        { label: "Uciekaj do pociągu, zanim ciało zaprotestuje", detail: "Reportaż przetrwa. Przesiadka w Chibie może nie.", next: "trainEnd", note: "train", energy: -1 },
+        { label: "Wyjdź i kup absurdalną koszulkę", detail: "Są gorsze decyzje redakcyjne, choć teraz trudno je wymienić.", next: "merchLine", note: "merch", energy: -1 },
+      ],
     },
-    context: {
-      kind: "Tłumaczenie kultury",
-      title: "Z jednego spotkania robisz pytanie o obieg kultury.",
-      body: "Rozmowa prowadzi na zewnątrz: między Japonią a innymi rynkami, między lokalnymi założeniami a importowanymi oczekiwaniami, między grą jako produktem a grą jako kulturą.",
-      lesson: "Ruch redakcyjny: połącz lokalny szczegół z większym pytaniem, nie spłaszczając żadnej ze stron.",
+    merchLine: {
+      title: "Koszulka jest limitowana. Twój czas jeszcze bardziej.",
+      body: "W kolejce stoją kolekcjonerzy, zmęczeni dziennikarze i przynajmniej jedna osoba, która robiła to już wcześniej. Zaczynasz rozumieć, że przedmioty nie są tu pamiątkami: są dowodem obecności. Notatnik łapie tę myśl dokładnie wtedy, gdy energia opuszcza budynek.",
+      choices: [
+        { label: "Napisz o przedmiocie i idź dalej", detail: "Mały zakup może być przenośną historią znacznie większego wydarzenia.", next: "detail", note: "merch", energy: -1 },
+        { label: "Zostań, aż ostatni pociąg stanie się plotką", detail: "Doskonale wiesz, jak kończy się ta opowieść: snem za własną stacją.", next: "trainEnd", note: "train", energy: -2 },
+      ],
     },
-    restart: "Wybierz inną drogę",
+    humanMoment: {
+      title: "Sala się śmieje. To jest użyteczniejsze niż idealny cytat.",
+      body: "Przez chwilę wydarzenie przestaje być maszyną do wypuszczania produktów, a staje się pokojem pełnym ludzi. Zapisujesz odpowiedź — pauzę, uśmiech, osobę tłumaczącą żart przyjacielowi. To materiał, dzięki któremu kontekst jest przeżyty, a nie tylko ogłoszony.",
+      choices: [
+        { label: "Zachowaj mały szczegół i zrób z niego lead", detail: "Zaufaj scenie. Branżę wyjaśnisz później.", next: "detail", note: "player", energy: 0 },
+        { label: "Ścigaj jeszcze jedną wielką historię", detail: "Chęć bycia wszędzie jest ostatnim bossem reportażu w terenie.", next: "trainEnd", note: "train", energy: -2 },
+      ],
+    },
+    detail: {
+      kind: "Twoja notatka zamieniła się w reportaż",
+      title: "Przestajesz szukać definitywnej historii i znajdujesz tę, którą da się opowiedzieć.",
+      body: "Notatnik zawiera teraz fragmenty zamiast wielkiej teorii: kolejkę, niezręczne zaproszenie, młodego twórcę, absurdalny kabel, zdanie o wodzie. Przy biurku to wystarczy. Praca polega na takim ułożeniu szczegółów, by czytelnik mógł wejść w to miejsce i zrozumieć, dlaczego było ważne.",
+      lesson: "Ruch redakcyjny: dobre reporterstwo nie polega na zebraniu wszystkiego. Polega na wybraniu detali, dzięki którym pojawia się większy świat.",
+      lead: "Tokyo Game Show nie zaczął się od zwiastuna. Zaczął się od",
+    },
+    crowdEnd: {
+      kind: "Twoja notatka zamieniła się w historię tłumu",
+      title: "Właściwie nie wchodzisz do środka. Historia i tak wchodzi do ciebie.",
+      body: "Drzwi pozostają gdzieś za ludzkim systemem pogodowym z toreb, znaków i cierpliwej determinacji. Zamiast udawać, że przeszkoda nie istnieje, piszesz właśnie z niej. Skala wydarzenia staje się widoczna dlatego, że odmawia bycia wygodna.",
+      lesson: "Ruch redakcyjny: ograniczenie może być uczciwym kątem, jeśli opisujesz to, co odsłania, a nie tylko to, co uniemożliwia.",
+      lead: "Zanim udało się zobaczyć pierwszy ekran, Tokyo Game Show zdążył już stać się",
+    },
+    inboxEnd: {
+      kind: "Twoja notatka zamieniła się w komedię porażki",
+      title: "Skrzynka odbiorcza wygrywa. I nigdy nie odpisuje.",
+      body: "Gdy przyznajesz w końcu, że zaproszenie nie nadejdzie, zdobywasz nową umiejętność zawodową: rozpoznawanie chwili, w której wątek mailowy staje się małą tragikomedią. Nie masz ekskluzywnego dema, ale zostaje precyzyjne wspomnienie o tym, że międzynarodowe wydarzenia czasami działają na optymizmie i wygasłych kontaktach.",
+      lesson: "Ruch redakcyjny: zachowaj administracyjny absurd, jeśli mówi coś prawdziwego o pracy wokół wydarzenia.",
+      lead: "Najbardziej ekskluzywny pokój na Tokyo Game Show nie był za aksamitną liną. Był za",
+    },
+    redWireEnd: {
+      kind: "Twoja notatka zamieniła się w małą eksplozję",
+      title: "Przecinasz czerwony kabel. Para, hałas, brawa.",
+      body: "Nie dzieje się nic niebezpiecznego, może poza drobnym uszczerbkiem dla godności. Kartonowe urządzenie działa dokładnie zgodnie z obietnicą, zespół się śmieje, a wielkie stoiska wokół nagle wydają się mniej żywe. Nie znalazłeś największej gry na targach. Znalazłeś powód, dla którego ludzie w ogóle robią gry.",
+      lesson: "Ruch redakcyjny: pozwól, by zabawna porażka odsłoniła pracę, ryzyko i hojność stojące za twórczym projektem.",
+      lead: "Najgłośniejsza eksplozja, jaką usłyszałem na Tokyo Game Show, dobiegła z",
+    },
+    trainEnd: {
+      kind: "Twoja notatka zamieniła się w podróż do domu",
+      title: "Budzisz się jedną stację za daleko. Potem jeszcze kilka.",
+      body: "Pociąg zabrał cię za Chibę, a notatnik zsuwa się z kolan. To nie jest efektowne zakończenie, ale właściwe: reportaż w terenie ma ciało, rozkład jazdy i granice. Jutro w notatkach nadal będzie historia. Dzisiaj jest w nich mapa powrotna.",
+      lesson: "Ruch redakcyjny: nie wycinaj z kadru logistyki dnia; ona też jest częścią realnego doświadczenia miejsca.",
+      lead: "Pod koniec dnia na Tokyo Game Show najbardziej ambitną czynnością nawigacyjną było",
+    },
   },
 };
 
@@ -1774,6 +1940,55 @@ document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
   const stage = gamebook.querySelector("[data-writing-game-stage]");
   let currentId = "start";
   let step = 1;
+  let energy = 4;
+  let notes = [];
+
+  const createStatus = () => {
+    const status = document.createElement("div");
+    const scene = document.createElement("span");
+    const notebook = document.createElement("span");
+    const fieldEnergy = document.createElement("span");
+    status.className = "writing-gamebook-status";
+    scene.textContent = copy.scene.replace("{step}", String(step));
+    notebook.textContent = `${copy.notebook}: ${notes.length}`;
+    fieldEnergy.textContent = `${copy.energy}: ${"●".repeat(energy)}${"○".repeat(4 - energy)}`;
+    status.append(scene, notebook, fieldEnergy);
+    return status;
+  };
+
+  const createNotebook = () => {
+    const notebook = document.createElement("div");
+    const label = document.createElement("strong");
+    const content = document.createElement("div");
+    notebook.className = "writing-gamebook-notebook";
+    label.textContent = copy.notebook;
+    if (notes.length === 0) {
+      content.textContent = copy.notebookEmpty;
+    } else {
+      notes.forEach((note) => {
+        const chip = document.createElement("span");
+        chip.textContent = copy.notes[note];
+        content.append(chip);
+      });
+    }
+    notebook.append(label, content);
+    return notebook;
+  };
+
+  const buildLead = (scene) => {
+    const preferredNotes = ["water", "student", "redWire", "queue", "crowd", "merch", "train", "missingInvite", "player", "quietBooth"];
+    const firstNote = preferredNotes.find((note) => notes.includes(note));
+    const detail = firstNote ? copy.notes[firstNote] : copy.pressPass.toLowerCase();
+    return `${scene.lead} ${detail}.`;
+  };
+
+  const restart = () => {
+    currentId = "start";
+    step = 1;
+    energy = 4;
+    notes = [];
+    render();
+  };
 
   const render = () => {
     const scene = copy[currentId];
@@ -1781,12 +1996,9 @@ document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
     stage.replaceChildren();
 
     if (scene.choices) {
-      const progress = document.createElement("p");
       const heading = document.createElement("h3");
       const body = document.createElement("p");
       const choices = document.createElement("div");
-      progress.className = "writing-gamebook-progress";
-      progress.textContent = copy.progress.replace("{step}", String(step));
       heading.textContent = scene.title;
       body.textContent = scene.body;
       choices.className = "writing-gamebook-choices";
@@ -1802,11 +2014,13 @@ document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
         button.addEventListener("click", () => {
           currentId = choice.next;
           step += 1;
+          energy = Math.max(0, Math.min(4, energy + (choice.energy || 0)));
+          if (choice.note && !notes.includes(choice.note)) notes = [...notes, choice.note];
           render();
         });
         choices.append(button);
       });
-      stage.append(progress, heading, body, choices);
+      stage.append(createStatus(), heading, body, createNotebook(), choices);
       return;
     }
 
@@ -1814,22 +2028,34 @@ document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
     const kind = document.createElement("strong");
     const heading = document.createElement("h3");
     const body = document.createElement("p");
+    const leadLabel = document.createElement("strong");
+    const lead = document.createElement("p");
+    const lessonLabel = document.createElement("strong");
     const lesson = document.createElement("p");
-    const restart = document.createElement("button");
+    const actions = document.createElement("div");
+    const restartButton = document.createElement("button");
+    const replayButton = document.createElement("button");
     result.className = "writing-gamebook-result";
     kind.textContent = scene.kind;
     heading.textContent = scene.title;
     body.textContent = scene.body;
+    leadLabel.textContent = copy.possibleLead;
+    lead.className = "writing-gamebook-lead";
+    lead.textContent = `“${buildLead(scene)}”`;
+    lessonLabel.textContent = copy.editorialMove;
+    lesson.className = "writing-gamebook-lesson";
     lesson.textContent = scene.lesson;
-    restart.type = "button";
-    restart.className = "writing-gamebook-restart";
-    restart.textContent = copy.restart;
-    restart.addEventListener("click", () => {
-      currentId = "start";
-      step = 1;
-      render();
-    });
-    result.append(kind, heading, body, lesson, restart);
+    actions.className = "writing-gamebook-actions";
+    restartButton.type = "button";
+    restartButton.className = "writing-gamebook-restart";
+    restartButton.textContent = copy.restart;
+    replayButton.type = "button";
+    replayButton.className = "writing-gamebook-restart writing-gamebook-replay";
+    replayButton.textContent = copy.replay;
+    restartButton.addEventListener("click", restart);
+    replayButton.addEventListener("click", restart);
+    actions.append(replayButton, restartButton);
+    result.append(createStatus(), kind, heading, body, createNotebook(), leadLabel, lead, lessonLabel, lesson, actions);
     stage.append(result);
   };
 
