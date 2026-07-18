@@ -1619,6 +1619,223 @@ document.querySelectorAll("[data-design-studio]").forEach((studio) => {
   render();
 });
 
+const writingGamebookCopy = {
+  en: {
+    progress: "Decision {step} of 2",
+    start: {
+      title: "The doors open. What catches your eye first?",
+      body: "A queue curls around a major publisher, a small booth is almost empty, and a creator waves you over from the edge of the hall.",
+      choices: [
+        { label: "Follow the impossible queue", detail: "Start with scale, anticipation, and what people are willing to wait for.", next: "crowd" },
+        { label: "Turn toward the quiet booth", detail: "Look for an idea that might be missed by the main flow of the show.", next: "booth" },
+        { label: "Take the unexpected conversation", detail: "Let a person, rather than a product, become the way in.", next: "conversation" },
+      ],
+    },
+    crowd: {
+      title: "The queue moves slowly, but it is telling you something.",
+      body: "You can treat it as a number, or listen for what the waiting reveals about expectation, fandom, and ritual.",
+      choices: [
+        { label: "Map the scale", detail: "Notice the booth, the launch strategy, and the industry logic behind the spectacle.", next: "industry" },
+        { label: "Listen to the people waiting", detail: "Follow a small remark, costume, or shared joke into a human scene.", next: "people" },
+      ],
+    },
+    booth: {
+      title: "A tiny booth has no crowd — just a game that invites a second look.",
+      body: "The useful question is not whether it is big. It is what its design choice makes possible for a player.",
+      choices: [
+        { label: "Ask about one mechanic", detail: "Turn a specific design decision into the spine of the story.", next: "design" },
+        { label: "Watch people play", detail: "Let hesitation, surprise, and explanation show what the game is doing.", next: "meaning" },
+      ],
+    },
+    conversation: {
+      title: "One offhand remark could be your opening. Or it could be a detour.",
+      body: "You need to decide whether to protect the texture of the moment or test it against a wider context.",
+      choices: [
+        { label: "Keep the strange detail", detail: "Build a scene that lets the reader enter the room before you explain it.", next: "scene" },
+        { label: "Ask the larger question", detail: "Use the encounter to investigate how games move between markets and cultures.", next: "context" },
+      ],
+    },
+    industry: {
+      kind: "Industry context",
+      title: "You build a feature from the spectacle outward.",
+      body: "The queue becomes evidence: of risk, marketing, platform strategy, and the scale required to turn a game into an event. The reader gets the machinery without losing the excitement.",
+      lesson: "Editorial move: use a concrete scene to make an industry system legible.",
+    },
+    people: {
+      kind: "Human reportage",
+      title: "You find the event in the people waiting for it.",
+      body: "A comment in a queue, a costume, or a shared ritual becomes the lead. The large show stays in the background, while the reader understands why it matters to someone in the foreground.",
+      lesson: "Editorial move: let a small human detail carry the scale of a larger story.",
+    },
+    design: {
+      kind: "Close reading",
+      title: "You make one design choice do the explanatory work.",
+      body: "The article starts with a mechanic, then follows its consequences: what it asks of a player, what it borrows from other games, and why it changes the experience.",
+      lesson: "Editorial move: begin with the specific before making a wider cultural claim.",
+    },
+    meaning: {
+      kind: "Cultural observation",
+      title: "You watch meaning appear in real time.",
+      body: "Players stop, try, explain, and react. Those small gestures tell the reader more than a press release could about who the game is for and how it is being understood.",
+      lesson: "Editorial move: observe first; interpretation becomes stronger when it has somewhere to stand.",
+    },
+    scene: {
+      kind: "Scene-led feature",
+      title: "You keep the odd moment intact.",
+      body: "The piece opens with an image, a voice, and the physical texture of the show floor. Context arrives later, once the reader has been allowed to enter the scene with you.",
+      lesson: "Editorial move: atmosphere is not decoration when it helps the reader understand a place.",
+    },
+    context: {
+      kind: "Cultural translation",
+      title: "You turn one encounter into a question about circulation.",
+      body: "The conversation leads outwards: between Japan and other markets, between local assumptions and imported expectations, and between a game as a product and a game as culture.",
+      lesson: "Editorial move: connect local detail to a wider question without flattening either one.",
+    },
+    restart: "Take another route",
+  },
+  pl: {
+    progress: "Decyzja {step} z 2",
+    start: {
+      title: "Drzwi się otwierają. Co najpierw przykuwa twoją uwagę?",
+      body: "Kolejka do wielkiego wydawcy zawija się przez halę, przy niewielkim stoisku prawie nikogo nie ma, a twórca z obrzeża sali macha, żeby podejść.",
+      choices: [
+        { label: "Idź za niemożliwie długą kolejką", detail: "Zacznij od skali, oczekiwania i tego, na co ludzie są gotowi czekać.", next: "crowd" },
+        { label: "Skręć w stronę cichego stoiska", detail: "Poszukaj pomysłu, który mógłby umknąć głównemu strumieniowi targów.", next: "booth" },
+        { label: "Podejmij nieoczekiwaną rozmowę", detail: "Niech punktem wejścia będzie człowiek, a nie produkt.", next: "conversation" },
+      ],
+    },
+    crowd: {
+      title: "Kolejka przesuwa się powoli, ale już coś opowiada.",
+      body: "Możesz potraktować ją jak liczbę albo wsłuchać się w to, co czekanie mówi o oczekiwaniu, fandomie i rytuale.",
+      choices: [
+        { label: "Rozrysuj skalę zjawiska", detail: "Zauważ stoisko, strategię premiery i branżową logikę stojącą za widowiskiem.", next: "industry" },
+        { label: "Posłuchaj ludzi w kolejce", detail: "Pójdź za drobną uwagą, kostiumem albo wspólnym żartem i znajdź ludzką scenę.", next: "people" },
+      ],
+    },
+    booth: {
+      title: "Przy małym stoisku nie ma tłumu — jest tylko gra, która prosi o drugie spojrzenie.",
+      body: "Pożyteczne pytanie nie brzmi: czy to jest duże? Ważniejsze jest to, co konkretna decyzja projektowa umożliwia graczowi.",
+      choices: [
+        { label: "Zapytaj o jeden mechanizm", detail: "Niech konkretna decyzja projektowa stanie się osią tekstu.", next: "design" },
+        { label: "Popatrz, jak ludzie grają", detail: "Niech zawahanie, zaskoczenie i objaśnienia pokażą, co robi ta gra.", next: "meaning" },
+      ],
+    },
+    conversation: {
+      title: "Jedna rzucona mimochodem uwaga może otworzyć tekst. Albo wyprowadzić cię w pole.",
+      body: "Trzeba zdecydować, czy zachować fakturę chwili, czy sprawdzić ją w szerszym kontekście.",
+      choices: [
+        { label: "Zachowaj dziwny szczegół", detail: "Zbuduj scenę, która wpuszcza czytelnika do sali, zanim zaczniesz ją wyjaśniać.", next: "scene" },
+        { label: "Zadaj większe pytanie", detail: "Niech spotkanie prowadzi do pytania o to, jak gry krążą między rynkami i kulturami.", next: "context" },
+      ],
+    },
+    industry: {
+      kind: "Kontekst branżowy",
+      title: "Budujesz reportaż od widowiska na zewnątrz.",
+      body: "Kolejka staje się dowodem: ryzyka, marketingu, strategii platform i skali potrzebnej, by zamienić grę w wydarzenie. Czytelnik dostaje mechanizm, ale nie traci ekscytacji.",
+      lesson: "Ruch redakcyjny: użyj konkretnej sceny, żeby uczynić system branżowy zrozumiałym.",
+    },
+    people: {
+      kind: "Reportaż o ludziach",
+      title: "Odnajdujesz wydarzenie w tych, którzy na nie czekają.",
+      body: "Komentarz w kolejce, kostium albo wspólny rytuał stają się leadem. Wielkie targi pozostają w tle, a czytelnik rozumie, dlaczego dla kogoś na pierwszym planie naprawdę mają znaczenie.",
+      lesson: "Ruch redakcyjny: pozwól, aby mały ludzki szczegół uniósł skalę większej historii.",
+    },
+    design: {
+      kind: "Close reading",
+      title: "Pozwalasz jednej decyzji projektowej wykonać pracę objaśnienia.",
+      body: "Artykuł zaczyna się od mechanizmu, a potem śledzi jego konsekwencje: czego wymaga od gracza, co zapożycza z innych gier i dlaczego zmienia doświadczenie.",
+      lesson: "Ruch redakcyjny: zacznij od szczegółu, zanim postawisz szerszą tezę kulturową.",
+    },
+    meaning: {
+      kind: "Obserwacja kulturowa",
+      title: "Patrzysz, jak znaczenie pojawia się w czasie rzeczywistym.",
+      body: "Gracze zatrzymują się, próbują, objaśniają i reagują. Te drobne gesty mówią o odbiorcach i rozumieniu gry więcej niż informacja prasowa.",
+      lesson: "Ruch redakcyjny: najpierw obserwuj; interpretacja jest mocniejsza, gdy ma się na czym oprzeć.",
+    },
+    scene: {
+      kind: "Tekst prowadzony sceną",
+      title: "Zachowujesz dziwny moment w całości.",
+      body: "Tekst otwiera obraz, głos i fizyczna faktura hali targowej. Kontekst przychodzi później — gdy czytelnik miał już okazję wejść w tę scenę razem z tobą.",
+      lesson: "Ruch redakcyjny: atmosfera nie jest ozdobnikiem, jeśli pomaga zrozumieć miejsce.",
+    },
+    context: {
+      kind: "Tłumaczenie kultury",
+      title: "Z jednego spotkania robisz pytanie o obieg kultury.",
+      body: "Rozmowa prowadzi na zewnątrz: między Japonią a innymi rynkami, między lokalnymi założeniami a importowanymi oczekiwaniami, między grą jako produktem a grą jako kulturą.",
+      lesson: "Ruch redakcyjny: połącz lokalny szczegół z większym pytaniem, nie spłaszczając żadnej ze stron.",
+    },
+    restart: "Wybierz inną drogę",
+  },
+};
+
+document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
+  const language = gamebook.dataset.gameLanguage === "pl" ? "pl" : "en";
+  const copy = writingGamebookCopy[language];
+  const stage = gamebook.querySelector("[data-writing-game-stage]");
+  let currentId = "start";
+  let step = 1;
+
+  const render = () => {
+    const scene = copy[currentId];
+    if (!stage || !scene) return;
+    stage.replaceChildren();
+
+    if (scene.choices) {
+      const progress = document.createElement("p");
+      const heading = document.createElement("h3");
+      const body = document.createElement("p");
+      const choices = document.createElement("div");
+      progress.className = "writing-gamebook-progress";
+      progress.textContent = copy.progress.replace("{step}", String(step));
+      heading.textContent = scene.title;
+      body.textContent = scene.body;
+      choices.className = "writing-gamebook-choices";
+      scene.choices.forEach((choice) => {
+        const button = document.createElement("button");
+        const label = document.createElement("strong");
+        const detail = document.createElement("span");
+        button.type = "button";
+        button.className = "writing-gamebook-choice";
+        label.textContent = choice.label;
+        detail.textContent = choice.detail;
+        button.append(label, detail);
+        button.addEventListener("click", () => {
+          currentId = choice.next;
+          step += 1;
+          render();
+        });
+        choices.append(button);
+      });
+      stage.append(progress, heading, body, choices);
+      return;
+    }
+
+    const result = document.createElement("div");
+    const kind = document.createElement("strong");
+    const heading = document.createElement("h3");
+    const body = document.createElement("p");
+    const lesson = document.createElement("p");
+    const restart = document.createElement("button");
+    result.className = "writing-gamebook-result";
+    kind.textContent = scene.kind;
+    heading.textContent = scene.title;
+    body.textContent = scene.body;
+    lesson.textContent = scene.lesson;
+    restart.type = "button";
+    restart.className = "writing-gamebook-restart";
+    restart.textContent = copy.restart;
+    restart.addEventListener("click", () => {
+      currentId = "start";
+      step = 1;
+      render();
+    });
+    result.append(kind, heading, body, lesson, restart);
+    stage.append(result);
+  };
+
+  render();
+});
+
 syncHeader();
 setLanguage(localStorage.getItem("identity-language") || "en");
 window.addEventListener("scroll", syncHeader, { passive: true });
