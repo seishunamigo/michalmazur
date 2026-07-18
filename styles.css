@@ -196,10 +196,11 @@ html[lang="ja"] .hero h1[data-person-name-headline] {
 
 .hero-tenure {
   display: grid;
-  grid-template-columns: auto minmax(0, 240px);
-  width: fit-content;
-  align-items: center;
-  column-gap: 14px;
+  grid-template-columns: 96px minmax(0, 250px);
+  width: min(100%, 370px);
+  align-items: start;
+  column-gap: 16px;
+  row-gap: 8px;
   margin-top: 22px;
   padding-left: 14px;
   border-left: 3px solid var(--coral);
@@ -208,12 +209,14 @@ html[lang="ja"] .hero h1[data-person-name-headline] {
 
 .hero-tenure > strong {
   grid-row: 1;
+  align-self: start;
   font-family: "Source Serif 4", Georgia, serif;
-  font-size: 2.5rem;
+  font-size: clamp(2.75rem, 5vw, 3.4rem);
   line-height: 1;
 }
 
 .hero-tenure-copy {
+  grid-column: 2;
   display: grid;
   gap: 3px;
 }
@@ -232,7 +235,8 @@ html[lang="ja"] .hero h1[data-person-name-headline] {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 12px 0 0;
+  min-width: 0;
+  margin: 5px 0 0;
   color: rgba(255, 255, 255, 0.82);
   font-size: 0.78rem;
   font-weight: 750;
@@ -255,6 +259,7 @@ html[lang="ja"] .hero h1[data-person-name-headline] {
 }
 
 .hero-days-label {
+  min-width: 0;
   max-width: 20ch;
   line-height: 1.2;
 }
@@ -4336,6 +4341,88 @@ dd {
   color: #fff;
 }
 
+.teaching-chapter-nav {
+  position: sticky;
+  top: 74px;
+  z-index: 12;
+  margin: 0 calc((100vw - min(var(--max), calc(100vw - 40px))) / -2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(251, 247, 239, 0.96);
+  box-shadow: 0 10px 26px rgba(24, 32, 32, 0.06);
+  backdrop-filter: blur(14px);
+}
+
+.teaching-chapter-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: min(var(--max), calc(100% - 40px));
+  margin: 0 auto;
+  padding: 12px 0;
+}
+
+.teaching-chapter-label {
+  flex: 0 0 164px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.teaching-chapter-links {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.teaching-chapter-links a {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 10px;
+  border: 1px solid transparent;
+  color: var(--teal-deep);
+  font-size: 0.79rem;
+  font-weight: 800;
+  line-height: 1.15;
+  text-decoration: none;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.teaching-chapter-links a:hover,
+.teaching-chapter-links a:focus-visible {
+  border-color: var(--gold);
+  background: var(--surface);
+  outline: none;
+}
+
+.teaching-chapter-links a b {
+  flex: 0 0 auto;
+  color: var(--red);
+  font-size: 0.67rem;
+  letter-spacing: 0.08em;
+}
+
+.teaching-chapter-links a.is-active {
+  border-color: var(--teal-deep);
+  background: var(--teal-deep);
+  color: #fff;
+}
+
+.teaching-chapter-links a.is-active b {
+  color: #f2c76c;
+}
+
+[data-teaching-chapter-target] {
+  scroll-margin-top: 150px;
+}
+
 .teaching-scope {
   margin: 68px 0 0;
   padding: 0 0 62px;
@@ -5526,6 +5613,32 @@ dd {
     padding: 14px 20px;
   }
 
+  .teaching-chapter-nav {
+    top: 66px;
+  }
+
+  .teaching-chapter-nav-inner {
+    display: block;
+    padding: 10px 0 11px;
+  }
+
+  .teaching-chapter-label {
+    margin: 0 0 8px;
+  }
+
+  .teaching-chapter-links {
+    display: flex;
+    gap: 7px;
+    overflow-x: auto;
+    padding-bottom: 1px;
+    scrollbar-width: thin;
+  }
+
+  .teaching-chapter-links a {
+    flex: 0 0 auto;
+    min-width: 154px;
+  }
+
   .brand span:last-child {
     display: none;
   }
@@ -5775,6 +5888,20 @@ dd {
   .site-header {
     flex-wrap: wrap;
     gap: 8px 14px;
+  }
+
+  .teaching-chapter-nav {
+    top: 108px;
+  }
+
+  .teaching-chapter-nav-inner {
+    width: min(var(--max), calc(100% - 28px));
+  }
+
+  .teaching-chapter-links a {
+    min-width: 144px;
+    padding: 8px 9px;
+    font-size: 0.75rem;
   }
 
   .brand-mark {

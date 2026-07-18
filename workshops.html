@@ -19,7 +19,7 @@
     <meta name="twitter:description" content="University courses, workshops, seminars, and presentations for faculty, graduate students, and multilingual teaching teams.">
     <meta name="twitter:image" content="assets/identity-hero.png">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=59">
+    <link rel="stylesheet" href="styles.css?v=65">
   </head>
   <body>
     <header class="site-header essay-header is-scrolled" data-header>
@@ -94,7 +94,19 @@
         </div>
       </section>
 
-      <section class="teaching-scope" data-lang-panel="en" aria-label="Teaching portfolio overview">
+      <nav class="teaching-chapter-nav" data-teaching-chapter-nav aria-label="Teaching portfolio sections">
+        <div class="teaching-chapter-nav-inner">
+          <p class="teaching-chapter-label" data-i18n="teachingChapterLabel">Explore this teaching portfolio</p>
+          <div class="teaching-chapter-links">
+            <a href="#teaching-overview" data-teaching-chapter-link="overview" aria-current="location"><b>01</b><span data-i18n="teachingChapterOverview">Overview</span></a>
+            <a href="#teaching-classes" data-teaching-chapter-link="classes"><b>02</b><span data-i18n="teachingChapterClasses">Classes</span></a>
+            <a href="#start-workshop" data-teaching-chapter-link="workshops"><b>03</b><span data-i18n="teachingChapterWorkshops">Workshops &amp; seminars</span></a>
+            <a href="#teaching-materials" data-teaching-chapter-link="materials"><b>04</b><span data-i18n="teachingChapterMaterials">Materials &amp; evidence</span></a>
+          </div>
+        </div>
+      </nav>
+
+      <section class="teaching-scope" id="teaching-overview" data-teaching-chapter-target="overview" data-lang-panel="en" aria-label="Teaching portfolio overview">
         <div class="section-heading compact">
           <p class="eyebrow">One teaching practice, three settings</p>
           <h2>The format changes; the work stays connected.</h2>
@@ -107,7 +119,7 @@
         </div>
       </section>
 
-      <section class="teaching-scope" data-lang-panel="ja" hidden aria-label="教育ポートフォリオの概要">
+      <section class="teaching-scope" data-teaching-chapter-target="overview" data-lang-panel="ja" hidden aria-label="教育ポートフォリオの概要">
         <div class="section-heading compact">
           <p class="eyebrow">ひとつの教育実践、3つの場</p>
           <h2>形式は変わっても、実践はつながっています。</h2>
@@ -120,7 +132,7 @@
         </div>
       </section>
 
-      <section class="teaching-scope" data-lang-panel="pl" hidden aria-label="Przegląd portfolio dydaktycznego">
+      <section class="teaching-scope" data-teaching-chapter-target="overview" data-lang-panel="pl" hidden aria-label="Przegląd portfolio dydaktycznego">
         <div class="section-heading compact">
           <p class="eyebrow">Jedna praktyka dydaktyczna, trzy środowiska</p>
           <h2>Format się zmienia, ale praktyka pozostaje spójna.</h2>
@@ -133,7 +145,7 @@
         </div>
       </section>
 
-      <section class="course-record" data-lang-panel="en" aria-label="Selected teaching record">
+      <section class="course-record" id="teaching-classes" data-teaching-chapter-target="classes" data-lang-panel="en" aria-label="Selected teaching record">
         <div class="section-heading compact">
           <p class="eyebrow">Selected teaching record</p>
           <h2>Three teaching settings, three forms of evidence.</h2>
@@ -173,7 +185,7 @@
         </div>
       </section>
 
-      <section class="course-record" data-lang-panel="ja" hidden aria-label="教育実践の記録">
+      <section class="course-record" data-teaching-chapter-target="classes" data-lang-panel="ja" hidden aria-label="教育実践の記録">
         <div class="section-heading compact">
           <p class="eyebrow">教育実践の記録</p>
           <h2>同じ教育原則が、3つの場で異なる形をとります。</h2>
@@ -213,7 +225,7 @@
         </div>
       </section>
 
-      <section class="course-record" data-lang-panel="pl" hidden aria-label="Wybrane doświadczenie dydaktyczne">
+      <section class="course-record" data-teaching-chapter-target="classes" data-lang-panel="pl" hidden aria-label="Wybrane doświadczenie dydaktyczne">
         <div class="section-heading compact">
           <p class="eyebrow">Wybrane doświadczenie dydaktyczne</p>
           <h2>Trzy środowiska dydaktyczne, trzy rodzaje dowodów.</h2>
@@ -292,7 +304,7 @@
         </a>
       </section>
 
-      <section class="workshop-start" id="start-workshop" data-lang-panel="en" aria-label="How to begin a workshop collaboration">
+      <section class="workshop-start" id="start-workshop" data-teaching-chapter-target="workshops" data-lang-panel="en" aria-label="How to begin a workshop collaboration">
         <div class="workshop-start-intro">
           <p class="eyebrow">Start with the problem</p>
           <h2>You do not need a finished brief to begin a useful workshop.</h2>
@@ -316,7 +328,7 @@
         </div>
       </section>
 
-      <section class="workshop-start" data-lang-panel="ja" hidden aria-label="ワークショップの相談を始める方法">
+      <section class="workshop-start" data-teaching-chapter-target="workshops" data-lang-panel="ja" hidden aria-label="ワークショップの相談を始める方法">
         <div class="workshop-start-intro">
           <p class="eyebrow">課題から始める</p>
           <h2>役に立つワークショップを始めるために、完成した依頼書は必要ありません。</h2>
@@ -340,7 +352,7 @@
         </div>
       </section>
 
-      <section class="workshop-start" data-lang-panel="pl" hidden aria-label="Jak rozpocząć współpracę warsztatową">
+      <section class="workshop-start" data-teaching-chapter-target="workshops" data-lang-panel="pl" hidden aria-label="Jak rozpocząć współpracę warsztatową">
         <div class="workshop-start-intro">
           <p class="eyebrow">Zacznijmy od problemu</p>
           <h2>Nie potrzebujesz gotowego briefu, żeby rozpocząć użyteczny warsztat.</h2>
@@ -439,7 +451,7 @@
         </div>
       </section>
 
-      <section class="teaching-materials" aria-label="Teaching materials in practice">
+      <section class="teaching-materials" id="teaching-materials" data-teaching-chapter-target="materials" aria-label="Teaching materials in practice">
         <div class="section-heading compact">
           <p class="eyebrow" data-i18n="teachingMaterialsEyebrow">Teaching materials in practice</p>
           <h2 data-i18n="teachingMaterialsTitle">Three examples of how I turn ideas into usable learning.</h2>
@@ -947,6 +959,6 @@
       <a href="index.html#top" data-i18n="backTop">Back to top</a>
     </footer>
 
-  <script src="script.js?v=59"></script>
+  <script src="script.js?v=65"></script>
   </body>
 </html>

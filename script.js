@@ -117,7 +117,7 @@ const translations = {
     bioEyebrow: "How I work",
     bioTitle: "I work where language, culture, and learning meet.",
     bioBodyOne:
-      "I am an Assistant Professor at Ritsumeikan Asia Pacific University in Japan. My work focuses on intercultural communication, global learning, faculty development, and teaching in multilingual higher education. I design courses and professional-development programmes that help educators and students interpret difference, participate more fully, and turn reflection into practical action.",
+      "I am an Assistant Professor at Ritsumeikan Asia Pacific University (APU) in Japan. My work focuses on intercultural communication, global learning, faculty development, and teaching in multilingual higher education. I design courses and professional-development programmes that help educators and students interpret difference, participate more fully, and turn reflection into practical action.",
     bioBodyTwo:
       "My academic path connects language and literature, Japanese studies, information science, and natural language processing. Before joining APU, I worked and taught at Hokkaido University, developing courses and faculty-development activities around English-medium instruction, intercultural communication, curriculum design, and the changing role of generative AI in higher education.",
     bioBodyThree:
@@ -295,6 +295,11 @@ const translations = {
     serviceTitle: "Courses, workshops, and seminars built around real learning problems",
     serviceDeck:
       "I teach credit-bearing courses, lead practical workshops, and give seminars for university communities. Across a decade of work to improve teaching quality at Hokkaido University and APU, the common thread has been the same: start with a problem people recognise and end with a usable next step.",
+    teachingChapterLabel: "Explore this teaching portfolio",
+    teachingChapterOverview: "Overview",
+    teachingChapterClasses: "Classes",
+    teachingChapterWorkshops: "Workshops & seminars",
+    teachingChapterMaterials: "Materials & evidence",
     workshopHeroContact: "Tell me what you want to improve",
     workshopHeroBrief: "Read the one-page brief",
     workshopStartEmail: "Start a workshop conversation",
@@ -619,6 +624,11 @@ const translations = {
     serviceTitle: "Kursy, warsztaty i seminaria zbudowane wokół prawdziwych problemów uczenia się",
     serviceDeck:
       "Prowadzę kursy akademickie, praktyczne warsztaty i seminaria dla społeczności uniwersyteckich. W ciągu dekady pracy nad jakością dydaktyki na Hokkaido University i APU powtarza się jeden motyw: zaczynać od problemu, który ludzie naprawdę rozpoznają, i kończyć konkretnym krokiem, z którego można skorzystać.",
+    teachingChapterLabel: "Przeglądaj portfolio dydaktyczne",
+    teachingChapterOverview: "Przegląd",
+    teachingChapterClasses: "Kursy",
+    teachingChapterWorkshops: "Warsztaty i seminaria",
+    teachingChapterMaterials: "Materiały i dowody",
     workshopHeroContact: "Napisz, co chcesz ulepszyć",
     workshopHeroBrief: "Przeczytaj jednostronicowy brief",
     workshopStartEmail: "Rozpocznij rozmowę o warsztacie",
@@ -786,6 +796,11 @@ translations.ja = {
   serviceEyebrow: "教育ポートフォリオ",
   serviceTitle: "現実の学びの課題からつくる授業、ワークショップ、セミナー",
   serviceDeck: "正課授業を担当し、実践的なワークショップを行い、大学コミュニティのためのセミナーも実施しています。北海道大学とAPUで教育の質向上に約10年取り組むなかで、一貫してきたのは、誰もが認識できる課題から始め、すぐに使える次の一歩で終えることです。",
+  teachingChapterLabel: "教育ポートフォリオを探す",
+  teachingChapterOverview: "概要",
+  teachingChapterClasses: "授業",
+  teachingChapterWorkshops: "ワークショップ・セミナー",
+  teachingChapterMaterials: "教材・エビデンス",
   workshopHeroContact: "改善したいことを教えてください",
   workshopHeroBrief: "1ページの概要を見る",
   workshopStartEmail: "ワークショップについて相談する",
@@ -2061,6 +2076,64 @@ document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
 
   render();
 });
+
+const teachingChapterNavigation = document.querySelector("[data-teaching-chapter-nav]");
+
+if (teachingChapterNavigation) {
+  const chapterLinks = [...teachingChapterNavigation.querySelectorAll("[data-teaching-chapter-link]")];
+  const getVisibleChapterTargets = () => [...document.querySelectorAll("[data-teaching-chapter-target]")]
+    .filter((target) => !target.hidden && target.getClientRects().length > 0);
+
+  const setActiveTeachingChapter = (chapter) => {
+    chapterLinks.forEach((link) => {
+      const isActive = link.dataset.teachingChapterLink === chapter;
+      link.classList.toggle("is-active", isActive);
+      if (isActive) {
+        link.setAttribute("aria-current", "location");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  const updateTeachingChapter = () => {
+    const targets = getVisibleChapterTargets();
+    if (targets.length === 0) return;
+    const headerOffset = header?.getBoundingClientRect().height || 0;
+    const chapterOffset = teachingChapterNavigation.getBoundingClientRect().height || 0;
+    const marker = headerOffset + chapterOffset + 36;
+    let activeTarget = targets[0];
+
+    targets.forEach((target) => {
+      if (target.getBoundingClientRect().top <= marker) activeTarget = target;
+    });
+
+    setActiveTeachingChapter(activeTarget.dataset.teachingChapterTarget);
+  };
+
+  chapterLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const chapter = link.dataset.teachingChapterLink;
+      const target = getVisibleChapterTargets()
+        .find((item) => item.dataset.teachingChapterTarget === chapter);
+      if (!target) return;
+
+      event.preventDefault();
+      const headerOffset = header?.getBoundingClientRect().height || 0;
+      const chapterOffset = teachingChapterNavigation.getBoundingClientRect().height || 0;
+      const top = window.scrollY + target.getBoundingClientRect().top - headerOffset - chapterOffset - 24;
+      window.scrollTo({ top, behavior: "smooth" });
+      setActiveTeachingChapter(chapter);
+    });
+  });
+
+  window.addEventListener("scroll", updateTeachingChapter, { passive: true });
+  window.addEventListener("resize", updateTeachingChapter);
+  document.addEventListener("identity:languagechange", () => {
+    window.requestAnimationFrame(updateTeachingChapter);
+  });
+  updateTeachingChapter();
+}
 
 syncHeader();
 setLanguage(localStorage.getItem("identity-language") || "en");
