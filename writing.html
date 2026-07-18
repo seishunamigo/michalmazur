@@ -19,7 +19,7 @@
     <meta name="twitter:description" content="A writing sampler drawn from Michal Maciej Mazur's PSX Extreme archive.">
     <meta name="twitter:image" content="assets/public-voice-podcast.jpg">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=67">
+    <link rel="stylesheet" href="styles.css?v=70">
   </head>
   <body>
     <header class="site-header essay-header is-scrolled" data-header>
@@ -56,6 +56,7 @@
       <nav class="portfolio-chapter-nav" data-portfolio-chapter-nav aria-label="Writing portfolio sections">
         <div class="portfolio-chapter-nav-inner">
           <p class="portfolio-chapter-label" data-i18n="writingChapterLabel">Explore this writing portfolio</p>
+          <span class="portfolio-chapter-swipe-hint" data-i18n="chapterSwipeHint" aria-hidden="true">Swipe →</span>
           <div class="portfolio-chapter-links">
             <a href="#writing-psx" data-portfolio-chapter-link="psx" aria-current="location"><b>01</b><span data-i18n="writingChapterPsx">PSX Extreme</span></a>
             <a href="#writing-editorial" data-portfolio-chapter-link="editorial"><b>02</b><span data-i18n="writingChapterEditorial">Editorial practice</span></a>
@@ -114,20 +115,20 @@
       <section class="writing-profile" id="writing-editorial" data-portfolio-chapter-target="editorial" data-lang-panel="en" aria-label="Editorial profile">
         <div class="writing-profile-heading">
           <p class="eyebrow">Editorial Profile</p>
-          <h2>The writing moves between reporting, cultural history, and close reading.</h2>
+          <h2>Writing that starts with a scene and keeps its eyes open.</h2>
           <figure class="writing-profile-photo">
             <img src="assets/writing/tokyo-game-show-2024-arrival.jpg" alt="Michal Mazur at the entrance to Tokyo Game Show, beside the event artwork." loading="lazy" decoding="async">
             <figcaption>Tokyo Game Show · returning to the show floor</figcaption>
           </figure>
         </div>
         <div class="writing-profile-copy">
-          <p>Across the last few years, my articles have used games and Japan as entry points into larger questions: how technology travels between markets, how local context changes the meaning of a medium, and how ordinary people live with the cultures they create. The subjects vary, but the method stays consistent: begin with a concrete object or encounter, add historical and social context, and make the reader feel why it matters.</p>
-          <p>The archive includes event features from the Tokyo Game Show, histories of Japanese hardware and software, essays on overlooked games, and reviews that treat games as cultural texts rather than disposable products. It also includes writing about comfort, work, loneliness, memory, and everyday life: the quieter experiences that games can make visible.</p>
+          <p>Read across the archive, one pattern keeps returning: I enter through something tangible — a crowded show floor, a hardware object, an overlooked game, a sentence heard in a room — and then widen the frame. Games and Japan become ways to ask larger questions about technology, culture, work, memory, and everyday life.</p>
+          <p>The voice is direct but not flat. It combines field detail, history, research, and, when the material allows, a little humour. I write for readers who do not need specialist knowledge in advance, while taking the subject seriously enough not to smooth away the details that make it particular.</p>
           <ul class="writing-profile-list">
-            <li><strong>Field reporting:</strong> events, people, atmosphere, and industry context.</li>
-            <li><strong>Technology and market history:</strong> why products succeed in one place and fail in another.</li>
-            <li><strong>Game and media criticism:</strong> narrative, design, folklore, emotion, and representation.</li>
-            <li><strong>Cultural translation:</strong> making Japanese contexts legible without reducing them to stereotypes.</li>
+            <li><strong>Scene before thesis:</strong> begin with a place, object, or encounter rather than an abstract claim.</li>
+            <li><strong>Context without a lecture:</strong> bring in history, markets, and media systems only when they make the story clearer.</li>
+            <li><strong>Japan from within:</strong> translate local contexts without turning them into decorative shorthand.</li>
+            <li><strong>Room for a human voice:</strong> keep the prose readable, curious, and alert to the unexpected.</li>
           </ul>
         </div>
       </section>
@@ -135,22 +136,76 @@
       <section class="writing-profile" data-portfolio-chapter-target="editorial" data-lang-panel="pl" hidden aria-label="Profil redakcyjny">
         <div class="writing-profile-heading">
           <p class="eyebrow">Profil pisarski</p>
-          <h2>Moje teksty poruszają się między reportażem, historią kultury i close reading.</h2>
+          <h2>Pisanie, które zaczyna się od sceny i nie traci jej z oczu.</h2>
           <figure class="writing-profile-photo">
             <img src="assets/writing/tokyo-game-show-2024-arrival.jpg" alt="Michał Mazur przy wejściu na Tokyo Game Show, obok grafiki wydarzenia." loading="lazy" decoding="async">
             <figcaption>Tokyo Game Show · powrót na teren targów</figcaption>
           </figure>
         </div>
         <div class="writing-profile-copy">
-          <p>W ostatnich latach moje artykuły wykorzystywały gry i Japonię jako punkt wyjścia do większych pytań: jak technologia podróżuje między rynkami, jak lokalny kontekst zmienia znaczenie medium i jak ludzie żyją z kulturą, którą sami tworzą. Tematy się zmieniają, ale metoda pozostaje podobna: zacząć od konkretnego obiektu lub spotkania, dodać kontekst historyczny i społeczny, a następnie pokazać czytelnikowi, dlaczego dana rzecz ma znaczenie.</p>
-          <p>W archiwum znajdują się reportaże z Tokyo Game Show, historie japońskiego sprzętu i oprogramowania, eseje o zapomnianych grach oraz recenzje traktujące gry jako teksty kultury, a nie jednorazowe produkty. Są tam również teksty o komforcie, pracy, samotności, pamięci i codzienności: o cichszych doświadczeniach, które gry potrafią uwidocznić.</p>
+          <p>Po lekturze archiwum widać jeden powracający rytm: zaczynam od czegoś konkretnego — tłumu na targach, przedmiotu, zapomnianej gry, zdania zasłyszanego w sali — a potem rozszerzam kadr. Gry i Japonia stają się wtedy punktem wyjścia do rozmowy o technologii, kulturze, pracy, pamięci i codzienności.</p>
+          <p>To głos bezpośredni, ale nie uproszczony. Łączy detal z terenu, historię, research i — kiedy materiał na to pozwala — odrobinę humoru. Piszę dla osób, które nie muszą wcześniej znać się na temacie, ale traktuję go na tyle poważnie, by nie wygładzać szczegółów, które czynią go osobnym.</p>
           <ul class="writing-profile-list">
-            <li><strong>Reportaż terenowy:</strong> wydarzenia, ludzie, atmosfera i kontekst branżowy.</li>
-            <li><strong>Historia technologii i rynku:</strong> dlaczego produkty odnoszą sukces w jednym miejscu, a w innym nie.</li>
-            <li><strong>Krytyka gier i mediów:</strong> narracja, design, folklor, emocje i reprezentacja.</li>
-            <li><strong>Tłumaczenie kultury:</strong> przybliżanie japońskich kontekstów bez redukowania ich do stereotypów.</li>
+            <li><strong>Scena przed tezą:</strong> najpierw miejsce, przedmiot albo spotkanie, a dopiero potem ogólniejszy wniosek.</li>
+            <li><strong>Kontekst bez wykładu:</strong> historia, rynek i systemy mediów pojawiają się wtedy, gdy pomagają lepiej zrozumieć historię.</li>
+            <li><strong>Japonia od środka:</strong> przybliżam lokalne konteksty bez zamieniania ich w egzotyczną dekorację.</li>
+            <li><strong>Miejsce na ludzki głos:</strong> proza ma pozostać czytelna, ciekawa i czujna na to, co nieoczekiwane.</li>
           </ul>
         </div>
+      </section>
+
+      <section class="writing-page-samples" data-lang-panel="en" aria-labelledby="writing-page-samples-title-en">
+        <div class="writing-page-samples-heading">
+          <p class="eyebrow">From the printed page</p>
+          <h2 id="writing-page-samples-title-en">Two pages, two sides of the same editorial instinct.</h2>
+          <p>These original PSX Extreme spreads show the range behind the profile above: a Tokyo feature built by moving through a place, and a cultural essay that turns a familiar genre into a wider question.</p>
+        </div>
+        <div class="writing-page-samples-grid">
+          <figure class="writing-page-sample writing-page-sample--tokyo">
+            <div class="writing-page-sample-image">
+              <img src="assets/writing/gracz-w-tokyo-2011.jpg" alt="Two-page PSX Extreme spread from the feature Gracz w Tokio, with photographs from Tokyo." loading="lazy" decoding="async">
+            </div>
+            <figcaption><span>PSX Extreme · 2011</span><strong>Gracz w Tokio</strong><p>A city feature that treats Tokyo as somewhere to move through, notice, and interpret — not simply a backdrop.</p></figcaption>
+          </figure>
+          <figure class="writing-page-sample writing-page-sample--cozy">
+            <div class="writing-page-sample-image">
+              <img src="assets/writing/cosy-games-psx-327.jpg" alt="PSX Extreme article page titled Cosy Games: Gry, które pozwalają odetchnąć." loading="lazy" decoding="async">
+            </div>
+            <figcaption><span>PSX Extreme · issue 327</span><strong>Cosy Games</strong><p>An accessible cultural essay about comfort games: a clear question, social context, and an argument that reaches beyond the review column.</p></figcaption>
+          </figure>
+        </div>
+        <aside class="writing-page-samples-note">
+          <p class="eyebrow">A current reporting note</p>
+          <p>In my 2024 Tokyo Game Show report, 274,000 visitors and 985 exhibitors were not just numbers: they explained why a reporter first has to choose one thread before the show chooses it for them.</p>
+          <span>Based on my original PSX Extreme field report.</span>
+        </aside>
+      </section>
+
+      <section class="writing-page-samples" data-lang-panel="pl" hidden aria-labelledby="writing-page-samples-title-pl">
+        <div class="writing-page-samples-heading">
+          <p class="eyebrow">Z łamów</p>
+          <h2 id="writing-page-samples-title-pl">Dwie strony, dwa oblicza tego samego instynktu redakcyjnego.</h2>
+          <p>Te autentyczne rozkładówki z PSX Extreme pokazują zakres stojący za profilem powyżej: tekst o Tokio, który powstaje w ruchu i w terenie, oraz esej kulturowy, który z pozornie znanego gatunku wydobywa szersze pytanie.</p>
+        </div>
+        <div class="writing-page-samples-grid">
+          <figure class="writing-page-sample writing-page-sample--tokyo">
+            <div class="writing-page-sample-image">
+              <img src="assets/writing/gracz-w-tokyo-2011.jpg" alt="Dwustronicowa rozkładówka PSX Extreme z tekstu Gracz w Tokio, ze zdjęciami z Tokio." loading="lazy" decoding="async">
+            </div>
+            <figcaption><span>PSX Extreme · 2011</span><strong>Gracz w Tokio</strong><p>Tekst o mieście potraktowanym jako miejsce, przez które trzeba przejść, uważnie zobaczyć i zinterpretować — a nie tylko jako tło.</p></figcaption>
+          </figure>
+          <figure class="writing-page-sample writing-page-sample--cozy">
+            <div class="writing-page-sample-image">
+              <img src="assets/writing/cosy-games-psx-327.jpg" alt="Strona artykułu PSX Extreme pod tytułem Cosy Games: Gry, które pozwalają odetchnąć." loading="lazy" decoding="async">
+            </div>
+            <figcaption><span>PSX Extreme · numer 327</span><strong>Cosy Games</strong><p>Przystępny esej o grach komfortowych: jasne pytanie, społeczny kontekst i argument wykraczający poza zwykłą recenzję.</p></figcaption>
+          </figure>
+        </div>
+        <aside class="writing-page-samples-note">
+          <p class="eyebrow">Aktualna notatka reporterska</p>
+          <p>W raporcie z Tokyo Game Show 2024 liczby — 274 tysiące odwiedzających i 985 wystawców — nie były jedynie statystyką. Wyjaśniały, dlaczego reporter musi najpierw wybrać jeden trop, zanim targi wybiorą go za niego.</p>
+          <span>Na podstawie mojego autorskiego reportażu dla PSX Extreme.</span>
+        </aside>
       </section>
 
       <section class="writing-field-notes" id="writing-fieldnotes" data-portfolio-chapter-target="fieldnotes" data-lang-panel="en" aria-labelledby="writing-field-notes-title-en">
@@ -484,6 +539,6 @@
       <a href="writing.html#top" data-i18n="backTop">Back to top</a>
     </footer>
 
-  <script src="script.js?v=67"></script>
+  <script src="script.js?v=70"></script>
   </body>
 </html>

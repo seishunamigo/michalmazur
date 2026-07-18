@@ -29,6 +29,12 @@ const translations = {
     researchPageTitle: "What helps people participate when languages, cultures, and systems meet?",
     researchPageDeck:
       "My research grows from situations I have actually encountered: multilingual classrooms, language-learning systems, tourism encounters, and an interdisciplinary space programme. I study what helps people interpret difference, work together, and learn with greater agency.",
+    researchChapterLabel: "Explore this research portfolio",
+    researchChapterQuestion: "Research question",
+    researchChapterProjects: "Projects & publications",
+    researchChapterFieldwork: "Fieldwork & collaboration",
+    researchChapterMethod: "Try the method",
+    chapterSwipeHint: "Swipe →",
     researchMapEyebrow: "Research map",
     researchMapTitle: "One question, four research contexts.",
     researchMapDeck: "The topics change, but the underlying concern remains: how design, language, and context shape whether people can take part.",
@@ -363,6 +369,12 @@ const translations = {
     researchPageTitle: "Co pomaga ludziom uczestniczyć, kiedy spotykają się języki, kultury i systemy?",
     researchPageDeck:
       "Moje badania wyrastają z sytuacji, których doświadczyłem w praktyce: wielojęzycznych klas, systemów nauki języka, spotkań w turystyce i interdyscyplinarnego programu kosmicznego. Pytam, co pomaga ludziom odczytywać różnice, współpracować i uczyć się z większym poczuciem sprawczości.",
+    researchChapterLabel: "Przeglądaj portfolio badawcze",
+    researchChapterQuestion: "Pytanie badawcze",
+    researchChapterProjects: "Projekty i publikacje",
+    researchChapterFieldwork: "Badania terenowe i współprace",
+    researchChapterMethod: "Wypróbuj metodę",
+    chapterSwipeHint: "Przesuń →",
     researchMapEyebrow: "Mapa badań",
     researchMapTitle: "Jedno pytanie, cztery konteksty badawcze.",
     researchMapDeck: "Tematy się zmieniają, lecz pytanie pozostaje to samo: jak projekt, język i kontekst wpływają na możliwość uczestnictwa.",
@@ -811,6 +823,7 @@ translations.ja = {
   teachingChapterClasses: "授業",
   teachingChapterWorkshops: "ワークショップ・セミナー",
   teachingChapterMaterials: "教材・エビデンス",
+  chapterSwipeHint: "スワイプ →",
   workshopHeroContact: "改善したいことを教えてください",
   workshopHeroBrief: "1ページの概要を見る",
   workshopStartEmail: "ワークショップについて相談する",
@@ -2089,6 +2102,7 @@ document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
 
 document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNavigation) => {
   const chapterLinks = [...chapterNavigation.querySelectorAll("[data-portfolio-chapter-link]")];
+  let activeChapter = "";
   const getVisibleChapterTargets = () => [...document.querySelectorAll("[data-portfolio-chapter-target]")]
     .filter((target) => !target.hidden && target.getClientRects().length > 0);
 
@@ -2102,6 +2116,13 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
         link.removeAttribute("aria-current");
       }
     });
+
+    if (activeChapter === chapter) return;
+    activeChapter = chapter;
+    const activeLink = chapterLinks.find((link) => link.dataset.portfolioChapterLink === chapter);
+    if (activeLink && window.matchMedia("(max-width: 860px)").matches) {
+      activeLink.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    }
   };
 
   const updateChapter = () => {
