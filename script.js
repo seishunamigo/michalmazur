@@ -315,9 +315,10 @@ const translations = {
       "I teach credit-bearing courses, lead practical workshops, and give seminars for university communities. Across a decade of work to improve teaching quality at Hokkaido University and APU, the common thread has been the same: start with a problem people recognise and end with a usable next step.",
     teachingChapterLabel: "Explore this teaching portfolio",
     teachingChapterOverview: "Overview",
-    teachingChapterClasses: "Classes",
+    teachingChapterClasses: "Classes & materials",
     teachingChapterWorkshops: "Workshops & seminars",
     teachingChapterMaterials: "Materials & evidence",
+    teachingChapterTryMethod: "Try the method",
     workshopHeroContact: "Tell me what you want to improve",
     workshopHeroBrief: "Read the one-page brief",
     workshopStartEmail: "Start a workshop conversation",
@@ -662,9 +663,10 @@ const translations = {
       "Prowadzę kursy akademickie, praktyczne warsztaty i seminaria dla społeczności uniwersyteckich. W ciągu dekady pracy nad jakością dydaktyki na Hokkaido University i APU powtarza się jeden motyw: zaczynać od problemu, który ludzie naprawdę rozpoznają, i kończyć konkretnym krokiem, z którego można skorzystać.",
     teachingChapterLabel: "Przeglądaj portfolio dydaktyczne",
     teachingChapterOverview: "Przegląd",
-    teachingChapterClasses: "Kursy",
+    teachingChapterClasses: "Kursy i materiały",
     teachingChapterWorkshops: "Warsztaty i seminaria",
     teachingChapterMaterials: "Materiały i dowody",
+    teachingChapterTryMethod: "Wypróbuj metodę",
     workshopHeroContact: "Napisz, co chcesz ulepszyć",
     workshopHeroBrief: "Przeczytaj jednostronicowy brief",
     workshopStartEmail: "Rozpocznij rozmowę o warsztacie",
@@ -841,9 +843,10 @@ translations.ja = {
   serviceDeck: "正課授業を担当し、実践的なワークショップを行い、大学コミュニティのためのセミナーも実施しています。北海道大学とAPUで教育の質向上に約10年取り組むなかで、一貫してきたのは、誰もが認識できる課題から始め、すぐに使える次の一歩で終えることです。",
   teachingChapterLabel: "教育ポートフォリオを探す",
   teachingChapterOverview: "概要",
-  teachingChapterClasses: "授業",
+  teachingChapterClasses: "授業と教材",
   teachingChapterWorkshops: "ワークショップ・セミナー",
   teachingChapterMaterials: "教材・エビデンス",
+  teachingChapterTryMethod: "方法を試す",
   chapterSwipeHint: "スワイプ →",
   workshopHeroContact: "改善したいことを教えてください",
   workshopHeroBrief: "1ページの概要を見る",
@@ -1079,7 +1082,7 @@ const coMixExamples = {
           "Before her first seminar, Aiko checks the campus ",
           coMixWord("地図", "map", "ちず", "chizu", "地図で教室を見つけます。", "I find the classroom with a map.", "The need to arrive gives the word a clear job before its meaning is revealed."),
           " and looks for the right ",
-          coMixWord("教室", "classroom", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "A familiar university situation makes the place word easy to infer."),
+          coMixWord("教室", "classroom", "きょうしつ", "kyōshitsu / kyoushitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "A familiar university situation makes the place word easy to infer."),
           ".",
         ],
         rich: [
@@ -1090,10 +1093,10 @@ const coMixExamples = {
           ", checks the campus ",
           coMixWord("地図", "map", "ちず", "chizu", "地図で教室を見つけます。", "I find the classroom with a map.", "The same useful object is encountered inside a richer scene."),
           ", and finds the right ",
-          coMixWord("教室", "classroom", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "The destination completes the small practical problem."),
+          coMixWord("教室", "classroom", "きょうしつ", "kyōshitsu / kyoushitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "The destination completes the small practical problem."),
           ".",
         ],
-        answer: ["教室", "きょうしつ", "kyoshitsu", "kyōshitsu"],
+        answer: ["教室", "きょうしつ", "kyoushitsu", "kyōshitsu"],
         focus: "教室",
         reuse: {
           question: "The map helps Aiko find the ___. Choose the word that fits.",
@@ -1104,14 +1107,14 @@ const coMixExamples = {
       task: {
         light: [
           "In the ",
-          coMixWord("教室", "classroom", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "A word from the first scene returns when the story moves from finding the room to learning in it."),
+          coMixWord("教室", "classroom", "きょうしつ", "kyōshitsu / kyoushitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "A word from the first scene returns when the story moves from finding the room to learning in it."),
           ", the teacher explains a short ",
           coMixWord("課題", "assignment / task", "かだい", "kadai", "この課題は金曜日までです。", "This assignment is due on Friday.", "The explanation and deadline show that this is something learners need to do."),
           ".",
         ],
         rich: [
           "In the ",
-          coMixWord("教室", "classroom", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "The word returns in a fresh event rather than in an isolated list."),
+          coMixWord("教室", "classroom", "きょうしつ", "kyōshitsu / kyoushitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "The word returns in a fresh event rather than in an isolated list."),
           ", the teacher gives a short ",
           coMixWord("課題", "assignment / task", "かだい", "kadai", "この課題は金曜日までです。", "This assignment is due on Friday.", "A task with a deadline has a clear purpose in the scene."),
           ". Aiko works with a small ",
@@ -1165,7 +1168,7 @@ const coMixExamples = {
           "初めてのゼミの前に、アイコはキャンパスの ",
           coMixWord("map", "地図", "ちず", "chizu", "地図で教室を見つけます。", "I find the classroom with a map.", "The need to arrive gives the word a clear job before its meaning is revealed."),
           " を見て、正しい ",
-          coMixWord("classroom", "教室", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "A familiar university situation makes the place word easy to infer."),
+          coMixWord("classroom", "教室", "きょうしつ", "kyōshitsu / kyoushitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "A familiar university situation makes the place word easy to infer."),
           " を探します。",
         ],
         rich: [
@@ -1176,7 +1179,7 @@ const coMixExamples = {
           " から入り、キャンパスの ",
           coMixWord("map", "地図", "ちず", "chizu", "地図で教室を見つけます。", "I find the classroom with a map.", "The same useful object is encountered inside a richer scene."),
           " を見て、正しい ",
-          coMixWord("classroom", "教室", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "The destination completes the small practical problem."),
+          coMixWord("classroom", "教室", "きょうしつ", "kyōshitsu / kyoushitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "The destination completes the small practical problem."),
           " を見つけます。",
         ],
         answer: ["classroom"],
@@ -1190,14 +1193,14 @@ const coMixExamples = {
       task: {
         light: [
           "アイコは ",
-          coMixWord("classroom", "教室", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "A word from the first scene returns when the story moves from finding the room to learning in it."),
+          coMixWord("classroom", "教室", "きょうしつ", "kyōshitsu / kyoushitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "A word from the first scene returns when the story moves from finding the room to learning in it."),
           " で、先生が説明する短い ",
           coMixWord("assignment", "課題", "かだい", "kadai", "この課題は金曜日までです。", "This assignment is due on Friday.", "The explanation and deadline show that this is something learners need to do."),
           " を聞きます。",
         ],
         rich: [
           "アイコは ",
-          coMixWord("classroom", "教室", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "The word returns in a fresh event rather than in an isolated list."),
+          coMixWord("classroom", "教室", "きょうしつ", "kyōshitsu / kyoushitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "The word returns in a fresh event rather than in an isolated list."),
           " で短い ",
           coMixWord("assignment", "課題", "かだい", "kadai", "この課題は金曜日までです。", "This assignment is due on Friday.", "A task with a deadline has a clear purpose in the scene."),
           " を受け取ります。小さな ",
@@ -1420,6 +1423,7 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
         if (correct) {
           learning.reuse = true;
           completedScenes.add(scene);
+          document.dispatchEvent(new CustomEvent("identity:stamp", { detail: { id: "code-mixing" } }));
           reuseOptions.querySelectorAll("button").forEach((item) => { item.disabled = true; });
           if (completePanel) completePanel.hidden = false;
           if (completeTitle) completeTitle.textContent = ui.completeTitle;
@@ -1790,6 +1794,7 @@ document.querySelectorAll("[data-design-studio]").forEach((studio) => {
   };
 
   copyButton?.addEventListener("click", async () => {
+    document.dispatchEvent(new CustomEvent("identity:stamp", { detail: { id: "classroom-architect" } }));
     try {
       await navigator.clipboard.writeText(outlineText());
       if (copyStatus) copyStatus.textContent = currentData().copySuccess;
@@ -2228,6 +2233,7 @@ document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
     lessonLabel.textContent = copy.editorialMove;
     lesson.className = "writing-gamebook-lesson";
     lesson.textContent = scene.lesson;
+    document.dispatchEvent(new CustomEvent("identity:stamp", { detail: { id: "tgs-survivor" } }));
     actions.className = "writing-gamebook-actions";
     restartButton.type = "button";
     restartButton.className = "writing-gamebook-restart";
@@ -2312,3 +2318,435 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
 syncHeader();
 setLanguage(localStorage.getItem("identity-language") || "en");
 window.addEventListener("scroll", syncHeader, { passive: true });
+
+/* --------------------------------------------------------------------------
+   Explorer Passport · a local, optional stamp rally across the portfolio
+   -------------------------------------------------------------------------- */
+
+(() => {
+  const storageKey = "mmm-explorer-passport-v1";
+  const stampOrder = [
+    "classroom-architect",
+    "code-mixing",
+    "tgs-survivor",
+    "critical-player",
+    "evidence-hunter",
+    "field-correspondent",
+    "across-cultures",
+  ];
+  const stampDefinitions = {
+    "classroom-architect": { glyph: "教", icon: "classroom", shape: "round", tone: "gold", href: "workshops.html#teaching-design-studio" },
+    "code-mixing": { glyph: "言", icon: "mix", shape: "oval", tone: "teal", href: "research.html#research-method" },
+    "tgs-survivor": { glyph: "取", icon: "tgs", shape: "shield", tone: "red", href: "writing.html#writing-fieldnotes" },
+    "critical-player": { glyph: "遊", icon: "controller", shape: "square", tone: "violet", href: "workshops.html#teaching-classes" },
+    "evidence-hunter": { glyph: "証", icon: "evidence", shape: "oval", tone: "blue", href: "research.html#research-projects" },
+    "field-correspondent": { glyph: "記", icon: "press", shape: "round", tone: "orange", href: "writing.html#writing-psx" },
+    "across-cultures": { glyph: "間", icon: "bridge", shape: "arch", tone: "green", href: "index.html#top" },
+  };
+  const stampArtwork = {
+    classroom: `<svg viewBox="0 0 100 100" role="presentation"><text class="stamp-title" x="50" y="14">授業設計</text><path d="M19 29h50v33H19zM24 34h40M29 42l7 6 10-13M50 43h11m-11 7h8M27 68h34M34 62v6m20-6v6"/><circle cx="76" cy="49" r="7"/><path d="M68 72c1-9 4-15 8-15s8 6 9 15M72 49c0-2 2-4 4-4m11-21 2 4 4 2-4 2-2 4-2-4-4-2 4-2zM14 76c7 4 16 6 25 6"/></svg>`,
+    mix: `<svg viewBox="0 0 100 100" role="presentation"><text class="stamp-title" x="50" y="14">言語学習</text><path d="M20 61c10-5 20-5 30 1 10-6 20-6 30-1v22c-10-5-20-5-30 1-10-6-20-6-30-1zM50 62v22"/><path d="M17 26c0-5 4-9 9-9h18c5 0 9 4 9 9v7c0 5-4 9-9 9H33l-8 6 2-6h-1c-5 0-9-4-9-9zM51 32c0-5 4-9 9-9h14c5 0 9 4 9 9v6c0 5-4 9-9 9h-6l-7 6 1-6h-2c-5 0-9-4-9-9z"/><text x="29" y="34">A</text><text x="61" y="39">あ</text><path d="M34 54c4-4 9-6 15-6m-4-4 5 4-5 4"/></svg>`,
+    tgs: `<svg viewBox="0 0 100 100" role="presentation"><text class="stamp-title" x="50" y="14">東京取材</text><path d="M17 60V35l33-15 33 15v25M11 60h78M25 60V40h50v20M40 40v20m20-20v20M35 29h30"/><path d="M14 71c8-7 15-7 23 0 8-7 15-7 23 0 8-7 15-7 24 0M20 78c8-6 15-6 23 0 8-6 15-6 23 0"/><rect x="65" y="68" width="25" height="17" rx="2"/><text x="68" y="79">PRESS</text><path d="M74 63h7v5"/></svg>`,
+    controller: `<svg viewBox="0 0 100 100" role="presentation"><text class="stamp-title" x="50" y="14">ゲーム文化</text><path d="M26 35h48c8 0 13 7 14 16l2 17c1 8-8 12-14 7L64 65H36L24 75c-6 5-15 1-14-7l2-17c1-9 6-16 14-16zM27 47v14m-7-7h14"/><circle cx="68" cy="49" r="3"/><circle cx="77" cy="57" r="3"/><path d="M37 30c4-6 8-9 13-9s9 3 13 9M43 80h14M50 73v14m-7-7h14"/></svg>`,
+    evidence: `<svg viewBox="0 0 100 100" role="presentation"><text class="stamp-title" x="50" y="14">研究記録</text><path d="M20 22h41l10 10v37H20zM61 22v11h10M28 40h27M28 48h21M28 56h15"/><circle cx="64" cy="63" r="15"/><path d="M75 74l12 12M55 64l6 5 10-13M13 79h28M17 79v-9h5v9m5 0V65h5v14m5 0V59h5"/></svg>`,
+    press: `<svg viewBox="0 0 100 100" role="presentation"><text class="stamp-title" x="50" y="14">現場記者</text><path d="M17 29h39v50H17zM24 39h25M24 47h18M24 55h25M24 63h15"/><circle cx="71" cy="34" r="8"/><path d="M61 76c1-14 4-25 10-25s10 11 11 25M67 34c0-3 2-5 5-5M61 57l-8 6 6 8M75 55l9-8M81 47l7 18M77 68h12"/><rect x="62" y="75" width="25" height="10" rx="2"/><text x="65" y="82">PRESS</text></svg>`,
+    bridge: `<svg viewBox="0 0 100 100" role="presentation"><text class="stamp-title" x="50" y="14">文化の間</text><path d="M10 72h80M18 72c4-25 17-38 32-38s28 13 32 38M18 72V49m64 23V49M27 49h46M22 56c8 8 18 12 28 12s20-4 28-12"/><path d="M12 80c9-5 17-5 25 0 9-5 17-5 25 0 8-5 16-5 25 0M22 29l5-8 5 8m-10 0h10M73 25c5-4 10-4 15 0m-12 5c3-2 6-2 9 0"/></svg>`,
+  };
+  const passportCopy = {
+    en: {
+      launcher: "Passport",
+      minimize: "Hide passport shortcut",
+      restore: "Restore Explorer Passport",
+      title: "Explorer Passport",
+      deck: "Seven small encounters connect teaching, research, writing, and life between cultures. Complete an action to collect its hand-stamped trace.",
+      progress: "{count} of {total} stamps",
+      close: "Close passport",
+      reset: "Reset this passport",
+      resetConfirm: "Reset all locally saved stamps?",
+      locked: "Not collected yet",
+      unlocked: "Collected",
+      openRoute: "Follow this route",
+      stampHere: "STAMP HERE",
+      firstToast: "A new stamp found",
+      completeToast: "Passport complete — the final page is open",
+      stamps: {
+        "classroom-architect": ["Classroom Architect", "Build and copy a usable activity in the Teaching Design Studio."],
+        "code-mixing": ["Code-Mixing Explorer", "Complete one full Co-MIX loop: read, notice, recall, and reuse."],
+        "tgs-survivor": ["TGS Survivor", "Reach an ending in the Tokyo Game Show field-reporting story."],
+        "critical-player": ["Critical Player", "Open a class sample or poster from Understanding Video Games."],
+        "evidence-hunter": ["Evidence Hunter", "Open a publication record or DOI behind the research."],
+        "field-correspondent": ["Field Correspondent", "Open one reporting trail beyond this portfolio — a PSX Extreme source, an interview, or another field note."],
+        "across-cultures": ["Across Cultures", "Visit the Teaching, Research, and Writing portfolios."],
+      },
+      finalEyebrow: "The hidden eighth stamp",
+      finalHanko: "BETWEEN WORLDS",
+      finalTitle: "You found the thread connecting it all.",
+      finalBody: "Teaching, research, journalism, games, languages, and life between cultures are not separate chapters here. They are different ways of entering an unfamiliar world — and helping other people find their way through it.",
+      routeLabel: "Your route began as",
+      routes: {
+        teaching: "Classroom Cartographer",
+        research: "Curious Field Researcher",
+        writing: "Culture Correspondent",
+      },
+      routeFinish: "You finished it as a Reader Between Worlds.",
+      noteLabel: "A note from Michal",
+      note: "Thank you for staying long enough to see the connections. A portfolio usually asks visitors to look at finished things. My work has more often grown in the space between them: between languages, disciplines, classrooms, and public stories. Your attention is part of what makes those connections visible.",
+      storyLabel: "One more story",
+      storyTitle: "28 March 2009 · A journey without a return date",
+      story: [
+        "At Kraków airport on 28 March 2009, the photograph caught the part a CV cannot: my parents beside me, a one-way ticket in my bag, and a goodbye that was both beautiful and painful.",
+        "The decision may have looked sudden from the outside. It was not. The MEXT scholarship came after three years, two attempts, exams, an interview, and a research plan. When it finally arrived, I left a job I liked and closed a familiar life almost overnight.",
+        "Twenty hours later I landed at New Chitose. Otaru and Sapporo followed: Japanese lessons, cognitive science, doctoral work, new friendships, and continued reporting for readers in Poland. I thought starting over was one decisive act.",
+        "The first departure was crowded. Later returns taught me that the people and places waiting at ‘home’ also change: my father died, farewells became quieter, and Hokkaido itself filled with friends who would eventually leave. Starting over stopped meaning a clean break. It became a way of carrying earlier homes forward without pretending they remained unchanged.",
+        "It was not. Hokkaido taught me that every arrival contains future goodbyes; moving south to Beppu asked me to begin again. We do not find ourselves only once, but repeatedly — in another language, another classroom, and another version of home.",
+      ],
+      storyClose: "What looked like courage from the outside was, from within, fear wrapped in hope.",
+      storyPhotoAlt: "Michal saying goodbye to his parents outside Kraków airport before moving to Japan in 2009",
+      storyPhotoCaption: "Kraków, 28 March 2009. A final conversation with my parents before the flight to Japan.",
+      storyGroupPhotoAlt: "Michal standing with family and friends outside Kraków airport before departing for Japan in 2009",
+      storyGroupPhotoCaption: "The wider farewell: the people who came to see me off before the one-way journey.",
+    },
+    pl: {
+      launcher: "Paszport",
+      minimize: "Ukryj skrót paszportu",
+      restore: "Przywróć Paszport odkrywcy",
+      title: "Paszport odkrywcy",
+      deck: "Siedem małych spotkań łączy dydaktykę, badania, pisanie i życie między kulturami. Wykonaj działanie, aby zdobyć jego ręcznie odciśnięty ślad.",
+      progress: "Pieczątki: {count} z {total}",
+      close: "Zamknij paszport",
+      reset: "Wyczyść ten paszport",
+      resetConfirm: "Usunąć wszystkie pieczątki zapisane lokalnie?",
+      locked: "Jeszcze niezdobyta",
+      unlocked: "Zdobyta",
+      openRoute: "Podążaj tym tropem",
+      stampHere: "ODCIŚNIJ TUTAJ",
+      firstToast: "Znalazłeś nową pieczątkę",
+      completeToast: "Paszport ukończony — ostatnia strona jest otwarta",
+      stamps: {
+        "classroom-architect": ["Architekt zajęć", "Zbuduj i skopiuj użyteczną aktywność w Studiu projektowania zajęć."],
+        "code-mixing": ["Odkrywca Co-MIX", "Ukończ jedną pełną pętlę Co-MIX: czytanie, zauważenie, przypomnienie i ponowne użycie."],
+        "tgs-survivor": ["Ocalały z TGS", "Dotrzyj do zakończenia reporterskiej opowieści z Tokyo Game Show."],
+        "critical-player": ["Krytyczny gracz", "Otwórz próbkę zajęć albo plakat kursu Understanding Video Games."],
+        "evidence-hunter": ["Łowca dowodów", "Otwórz rekord publikacji lub DOI stojący za badaniem."],
+        "field-correspondent": ["Korespondent terenowy", "Otwórz poza portfolio jeden ślad pracy reporterskiej — materiał PSX Extreme, wywiad albo inną relację z terenu."],
+        "across-cultures": ["Pomiędzy kulturami", "Odwiedź portfolio dydaktyczne, badawcze i pisarskie."],
+      },
+      finalEyebrow: "Ukryta ósma pieczęć",
+      finalHanko: "BETWEEN WORLDS",
+      finalTitle: "Odnalazłeś nić, która łączy wszystkie te historie.",
+      finalBody: "Dydaktyka, badania, dziennikarstwo, gry, języki i życie między kulturami nie są tu osobnymi rozdziałami. To różne sposoby wchodzenia w nieznany świat — i pomagania innym, by potrafili się w nim odnaleźć.",
+      routeLabel: "Twoja droga zaczęła się jako",
+      routes: {
+        teaching: "Kartograf sali zajęciowej",
+        research: "Ciekawy świata badacz terenowy",
+        writing: "Korespondent kultury",
+      },
+      routeFinish: "Kończysz ją jako Czytelnik Pomiędzy Światami.",
+      noteLabel: "Wiadomość od Michała",
+      note: "Dziękuję, że zostałeś na tyle długo, by zobaczyć te połączenia. Portfolio zwykle prosi, by oglądać gotowe rzeczy. Moja praca częściej wyrastała w przestrzeni pomiędzy nimi: pomiędzy językami, dyscyplinami, salami zajęciowymi i publicznymi opowieściami. Twoja uwaga pomaga te związki dostrzec.",
+      storyLabel: "Jeszcze jedna historia",
+      storyTitle: "28 marca 2009 · Podróż bez daty powrotu",
+      story: [
+        "Na lotnisku w Krakowie, 28 marca 2009 roku, aparat uchwycił część historii, której nie pokazuje CV: obok mnie rodzice, w bagażu bilet w jedną stronę, a między nami pożegnanie zarazem piękne i bolesne.",
+        "Z zewnątrz decyzja mogła wyglądać na nagłą. Nie była. Stypendium MEXT przyszło po trzech latach starań, dwóch podejściach, egzaminach, rozmowie i planie badawczym. Kiedy wreszcie się udało, odszedłem z pracy, którą lubiłem, i niemal z dnia na dzień zamknąłem znane życie.",
+        "Dwadzieścia godzin później wylądowałem na New Chitose. Potem przyszły Otaru i Sapporo: japoński, kognitywistyka, doktorat, nowe przyjaźnie oraz dalsze pisanie dla czytelników w Polsce. Wydawało mi się, że zaczynanie od nowa jest jednym odważnym ruchem.",
+        "Pierwszy wyjazd miał wielu świadków. Kolejne powroty uczyły mnie, że ludzie i miejsca czekające „w domu” także się zmieniają: zmarł mój ojciec, pożegnania stawały się cichsze, a Hokkaido zapełniło się przyjaciółmi, którzy z czasem również wyjeżdżali. Zaczynanie od nowa przestało oznaczać czyste cięcie. Stało się sposobem zabierania dawnych domów ze sobą bez udawania, że pozostały niezmienione.",
+        "Nie było. Hokkaido nauczyło mnie, że każde przybycie mieści w sobie przyszłe pożegnania; przeprowadzka do Beppu kazała rozpocząć jeszcze raz. Człowiek nie odnajduje siebie raz na zawsze. Robi to wielokrotnie — w kolejnym języku, kolejnej sali i następnej wersji domu.",
+      ],
+      storyClose: "To, co z zewnątrz wyglądało jak odwaga, od środka było lękiem owiniętym w nadzieję.",
+      storyPhotoAlt: "Michał żegna się z rodzicami przed lotniskiem w Krakowie i przeprowadzką do Japonii w 2009 roku",
+      storyPhotoCaption: "Kraków, 28 marca 2009. Ostatnia rozmowa z rodzicami przed wylotem do Japonii.",
+      storyGroupPhotoAlt: "Michał z rodziną i przyjaciółmi przed lotniskiem w Krakowie, przed wyjazdem do Japonii w 2009 roku",
+      storyGroupPhotoCaption: "Szerszy kadr pożegnania: osoby, które przyszły odprowadzić mnie przed podróżą w jedną stronę.",
+    },
+    ja: {
+      launcher: "パスポート",
+      minimize: "パスポートの表示を小さくする",
+      restore: "探検パスポートを戻す",
+      title: "探検パスポート",
+      deck: "教育、研究、執筆、そして文化のあいだを生きる経験を、7つの小さな出会いがつなぎます。実際に操作して、手作り風のスタンプを集めてください。",
+      progress: "スタンプ {count} / {total}",
+      close: "パスポートを閉じる",
+      reset: "パスポートをリセット",
+      resetConfirm: "このブラウザに保存されたスタンプをすべて消しますか？",
+      locked: "未取得",
+      unlocked: "取得済み",
+      openRoute: "このルートをたどる",
+      stampHere: "ここにスタンプ",
+      firstToast: "新しいスタンプを見つけました",
+      completeToast: "パスポート完成 — 最後のページが開きました",
+      stamps: {
+        "classroom-architect": ["授業の設計者", "授業設計スタジオで活動案を作り、コピーする。"],
+        "code-mixing": ["Co-MIX 探検者", "読む・気づく・思い出す・再使用する、1つの学習ループを完了する。"],
+        "tgs-survivor": ["TGS サバイバー", "東京ゲームショウの取材ストーリーで結末にたどり着く。"],
+        "critical-player": ["批評するプレイヤー", "Understanding Video Games の授業映像またはポスターを開く。"],
+        "evidence-hunter": ["エビデンス・ハンター", "研究を支える論文記録または DOI を開く。"],
+        "field-correspondent": ["現場記者", "ポートフォリオの外にある取材の痕跡を一つ開く。PSX Extreme、インタビュー、または現場記事が手がかりです。"],
+        "across-cultures": ["文化のあいだ", "教育・研究・執筆の3つのポートフォリオを訪れる。"],
+      },
+      finalEyebrow: "隠されていた8つ目の印",
+      finalHanko: "BETWEEN WORLDS",
+      finalTitle: "すべてをつなぐ糸を見つけました。",
+      finalBody: "教育、研究、ジャーナリズム、ゲーム、言語、文化のあいだで生きることは、別々の章ではありません。未知の世界に入り、それを理解し、他の人にも道を示すための異なる方法です。",
+      routeLabel: "あなたの旅の始まりは",
+      routes: {
+        teaching: "教室の地図を描く人",
+        research: "好奇心を持つフィールド研究者",
+        writing: "文化の特派員",
+      },
+      routeFinish: "最後には「世界のあいだを読む人」になりました。",
+      noteLabel: "ミハウからのメッセージ",
+      note: "ここまで時間をかけ、つながりを見つけてくださってありがとうございます。ポートフォリオは普通、完成した成果を見る場所です。しかし私の仕事は、言語、分野、教室、そして公共の物語の「あいだ」から育ってきました。あなたの注意が、そのつながりを見えるものにしてくれます。",
+      storyLabel: "もう一つの物語",
+      storyTitle: "2009年3月28日 · 帰国日を決めない旅",
+      story: [
+        "2009年3月28日、クラクフ空港で撮られたこの写真には、履歴書には残らない時間が写っています。そばにいる両親、鞄の中の片道切符、そして美しさと痛みが同居する別れです。",
+        "外から見れば、突然の決断だったかもしれません。しかし、文部科学省奨学金にたどり着くまでには、3年間、2度の挑戦、試験、面接、研究計画がありました。採用が決まった時、好きだった仕事を辞め、慣れ親しんだ生活をほとんど一夜で閉じました。",
+        "約20時間後、新千歳空港に到着しました。その後の小樽と札幌では、日本語、認知科学、博士研究、新しい友人、そしてポーランドの読者に向けた執筆が重なっていきました。当時は、再出発とは一度だけの大きな決断だと思っていました。",
+        "最初の出発は、多くの人に見送られました。その後の帰省を通して、『故郷』で待つ人や場所も変わるのだと知りました。父を亡くし、別れは静かになり、北海道で出会った友人たちもやがて旅立っていきました。再出発は、過去を切り離すことではなくなりました。変わってしまった以前の故郷も、自分の中に持って進むことになったのです。",
+        "けれど、そうではありませんでした。北海道で、出会いにはいつか別れが含まれることを学び、別府への移動でもう一度始め直しました。自分を見つけるのは一度きりではありません。別の言語、別の教室、別の『家』のかたちの中で、何度も見つけ直すのです。",
+      ],
+      storyClose: "外からは勇気に見えた旅も、内側では、希望に包まれた不安でした。",
+      storyPhotoAlt: "2009年、日本への移住を前にクラクフ空港で両親に別れを告げるミハウ",
+      storyPhotoCaption: "2009年3月28日、クラクフ。日本へ出発する前、両親と交わした最後の会話。",
+      storyGroupPhotoAlt: "2009年、日本へ出発する前にクラクフ空港で家族や友人と並ぶミハウ",
+      storyGroupPhotoCaption: "片道の旅へ出る私を見送りに来てくれた人たちとの、もう一つの別れの風景。",
+    },
+  };
+
+  let state = { unlocked: {}, visited: [], completionSeen: false, launcherMinimized: false };
+  try {
+    const saved = JSON.parse(localStorage.getItem(storageKey) || "null");
+    if (saved && typeof saved === "object") state = { ...state, ...saved };
+  } catch {
+    // The passport remains usable for the current visit if storage is unavailable.
+  }
+
+  const save = () => {
+    try { localStorage.setItem(storageKey, JSON.stringify(state)); } catch { /* local-only enhancement */ }
+  };
+  const currentLanguage = () => ["pl", "ja"].includes(document.documentElement.lang)
+    ? document.documentElement.lang
+    : "en";
+  const currentCopy = () => passportCopy[currentLanguage()];
+  const unlockedCount = () => stampOrder.filter((id) => state.unlocked[id]).length;
+  const isComplete = () => unlockedCount() === stampOrder.length;
+  const routeStarted = () => {
+    const candidates = [
+      ["teaching", state.unlocked["classroom-architect"] || state.unlocked["critical-player"]],
+      ["research", state.unlocked["code-mixing"] || state.unlocked["evidence-hunter"]],
+      ["writing", state.unlocked["tgs-survivor"] || state.unlocked["field-correspondent"]],
+    ].filter(([, time]) => time).sort((a, b) => a[1] - b[1]);
+    return candidates[0]?.[0] || "teaching";
+  };
+
+  const root = document.createElement("div");
+  root.className = "stamp-rally";
+  root.innerHTML = `
+    <div class="stamp-rally-launcher-shell">
+      <button class="stamp-rally-launcher" type="button" aria-expanded="false">
+        <span class="stamp-rally-launcher-mark" aria-hidden="true">〒</span>
+        <span data-passport-launcher></span>
+        <b data-passport-count>0/7</b>
+      </button>
+      <button class="stamp-rally-minimize" type="button" data-passport-minimize aria-label="Hide passport shortcut">×</button>
+    </div>
+    <div class="stamp-rally-scrim" hidden></div>
+    <aside class="stamp-rally-drawer" aria-hidden="true" aria-label="Explorer Passport">
+      <div class="stamp-rally-drawer-head">
+        <div><p class="eyebrow" data-passport-progress></p><h2 data-passport-title></h2></div>
+        <button class="stamp-rally-close" type="button" data-passport-close aria-label="Close">×</button>
+      </div>
+      <p class="stamp-rally-deck" data-passport-deck></p>
+      <div class="stamp-rally-route" aria-hidden="true"><span></span><i></i><span></span><i></i><span></span><i></i><span></span></div>
+      <div class="stamp-rally-grid" data-passport-grid></div>
+      <section class="stamp-rally-reward" data-passport-reward hidden></section>
+      <button class="stamp-rally-reset" type="button" data-passport-reset></button>
+    </aside>
+    <div class="stamp-rally-toast" role="status" aria-live="polite" hidden></div>`;
+  document.body.append(root);
+
+  const languageSwitch = document.querySelector(".language-switch");
+  const headerTools = document.createElement("div");
+  headerTools.className = "header-tools";
+  const headerLauncher = document.createElement("button");
+  headerLauncher.className = "stamp-rally-header-launcher";
+  headerLauncher.type = "button";
+  headerLauncher.hidden = true;
+  headerLauncher.innerHTML = `<span aria-hidden="true">〒</span><b data-passport-header-count>0/7</b>`;
+  if (languageSwitch) {
+    languageSwitch.before(headerTools);
+    headerTools.append(headerLauncher, languageSwitch);
+  }
+
+  const launcher = root.querySelector(".stamp-rally-launcher");
+  const minimizeButton = root.querySelector("[data-passport-minimize]");
+  const scrim = root.querySelector(".stamp-rally-scrim");
+  const drawer = root.querySelector(".stamp-rally-drawer");
+  const grid = root.querySelector("[data-passport-grid]");
+  const reward = root.querySelector("[data-passport-reward]");
+  const toast = root.querySelector(".stamp-rally-toast");
+  let toastTimer;
+
+  const showToast = (message, completed = false) => {
+    clearTimeout(toastTimer);
+    toast.textContent = message;
+    toast.classList.toggle("is-complete", completed);
+    toast.hidden = false;
+    window.requestAnimationFrame(() => toast.classList.add("is-visible"));
+    toastTimer = window.setTimeout(() => {
+      toast.classList.remove("is-visible");
+      window.setTimeout(() => { toast.hidden = true; }, 220);
+    }, 3400);
+  };
+
+  const setOpen = (open) => {
+    launcher.setAttribute("aria-expanded", String(open));
+    drawer.setAttribute("aria-hidden", String(!open));
+    drawer.classList.toggle("is-open", open);
+    scrim.hidden = !open;
+    root.classList.toggle("is-open", open);
+    if (open) drawer.querySelector("[data-passport-close]")?.focus({ preventScroll: true });
+  };
+
+  const setMinimized = (minimized) => {
+    state.launcherMinimized = minimized;
+    root.classList.toggle("is-minimized", minimized);
+    headerLauncher.hidden = !minimized;
+    save();
+  };
+
+  const renderReward = (copy) => {
+    if (!isComplete()) {
+      reward.hidden = true;
+      reward.replaceChildren();
+      return;
+    }
+    reward.hidden = false;
+    const paragraphs = copy.story.map((paragraph) => `<p>${paragraph}</p>`).join("");
+    reward.innerHTML = `
+      <div class="stamp-rally-final-seal" aria-label="${copy.finalHanko}"><span>間</span><b>${copy.finalHanko}</b></div>
+      <p class="eyebrow">${copy.finalEyebrow}</p>
+      <h3>${copy.finalTitle}</h3>
+      <p class="stamp-rally-final-body">${copy.finalBody}</p>
+      <p class="stamp-rally-route-title"><span>${copy.routeLabel}</span><strong>${copy.routes[routeStarted()]}</strong><b>${copy.routeFinish}</b></p>
+      <div class="stamp-rally-note"><span>01</span><div><p class="eyebrow">${copy.noteLabel}</p><p>${copy.note}</p></div></div>
+      <article class="stamp-rally-story">
+        <div class="stamp-rally-story-gallery">
+          <figure class="stamp-rally-story-photo has-ticket">
+            <img src="assets/story/airport-farewell-2009.jpg" alt="${copy.storyPhotoAlt}" loading="lazy">
+            <figcaption>${copy.storyPhotoCaption}</figcaption>
+            <div class="stamp-rally-story-ticket" aria-hidden="true"><b>28</b><span>MAR<br>2009</span><i>KRK → JP</i></div>
+          </figure>
+          <figure class="stamp-rally-story-photo">
+            <img src="assets/story/airport-farewell-group-2009.jpg" alt="${copy.storyGroupPhotoAlt}" loading="lazy">
+            <figcaption>${copy.storyGroupPhotoCaption}</figcaption>
+          </figure>
+        </div>
+        <div class="stamp-rally-story-copy"><p class="eyebrow">${copy.storyLabel}</p><h4>${copy.storyTitle}</h4>${paragraphs}<strong>${copy.storyClose}</strong></div>
+      </article>`;
+  };
+
+  const render = () => {
+    const copy = currentCopy();
+    const count = unlockedCount();
+    root.querySelector("[data-passport-launcher]").textContent = copy.launcher;
+    root.querySelector("[data-passport-count]").textContent = `${count}/${stampOrder.length}`;
+    headerLauncher.querySelector("[data-passport-header-count]").textContent = `${count}/${stampOrder.length}`;
+    minimizeButton.setAttribute("aria-label", copy.minimize);
+    headerLauncher.setAttribute("aria-label", copy.restore);
+    root.querySelector("[data-passport-progress]").textContent = copy.progress
+      .replace("{count}", String(count)).replace("{total}", String(stampOrder.length));
+    root.querySelector("[data-passport-title]").textContent = copy.title;
+    root.querySelector("[data-passport-deck]").textContent = copy.deck;
+    root.querySelector("[data-passport-close]").setAttribute("aria-label", copy.close);
+    root.querySelector("[data-passport-reset]").textContent = copy.reset;
+    grid.replaceChildren();
+    stampOrder.forEach((id, index) => {
+      const definition = stampDefinitions[id];
+      const [title, description] = copy.stamps[id];
+      const unlocked = Boolean(state.unlocked[id]);
+      const item = document.createElement("article");
+      item.className = `stamp-rally-item stamp-rally-tone-${definition.tone}`;
+      item.classList.toggle("is-unlocked", unlocked);
+      item.innerHTML = `
+        <div class="stamp-rally-stamp-field stamp-rally-shape-${definition.shape}" aria-hidden="true">
+          <small class="stamp-rally-slot-number">0${index + 1}</small>
+          <span class="stamp-rally-slot-label">${copy.stampHere}</span>
+          <i class="stamp-rally-slot-target"></i>
+          <div class="stamp-rally-stamp"><small>0${index + 1}</small>${stampArtwork[definition.icon]}<strong>${definition.glyph}</strong><span>MICHAŁ MAZUR</span></div>
+        </div>
+        <div class="stamp-rally-item-copy"><span>${unlocked ? copy.unlocked : copy.locked}</span><h3>${title}</h3><p>${description}</p><a href="${definition.href}">${copy.openRoute} <i aria-hidden="true">→</i></a></div>`;
+      grid.append(item);
+    });
+    renderReward(copy);
+    root.classList.toggle("is-complete", isComplete());
+    root.classList.toggle("is-minimized", Boolean(state.launcherMinimized));
+    headerLauncher.hidden = !state.launcherMinimized;
+  };
+
+  const unlock = (id, options = {}) => {
+    if (!stampDefinitions[id] || state.unlocked[id]) return false;
+    state.unlocked[id] = Date.now();
+    const completeNow = isComplete();
+    save();
+    render();
+    if (!options.silent) showToast(completeNow ? currentCopy().completeToast : currentCopy().firstToast, completeNow);
+    if (completeNow && !state.completionSeen) {
+      state.completionSeen = true;
+      save();
+      window.setTimeout(() => setOpen(true), 700);
+    }
+    return true;
+  };
+
+  document.addEventListener("identity:stamp", (event) => unlock(event.detail?.id));
+  document.addEventListener("identity:languagechange", render);
+  launcher.addEventListener("click", () => setOpen(!drawer.classList.contains("is-open")));
+  minimizeButton.addEventListener("click", () => {
+    setOpen(false);
+    setMinimized(true);
+  });
+  headerLauncher.addEventListener("click", () => {
+    setMinimized(false);
+    setOpen(true);
+  });
+  scrim.addEventListener("click", () => setOpen(false));
+  root.querySelector("[data-passport-close]").addEventListener("click", () => setOpen(false));
+  root.querySelector("[data-passport-reset]").addEventListener("click", () => {
+    if (!window.confirm(currentCopy().resetConfirm)) return;
+    state = { unlocked: {}, visited: [], completionSeen: false, launcherMinimized: state.launcherMinimized };
+    save();
+    render();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && drawer.classList.contains("is-open")) setOpen(false);
+  });
+
+  document.addEventListener("click", (event) => {
+    const clickOrigin = event.target instanceof Element ? event.target : event.target?.parentElement;
+    const link = clickOrigin?.closest("a[href]");
+    if (!link) return;
+    const href = link.getAttribute("href") || "";
+    if (/doi\.org|researchmap\.jp\/.*published_papers/i.test(href)) unlock("evidence-hunter");
+    if (/yF0FeLBleUY|3EGgpnY2BJc|understanding-video-games-(course|information)-poster/i.test(href)) unlock("critical-player");
+    if (/psxextreme|torii\.com\.pl|nagoshi|valkyrie|gamemusic|tokyo-game-show-2011-press/i.test(href)) unlock("field-correspondent");
+  }, true);
+
+  const pageName = window.location.pathname.split("/").pop() || "index.html";
+  const portfolioPage = {
+    "workshops.html": "teaching",
+    "research.html": "research",
+    "writing.html": "writing",
+  }[pageName];
+  if (portfolioPage && !state.visited.includes(portfolioPage)) {
+    state.visited = [...state.visited, portfolioPage];
+    save();
+  }
+  if (["teaching", "research", "writing"].every((page) => state.visited.includes(page))) {
+    unlock("across-cultures");
+  }
+
+  window.identityStampRally = { unlock, open: () => setOpen(true) };
+  render();
+})();
