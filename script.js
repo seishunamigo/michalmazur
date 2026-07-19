@@ -113,14 +113,19 @@ const translations = {
     timelineTitle: "The route matters because it changed what I can help other people do.",
     timelineOneTitle: "Japan begins",
     timelineOneBody: "I arrive on a MEXT scholarship and start learning the everyday work of living between languages.",
-    timelineTwoTitle: "Language meets technology",
-    timelineTwoBody: "Research on NLP and language-learning systems makes context, choice, and learner experience central questions.",
+    timelineOneLink: "See the public record ↗",
+    timelineTwoTitle: "Doctoral work makes language a system",
+    timelineTwoBody: "A PhD in information science at Hokkaido University leads into Co-MIX research: language-learning systems that make context, choice, and learner experience central questions.",
+    timelineTwoLink: "Explore Co-MIX research ↗",
     timelineThreeTitle: "Teaching becomes the focus",
     timelineThreeBody: "Invited workshops on teaching in English and intercultural communication turn research questions into live classroom work.",
+    timelineThreeLink: "See teaching in practice ↗",
     timelineFourTitle: "Evidence from the classroom",
     timelineFourBody: "A 15-week study makes intercultural learning visible through students’ reflection and practice.",
+    timelineFourLink: "Read the study ↗",
     timelineFiveTitle: "APU, Beppu",
     timelineFiveBody: "At APU, I bring teaching, research, and public communication into the same room.",
+    timelineFiveLink: "Read the APU profile ↗",
     bioEyebrow: "How I work",
     bioTitle: "I work where language, culture, and learning meet.",
     bioBodyOne:
@@ -295,6 +300,7 @@ const translations = {
     contactTitle: "Let’s build a workshop, course, or collaboration around a real problem.",
     contactBody:
       "I am especially interested in work with centers for teaching and learning, international programmes, graduate schools, and academic teams developing multilingual or intercultural learning.",
+    contactSignature: "For teaching, research, editorial, and public conversations, you can write in English, Polish, or Japanese.",
     contactWorkshop: "Review workshop formats",
     contactEmail: "Email me about a collaboration",
     contactLinkedIn: "View LinkedIn profile",
@@ -454,14 +460,19 @@ const translations = {
     timelineTitle: "Ta droga ma znaczenie, bo zmieniła to, w czym mogę dziś pomagać innym.",
     timelineOneTitle: "Początek Japonii",
     timelineOneBody: "Przyjeżdżam na stypendium MEXT i zaczynam rozumieć codzienną pracę życia pomiędzy językami.",
-    timelineTwoTitle: "Język spotyka technologię",
-    timelineTwoBody: "Badania nad NLP i systemami nauki języka stawiają w centrum kontekst, wybór i doświadczenie uczących się.",
+    timelineOneLink: "Zobacz dorobek ↗",
+    timelineTwoTitle: "Doktorat zamienia język w system",
+    timelineTwoBody: "Doktorat z informatyki na Hokkaido University prowadzi do badań Co-MIX: systemów nauki języka, w których najważniejsze są kontekst, wybór i doświadczenie uczących się.",
+    timelineTwoLink: "Poznaj badania Co-MIX ↗",
     timelineThreeTitle: "Nauczanie wysuwa się na pierwszy plan",
     timelineThreeBody: "Zaproszone warsztaty o nauczaniu po angielsku i komunikacji międzykulturowej przenoszą pytania badawcze do prawdziwej pracy w klasie.",
+    timelineThreeLink: "Zobacz dydaktykę w praktyce ↗",
     timelineFourTitle: "Dowody z klasy",
     timelineFourBody: "Piętnastotygodniowe badanie uwidacznia uczenie międzykulturowe poprzez refleksję i praktykę studentów.",
+    timelineFourLink: "Przeczytaj badanie ↗",
     timelineFiveTitle: "APU, Beppu",
     timelineFiveBody: "Na APU łączę nauczanie, badania i komunikację publiczną w jednej przestrzeni.",
+    timelineFiveLink: "Przeczytaj profil APU ↗",
     bioEyebrow: "Jak pracuję",
     bioTitle: "Pracuję na styku języka, kultury i uczenia się.",
     bioBodyOne:
@@ -581,7 +592,7 @@ const translations = {
     writingPageLink: "Zobacz portfolio pisarskie",
     bridgeQuote: "„Przez całą karierę uczę się wchodzić do nieznanych światów, czytać ich zasady i pomagać innym odnaleźć w nich drogę.”",
     editorialEvidenceNagoshi: "Wywiad · Toshihiro Nagoshi",
-    editorialEvidenceValkyrie: "Spotkanie redakcyjne · twórcy Valkyrie Profile",
+    editorialEvidenceValkyrie: "Wywiad · twórcy Valkyrie Profile",
     identityAcademicTerm: "Tożsamość akademicka",
     identityAcademicDesc: "Adiunkt, badacz szkolnictwa wyższego, projektant rozwoju dydaktycznego kadry.",
     identityPublicTerm: "Tożsamość publiczna",
@@ -636,6 +647,7 @@ const translations = {
     contactTitle: "Zbudujmy warsztat, kurs albo współpracę wokół prawdziwego problemu.",
     contactBody:
       "Szczególnie interesuje mnie współpraca z centrami doskonalenia dydaktyki, programami międzynarodowymi, szkołami doktorskimi i zespołami rozwijającymi wielojęzyczne lub międzykulturowe uczenie się.",
+    contactSignature: "W sprawie dydaktyki, badań, tekstów i rozmów publicznych można napisać do mnie po angielsku, polsku lub japońsku.",
     contactWorkshop: "Przejrzyj formaty warsztatów",
     contactEmail: "Napisz do mnie o współpracy",
     contactLinkedIn: "Zobacz profil LinkedIn",
@@ -730,14 +742,19 @@ translations.ja = {
   timelineTitle: "この道のりが大切なのは、いま他の人のためにできることを変えてくれたからです。",
   timelineOneTitle: "日本での出発",
   timelineOneBody: "MEXT奨学生として来日し、言語のあいだで生きる日々の仕事を学び始めます。",
-  timelineTwoTitle: "言語とテクノロジーの接点",
-  timelineTwoBody: "NLPと言語学習システムの研究を通じて、文脈、選択、学習者経験を中心的な問いにしました。",
+  timelineOneLink: "活動記録を見る ↗",
+  timelineTwoTitle: "博士課程で言語をシステムとして捉える",
+  timelineTwoBody: "北海道大学の情報科学博士課程を経て、文脈、選択、学習者経験を中心に据えるCo-MIXの語学学習システム研究へ進みました。",
+  timelineTwoLink: "Co-MIXの研究を見る ↗",
   timelineThreeTitle: "教育が中心になる",
   timelineThreeBody: "英語で教えることと異文化コミュニケーションについての招待ワークショップが、研究の問いを生きた教室の仕事へつなげます。",
+  timelineThreeLink: "教育実践を見る ↗",
   timelineFourTitle: "教室からの根拠",
   timelineFourBody: "15週間の研究が、学生の振り返りと実践を通じて異文化学習を可視化しました。",
+  timelineFourLink: "研究を読む ↗",
   timelineFiveTitle: "APU・別府",
   timelineFiveBody: "APUでは、教育、研究、パブリック・コミュニケーションを同じ場に結びつけています。",
+  timelineFiveLink: "APUのプロフィールを読む ↗",
   bioEyebrow: "仕事の進め方",
   bioTitle: "言語、文化、学びが交わる場所で働いています。",
   bioBodyOne: "私は、立命館アジア太平洋大学の助教です。異文化コミュニケーション、グローバル・ラーニング、ファカルティ・ディベロップメント、多言語高等教育における教育に取り組んでいます。教育者と学生が違いを解釈し、より深く参加し、振り返りを実践へ移せるよう、授業と専門能力開発プログラムを設計しています。",
@@ -810,6 +827,7 @@ translations.ja = {
   contactEyebrow: "お問い合わせ",
   contactTitle: "現実の課題を起点に、ワークショップ、授業、協働をつくりましょう。",
   contactBody: "教育開発センター、国際プログラム、大学院、多言語または異文化の学習を育てるアカデミック・チームとの協働に特に関心があります。",
+  contactSignature: "教育、研究、執筆、パブリックな対話については、英語・ポーランド語・日本語でご連絡いただけます。",
   contactWorkshop: "ワークショップ形式を見る",
   contactEmail: "協働についてメールする",
   contactLinkedIn: "LinkedInを見る",
@@ -1056,58 +1074,85 @@ const coMixExamples = {
   "en-ja": {
     language: "en",
     scenes: {
-      magazine: {
+      arrival: {
         light: [
-          "On a rainy afternoon in Tokyo, Maya finds an old ",
-          coMixWord("雑誌", "magazine", "ざっし", "zasshi", "この雑誌は古いゲームについてです。", "This magazine is about an old game.", "The shop, the cover, and the story help you predict the object before revealing it."),
-          " in a small game shop. Inside is a ",
-          coMixWord("地図", "map", "ちず", "chizu", "この地図で駅を見つけます。", "I find the station with this map.", "Maya needs directions, so the surrounding story makes the meaning easier to infer."),
-          " with a circle around a station.",
+          "Before her first seminar, Aiko checks the campus ",
+          coMixWord("地図", "map", "ちず", "chizu", "地図で教室を見つけます。", "I find the classroom with a map.", "The need to arrive gives the word a clear job before its meaning is revealed."),
+          " and looks for the right ",
+          coMixWord("教室", "classroom", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "A familiar university situation makes the place word easy to infer."),
+          ".",
         ],
         rich: [
-          "On a rainy afternoon in Tokyo, Maya finds an old ",
-          coMixWord("雑誌", "magazine", "ざっし", "zasshi", "この雑誌は古いゲームについてです。", "This magazine is about an old game.", "The shop, the cover, and the story help you predict the object before revealing it."),
-          " in a small ",
-          coMixWord("店", "shop", "みせ", "mise", "この店は駅の近くです。", "This shop is near the station.", "A familiar place word is kept inside a clear English sentence."),
-          ". Inside is a short ",
-          coMixWord("手紙", "letter / note", "てがみ", "tegami", "手紙を読みました。", "I read the letter.", "The letter moves the story forward, so its function is clear even before translation."),
-          " and a ",
-          coMixWord("地図", "map", "ちず", "chizu", "この地図で駅を見つけます。", "I find the station with this map.", "Maya needs directions, so the surrounding story makes the meaning easier to infer."),
-          " with a circle around a station.",
+          "Before her first ",
+          coMixWord("授業", "class", "じゅぎょう", "jugyō", "授業は九時に始まります。", "The class starts at nine.", "The time and first-day setting make this event word predictable."),
+          ", Aiko enters the ",
+          coMixWord("入り口", "entrance", "いりぐち", "iriguchi", "入り口はあちらです。", "The entrance is over there.", "The route through a building supplies a concrete physical context."),
+          ", checks the campus ",
+          coMixWord("地図", "map", "ちず", "chizu", "地図で教室を見つけます。", "I find the classroom with a map.", "The same useful object is encountered inside a richer scene."),
+          ", and finds the right ",
+          coMixWord("教室", "classroom", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "The destination completes the small practical problem."),
+          ".",
         ],
-        answer: ["地図", "ちず", "chizu", "tizu"],
-        focus: "地図",
+        answer: ["教室", "きょうしつ", "kyoshitsu", "kyōshitsu"],
+        focus: "教室",
         reuse: {
-          question: "At the station, Maya checks the ___ again. Choose the word that fits.",
-          options: ["地図", "雑誌", "店"],
-          answer: "地図",
+          question: "The map helps Aiko find the ___. Choose the word that fits.",
+          options: ["教室", "課題", "手伝う"],
+          answer: "教室",
         },
       },
-      station: {
+      task: {
         light: [
-          "At the ",
-          coMixWord("駅", "station", "えき", "eki", "駅で友達に会います。", "I meet a friend at the station.", "The destination in the first scene makes this place word easy to anchor."),
-          ", Maya follows the map to a quiet café. A student is waiting with the old ",
-          coMixWord("雑誌", "magazine", "ざっし", "zasshi", "この雑誌は古いゲームについてです。", "This magazine is about an old game.", "The word returns in a second scene, which gives the learner another meaningful encounter."),
+          "In the ",
+          coMixWord("教室", "classroom", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "A word from the first scene returns when the story moves from finding the room to learning in it."),
+          ", the teacher explains a short ",
+          coMixWord("課題", "assignment / task", "かだい", "kadai", "この課題は金曜日までです。", "This assignment is due on Friday.", "The explanation and deadline show that this is something learners need to do."),
           ".",
         ],
         rich: [
-          "At the ",
-          coMixWord("駅", "station", "えき", "eki", "駅で友達に会います。", "I meet a friend at the station.", "The destination in the first scene makes this place word easy to anchor."),
-          ", Maya follows the ",
-          coMixWord("地図", "map", "ちず", "chizu", "この地図で駅を見つけます。", "I find the station with this map.", "The word from the first scene returns in a new situation instead of being drilled in isolation."),
-          " to a quiet café. A ",
-          coMixWord("学生", "student", "がくせい", "gakusei", "学生はゲームを勉強しています。", "The student is studying games.", "The character is introduced through what she is doing, not through a vocabulary list."),
-          " is waiting with the old magazine and the ",
-          coMixWord("手紙", "letter / note", "てがみ", "tegami", "手紙を読みました。", "I read the letter.", "The note connects both scenes and gives this word a clear narrative role."),
+          "In the ",
+          coMixWord("教室", "classroom", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "The word returns in a fresh event rather than in an isolated list."),
+          ", the teacher gives a short ",
+          coMixWord("課題", "assignment / task", "かだい", "kadai", "この課題は金曜日までです。", "This assignment is due on Friday.", "A task with a deadline has a clear purpose in the scene."),
+          ". Aiko works with a small ",
+          coMixWord("グループ", "group", "ぐるーぷ", "gurūpu", "グループで意見を話します。", "We discuss our ideas in a group.", "The social arrangement is meaningful because the story shows what the people do together."),
+          " and shares one ",
+          coMixWord("意見", "opinion / idea", "いけん", "iken", "意見を聞かせてください。", "Please tell me your opinion.", "The word is introduced through a communicative act, not a definition."),
           ".",
         ],
-        answer: ["手紙", "てがみ", "tegami"],
-        focus: "手紙",
+        answer: ["課題", "かだい", "kadai"],
+        focus: "課題",
         reuse: {
-          question: "Inside the magazine, Maya finds a short ___. Choose the word that fits.",
-          options: ["手紙", "駅", "学生"],
-          answer: "手紙",
+          question: "Aiko reads the instructions before starting the ___. Choose the word that fits.",
+          options: ["課題", "地図", "教室"],
+          answer: "課題",
+        },
+      },
+      support: {
+        light: [
+          "After the activity, Aiko has one ",
+          coMixWord("質問", "question", "しつもん", "shitsumon", "質問があります。", "I have a question.", "A genuine need to ask for clarification gives the noun an immediate communicative purpose."),
+          " about the ",
+          coMixWord("課題", "assignment / task", "かだい", "kadai", "この課題は金曜日までです。", "This assignment is due on Friday.", "A word from the previous scene returns as part of a new, cooperative action."),
+          ".",
+        ],
+        rich: [
+          "After the ",
+          coMixWord("授業", "class", "じゅぎょう", "jugyō", "授業は九時に始まります。", "The class starts at nine.", "The word now closes the learning event introduced at the beginning."),
+          ", Aiko has one ",
+          coMixWord("質問", "question", "しつもん", "shitsumon", "質問があります。", "I have a question.", "A question is introduced as a genuine communicative need."),
+          " about the ",
+          coMixWord("課題", "assignment / task", "かだい", "kadai", "この課題は金曜日までです。", "This assignment is due on Friday.", "The task appears again when the learner has to act on it."),
+          ". A classmate explains the ",
+          coMixWord("答え", "answer", "こたえ", "kotae", "答えを一緒に考えます。", "We think about the answer together.", "The response completes the communicative pair: a question creates the need for an answer."),
+          ".",
+        ],
+        answer: ["質問", "しつもん", "shitsumon"],
+        focus: "質問",
+        reuse: {
+          question: "Aiko raises her hand because she has a ___. Choose the word that fits.",
+          options: ["質問", "教室", "地図"],
+          answer: "質問",
         },
       },
     },
@@ -1115,58 +1160,85 @@ const coMixExamples = {
   "jp-en": {
     language: "ja",
     scenes: {
-      magazine: {
+      arrival: {
         light: [
-          "雨の午後、マヤは東京の小さなゲーム店で古い ",
-          coMixWord("magazine", "雑誌", "ざっし", "zasshi", "この雑誌は古いゲームについてです。", "This magazine is about an old game.", "The shop, the cover, and the story help you predict the object before revealing it."),
-          " を見つけました。中には駅を丸で囲んだ ",
-          coMixWord("map", "地図", "ちず", "chizu", "この地図で駅を見つけます。", "I find the station with this map.", "Maya needs directions, so the surrounding story makes the meaning easier to infer."),
-          " がありました。",
+          "初めてのゼミの前に、アイコはキャンパスの ",
+          coMixWord("map", "地図", "ちず", "chizu", "地図で教室を見つけます。", "I find the classroom with a map.", "The need to arrive gives the word a clear job before its meaning is revealed."),
+          " を見て、正しい ",
+          coMixWord("classroom", "教室", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "A familiar university situation makes the place word easy to infer."),
+          " を探します。",
         ],
         rich: [
-          "雨の午後、マヤは東京の小さな ",
-          coMixWord("shop", "店", "みせ", "mise", "この店は駅の近くです。", "This shop is near the station.", "A familiar place word is kept inside a clear Japanese sentence."),
-          " で古い ",
-          coMixWord("magazine", "雑誌", "ざっし", "zasshi", "この雑誌は古いゲームについてです。", "This magazine is about an old game.", "The shop, the cover, and the story help you predict the object before revealing it."),
-          " を見つけました。中には短い ",
-          coMixWord("letter", "手紙", "てがみ", "tegami", "手紙を読みました。", "I read the letter.", "The letter moves the story forward, so its function is clear even before translation."),
-          " と、駅を丸で囲んだ ",
-          coMixWord("map", "地図", "ちず", "chizu", "この地図で駅を見つけます。", "I find the station with this map.", "Maya needs directions, so the surrounding story makes the meaning easier to infer."),
-          " がありました。",
+          "最初の ",
+          coMixWord("class", "授業", "じゅぎょう", "jugyō", "授業は九時に始まります。", "The class starts at nine.", "The time and first-day setting make this event word predictable."),
+          " の前に、アイコは ",
+          coMixWord("entrance", "入り口", "いりぐち", "iriguchi", "入り口はあちらです。", "The entrance is over there.", "The route through a building supplies a concrete physical context."),
+          " から入り、キャンパスの ",
+          coMixWord("map", "地図", "ちず", "chizu", "地図で教室を見つけます。", "I find the classroom with a map.", "The same useful object is encountered inside a richer scene."),
+          " を見て、正しい ",
+          coMixWord("classroom", "教室", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "The destination completes the small practical problem."),
+          " を見つけます。",
         ],
-        answer: ["map"],
-        focus: "map",
+        answer: ["classroom"],
+        focus: "classroom",
         reuse: {
-          question: "駅で、マヤはもう一度 ___ を見ます。正しい英単語を選んでください。",
-          options: ["map", "magazine", "shop"],
-          answer: "map",
+          question: "The map helps Aiko find the ___. 正しい英単語を選んでください。",
+          options: ["classroom", "assignment", "help"],
+          answer: "classroom",
         },
       },
-      station: {
+      task: {
         light: [
-          "マヤは ",
-          coMixWord("station", "駅", "えき", "eki", "駅で友達に会います。", "I meet a friend at the station.", "The destination in the first scene makes this place word easy to anchor."),
-          " で地図を頼りに静かなカフェへ行きました。学生が古い ",
-          coMixWord("magazine", "雑誌", "ざっし", "zasshi", "この雑誌は古いゲームについてです。", "This magazine is about an old game.", "The word returns in a second scene, which gives the learner another meaningful encounter."),
-          " を持って待っています。",
+          "アイコは ",
+          coMixWord("classroom", "教室", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "A word from the first scene returns when the story moves from finding the room to learning in it."),
+          " で、先生が説明する短い ",
+          coMixWord("assignment", "課題", "かだい", "kadai", "この課題は金曜日までです。", "This assignment is due on Friday.", "The explanation and deadline show that this is something learners need to do."),
+          " を聞きます。",
         ],
         rich: [
-          "マヤは ",
-          coMixWord("station", "駅", "えき", "eki", "駅で友達に会います。", "I meet a friend at the station.", "The destination in the first scene makes this place word easy to anchor."),
-          " で ",
-          coMixWord("map", "地図", "ちず", "chizu", "この地図で駅を見つけます。", "I find the station with this map.", "The word from the first scene returns in a new situation instead of being drilled in isolation."),
-          " を頼りに静かなカフェへ行きました。ひとりの ",
-          coMixWord("student", "学生", "がくせい", "gakusei", "学生はゲームを勉強しています。", "The student is studying games.", "The character is introduced through what she is doing, not through a vocabulary list."),
-          " が古い雑誌と短い ",
-          coMixWord("letter", "手紙", "てがみ", "tegami", "手紙を読みました。", "I read the letter.", "The note connects both scenes and gives this word a clear narrative role."),
-          " を持って待っています。",
+          "アイコは ",
+          coMixWord("classroom", "教室", "きょうしつ", "kyōshitsu", "この教室で日本語を勉強します。", "I study Japanese in this classroom.", "The word returns in a fresh event rather than in an isolated list."),
+          " で短い ",
+          coMixWord("assignment", "課題", "かだい", "kadai", "この課題は金曜日までです。", "This assignment is due on Friday.", "A task with a deadline has a clear purpose in the scene."),
+          " を受け取ります。小さな ",
+          coMixWord("group", "グループ", "ぐるーぷ", "gurūpu", "グループで意見を話します。", "We discuss our ideas in a group.", "The social arrangement is meaningful because the story shows what the people do together."),
+          " で一つの ",
+          coMixWord("opinion", "意見", "いけん", "iken", "意見を聞かせてください。", "Please tell me your opinion.", "The word is introduced through a communicative act, not a definition."),
+          " を話します。",
         ],
-        answer: ["letter", "note"],
-        focus: "letter",
+        answer: ["assignment", "task"],
+        focus: "assignment",
         reuse: {
-          question: "雑誌の中で、マヤは短い ___ を見つけます。正しい英単語を選んでください。",
-          options: ["letter", "station", "student"],
-          answer: "letter",
+          question: "Aiko reads the instructions before starting the ___. 正しい英単語を選んでください。",
+          options: ["assignment", "map", "classroom"],
+          answer: "assignment",
+        },
+      },
+      support: {
+        light: [
+          "活動の後、アイコは ",
+          coMixWord("question", "質問", "しつもん", "shitsumon", "質問があります。", "I have a question.", "A genuine need to ask for clarification gives the noun an immediate communicative purpose."),
+          " があります。それは ",
+          coMixWord("assignment", "課題", "かだい", "kadai", "この課題は金曜日までです。", "This assignment is due on Friday.", "A word from the previous scene returns as part of a new, cooperative action."),
+          " についてです。",
+        ],
+        rich: [
+          "",
+          coMixWord("class", "授業", "じゅぎょう", "jugyō", "授業は九時に始まります。", "The class starts at nine.", "The word now closes the learning event introduced at the beginning."),
+          " の後、アイコは ",
+          coMixWord("question", "質問", "しつもん", "shitsumon", "質問があります。", "I have a question.", "A question is introduced as a genuine communicative need."),
+          " を一つ持っています。 ",
+          coMixWord("assignment", "課題", "かだい", "kadai", "この課題は金曜日までです。", "This assignment is due on Friday.", "The task appears again when the learner has to act on it."),
+          " についてです。クラスメートと一緒に ",
+          coMixWord("answer", "答え", "こたえ", "kotae", "答えを一緒に考えます。", "We think about the answer together.", "The response completes the communicative pair: a question creates the need for an answer."),
+          " を考えます。",
+        ],
+        answer: ["question"],
+        focus: "question",
+        reuse: {
+          question: "Aiko raises her hand because she has a ___. 正しい英単語を選んでください。",
+          options: ["question", "classroom", "map"],
+          answer: "question",
         },
       },
     },
@@ -1176,37 +1248,67 @@ const coMixExamples = {
 const coMixCopy = {
   en: {
     questions: {
-      "en-ja": { magazine: "What is the Japanese target for “map”?", station: "What is the Japanese target for “letter / note”?" },
-      "jp-en": { magazine: "What is the English target for “地図”?", station: "What is the English target for “手紙”?" },
+      "en-ja": {
+        arrival: "What is the Japanese target for “classroom”?",
+        task: "What is the Japanese target for “assignment / task”?",
+        support: "What is the Japanese target for “question”?",
+      },
+      "jp-en": {
+        arrival: "What is the English target for “教室”?",
+        task: "What is the English target for “課題”?",
+        support: "What is the English target for “質問”?",
+      },
     },
     summaries: {
-      "en-ja": "{count} reviewed Japanese noun targets sit inside an otherwise English scene.",
-      "jp-en": "{count} reviewed English noun targets sit inside an otherwise Japanese scene.",
+      "en-ja": "{count} reviewed Japanese targets sit inside an otherwise English university scene.",
+      "jp-en": "{count} reviewed English targets sit inside an otherwise Japanese university scene.",
     },
     answerNotes: { "en-ja": "Japanese answers may be typed in kanji, kana, or romaji.", "jp-en": "Type the English target word." },
     correct: "Correct. Now use the word once more in a fresh part of the story.",
-    incorrect: "Not quite. Read the story again, then click a highlighted word for its reading, meaning, and a second example.",
+    incorrect: "Not quite. Co-MIX now gives you a staged clue: the reading, meaning, and an example sentence. Try the answer again when you are ready.",
     empty: "Type an answer first.",
     reuseCorrect: "Exactly. You have met the word in a second context — that is the learning move Co-MIX is designed to support.",
-    reuseIncorrect: "Try again. Use the story, not a guess: which object helps Maya find her way?",
+    reuseIncorrect: "Try again. Use the situation, not a guess: what does Aiko need at this point in the story?",
     progress: "Learning path · {count} of 4",
+    session: "Story · {count} of 3 scenes complete",
+    completeTitle: "You completed one Co-MIX learning loop.",
+    completeBody: "You inferred the target from context, recalled it{attempts}, and recognised it in a new situation. No answer was stored.",
+    attemptOnce: " on the first attempt",
+    attemptMany: " after {count} attempts and staged support",
+    nextScene: "Continue to the next scene",
+    restart: "Run the story again",
   },
   pl: {
     questions: {
-      "en-ja": { magazine: "Jak brzmi japońskie słowo docelowe dla „map”?", station: "Jak brzmi japońskie słowo docelowe dla „letter / note”?" },
-      "jp-en": { magazine: "Jak brzmi angielskie słowo docelowe dla „地図”?", station: "Jak brzmi angielskie słowo docelowe dla „手紙”?" },
+      "en-ja": {
+        arrival: "Jak brzmi japońskie słowo docelowe dla „classroom”?",
+        task: "Jak brzmi japońskie słowo docelowe dla „assignment / task”?",
+        support: "Jak brzmi japońskie słowo docelowe dla „question”?",
+      },
+      "jp-en": {
+        arrival: "Jak brzmi angielskie słowo docelowe dla „教室”?",
+        task: "Jak brzmi angielskie słowo docelowe dla „課題”?",
+        support: "Jak brzmi angielskie słowo docelowe dla „質問”?",
+      },
     },
     summaries: {
-      "en-ja": "{count} sprawdzone japońskie rzeczowniki docelowe pojawiają się w angielskiej scenie.",
-      "jp-en": "{count} sprawdzone angielskie rzeczowniki docelowe pojawiają się w japońskiej scenie.",
+      "en-ja": "{count} sprawdzonych japońskich słów docelowych pojawia się w angielskiej scenie z życia uczelni.",
+      "jp-en": "{count} sprawdzonych angielskich słów docelowych pojawia się w japońskiej scenie z życia uczelni.",
     },
     answerNotes: { "en-ja": "Japońskie odpowiedzi możesz wpisać kanji, kana albo rōmaji.", "jp-en": "Podaj angielskie słowo docelowe." },
     correct: "Dobrze. Teraz użyj słowa jeszcze raz w nowym fragmencie historii.",
-    incorrect: "Jeszcze nie. Przeczytaj historię ponownie, a potem kliknij wyróżnione słowo — zobaczysz zapis, znaczenie i drugi przykład.",
+    incorrect: "Jeszcze nie. Co-MIX uruchamia teraz etapową podpowiedź: zapis, znaczenie i zdanie przykładowe. Gdy będziesz gotowy, spróbuj ponownie.",
     empty: "Najpierw wpisz odpowiedź.",
     reuseCorrect: "Dokładnie. Spotykasz słowo w drugim kontekście — właśnie taki ruch uczenia wspiera Co-MIX.",
-    reuseIncorrect: "Spróbuj jeszcze raz. Oprzyj się na historii, nie na zgadywaniu: który przedmiot pomaga Mai znaleźć drogę?",
+    reuseIncorrect: "Spróbuj jeszcze raz. Oprzyj się na sytuacji, nie na zgadywaniu: czego Aiko potrzebuje w tym momencie historii?",
     progress: "Etapy nauki · {count} z 4",
+    session: "Historia · ukończono {count} z 3 scen",
+    completeTitle: "Właśnie kończysz jedną pętlę uczenia Co-MIX.",
+    completeBody: "Wyprowadzasz znaczenie z kontekstu, przypominasz sobie słowo{attempts} i rozpoznajesz je w nowej sytuacji. Żadna odpowiedź nie została zapisana.",
+    attemptOnce: " za pierwszym razem",
+    attemptMany: " po {count} próbach i etapowej podpowiedzi",
+    nextScene: "Przejdź do kolejnej sceny",
+    restart: "Przejdź historię jeszcze raz",
   },
 };
 
@@ -1234,12 +1336,20 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
   const reuseOptions = demo.querySelector("[data-comix-reuse-options]");
   const reuseFeedback = demo.querySelector("[data-comix-reuse-feedback]");
   const progressLabel = demo.querySelector("[data-comix-progress-label]");
+  const sessionLabel = demo.querySelector("[data-comix-session-label]");
   const steps = [...demo.querySelectorAll("[data-comix-step]")];
+  const completePanel = demo.querySelector("[data-comix-complete]");
+  const completeTitle = demo.querySelector("[data-comix-complete-title]");
+  const completeBody = demo.querySelector("[data-comix-complete-body]");
+  const nextButton = demo.querySelector("[data-comix-next]");
   let mode = "en-ja";
-  let scene = "magazine";
+  let scene = "arrival";
   let density = "light";
   let meaningsVisible = false;
+  let attempts = 0;
+  const completedScenes = new Set();
   let learning = { read: true, notice: false, recall: false, reuse: false };
+  const sceneOrder = ["arrival", "task", "support"];
 
   const currentMode = () => coMixExamples[mode];
   const currentExample = () => currentMode().scenes[scene];
@@ -1259,6 +1369,7 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
       step.classList.toggle("is-active", !completeStep && ["notice", "recall", "reuse"].find((name) => !learning[name]) === step.dataset.comixStep);
     });
     if (progressLabel) progressLabel.textContent = ui.progress.replace("{count}", String(complete));
+    if (sessionLabel) sessionLabel.textContent = ui.session.replace("{count}", String(completedScenes.size));
   };
 
   const setFeedback = (message = "", isIncorrect = false) => {
@@ -1308,7 +1419,17 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
         }
         if (correct) {
           learning.reuse = true;
+          completedScenes.add(scene);
           reuseOptions.querySelectorAll("button").forEach((item) => { item.disabled = true; });
+          if (completePanel) completePanel.hidden = false;
+          if (completeTitle) completeTitle.textContent = ui.completeTitle;
+          if (completeBody) {
+            const attemptText = attempts === 1
+              ? ui.attemptOnce
+              : ui.attemptMany.replace("{count}", String(attempts));
+            completeBody.textContent = ui.completeBody.replace("{attempts}", attemptText);
+          }
+          if (nextButton) nextButton.textContent = completedScenes.size === sceneOrder.length ? ui.restart : ui.nextScene;
           updateProgress();
         }
       });
@@ -1344,16 +1465,20 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
     if (answerNote) answerNote.textContent = ui.answerNotes[mode];
     if (methodNote) methodNote.textContent = ui.summaries[mode].replace("{count}", String(targets.length));
     answer.value = "";
+    attempts = 0;
     setFeedback();
     if (wordCard) wordCard.hidden = true;
+    if (completePanel) completePanel.hidden = true;
     renderTargets(targets);
     renderReuse();
     updateProgress();
   };
 
-  const resetLearning = () => {
+  const resetLearning = (resetSession = false) => {
     meaningsVisible = false;
+    attempts = 0;
     learning = { read: true, notice: false, recall: false, reuse: false };
+    if (resetSession) completedScenes.clear();
   };
 
   const updateButtons = () => {
@@ -1377,18 +1502,22 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
   const checkAnswer = () => {
     const value = normaliseAnswer(answer?.value || "");
     if (!value) return setFeedback(ui.empty, true);
+    attempts += 1;
     const correct = currentExample().answer.some((accepted) => normaliseAnswer(accepted) === value);
     setFeedback(correct ? ui.correct : ui.incorrect, !correct);
     if (correct) {
       learning.recall = true;
       renderReuse();
       updateProgress();
+    } else {
+      const target = currentExample()[density].find((part) => typeof part !== "string" && part.word === currentExample().focus);
+      if (target) showWordCard(target);
     }
   };
 
   modeButtons.forEach((button) => button.addEventListener("click", () => {
     mode = button.dataset.comixMode;
-    resetLearning();
+    resetLearning(true);
     updateButtons();
     render();
   }));
@@ -1400,7 +1529,7 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
   }));
   densityButtons.forEach((button) => button.addEventListener("click", () => {
     density = button.dataset.comixDensity;
-    resetLearning();
+    resetLearning(true);
     updateButtons();
     render();
   }));
@@ -1413,6 +1542,19 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
   check?.addEventListener("click", checkAnswer);
   answer?.addEventListener("keydown", (event) => {
     if (event.key === "Enter") checkAnswer();
+  });
+  nextButton?.addEventListener("click", () => {
+    if (completedScenes.size === sceneOrder.length) {
+      completedScenes.clear();
+      scene = sceneOrder[0];
+    } else {
+      const nextIncomplete = sceneOrder.find((item) => !completedScenes.has(item));
+      scene = nextIncomplete || sceneOrder[0];
+    }
+    resetLearning();
+    updateButtons();
+    render();
+    passage?.focus({ preventScroll: true });
   });
   updateButtons();
   render();
