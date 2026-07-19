@@ -3545,6 +3545,25 @@ dd {
   line-height: 1.55;
 }
 
+.stamp-rally-reward-hint {
+  margin: -10px 0 22px;
+  padding: 8px 10px 8px 30px;
+  border-left: 2px solid #d19c36;
+  color: rgba(18, 63, 61, 0.82);
+  font: 800 0.76rem/1.42 var(--font-sans);
+  letter-spacing: 0.015em;
+  position: relative;
+}
+
+.stamp-rally-reward-hint::before {
+  content: "〒";
+  position: absolute;
+  left: 9px;
+  top: 7px;
+  color: #c18b27;
+  font: 700 1rem/1 var(--font-serif);
+}
+
 .stamp-rally-route {
   display: grid;
   grid-template-columns: 9px 1fr 9px 1fr 9px 1fr 9px;
@@ -4052,7 +4071,10 @@ dd {
 @media (max-width: 620px) {
   .stamp-rally-launcher-shell {
     right: 10px;
-    bottom: 12px;
+    bottom: auto;
+    /* Keep the passport control off the reading area and above the content.
+       It stays deliberately compact, but no longer floats over the final story. */
+    top: max(154px, calc(env(safe-area-inset-top) + 154px));
   }
 
   .stamp-rally-launcher {
