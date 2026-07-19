@@ -6101,6 +6101,157 @@ dd {
   color: var(--muted);
 }
 
+.workshop-catalog {
+  margin-top: 22px;
+  border: 1px solid var(--teal-deep);
+  background: var(--surface);
+}
+
+.workshop-catalog summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 24px 26px;
+  color: var(--teal-deep);
+  cursor: pointer;
+  list-style: none;
+}
+
+.workshop-catalog summary::-webkit-details-marker {
+  display: none;
+}
+
+.workshop-catalog summary span {
+  display: grid;
+  gap: 5px;
+}
+
+.workshop-catalog summary b {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  line-height: 1.05;
+}
+
+.workshop-catalog summary small {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.workshop-catalog summary i {
+  display: grid;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid var(--teal-deep);
+  font-size: 1.5rem;
+  font-style: normal;
+  line-height: 1;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.workshop-catalog summary:hover i,
+.workshop-catalog summary:focus-visible i {
+  background: var(--teal-deep);
+  color: #fff;
+}
+
+.workshop-catalog[open] summary i {
+  transform: rotate(45deg);
+}
+
+.workshop-catalog-body {
+  padding: 0 26px 28px;
+  border-top: 1px solid var(--line);
+}
+
+.workshop-catalog-intro {
+  max-width: 820px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.workshop-catalog-group {
+  margin-top: 34px;
+}
+
+.workshop-catalog-heading {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.55fr) minmax(0, 1.45fr);
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 14px;
+}
+
+.workshop-catalog-heading p {
+  margin: 0;
+}
+
+.workshop-catalog-heading > p:last-child {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.workshop-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.workshop-catalog-grid.compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.workshop-catalog-grid article {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.workshop-catalog-grid h3 {
+  margin: 12px 0 8px;
+  color: var(--teal-deep);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.12;
+}
+
+.workshop-catalog-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.workshop-catalog-status {
+  display: inline-flex;
+  padding: 5px 8px;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.workshop-catalog-status.delivered {
+  background: var(--teal-deep);
+  color: #fff;
+}
+
+.workshop-catalog-status.tailored {
+  background: #ead6a7;
+  color: var(--teal-deep);
+}
+
+.workshop-catalog-status.talk {
+  background: #efe0dc;
+  color: #8f302b;
+}
+
 .workshop-proof {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
@@ -6831,6 +6982,8 @@ dd {
   .case-grid,
   .proof-grid,
   .workshop-menu-grid,
+  .workshop-catalog-grid,
+  .workshop-catalog-grid.compact,
   .teaching-materials-grid,
   .service-columns,
   .workshop-proof,
@@ -6844,6 +6997,12 @@ dd {
   .contact-intro,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .workshop-catalog-heading {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    align-items: start;
   }
 
   .course-poster-feature {
@@ -7042,6 +7201,29 @@ dd {
   .site-header {
     flex-wrap: wrap;
     gap: 8px 14px;
+  }
+
+  .workshop-catalog summary {
+    gap: 14px;
+    padding: 20px 18px;
+  }
+
+  .workshop-catalog summary small {
+    font-size: 0.8rem;
+  }
+
+  .workshop-catalog summary i {
+    flex-basis: 34px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .workshop-catalog-body {
+    padding: 0 16px 20px;
+  }
+
+  .workshop-catalog-grid article {
+    padding: 18px;
   }
 
   .portfolio-chapter-nav {
