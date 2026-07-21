@@ -4126,17 +4126,16 @@ dd {
   font: 700 0.67rem/1.4 var(--font-sans);
 }
 
-.stamp-rally-story-photo.has-ticket figcaption { padding-right: 132px; }
-
 .stamp-rally-story-ticket {
   position: absolute;
-  right: 13px;
-  bottom: -12px;
+  top: 14px;
+  right: -8px;
+  bottom: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 124px;
-  min-height: 114px;
-  padding: 11px;
+  width: 104px;
+  min-height: 96px;
+  padding: 9px;
   border: 1px solid var(--passport-ink);
   background: #dfc789;
   color: #193e3c;
@@ -4145,7 +4144,7 @@ dd {
 }
 
 .stamp-rally-story-ticket b {
-  font: 800 3rem/0.8 var(--font-serif);
+  font: 800 2.5rem/0.8 var(--font-serif);
 }
 
 .stamp-rally-story-ticket span {
@@ -4158,7 +4157,7 @@ dd {
   align-self: end;
   padding-top: 9px;
   border-top: 1px dashed currentColor;
-  font: 900 0.7rem/1 var(--font-sans);
+  font: 900 0.62rem/1 var(--font-sans);
   font-style: normal;
   letter-spacing: 0.08em;
 }
@@ -4283,9 +4282,16 @@ dd {
   .stamp-rally-final-seal { width: 92px; height: 92px; margin-left: 10px; }
   .stamp-rally-final-seal span { font-size: 2.25rem; }
   .stamp-rally-story-gallery { grid-template-columns: 1fr; gap: 18px; }
-  .stamp-rally-story-photo.has-ticket { margin-bottom: 34px; }
-  .stamp-rally-story-photo.has-ticket figcaption { padding-right: 0; margin-top: 44px; }
-  .stamp-rally-story-ticket { right: 8px; bottom: -36px; width: 112px; min-height: 103px; }
+  .stamp-rally-story-ticket {
+    top: 9px;
+    right: -4px;
+    width: 88px;
+    min-height: 82px;
+    padding: 7px;
+  }
+  .stamp-rally-story-ticket b { font-size: 2.1rem; }
+  .stamp-rally-story-ticket span { font-size: 0.68rem; }
+  .stamp-rally-story-ticket i { padding-top: 6px; font-size: 0.5rem; }
   .stamp-rally-toast { right: 10px; bottom: 66px; }
 }
 
@@ -6328,6 +6334,8 @@ dd {
   line-height: 1.15;
   text-decoration: none;
   transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .portfolio-chapter-links a:hover,
@@ -7789,6 +7797,7 @@ dd {
 
 .contact-postcard-mark {
   display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
   place-items: center;
   margin: 0;
   min-height: 300px;
@@ -7798,17 +7807,15 @@ dd {
   z-index: 1;
 }
 
-.contact-postcard-mark::after {
-  content: "BEPPU · OITA · JAPAN";
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: max-content;
+.contact-mailbox-tagline {
+  margin: 0;
+  padding-top: 8px;
   color: var(--teal);
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.15em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .contact-postcard-mark img {
@@ -7825,6 +7832,80 @@ dd {
   min-width: 0;
   position: relative;
   z-index: 1;
+  padding-right: clamp(78px, 8vw, 112px);
+}
+
+.contact-postcard-stamp {
+  position: absolute;
+  z-index: 2;
+  top: clamp(24px, 3vw, 36px);
+  right: clamp(24px, 3vw, 36px);
+  width: clamp(72px, 7vw, 94px);
+  margin: 0;
+  padding: 4px;
+  border: 2px dashed rgba(25, 65, 64, 0.68);
+  background: #fffdf8;
+  box-shadow: 3px 4px 0 rgba(25, 65, 64, 0.14);
+  transform: rotate(3deg);
+}
+
+.contact-postcard-stamp::before {
+  content: "BEPPU\A 2026";
+  position: absolute;
+  z-index: 2;
+  left: -22px;
+  bottom: -17px;
+  display: grid;
+  width: 43px;
+  height: 43px;
+  place-content: center;
+  border: 1.5px solid rgba(157, 53, 46, 0.66);
+  border-radius: 50%;
+  color: var(--brick);
+  font-size: 0.34rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.12;
+  text-align: center;
+  white-space: pre;
+  transform: rotate(-13deg);
+  opacity: 0.88;
+  pointer-events: none;
+}
+
+.contact-postcard-stamp::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  right: -14px;
+  bottom: 13px;
+  width: 56px;
+  height: 13px;
+  background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(157, 53, 46, 0.5) 3px 4px, transparent 4px 6px);
+  transform: rotate(-13deg);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.contact-postcard-stamp img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 0.8;
+  object-fit: cover;
+  object-position: center 28%;
+  filter: saturate(0.92) contrast(1.03);
+}
+
+.contact-postcard-stamp figcaption {
+  display: block;
+  margin-top: 6px;
+  color: var(--teal);
+  font-size: 0.48rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .contact-address {
@@ -8284,6 +8365,16 @@ dd {
 
   .contact-postcard {
     gap: 28px;
+  }
+
+  .contact-postcard-copy {
+    padding-right: 0;
+  }
+
+  .contact-postcard-stamp {
+    top: 22px;
+    right: 22px;
+    width: 78px;
   }
 
   .contact-postcard-mark {
@@ -9207,9 +9298,36 @@ dd {
     height: 135px;
   }
 
-  .contact-postcard-mark::after {
-    bottom: 5px;
+  .contact-mailbox-tagline {
+    padding-top: 4px;
     font-size: 0.58rem;
+  }
+
+  .contact-postcard-stamp {
+    top: 14px;
+    right: 14px;
+    width: 68px;
+    padding: 4px;
+  }
+
+  .contact-postcard-stamp::before {
+    left: -17px;
+    bottom: -14px;
+    width: 34px;
+    height: 34px;
+    font-size: 0.27rem;
+  }
+
+  .contact-postcard-stamp::after {
+    right: -11px;
+    bottom: 9px;
+    width: 44px;
+    height: 10px;
+  }
+
+  .contact-postcard-stamp figcaption {
+    margin-top: 4px;
+    font-size: 0.4rem;
   }
 
   .contact-postcard-copy {

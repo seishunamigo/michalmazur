@@ -309,6 +309,8 @@ const translations = {
     contactAddressLabel: "To",
     contactAddressName: "Michal Maciej Mazur",
     contactAddressPlace: "Beppu, Ōita, Japan",
+    contactMailboxTagline: "Open to good questions",
+    contactStampCaption: "mazur.jp · air mail",
     contactWorkshop: "See teaching formats",
     contactEmail: "Start a conversation",
     contactLinkedIn: "Connect on LinkedIn",
@@ -671,6 +673,8 @@ const translations = {
     contactAddressLabel: "Do",
     contactAddressName: "Michał Maciej Mazur",
     contactAddressPlace: "Beppu, prefektura Ōita, Japonia",
+    contactMailboxTagline: "Dobre pytania są mile widziane",
+    contactStampCaption: "mazur.jp · poczta lotnicza",
     contactWorkshop: "Zobacz formaty dydaktyczne",
     contactEmail: "Zacznijmy rozmowę",
     contactLinkedIn: "Połącz się przez LinkedIn",
@@ -993,6 +997,8 @@ translations.ja = {
   contactAddressLabel: "宛先",
   contactAddressName: "マズル　ミハウ　マチェイ",
   contactAddressPlace: "別府市・大分県・日本",
+  contactMailboxTagline: "よい問い、歓迎します",
+  contactStampCaption: "mazur.jp · 航空便",
   contactWorkshop: "教育の形式を見る",
   contactEmail: "まずは相談する",
   contactLinkedIn: "LinkedInでつながる",
@@ -2510,10 +2516,12 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
       if (!target) return;
 
       event.preventDefault();
+      event.stopPropagation();
       const headerOffset = header?.getBoundingClientRect().height || 0;
       const chapterOffset = chapterNavigation.getBoundingClientRect().height || 0;
       const top = window.scrollY + target.getBoundingClientRect().top - headerOffset - chapterOffset - 24;
       window.scrollTo({ top, behavior: "smooth" });
+      if (target.id) window.history.replaceState(null, "", `#${target.id}`);
       setActiveChapter(chapter);
     });
   });
