@@ -92,6 +92,12 @@ a {
   filter: brightness(0) saturate(100%) invert(17%) sepia(27%) saturate(1041%) hue-rotate(131deg) brightness(92%) contrast(94%);
 }
 
+.brand-mark img[src$="mazur-jp-postmark-gold.png"] {
+  width: 82%;
+  height: 82%;
+  filter: none !important;
+}
+
 .nav {
   display: flex;
   align-items: center;
