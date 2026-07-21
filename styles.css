@@ -7741,114 +7741,166 @@ dd {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .contact-heading {
-  grid-template-columns: minmax(176px, 0.45fr) minmax(0, 1.55fr);
-  align-items: end;
-}
-
-.contact-heading-portrait {
-  width: min(100%, 210px);
-  margin: 0;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  box-shadow: 0 8px 20px rgba(24, 32, 32, 0.08);
-}
-
-.contact-heading-portrait img {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
 }
 
-.contact-heading-copy {
+.contact-postcard {
   display: grid;
-  gap: 12px;
+  grid-template-columns: minmax(190px, 0.62fr) minmax(0, 1.38fr);
+  gap: clamp(26px, 5vw, 70px);
+  align-items: stretch;
+  margin: 28px 0 24px;
+  padding: clamp(24px, 4vw, 50px);
+  border: 1px solid var(--teal);
+  background:
+    linear-gradient(90deg, rgba(218, 176, 66, 0.1), transparent 32%),
+    var(--surface);
+  box-shadow: 7px 7px 0 rgba(25, 65, 64, 0.09);
+  position: relative;
+  overflow: hidden;
 }
 
-.contact-heading-copy .eyebrow {
+.contact-postcard::before,
+.contact-postcard::after {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.55;
+}
+
+.contact-postcard::before {
+  top: 18px;
+  right: -24px;
+  transform: rotate(35deg);
+}
+
+.contact-postcard::after {
+  bottom: 18px;
+  left: -24px;
+  transform: rotate(35deg);
+}
+
+.contact-postcard-mark {
+  display: grid;
+  place-items: center;
   margin: 0;
+  min-height: 300px;
+  padding: 22px;
+  border-right: 1px dashed rgba(25, 65, 64, 0.4);
+  position: relative;
+  z-index: 1;
 }
 
-.contact-intro {
+.contact-postcard-mark::after {
+  content: "BEPPU · OITA · JAPAN";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  color: var(--teal);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.contact-postcard-mark img {
+  display: block;
+  width: min(100%, 186px);
+  height: min(100%, 245px);
+  object-fit: contain;
+}
+
+.contact-postcard-copy {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 132px;
-  gap: 24px;
-  align-items: center;
-  margin: -12px 0 28px;
-  padding-bottom: 28px;
-  border-bottom: 1px solid var(--line);
+  align-content: center;
+  gap: 22px;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
 }
 
-.contact-copy {
-  grid-column: 1;
-  grid-row: 1;
-  min-width: 0;
+.contact-address {
+  display: grid;
+  gap: 3px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-address strong {
+  color: var(--teal-deep);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
 }
 
 .contact-copy > p {
-  max-width: 720px;
+  max-width: 62ch;
   margin: 0;
   color: var(--muted);
   font-size: 1.08rem;
 }
 
 .contact-copy .contact-signature {
-  max-width: 66ch;
-  margin-top: 12px;
+  max-width: 62ch;
+  margin-top: 13px;
   color: var(--teal-deep);
-  font-size: 0.94rem;
+  font-size: 0.96rem;
   font-weight: 700;
 }
 
-.contact-brand-signature {
-  grid-column: 2;
-  grid-row: 1;
-  align-self: center;
-  justify-self: end;
-  display: grid;
-  place-items: center;
-  width: 132px;
-  aspect-ratio: 1;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--teal-deep);
-  box-shadow: 0 8px 20px rgba(24, 32, 32, 0.08);
-  transition: transform 160ms ease, box-shadow 160ms ease;
-}
-
-.contact-brand-signature:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(24, 32, 32, 0.12);
-}
-
-.contact-brand-signature img {
-  display: block;
-  width: 78%;
-  height: 78%;
-  object-fit: contain;
-}
-
 .contact-actions {
-  grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: flex-start;
+}
+
+.contact-profiles {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.62fr) minmax(0, 1.38fr);
+  gap: 28px;
+  align-items: start;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.contact-profiles-heading {
+  display: grid;
+  gap: 9px;
+}
+
+.contact-profiles-heading .eyebrow {
+  margin: 0;
+}
+
+.contact-profiles-heading h3 {
+  max-width: 18ch;
+  margin: 0;
+  color: var(--teal-deep);
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 2.3vw, 2.1rem);
+  line-height: 0.98;
 }
 
 .contact-link {
   display: grid;
-  min-height: 140px;
-  align-content: space-between;
-  padding: 22px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 13px;
+  align-items: center;
+  min-height: 116px;
+  padding: 17px;
+  border: 1px solid var(--line);
+  background: var(--surface);
   text-decoration: none;
   transition: transform 160ms ease, border-color 160ms ease;
 }
@@ -7858,15 +7910,39 @@ dd {
   border-color: var(--teal);
 }
 
-.contact-link span {
-  color: var(--muted);
-  font-size: 0.86rem;
-  font-weight: 700;
+.contact-link-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  color: var(--teal-deep);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
 }
 
-.contact-link strong {
+.contact-link-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.contact-link-copy strong {
   color: var(--teal-deep);
-  font-size: 1.06rem;
+  font-size: 0.98rem;
+}
+
+.contact-link-copy small {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.contact-link-arrow {
+  color: var(--gold);
+  font-size: 1.2rem;
+  font-weight: 800;
 }
 
 .site-footer {
@@ -8012,7 +8088,8 @@ dd {
   .course-poster-feature,
   .archive-groups,
   .profile-statement,
-  .contact-intro,
+  .contact-postcard,
+  .contact-profiles,
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -8205,25 +8282,23 @@ dd {
     padding: 34px 24px;
   }
 
-  .contact-actions {
-    justify-content: flex-start;
+  .contact-postcard {
+    gap: 28px;
   }
 
-  .contact-brand-signature {
-    grid-column: 1;
-    grid-row: 2;
-    justify-self: start;
-    width: 116px;
-    aspect-ratio: 1;
+  .contact-postcard-mark {
+    min-height: 200px;
+    border-right: 0;
+    border-bottom: 1px dashed rgba(25, 65, 64, 0.4);
   }
 
-  .contact-copy {
-    grid-column: 1;
-    grid-row: 1;
+  .contact-postcard-mark img {
+    width: min(100%, 145px);
+    height: 178px;
   }
 
-  .contact-heading-portrait {
-    width: min(100%, 190px);
+  .contact-profiles-heading h3 {
+    max-width: 29ch;
   }
 
   .site-footer {
@@ -9113,6 +9188,65 @@ dd {
   .achievement-documentary-grid img,
   .achievement-community-visual img {
     min-height: 255px;
+  }
+
+  .contact-postcard {
+    margin-top: 22px;
+    padding: 20px 16px;
+    gap: 20px;
+    box-shadow: 4px 4px 0 rgba(25, 65, 64, 0.09);
+  }
+
+  .contact-postcard-mark {
+    min-height: 170px;
+    padding: 8px 12px 22px;
+  }
+
+  .contact-postcard-mark img {
+    width: 112px;
+    height: 135px;
+  }
+
+  .contact-postcard-mark::after {
+    bottom: 5px;
+    font-size: 0.58rem;
+  }
+
+  .contact-postcard-copy {
+    gap: 17px;
+  }
+
+  .contact-copy > p {
+    font-size: 1rem;
+  }
+
+  .contact-copy .contact-signature {
+    font-size: 0.9rem;
+  }
+
+  .contact-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .contact-actions .button {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-link {
+    min-height: 94px;
+    padding: 14px;
+  }
+
+  .contact-link-mark {
+    width: 38px;
+    height: 38px;
+    font-size: 0.65rem;
+  }
+
+  .contact-profiles-heading h3 {
+    font-size: 1.65rem;
   }
 
 }
