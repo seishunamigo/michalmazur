@@ -8232,6 +8232,33 @@ dd {
     gap: 8px 14px;
   }
 
+  /* Keep the three header controls on one calm visual baseline. */
+  .brand-mark,
+  .stamp-rally-header-launcher,
+  .language-switch {
+    box-sizing: border-box;
+    height: 48px;
+  }
+
+  .brand-mark {
+    width: 48px;
+  }
+
+  .stamp-rally-header-launcher {
+    min-height: 48px;
+    padding: 4px 8px 4px 4px;
+  }
+
+  .language-switch {
+    align-items: stretch;
+    padding: 3px;
+  }
+
+  .language-switch button {
+    min-height: 0;
+    height: 100%;
+  }
+
   .workshop-catalog summary {
     gap: 14px;
     padding: 20px 18px;
@@ -8267,11 +8294,6 @@ dd {
     min-width: min(76vw, 180px);
     padding: 8px 9px;
     font-size: 0.75rem;
-  }
-
-  .brand-mark {
-    width: 42px;
-    height: 42px;
   }
 
   .brand {
@@ -8549,7 +8571,7 @@ dd {
   }
 
   .record-screen {
-    height: 680px;
+    height: 740px;
   }
 
   .record-slide {
@@ -8561,11 +8583,11 @@ dd {
   }
 
   .record-copy {
-    padding: 28px 22px 30px;
+    padding: 30px 22px 34px;
   }
 
   .record-copy h3 {
-    font-size: 2.25rem;
+    font-size: clamp(2rem, 10.5vw, 2.25rem);
   }
 
   .record-tv-controls {
