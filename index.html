@@ -21,7 +21,7 @@
     <meta name="twitter:image" content="assets/identity-hero.png">
     <link rel="canonical" href="https://seishunamigo.github.io/">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=96">
+    <link rel="stylesheet" href="styles.css?v=102">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -54,7 +54,7 @@
   <body>
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Michal Maciej Mazur home" data-person-home>
-        <span class="brand-mark">MM</span>
+        <span class="brand-mark"><img src="assets/mazur-jp-mark.png" alt="" aria-hidden="true"></span>
         <span data-person-name>Michal Maciej Mazur</span>
       </a>
       <nav class="nav" aria-label="Main navigation">
@@ -528,15 +528,25 @@
       </section>
 
       <section class="section contact-section" id="contact">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
-          <h2 data-i18n="contactTitle">Let’s build a workshop, course, or collaboration around a real problem.</h2>
+        <div class="section-heading contact-heading">
+          <figure class="contact-heading-portrait">
+            <img src="assets/contact-michal-portrait.jpg" alt="Michal Maciej Mazur">
+          </figure>
+          <div class="contact-heading-copy">
+            <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+            <h2 data-i18n="contactTitle">Let’s build a workshop, course, or collaboration around a real problem.</h2>
+          </div>
         </div>
         <div class="contact-intro">
-          <p data-i18n="contactBody">
-            I am especially interested in work with centers for teaching and learning, international programmes, graduate schools, and academic teams developing multilingual or intercultural learning.
-          </p>
-          <p class="contact-signature" data-i18n="contactSignature">For teaching, research, editorial, and public conversations, you can write in English, Polish, or Japanese.</p>
+          <a class="contact-brand-signature" href="#top" aria-label="Michal Maciej Mazur home">
+            <img src="assets/mazur-jp-white-logo.png" alt="mazur.jp">
+          </a>
+          <div class="contact-copy">
+            <p data-i18n="contactBody">
+              I am especially interested in work with centers for teaching and learning, international programmes, graduate schools, and academic teams developing multilingual or intercultural learning.
+            </p>
+            <p class="contact-signature" data-i18n="contactSignature">For teaching, research, editorial, and public conversations, you can write in English, Polish, or Japanese.</p>
+          </div>
           <div class="contact-actions">
             <a class="button paper-primary" href="mailto:seishunamigo@gmail.com?subject=Workshop%20or%20academic%20collaboration" data-i18n="contactEmail">Email me about a collaboration</a>
             <a class="button paper-secondary" href="workshops.html" data-i18n="contactWorkshop">Review workshop formats</a>
@@ -569,6 +579,6 @@
       <a href="#top" data-i18n="backTop">Back to top</a>
     </footer>
 
-    <script src="script.js?v=88"></script>
+    <script src="script.js?v=90"></script>
   </body>
 </html>

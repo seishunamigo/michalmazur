@@ -25,6 +25,11 @@ const translations = {
     achievementsEyebrow: "Achievements & Appearances",
     achievementsTitle: "Let me show you where this work has taken me.",
     achievementsDeck: "I have gathered the milestones, invitations, conversations, and community projects that best explain my path. This is not a complete CV. It is a guided record of the moments when my work met students, institutions, and wider audiences.",
+    achievementsChapterLabel: "Explore this public record",
+    achievementsChapterAcademic: "Academic",
+    achievementsChapterInvitations: "Invitations",
+    achievementsChapterCommunity: "Community",
+    achievementsChapterVoice: "Public voice",
     researchEyebrow: "Research",
     researchPageTitle: "What helps people participate when languages, cultures, and systems meet?",
     researchPageDeck:
@@ -373,6 +378,11 @@ const translations = {
     achievementsEyebrow: "Osiągnięcia i wystąpienia",
     achievementsTitle: "Pozwól, że pokażę Ci, dokąd zaprowadziła mnie ta praca.",
     achievementsDeck: "Zebrałem tu osiągnięcia, zaproszenia, rozmowy i projekty społeczne, które najlepiej wyjaśniają moją drogę. To nie jest pełne CV, lecz prowadzona przeze mnie opowieść o momentach, w których moja praca spotkała studentów, instytucje i szerszą publiczność.",
+    achievementsChapterLabel: "Przejdź przez dorobek",
+    achievementsChapterAcademic: "Akademickie",
+    achievementsChapterInvitations: "Zaproszenia",
+    achievementsChapterCommunity: "Społeczność",
+    achievementsChapterVoice: "Głos publiczny",
     researchEyebrow: "Badania",
     researchPageTitle: "Co pomaga ludziom uczestniczyć, kiedy spotykają się języki, kultury i systemy?",
     researchPageDeck:
@@ -716,6 +726,11 @@ translations.ja = {
   achievementsEyebrow: "活動記録と登壇",
   achievementsTitle: "この仕事が私をどこへ連れていったのか、お見せします。",
   achievementsDeck: "節目、招待、対話、地域とのプロジェクトのなかから、自分の歩みを最もよく示すものを選びました。完全なCVではなく、学生、機関、そしてより広い社会と仕事が交わった瞬間をたどる記録です。",
+  achievementsChapterLabel: "活動記録を見る",
+  achievementsChapterAcademic: "学術",
+  achievementsChapterInvitations: "招待・研修",
+  achievementsChapterCommunity: "地域活動",
+  achievementsChapterVoice: "公共的な発信",
   researchEyebrow: "研究",
   researchPageTitle: "言語、文化、制度が出会うとき、人はどうすればよりよく参加できるのか。",
   researchPageDeck: "多言語の教室、語学学習システム、観光における出会い、学際的な宇宙プログラムでの実践から研究を組み立てています。違いを読み取り、協働し、自分の力で学べるようになる条件を問い続けています。",
@@ -1041,6 +1056,48 @@ const updateJapanDayCounter = () => {
 
 updateJapanDayCounter();
 setInterval(updateJapanDayCounter, 60000);
+
+const formatOrdinal = (number) => {
+  const remainder = number % 100;
+  if (remainder >= 11 && remainder <= 13) return `${number}th`;
+  switch (number % 10) {
+    case 1:
+      return `${number}st`;
+    case 2:
+      return `${number}nd`;
+    case 3:
+      return `${number}rd`;
+    default:
+      return `${number}th`;
+  }
+};
+
+const updatePsxExtremeStats = () => {
+  const now = new Date();
+  const basePrintYear = 29;
+  const baseCalendarYear = 2026;
+  const currentPrintYear = Math.max(
+    basePrintYear,
+    basePrintYear + now.getFullYear() - baseCalendarYear,
+  );
+
+  const baseIssue = 346;
+  const baseIssueIndex = (2026 * 12) + 6 + 1; // Issue 346 is current from July 10, 2026.
+  const currentIssueIndex = (now.getFullYear() * 12) + now.getMonth() + (now.getDate() >= 10 ? 1 : 0);
+  const currentIssue = Math.max(baseIssue, baseIssue + currentIssueIndex - baseIssueIndex);
+
+  document.querySelectorAll("[data-psx-year]").forEach((node) => {
+    node.textContent = node.dataset.psxYearFormat === "ordinal"
+      ? formatOrdinal(currentPrintYear)
+      : String(currentPrintYear);
+  });
+
+  document.querySelectorAll("[data-psx-issue]").forEach((node) => {
+    node.textContent = String(currentIssue);
+  });
+};
+
+updatePsxExtremeStats();
 
 const syncHeader = () => {
   const usesPaperHeader = header?.classList.contains("essay-header");
