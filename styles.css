@@ -1901,6 +1901,119 @@ dd {
   transform: scale(1.035);
 }
 
+.writing-press-interviews {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.46fr) minmax(0, 1.54fr);
+  gap: clamp(28px, 5vw, 68px);
+  padding: 54px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.writing-press-interviews-intro h2 {
+  max-width: 430px;
+  margin: 15px 0 0;
+  color: var(--teal-deep);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.9rem, 3.1vw, 3.25rem);
+  font-weight: 650;
+  line-height: 1;
+}
+
+.writing-press-interviews-intro > p:last-child {
+  max-width: 430px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.58;
+}
+
+.writing-press-interviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.writing-press-interview {
+  position: relative;
+  min-height: 285px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--teal-deep);
+}
+
+.writing-press-interview--feature {
+  grid-column: span 2;
+  min-height: 375px;
+}
+
+.writing-press-interview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.88) contrast(1.02);
+  transition: transform 420ms ease, filter 420ms ease;
+}
+
+.writing-press-interview--feature img {
+  object-position: center 42%;
+}
+
+.writing-press-interview::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(7, 30, 34, 0.94) 0%, rgba(7, 30, 34, 0.5) 36%, rgba(7, 30, 34, 0.03) 72%);
+  content: "";
+  pointer-events: none;
+}
+
+.writing-press-interview figcaption {
+  position: absolute;
+  right: 16px;
+  bottom: 15px;
+  left: 16px;
+  z-index: 1;
+  color: #fff;
+}
+
+.writing-press-interview figcaption span,
+.writing-press-interview figcaption strong,
+.writing-press-interview figcaption p {
+  display: block;
+}
+
+.writing-press-interview figcaption span {
+  margin-bottom: 6px;
+  color: #e7b756;
+  font-family: var(--font-sans);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.writing-press-interview figcaption strong {
+  color: #fff;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.28rem, 2.1vw, 1.72rem);
+  font-weight: 650;
+  line-height: 1.04;
+}
+
+.writing-press-interview figcaption p {
+  max-width: 600px;
+  margin: 7px 0 0;
+  color: #e3efeb;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.writing-press-interview:hover img {
+  filter: saturate(1.06) contrast(1.05);
+  transform: scale(1.035);
+}
+
 .writing-gamebook {
   position: relative;
   overflow: hidden;
@@ -3352,6 +3465,44 @@ dd {
   .comix-evidence-result {
     grid-template-columns: 1fr;
     gap: 5px;
+  }
+}
+
+/* Press-interview contact sheets: keep the editorial grid legible on phones. */
+@media (max-width: 860px) {
+  .writing-press-interviews {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+}
+
+@media (max-width: 620px) {
+  .writing-press-interviews {
+    padding: 42px 0;
+  }
+
+  .writing-press-interviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-press-interview,
+  .writing-press-interview--feature {
+    grid-column: auto;
+    min-height: 300px;
+  }
+
+  .writing-press-interview--feature {
+    min-height: 335px;
+  }
+
+  .writing-press-interview figcaption {
+    right: 14px;
+    bottom: 13px;
+    left: 14px;
+  }
+
+  .writing-press-interview figcaption p {
+    font-size: 0.76rem;
   }
 }
 
