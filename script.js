@@ -1137,6 +1137,11 @@ const syncHeader = () => {
   header?.classList.toggle("is-scrolled", usesPaperHeader || window.scrollY > 24);
 };
 
+const syncHeaderHeight = () => {
+  const height = Math.ceil(header?.getBoundingClientRect().height || 74);
+  document.documentElement.style.setProperty("--site-header-height", `${height}px`);
+};
+
 const setLanguage = (lang) => {
   const dictionary = translations[lang] || translations.en;
   const personName = personNames[lang] || personNames.en;
@@ -1171,6 +1176,7 @@ const setLanguage = (lang) => {
   });
   updateJapanDayCounter();
   document.dispatchEvent(new CustomEvent("identity:languagechange", { detail: { lang } }));
+  window.requestAnimationFrame(syncHeaderHeight);
   localStorage.setItem("identity-language", lang);
 };
 
@@ -2567,8 +2573,12 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
 });
 
 syncHeader();
+syncHeaderHeight();
 setLanguage(localStorage.getItem("identity-language") || "en");
 window.addEventListener("scroll", syncHeader, { passive: true });
+window.addEventListener("resize", syncHeaderHeight, { passive: true });
+window.addEventListener("load", syncHeaderHeight, { once: true });
+document.fonts?.ready?.then(syncHeaderHeight);
 
 /* --------------------------------------------------------------------------
    Explorer Passport · a local, optional stamp rally across the portfolio
@@ -2799,7 +2809,7 @@ window.addEventListener("scroll", syncHeader, { passive: true });
   root.innerHTML = `
     <div class="stamp-rally-launcher-shell">
       <button class="stamp-rally-launcher" type="button" aria-expanded="false">
-        <span class="stamp-rally-launcher-mark" aria-hidden="true">〒</span>
+        <span class="stamp-rally-launcher-mark" aria-hidden="true">印</span>
         <span data-passport-launcher></span>
         <b data-passport-count>0/7</b>
       </button>
@@ -2828,7 +2838,7 @@ window.addEventListener("scroll", syncHeader, { passive: true });
   headerLauncher.className = "stamp-rally-header-launcher";
   headerLauncher.type = "button";
   headerLauncher.hidden = true;
-  headerLauncher.innerHTML = `<span aria-hidden="true">〒</span><b data-passport-header-count>0/7</b>`;
+  headerLauncher.innerHTML = `<span aria-hidden="true">印</span><b data-passport-header-count>0/7</b>`;
   if (languageSwitch) {
     languageSwitch.before(headerTools);
     headerTools.append(headerLauncher, languageSwitch);

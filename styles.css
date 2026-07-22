@@ -11,6 +11,7 @@
   --gold: #d6a64c;
   --shadow: 0 24px 70px rgba(24, 32, 32, 0.14);
   --max: 1160px;
+  --site-header-height: 74px;
 }
 
 * {
@@ -6283,7 +6284,7 @@ dd {
 
 .portfolio-chapter-nav {
   position: sticky;
-  top: 74px;
+  top: calc(var(--site-header-height) + 8px);
   z-index: 12;
   margin: 0 calc((100vw - min(var(--max), calc(100vw - 40px))) / -2);
   border-top: 1px solid var(--line);
@@ -8056,10 +8057,6 @@ dd {
     padding: 14px 20px;
   }
 
-  .portfolio-chapter-nav {
-    top: 66px;
-  }
-
   .portfolio-chapter-nav-inner {
     display: block;
     position: relative;
@@ -8458,7 +8455,6 @@ dd {
   }
 
   .portfolio-chapter-nav {
-    top: 108px;
     /* Keep the horizontally scrollable chapter strip inside the viewport.
        Its desktop full-bleed negative margins otherwise create a small
        page-level horizontal scroll on narrow phones. */
@@ -8556,8 +8552,11 @@ dd {
   }
 
   /* Native hash navigation must leave room for the two-row mobile header. */
-  main > section[id] {
-    scroll-margin-top: 180px;
+  main > section[id],
+  .service-hero [id],
+  .writing-hero [id],
+  .research-hero [id] {
+    scroll-margin-top: calc(var(--site-header-height) + 20px);
   }
 
   .research-book-entry,
@@ -8686,7 +8685,7 @@ dd {
   .research-page,
   .service-page,
   .writing-page {
-    padding-top: 24px;
+    padding-top: calc(var(--site-header-height) + 24px);
   }
 
   .writing-publication-stats {
