@@ -1071,12 +1071,6 @@ html[lang="ja"] .hero h1[data-person-name-headline] {
   line-height: 1.2;
 }
 
-.bridge-mark {
-  width: 74px;
-  height: 74px;
-  margin: 0 0 28px;
-}
-
 .quote {
   margin: 0 0 28px;
   color: var(--teal-deep);
@@ -1261,6 +1255,15 @@ dd {
   line-height: 1.3;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+/* The Polish print-year figure is wrapped for its trailing full stop.
+   Keep its numeral on the same visual scale as the other publication stats. */
+.writing-publication-stats strong [data-psx-year] {
+  color: inherit;
+  font: inherit;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 .writing-publication-copy .writing-publication-source {
@@ -8456,6 +8459,13 @@ dd {
 
   .portfolio-chapter-nav {
     top: 108px;
+    /* Keep the horizontally scrollable chapter strip inside the viewport.
+       Its desktop full-bleed negative margins otherwise create a small
+       page-level horizontal scroll on narrow phones. */
+    width: 100vw;
+    max-width: 100vw;
+    margin-inline: calc(50% - 50vw);
+    overflow: clip;
   }
 
   .portfolio-chapter-nav-inner {
@@ -8543,6 +8553,11 @@ dd {
   .nav a {
     padding: 5px 0;
     line-height: 1.2;
+  }
+
+  /* Native hash navigation must leave room for the two-row mobile header. */
+  main > section[id] {
+    scroll-margin-top: 180px;
   }
 
   .research-book-entry,

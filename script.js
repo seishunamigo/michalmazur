@@ -1178,6 +1178,38 @@ languageButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.lang));
 });
 
+// The compact header becomes two rows on a phone. Native anchor scrolling does
+// not account for a fixed header, so it can hide a section title underneath it.
+// Keep all in-page navigation aligned just below the header's measured height.
+const scrollToHeaderAnchor = (target, behavior = "smooth") => {
+  if (!target) return;
+  const headerHeight = header?.getBoundingClientRect().height || 0;
+  const breathingRoom = window.matchMedia("(max-width: 720px)").matches ? 20 : 28;
+  const top = window.scrollY + target.getBoundingClientRect().top - headerHeight - breathingRoom;
+  window.scrollTo({ top: Math.max(0, top), behavior });
+};
+
+document.querySelectorAll(".site-header a[href^='#']").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const targetId = link.getAttribute("href")?.slice(1);
+    const target = targetId ? document.getElementById(targetId) : null;
+    if (!target) return;
+
+    event.preventDefault();
+    window.history.pushState(null, "", `#${targetId}`);
+    scrollToHeaderAnchor(target);
+  });
+});
+
+const correctInitialHeaderAnchor = () => {
+  const targetId = window.location.hash.slice(1);
+  const target = targetId ? document.getElementById(targetId) : null;
+  if (target) scrollToHeaderAnchor(target, "auto");
+};
+
+window.addEventListener("hashchange", () => correctInitialHeaderAnchor());
+window.addEventListener("load", () => requestAnimationFrame(correctInitialHeaderAnchor), { once: true });
+
 document.querySelectorAll("[data-workshop-carousel]").forEach((carousel) => {
   const slides = [...carousel.querySelectorAll("[data-carousel-slide]")];
   const previous = carousel.querySelector("[data-carousel-prev]");
