@@ -2788,6 +2788,12 @@ dd {
   margin-top: 8px;
 }
 
+.research-project-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .comix-demo {
   position: relative;
   max-width: 980px;
@@ -7977,6 +7983,47 @@ dd {
   line-height: 0.98;
 }
 
+.contact-social {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  margin-top: 4px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, rgba(218, 176, 66, 0.13), transparent 45%),
+    var(--surface);
+}
+
+.contact-social-copy {
+  display: grid;
+  gap: 7px;
+}
+
+.contact-social-copy .eyebrow,
+.contact-social-copy h3,
+.contact-social-copy p {
+  margin: 0;
+}
+
+.contact-social-copy h3 {
+  color: var(--teal-deep);
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  line-height: 1.02;
+}
+
+.contact-social-copy p:not(.eyebrow) {
+  max-width: 68ch;
+  color: var(--muted);
+}
+
+.contact-instagram-button {
+  white-space: nowrap;
+}
+
 .contact-link {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
@@ -8171,7 +8218,8 @@ dd {
   .profile-statement,
   .contact-postcard,
   .contact-profiles,
-  .contact-grid {
+  .contact-grid,
+  .contact-social {
     grid-template-columns: 1fr;
   }
 
