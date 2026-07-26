@@ -1,0 +1,2 @@
+[functions.trace-moderation]
+verify_jwt = false

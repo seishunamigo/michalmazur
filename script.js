@@ -2704,6 +2704,8 @@ document.fonts?.ready?.then(syncHeaderHeight);
       traceSave: "Add my mark",
       traceUpdate: "Update my mark",
       traceSaved: "Your mark has been added.",
+      tracePending: "Sent for review. It will appear after approval.",
+      traceError: "The mark could not be submitted. Please try again.",
       traceLocal: "Saved to the shared wall.",
       traceLocalFallback: "Saved privately here until the shared wall is ready.",
       traceYours: "Your mark",
@@ -2776,6 +2778,8 @@ document.fonts?.ready?.then(syncHeaderHeight);
       traceSave: "Dodaj mój ślad",
       traceUpdate: "Zmień mój ślad",
       traceSaved: "Twój ślad został dodany.",
+      tracePending: "Ślad czeka na zatwierdzenie. Pojawi się po akceptacji.",
+      traceError: "Nie udało się wysłać śladu. Spróbuj ponownie.",
       traceLocal: "Zapisany na wspólnej ścianie.",
       traceLocalFallback: "Zapisany prywatnie tutaj, dopóki wspólna ściana nie jest gotowa.",
       traceYours: "Twój ślad",
@@ -2848,6 +2852,8 @@ document.fonts?.ready?.then(syncHeaderHeight);
       traceSave: "印を残す",
       traceUpdate: "印を更新する",
       traceSaved: "あなたの印を残しました。",
+      tracePending: "確認のため送信しました。承認後に表示されます。",
+      traceError: "印を送信できませんでした。もう一度お試しください。",
       traceLocal: "共有の壁に保存されます。",
       traceLocalFallback: "共有の壁が準備できるまで、このブラウザに保存されます。",
       traceYours: "あなたの印",
@@ -2872,6 +2878,14 @@ document.fonts?.ready?.then(syncHeaderHeight);
   if (!state.followThreadAction) {
     delete state.unlocked["follow-the-thread"];
     state.completionSeen = false;
+  }
+  const traceOwnerStorageKey = `${storageKey}-trace-owner-v1`;
+  let traceOwnerToken = "";
+  try {
+    traceOwnerToken = localStorage.getItem(traceOwnerStorageKey) || crypto.randomUUID();
+    localStorage.setItem(traceOwnerStorageKey, traceOwnerToken);
+  } catch {
+    traceOwnerToken = crypto.randomUUID();
   }
 
   const save = () => {
@@ -2902,6 +2916,7 @@ document.fonts?.ready?.then(syncHeaderHeight);
     url: "https://nznypktoifwbrskklrmz.supabase.co",
     key: "sb_publishable_VkdJeKSZyGd3_jLNOlEhDw_cPvaJKR6",
     table: "traces",
+    function: "https://nznypktoifwbrskklrmz.supabase.co/functions/v1/trace-moderation",
   };
   let traceLoading = false;
   let traceRemoteReady = false;
@@ -2937,7 +2952,7 @@ document.fonts?.ready?.then(syncHeaderHeight);
       state.traceCount = Number.isFinite(remoteCount) ? remoteCount : state.traceFeed.length;
       traceRemoteReady = true;
     } catch {
-      state.traceFeed = state.trace ? [state.trace] : [];
+      state.traceFeed = state.traceApproved ? [state.trace] : [];
       state.traceCount = state.traceFeed.length;
       traceRemoteReady = false;
     } finally {
@@ -2948,18 +2963,20 @@ document.fonts?.ready?.then(syncHeaderHeight);
     }
   };
   const saveTraceRemote = async (trace) => {
-    const response = await fetch(`${traceSupabase.url}/rest/v1/${traceSupabase.table}`, {
+    const response = await fetch(traceSupabase.function, {
       method: "POST",
       headers: traceHeaders({ Prefer: "return=representation" }),
       body: JSON.stringify({
         mark: trace.mark,
         name: trace.name || null,
         message: trace.message || null,
+        website: trace.website || "",
+        id: trace.id || null,
+        ownerToken: traceOwnerToken,
       }),
     });
     if (!response.ok) throw new Error(`Trace save failed: ${response.status}`);
-    const [savedTrace] = await response.json();
-    return normalizeTrace(savedTrace || trace);
+    return response.json();
   };
   const routeStarted = () => {
     const candidates = [
@@ -3088,7 +3105,7 @@ document.fonts?.ready?.then(syncHeaderHeight);
     const traceRoot = reward.querySelector("[data-passport-trace]");
     if (!traceRoot) return;
     const choices = traceMarks.map((mark) => `<button class="passport-trace-mark${mark === selectedMark ? " is-selected" : ""}" type="button" data-trace-mark="${mark}" aria-pressed="${mark === selectedMark}">${mark}</button>`).join("");
-    const traces = (Array.isArray(state.traceFeed) ? state.traceFeed : (state.trace ? [state.trace] : []))
+    const traces = (Array.isArray(state.traceFeed) ? state.traceFeed : (state.traceApproved && state.trace ? [state.trace] : []))
       .slice()
       .sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
     const traceWall = () => {
@@ -3108,6 +3125,7 @@ document.fonts?.ready?.then(syncHeaderHeight);
         <fieldset><legend class="sr-only">${copy.traceTitle}</legend><div class="passport-trace-marks">${choices}</div></fieldset>
         <label><span>${copy.traceName}</span><input name="trace-name" maxlength="24" autocomplete="nickname" value="${escapeHtml(trace.name)}"></label>
         <label><span>${copy.traceMessage}</span><textarea name="trace-message" maxlength="140" rows="3" placeholder="${copy.tracePlaceholder}">${escapeHtml(trace.message)}</textarea></label>
+        <label class="sr-only">Leave blank<input name="website" tabindex="-1" autocomplete="off"></label>
         <div class="passport-trace-actions"><button type="submit">${state.trace ? copy.traceUpdate : copy.traceSave}</button><small>${traceRemoteReady ? copy.traceLocal : copy.traceLocalFallback}</small></div>
       </form>`;
     let chosenMark = selectedMark;
@@ -3132,24 +3150,24 @@ document.fonts?.ready?.then(syncHeaderHeight);
         mark: chosenMark,
         name: form.elements["trace-name"].value.trim().slice(0, 24),
         message: form.elements["trace-message"].value.trim().slice(0, 140),
+        website: form.elements.website.value,
         createdAt: Date.now(),
       };
-      state.trace = localTrace;
-      state.traceFeed = [localTrace, ...(Array.isArray(state.traceFeed) ? state.traceFeed : [])];
-      state.traceCount = Math.max(Number(state.traceCount) || 0, state.traceFeed.length);
-      save();
-      render();
+      const submitButton = form.querySelector("button[type=submit]");
+      if (submitButton) submitButton.disabled = true;
       try {
-        state.trace = await saveTraceRemote(localTrace);
+        const savedTrace = await saveTraceRemote(localTrace);
+        state.trace = { ...localTrace, id: savedTrace.id };
+        state.traceApproved = false;
         traceRemoteReady = true;
         traceRemoteChecked = false;
+        save();
+        render();
         await loadTraceFeed();
+        showToast(copy.tracePending, true);
       } catch {
-        traceRemoteReady = false;
-        traceRemoteChecked = true;
+        showToast(copy.traceError);
         renderTrace(currentCopy());
-      } finally {
-        showToast(copy.traceSaved, true);
       }
     });
   };
