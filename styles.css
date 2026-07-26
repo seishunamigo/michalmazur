@@ -3201,6 +3201,10 @@ dd {
 }
 
 .comix-demo-reuse-options button {
+  display: grid;
+  min-width: 0;
+  min-height: 46px;
+  place-items: center;
   border: 1px solid rgba(3, 73, 73, 0.45);
   padding: 8px 6px;
   background: #fffaf0;
@@ -3208,6 +3212,9 @@ dd {
   font: inherit;
   font-size: 0.76rem;
   font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+  overflow-wrap: anywhere;
   cursor: pointer;
 }
 
@@ -3638,6 +3645,18 @@ dd {
   color: #e2b34e;
   font: 700 1.1rem/1 var(--font-serif);
   transform: rotate(-5deg);
+}
+
+.stamp-rally.is-complete .stamp-rally-launcher-mark,
+.stamp-rally.is-complete .stamp-rally-header-launcher span {
+  border-color: #e06b57;
+  color: #ffd38a;
+  box-shadow: 0 0 0 3px rgba(224, 107, 87, 0.16), 0 0 18px rgba(224, 107, 87, 0.34);
+  transform: rotate(5deg) scale(1.06);
+}
+
+.stamp-rally.is-complete .stamp-rally-launcher {
+  border-color: rgba(224, 107, 87, 0.84);
 }
 
 .stamp-rally-launcher b {
@@ -4100,6 +4119,134 @@ dd {
 .stamp-rally-note .eyebrow { margin: 0 0 7px; }
 .stamp-rally-note p:last-child { margin: 0; line-height: 1.58; }
 
+.passport-trace {
+  margin-top: 28px;
+  padding: 26px 0 2px;
+  border-top: 1px solid rgba(18, 63, 61, 0.25);
+}
+
+.passport-trace-heading { max-width: 52ch; }
+.passport-trace-heading .eyebrow { margin: 0 0 5px; color: var(--passport-red); }
+.passport-trace-heading h4 { margin: 0; font-size: 1.65rem; line-height: 1.03; }
+.passport-trace-heading > p:last-child { margin: 10px 0 0; color: rgba(18, 63, 61, 0.78); font-size: 0.9rem; line-height: 1.52; }
+
+.passport-trace-counter {
+  display: inline-grid;
+  grid-template-columns: 39px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  margin-top: 16px;
+  padding: 7px 12px 7px 7px;
+  border: 1px solid rgba(167, 59, 49, 0.44);
+  background: linear-gradient(135deg, rgba(255, 250, 240, 0.95), rgba(211, 154, 49, 0.12));
+  box-shadow: 0 10px 22px rgba(18, 63, 61, 0.08);
+}
+.passport-trace-counter span {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border: 2px double var(--passport-red);
+  border-radius: 49% 51% 45% 55%;
+  color: var(--passport-red);
+  font: 800 1.1rem/1 var(--font-serif);
+  transform: rotate(-6deg);
+}
+.passport-trace-counter strong {
+  min-width: 0;
+  color: var(--passport-ink);
+  font: 800 0.76rem/1.25 var(--font-sans);
+  overflow-wrap: anywhere;
+}
+
+.passport-trace-wall {
+  margin-top: 18px;
+  padding: 13px;
+  border: 1px dashed rgba(18, 63, 61, 0.38);
+  background: rgba(211, 154, 49, 0.08);
+}
+
+.passport-trace-wall-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--passport-red);
+  font: 800 0.62rem/1 var(--font-sans);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.passport-trace-list { display: grid; gap: 9px; }
+.passport-trace-card { display: grid; grid-template-columns: 45px 1fr; gap: 11px; align-items: center; padding: 8px 0; }
+.passport-trace-card + .passport-trace-card { border-top: 1px solid rgba(18, 63, 61, 0.14); }
+.passport-trace-card > b {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border: 2px double var(--passport-red);
+  border-radius: 48% 52% 46% 54%;
+  color: var(--passport-red);
+  font: 800 1.25rem/1 var(--font-serif);
+  transform: rotate(-4deg);
+}
+.passport-trace-card strong { display: block; font: 800 0.8rem/1.2 var(--font-sans); }
+.passport-trace-card p { margin: 4px 0 0; color: rgba(18, 63, 61, 0.78); font-size: 0.84rem; line-height: 1.35; }
+.passport-trace-toggle {
+  margin-top: 10px;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  color: var(--passport-ink);
+  cursor: pointer;
+  font: 800 0.68rem/1.4 var(--font-sans);
+}
+
+.passport-trace-form { display: grid; gap: 12px; margin-top: 18px; }
+.passport-trace-form fieldset { margin: 0; padding: 0; border: 0; }
+.passport-trace-marks { display: flex; flex-wrap: wrap; gap: 8px; }
+.passport-trace-mark {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border: 1px solid rgba(18, 63, 61, 0.48);
+  border-radius: 50% 48% 52% 47%;
+  background: #fffaf0;
+  color: var(--passport-ink);
+  cursor: pointer;
+  font: 800 1.05rem/1 var(--font-serif);
+  transition: transform 150ms ease, background 150ms ease, color 150ms ease;
+}
+.passport-trace-mark:hover, .passport-trace-mark:focus-visible { transform: translateY(-2px) rotate(-3deg); }
+.passport-trace-mark.is-selected { border-color: var(--passport-red); background: var(--passport-red); color: #fffaf0; }
+.passport-trace-form label { display: grid; gap: 5px; }
+.passport-trace-form label > span { color: rgba(18, 63, 61, 0.75); font: 800 0.68rem/1.2 var(--font-sans); }
+.passport-trace-form input, .passport-trace-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(18, 63, 61, 0.4);
+  border-radius: 0;
+  background: #fffdf7;
+  color: var(--passport-ink);
+  font: 0.9rem/1.4 var(--font-sans);
+}
+.passport-trace-form input { height: 40px; padding: 8px 10px; }
+.passport-trace-form textarea { padding: 9px 10px; resize: vertical; }
+.passport-trace-form input:focus, .passport-trace-form textarea:focus { outline: 2px solid rgba(167, 59, 49, 0.35); outline-offset: 2px; }
+.passport-trace-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.passport-trace-actions button {
+  padding: 10px 14px;
+  border: 1px solid var(--passport-red);
+  background: var(--passport-red);
+  color: #fffaf0;
+  cursor: pointer;
+  font: 800 0.72rem/1 var(--font-sans);
+}
+.passport-trace-actions button:hover, .passport-trace-actions button:focus-visible { background: #87342e; }
+.passport-trace-actions small { color: rgba(18, 63, 61, 0.62); font: 700 0.68rem/1.3 var(--font-sans); }
+
 .stamp-rally-story {
   margin-top: 30px;
   padding-top: 28px;
@@ -4136,40 +4283,235 @@ dd {
   font: 700 0.67rem/1.4 var(--font-sans);
 }
 
+.stamp-rally-story-ticket-image {
+  display: block;
+  grid-column: 1 / -1;
+  width: min(100%, 760px);
+  height: auto;
+  justify-self: center;
+  margin: 7px auto 0;
+  aspect-ratio: auto !important;
+  border: 0 !important;
+  background: transparent !important;
+  filter: none !important;
+  transform: rotate(-0.6deg);
+  box-shadow: none !important;
+}
+
 .stamp-rally-story-ticket {
-  position: absolute;
-  top: 14px;
-  right: -8px;
+  position: relative;
+  top: auto;
+  right: auto;
   bottom: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 104px;
-  min-height: 96px;
-  padding: 9px;
+  grid-template-columns: minmax(0, 1fr) minmax(120px, 0.34fr);
+  width: 100%;
+  min-height: 0;
+  margin-top: 12px;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
   border: 1px solid var(--passport-ink);
-  background: #dfc789;
+  background:
+    linear-gradient(90deg, transparent calc(100% - 126px), rgba(25, 62, 60, 0.08) calc(100% - 126px)),
+    linear-gradient(135deg, #f4df9f 0%, #d9b865 100%);
   color: #193e3c;
-  transform: rotate(-2deg);
-  box-shadow: 5px 6px 0 rgba(18, 63, 61, 0.12);
+  transform: rotate(-0.6deg);
+  box-shadow: 5px 7px 0 rgba(18, 63, 61, 0.12);
 }
 
-.stamp-rally-story-ticket b {
-  font: 800 2.5rem/0.8 var(--font-serif);
+.stamp-rally-story-ticket::before,
+.stamp-rally-story-ticket::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
 }
 
-.stamp-rally-story-ticket span {
-  font: 900 0.85rem/1.1 var(--font-sans);
-  text-align: right;
+.stamp-rally-story-ticket::before {
+  inset: 6px;
+  border: 1px solid rgba(255, 250, 240, 0.56);
 }
 
-.stamp-rally-story-ticket i {
-  grid-column: 1 / -1;
-  align-self: end;
-  padding-top: 9px;
-  border-top: 1px dashed currentColor;
-  font: 900 0.62rem/1 var(--font-sans);
+.stamp-rally-story-ticket::after {
+  top: 0;
+  right: 126px;
+  bottom: 0;
+  border-right: 2px dashed rgba(25, 62, 60, 0.42);
+  transform: none;
+}
+
+.stamp-rally-ticket-main,
+.stamp-rally-ticket-stub { position: relative; z-index: 1; }
+
+.stamp-rally-ticket-main {
+  display: grid;
+  gap: 14px;
+  padding: 15px 16px 13px;
+}
+
+.stamp-rally-ticket-airline {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.stamp-rally-ticket-logo {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  border: 2px solid var(--passport-red);
+  border-radius: 50%;
+  background: #fffaf0;
+  box-shadow: inset 0 0 0 3px rgba(167, 59, 49, 0.12);
+  color: var(--passport-red);
+}
+
+.stamp-rally-ticket-logo b {
+  font: 900 1rem/1 var(--font-sans);
+  letter-spacing: 0.02em;
+}
+
+.stamp-rally-ticket-logo i {
+  position: absolute;
+  right: -7px;
+  bottom: 2px;
+  color: #193e3c;
+  font: 900 0.92rem/1 var(--font-sans);
+  transform: rotate(-14deg);
+}
+
+.stamp-rally-ticket-airline div {
+  min-width: 0;
+}
+
+.stamp-rally-ticket-airline b {
+  display: block;
+  color: #193e3c;
+  font: 900 0.76rem/1.1 var(--font-sans);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.stamp-rally-ticket-airline small {
+  display: block;
+  max-width: 38ch;
+  margin-top: 5px;
+  color: rgba(25, 62, 60, 0.78);
+  font: 800 0.62rem/1.32 var(--font-sans);
+}
+
+.stamp-rally-ticket-details {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr;
+  gap: 10px;
+  margin: 0;
+  padding: 9px 0 0;
+  border-top: 1px dashed rgba(25, 62, 60, 0.28);
+}
+
+.stamp-rally-ticket-details dt {
+  color: rgba(25, 62, 60, 0.62);
+  font: 900 0.46rem/1 var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.stamp-rally-ticket-details dd {
+  margin: 4px 0 0;
+  color: #193e3c;
+  font: 900 0.68rem/1 var(--font-sans);
+}
+
+.stamp-rally-ticket-route {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1fr);
+  align-items: end;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(25, 62, 60, 0.38);
+}
+
+.stamp-rally-ticket-route div {
+  min-width: 0;
+}
+
+.stamp-rally-ticket-route span,
+.stamp-rally-ticket-stub span,
+.stamp-rally-ticket-stub dt {
+  display: block;
+  color: rgba(25, 62, 60, 0.65);
+  font: 900 0.48rem/1 var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.stamp-rally-ticket-route strong {
+  display: block;
+  margin-top: 3px;
+  font: 900 2rem/0.9 var(--font-sans);
+  letter-spacing: 0.03em;
+}
+
+.stamp-rally-ticket-route small {
+  display: block;
+  margin-top: 5px;
+  color: rgba(25, 62, 60, 0.78);
+  font: 800 0.58rem/1 var(--font-sans);
+}
+
+.stamp-rally-ticket-route > i {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 9px;
+  border: 1px solid rgba(25, 62, 60, 0.42);
+  border-radius: 50%;
+  background: rgba(255, 250, 240, 0.54);
   font-style: normal;
-  letter-spacing: 0.08em;
+  transform: rotate(8deg);
+}
+
+.stamp-rally-ticket-stub {
+  display: grid;
+  align-content: center;
+  gap: 9px;
+  padding: 15px 12px;
+  text-align: center;
+}
+
+.stamp-rally-ticket-stub b {
+  font: 900 0.76rem/1.05 var(--font-sans);
+}
+
+.stamp-rally-ticket-stub dl {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+}
+
+.stamp-rally-ticket-stub dl > div {
+  padding-top: 6px;
+  border-top: 1px dashed rgba(25, 62, 60, 0.32);
+}
+
+.stamp-rally-ticket-stub dd {
+  margin: 3px 0 0;
+  font: 900 0.7rem/1 var(--font-sans);
+}
+
+.stamp-rally-ticket-stub::after {
+  content: "";
+  justify-self: center;
+  width: 54px;
+  height: 18px;
+  margin-top: 1px;
+  background:
+    linear-gradient(90deg, #193e3c 3px, transparent 3px 6px, #193e3c 6px 8px, transparent 8px 12px, #193e3c 12px 15px, transparent 15px 19px, #193e3c 19px 21px, transparent 21px 26px, #193e3c 26px 30px, transparent 30px 34px, #193e3c 34px 36px, transparent 36px 41px, #193e3c 41px 44px, transparent 44px 48px, #193e3c 48px 50px, transparent 50px);
+  opacity: 0.7;
 }
 
 .stamp-rally-story-copy .eyebrow { margin: 0 0 5px; color: var(--passport-red); }
@@ -4289,19 +4631,49 @@ dd {
   .stamp-rally-item-copy h3 { font-size: 1.14rem; }
   .stamp-rally-item-copy p { font-size: 0.78rem; }
   .stamp-rally-reward { padding: 23px 17px 18px; }
+  .passport-trace { margin-top: 24px; padding-top: 22px; }
   .stamp-rally-final-seal { width: 92px; height: 92px; margin-left: 10px; }
   .stamp-rally-final-seal span { font-size: 2.25rem; }
   .stamp-rally-story-gallery { grid-template-columns: 1fr; gap: 18px; }
+  .stamp-rally-story-ticket-image { width: min(100%, 520px); margin-top: 0; }
   .stamp-rally-story-ticket {
-    top: 9px;
-    right: -4px;
-    width: 88px;
-    min-height: 82px;
-    padding: 7px;
+    grid-template-columns: 1fr;
+    width: calc(100% - 4px);
+    margin: 11px 2px 0;
+    background: linear-gradient(135deg, #f4df9f 0%, #d9b865 100%);
   }
-  .stamp-rally-story-ticket b { font-size: 2.1rem; }
-  .stamp-rally-story-ticket span { font-size: 0.68rem; }
-  .stamp-rally-story-ticket i { padding-top: 6px; font-size: 0.5rem; }
+  .stamp-rally-story-ticket::after {
+    top: auto;
+    right: 0;
+    left: 0;
+    bottom: 82px;
+    border-right: 0;
+    border-bottom: 2px dashed rgba(25, 62, 60, 0.42);
+  }
+  .stamp-rally-ticket-main { padding: 13px 13px 12px; }
+  .stamp-rally-ticket-airline { gap: 9px; }
+  .stamp-rally-ticket-logo { width: 42px; min-width: 42px; height: 42px; }
+  .stamp-rally-ticket-airline b { font-size: 0.68rem; }
+  .stamp-rally-ticket-airline small { font-size: 0.58rem; }
+  .stamp-rally-ticket-details {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 8px;
+  }
+  .stamp-rally-ticket-details div:last-child { grid-column: 1 / -1; }
+  .stamp-rally-ticket-route strong { font-size: 1.72rem; }
+  .stamp-rally-ticket-stub {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 13px 12px;
+    text-align: left;
+  }
+  .stamp-rally-ticket-stub dl {
+    grid-template-columns: repeat(2, auto);
+    gap: 8px;
+  }
+  .stamp-rally-ticket-stub dl > div { padding-top: 0; border-top: 0; }
+  .stamp-rally-ticket-stub::after { display: none; }
   .stamp-rally-toast { right: 10px; bottom: 66px; }
 }
 

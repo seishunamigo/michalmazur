@@ -6,6 +6,22 @@ const languagePanels = document.querySelectorAll("[data-lang-panel]");
 const personNameNodes = document.querySelectorAll("[data-person-name]");
 const personHeadlineNodes = document.querySelectorAll("[data-person-name-headline]");
 const personHomeLinks = document.querySelectorAll("[data-person-home]");
+
+// Keep visitors inside the portfolio while sending genuinely external sources
+// to a separate browser tab. The explicit target is also applied to any link
+// inserted by a later interactive component.
+document.querySelectorAll("a[href]").forEach((link) => {
+  try {
+    const url = new URL(link.href, window.location.href);
+    if (/^https?:$/.test(url.protocol) && url.origin !== window.location.origin) {
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    }
+  } catch {
+    // Leave malformed or non-web links unchanged.
+  }
+});
+
 const personNames = {
   en: "Michal Maciej Mazur",
   pl: "Michal Maciej Mazur",
@@ -2602,7 +2618,7 @@ document.fonts?.ready?.then(syncHeaderHeight);
     "classroom-architect",
     "code-mixing",
     "tgs-survivor",
-    "critical-player",
+    "follow-the-thread",
     "evidence-hunter",
     "field-correspondent",
     "across-cultures",
@@ -2611,7 +2627,7 @@ document.fonts?.ready?.then(syncHeaderHeight);
     "classroom-architect": { glyph: "教", icon: "classroom", shape: "round", tone: "gold", href: "workshops.html#teaching-design-studio" },
     "code-mixing": { glyph: "言", icon: "mix", shape: "oval", tone: "teal", href: "research.html#research-method" },
     "tgs-survivor": { glyph: "取", icon: "tgs", shape: "shield", tone: "red", href: "writing.html#writing-fieldnotes" },
-    "critical-player": { glyph: "遊", icon: "controller", shape: "square", tone: "violet", href: "workshops.html#teaching-classes" },
+    "follow-the-thread": { glyph: "糸", icon: "bridge", shape: "arch", tone: "violet", href: "achievements.html#top" },
     "evidence-hunter": { glyph: "証", icon: "evidence", shape: "oval", tone: "blue", href: "research.html#research-projects" },
     "field-correspondent": { glyph: "記", icon: "press", shape: "round", tone: "orange", href: "writing.html#writing-psx" },
     "across-cultures": { glyph: "間", icon: "bridge", shape: "arch", tone: "green", href: "index.html#top" },
@@ -2647,7 +2663,7 @@ document.fonts?.ready?.then(syncHeaderHeight);
         "classroom-architect": ["Classroom Architect", "Build and copy a usable activity in the Teaching Design Studio."],
         "code-mixing": ["Code-Mixing Explorer", "Complete one full Co-MIX loop: read, notice, recall, and reuse."],
         "tgs-survivor": ["TGS Survivor", "Reach an ending in the Tokyo Game Show field-reporting story."],
-        "critical-player": ["Critical Player", "Open a class sample or poster from Understanding Video Games."],
+        "follow-the-thread": ["Follow the Thread", "Open the Public Record and follow one trace of the work beyond this portfolio."],
         "evidence-hunter": ["Evidence Hunter", "Open a publication record or DOI behind the research."],
         "field-correspondent": ["Field Correspondent", "Open one reporting trail beyond this portfolio — a PSX Extreme source, an interview, or another field note."],
         "across-cultures": ["Across Cultures", "Visit the Teaching, Research, and Writing portfolios."],
@@ -2679,6 +2695,24 @@ document.fonts?.ready?.then(syncHeaderHeight);
       storyPhotoCaption: "Kraków, 28 March 2009. A final conversation with my parents before the flight to Japan.",
       storyGroupPhotoAlt: "Michal standing with family and friends outside Kraków airport before departing for Japan in 2009",
       storyGroupPhotoCaption: "The wider farewell: the people who came to see me off before the one-way journey.",
+      traceEyebrow: "A place for fellow explorers",
+      traceTitle: "Leave your mark",
+      traceIntro: "Choose a small sign, add a name if you wish, and leave one short thought. It is a quiet record of having made the whole journey.",
+      traceName: "Name or initials (optional)",
+      traceMessage: "One short thought (optional)",
+      tracePlaceholder: "I found the thread…",
+      traceSave: "Add my mark",
+      traceUpdate: "Update my mark",
+      traceSaved: "Your mark has been added.",
+      traceLocal: "Saved to the shared wall.",
+      traceLocalFallback: "Saved privately here until the shared wall is ready.",
+      traceYours: "Your mark",
+      traceAnonymous: "Anonymous explorer",
+      traceRecent: "Recent marks",
+      traceShowMore: "Show all marks",
+      traceShowLess: "Show fewer marks",
+      traceCounter: "{count} marks left so far",
+      traceLoading: "Checking the shared wall…",
     },
     pl: {
       launcher: "Paszport",
@@ -2701,7 +2735,7 @@ document.fonts?.ready?.then(syncHeaderHeight);
         "classroom-architect": ["Architekt zajęć", "Zbuduj i skopiuj użyteczną aktywność w Studiu projektowania zajęć."],
         "code-mixing": ["Odkrywca Co-MIX", "Ukończ jedną pełną pętlę Co-MIX: czytanie, zauważenie, przypomnienie i ponowne użycie."],
         "tgs-survivor": ["Ocalały z TGS", "Dotrzyj do zakończenia reporterskiej opowieści z Tokyo Game Show."],
-        "critical-player": ["Krytyczny gracz", "Otwórz próbkę zajęć albo plakat kursu Understanding Video Games."],
+        "follow-the-thread": ["Podążaj za nicią", "Otwórz Dorobek i podążaj za jednym śladem pracy poza tym portfolio."],
         "evidence-hunter": ["Łowca dowodów", "Otwórz rekord publikacji lub DOI stojący za badaniem."],
         "field-correspondent": ["Korespondent terenowy", "Otwórz poza portfolio jeden ślad pracy reporterskiej — materiał PSX Extreme, wywiad albo inną relację z terenu."],
         "across-cultures": ["Pomiędzy kulturami", "Odwiedź portfolio dydaktyczne, badawcze i pisarskie."],
@@ -2733,6 +2767,24 @@ document.fonts?.ready?.then(syncHeaderHeight);
       storyPhotoCaption: "Kraków, 28 marca 2009. Ostatnia rozmowa z rodzicami przed wylotem do Japonii.",
       storyGroupPhotoAlt: "Michał z rodziną i przyjaciółmi przed lotniskiem w Krakowie, przed wyjazdem do Japonii w 2009 roku",
       storyGroupPhotoCaption: "Szerszy kadr pożegnania: osoby, które przyszły odprowadzić mnie przed podróżą w jedną stronę.",
+      traceEyebrow: "Miejsce dla innych odkrywców",
+      traceTitle: "Zostaw swój ślad",
+      traceIntro: "Wybierz mały znak, podpisz się — jeśli chcesz — i zostaw jedną krótką myśl. To cichy zapis tego, że przeszedłeś całą drogę.",
+      traceName: "Imię lub inicjały (opcjonalnie)",
+      traceMessage: "Jedna krótka myśl (opcjonalnie)",
+      tracePlaceholder: "Odnalazłem/am nić…",
+      traceSave: "Dodaj mój ślad",
+      traceUpdate: "Zmień mój ślad",
+      traceSaved: "Twój ślad został dodany.",
+      traceLocal: "Zapisany na wspólnej ścianie.",
+      traceLocalFallback: "Zapisany prywatnie tutaj, dopóki wspólna ściana nie jest gotowa.",
+      traceYours: "Twój ślad",
+      traceAnonymous: "Anonimowy odkrywca",
+      traceRecent: "Najnowsze ślady",
+      traceShowMore: "Pokaż wszystkie ślady",
+      traceShowLess: "Pokaż mniej śladów",
+      traceCounter: "{count} osób zostawiło już ślad",
+      traceLoading: "Sprawdzam wspólną ścianę…",
     },
     ja: {
       launcher: "パスポート",
@@ -2755,7 +2807,7 @@ document.fonts?.ready?.then(syncHeaderHeight);
         "classroom-architect": ["授業の設計者", "授業設計スタジオで活動案を作り、コピーする。"],
         "code-mixing": ["Co-MIX 探検者", "読む・気づく・思い出す・再使用する、1つの学習ループを完了する。"],
         "tgs-survivor": ["TGS サバイバー", "東京ゲームショウの取材ストーリーで結末にたどり着く。"],
-        "critical-player": ["批評するプレイヤー", "Understanding Video Games の授業映像またはポスターを開く。"],
+        "follow-the-thread": ["糸をたどる", "Public Recordを開き、このポートフォリオの外へ続く仕事の痕跡をたどる。"],
         "evidence-hunter": ["エビデンス・ハンター", "研究を支える論文記録または DOI を開く。"],
         "field-correspondent": ["現場記者", "ポートフォリオの外にある取材の痕跡を一つ開く。PSX Extreme、インタビュー、または現場記事が手がかりです。"],
         "across-cultures": ["文化のあいだ", "教育・研究・執筆の3つのポートフォリオを訪れる。"],
@@ -2787,10 +2839,29 @@ document.fonts?.ready?.then(syncHeaderHeight);
       storyPhotoCaption: "2009年3月28日、クラクフ。日本へ出発する前、両親と交わした最後の会話。",
       storyGroupPhotoAlt: "2009年、日本へ出発する前にクラクフ空港で家族や友人と並ぶミハウ",
       storyGroupPhotoCaption: "片道の旅へ出る私を見送りに来てくれた人たちとの、もう一つの別れの風景。",
+      traceEyebrow: "旅を終えた人のための場所",
+      traceTitle: "あなたの印を残す",
+      traceIntro: "小さな印を選び、よければ名前と短い一言を残してください。この旅を最後まで歩いた、静かな記録です。",
+      traceName: "名前・イニシャル（任意）",
+      traceMessage: "短いひとこと（任意）",
+      tracePlaceholder: "つながる糸を見つけました…",
+      traceSave: "印を残す",
+      traceUpdate: "印を更新する",
+      traceSaved: "あなたの印を残しました。",
+      traceLocal: "共有の壁に保存されます。",
+      traceLocalFallback: "共有の壁が準備できるまで、このブラウザに保存されます。",
+      traceYours: "あなたの印",
+      traceAnonymous: "匿名の探検者",
+      traceRecent: "新しい印",
+      traceShowMore: "すべての印を見る",
+      traceShowLess: "表示を減らす",
+      traceCounter: "これまでに {count} 件の印",
+      traceLoading: "共有の壁を確認しています…",
     },
   };
 
-  let state = { unlocked: {}, visited: [], completionSeen: false, launcherMinimized: false };
+  let state = { unlocked: {}, visited: [], completionSeen: false, launcherMinimized: false, trace: null };
+  let traceExpanded = false;
   try {
     const saved = JSON.parse(localStorage.getItem(storageKey) || "null");
     if (saved && typeof saved === "object") state = { ...state, ...saved };
@@ -2807,9 +2878,87 @@ document.fonts?.ready?.then(syncHeaderHeight);
   const currentCopy = () => passportCopy[currentLanguage()];
   const unlockedCount = () => stampOrder.filter((id) => state.unlocked[id]).length;
   const isComplete = () => unlockedCount() === stampOrder.length;
+  const traceMarks = ["間", "道", "灯", "波", "山", "星"];
+  const ticketImages = {
+    en: {
+      src: "assets/story/klamka-ticket-en.png",
+      alt: "Boarding pass for Klamka Zapadla Airlines from Krakow to Japan, March 28, 2009",
+    },
+    pl: {
+      src: "assets/story/klamka-ticket.png?v=2",
+      alt: "Bilet lotniczy linii Klamka Zapadła z Krakowa do Japonii, 28 marca 2009",
+    },
+    ja: {
+      src: "assets/story/klamka-ticket-ja.png",
+      alt: "2009年3月28日、クラクフから日本へ向かうKlamka Zapadła航空の搭乗券",
+    },
+  };
+  const traceSupabase = {
+    url: "https://nznypktoifwbrskklrmz.supabase.co",
+    key: "sb_publishable_VkdJeKSZyGd3_jLNOlEhDw_cPvaJKR6",
+    table: "traces",
+  };
+  let traceLoading = false;
+  let traceRemoteReady = false;
+  let traceRemoteChecked = false;
+  const escapeHtml = (value = "") => String(value).replace(/[&<>'\"]/g, (character) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", "\"": "&quot;",
+  }[character]));
+  const normalizeTrace = (entry = {}) => ({
+    id: entry.id,
+    mark: traceMarks.includes(entry.mark) ? entry.mark : traceMarks[0],
+    name: String(entry.name || "").trim().slice(0, 24),
+    message: String(entry.message || "").trim().slice(0, 140),
+    createdAt: entry.created_at ? Date.parse(entry.created_at) : (entry.createdAt || Date.now()),
+  });
+  const traceHeaders = (extra = {}) => ({
+    apikey: traceSupabase.key,
+    "Content-Type": "application/json",
+    ...extra,
+  });
+  const loadTraceFeed = async () => {
+    if (traceLoading || !isComplete()) return;
+    traceLoading = true;
+    renderTrace(currentCopy());
+    try {
+      const response = await fetch(`${traceSupabase.url}/rest/v1/${traceSupabase.table}?select=id,mark,name,message,created_at&order=created_at.desc&limit=100`, {
+        headers: traceHeaders({ Prefer: "count=exact" }),
+      });
+      if (!response.ok) throw new Error(`Trace feed unavailable: ${response.status}`);
+      const contentRange = response.headers.get("content-range") || "";
+      const remoteCount = Number(contentRange.split("/").pop());
+      const data = await response.json();
+      state.traceFeed = Array.isArray(data) ? data.map(normalizeTrace) : [];
+      state.traceCount = Number.isFinite(remoteCount) ? remoteCount : state.traceFeed.length;
+      traceRemoteReady = true;
+    } catch {
+      state.traceFeed = state.trace ? [state.trace] : [];
+      state.traceCount = state.traceFeed.length;
+      traceRemoteReady = false;
+    } finally {
+      traceRemoteChecked = true;
+      traceLoading = false;
+      save();
+      renderTrace(currentCopy());
+    }
+  };
+  const saveTraceRemote = async (trace) => {
+    const response = await fetch(`${traceSupabase.url}/rest/v1/${traceSupabase.table}`, {
+      method: "POST",
+      headers: traceHeaders({ Prefer: "return=representation" }),
+      body: JSON.stringify({
+        mark: trace.mark,
+        name: trace.name || null,
+        message: trace.message || null,
+      }),
+    });
+    if (!response.ok) throw new Error(`Trace save failed: ${response.status}`);
+    const [savedTrace] = await response.json();
+    return normalizeTrace(savedTrace || trace);
+  };
   const routeStarted = () => {
     const candidates = [
-      ["teaching", state.unlocked["classroom-architect"] || state.unlocked["critical-player"]],
+      ["teaching", state.unlocked["classroom-architect"]],
       ["research", state.unlocked["code-mixing"] || state.unlocked["evidence-hunter"]],
       ["writing", state.unlocked["tgs-survivor"] || state.unlocked["field-correspondent"]],
     ].filter(([, time]) => time).sort((a, b) => a[1] - b[1]);
@@ -2901,6 +3050,7 @@ document.fonts?.ready?.then(syncHeaderHeight);
     }
     reward.hidden = false;
     const paragraphs = copy.story.map((paragraph) => `<p>${paragraph}</p>`).join("");
+    const ticket = ticketImages[currentLanguage()] || ticketImages.en;
     reward.innerHTML = `
       <div class="stamp-rally-final-seal" aria-label="${copy.finalHanko}"><span>間</span><b>${copy.finalHanko}</b></div>
       <p class="eyebrow">${copy.finalEyebrow}</p>
@@ -2913,21 +3063,98 @@ document.fonts?.ready?.then(syncHeaderHeight);
           <figure class="stamp-rally-story-photo has-ticket">
             <img src="assets/story/airport-farewell-2009.jpg" alt="${copy.storyPhotoAlt}" loading="lazy">
             <figcaption>${copy.storyPhotoCaption}</figcaption>
-            <div class="stamp-rally-story-ticket" aria-hidden="true"><b>28</b><span>MAR<br>2009</span><i>KRK → JP</i></div>
           </figure>
           <figure class="stamp-rally-story-photo">
             <img src="assets/story/airport-farewell-group-2009.jpg" alt="${copy.storyGroupPhotoAlt}" loading="lazy">
             <figcaption>${copy.storyGroupPhotoCaption}</figcaption>
           </figure>
+          <img class="stamp-rally-story-ticket-image" src="${ticket.src}" alt="${ticket.alt}" loading="lazy">
         </div>
         <div class="stamp-rally-story-copy"><p class="eyebrow">${copy.storyLabel}</p><h4>${copy.storyTitle}</h4>${paragraphs}<strong>${copy.storyClose}</strong></div>
-      </article>`;
+      </article>
+      <section class="passport-trace" data-passport-trace></section>`;
+    renderTrace(copy);
+    if (!traceRemoteChecked) loadTraceFeed();
+  };
+
+  const renderTrace = (copy) => {
+    const trace = state.trace || {};
+    const selectedMark = trace.mark || traceMarks[0];
+    const traceRoot = reward.querySelector("[data-passport-trace]");
+    if (!traceRoot) return;
+    const choices = traceMarks.map((mark) => `<button class="passport-trace-mark${mark === selectedMark ? " is-selected" : ""}" type="button" data-trace-mark="${mark}" aria-pressed="${mark === selectedMark}">${mark}</button>`).join("");
+    const traces = (Array.isArray(state.traceFeed) ? state.traceFeed : (state.trace ? [state.trace] : []))
+      .slice()
+      .sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+    const traceWall = () => {
+      if (!traces.length) return "";
+      const displayed = traceExpanded ? traces : traces.slice(0, 6);
+      const cards = displayed.map((entry) => `<div class="passport-trace-card"><b>${escapeHtml(entry.mark)}</b><div><strong>${escapeHtml(entry.name || copy.traceAnonymous)}</strong>${entry.message ? `<p>${escapeHtml(entry.message)}</p>` : ""}</div></div>`).join("");
+      const toggle = traces.length > 6 ? `<button class="passport-trace-toggle" type="button" data-trace-toggle>${traceExpanded ? copy.traceShowLess : copy.traceShowMore}</button>` : "";
+      return `<div class="passport-trace-wall" aria-label="${copy.traceRecent}"><span class="passport-trace-wall-label">${copy.traceRecent}</span><div class="passport-trace-list">${cards}</div>${toggle}</div>`;
+    };
+    const traceCount = Number.isFinite(state.traceCount) ? state.traceCount : traces.length;
+    const counterText = traceLoading ? copy.traceLoading : copy.traceCounter.replace("{count}", String(traceCount));
+    traceRoot.innerHTML = `
+      <div class="passport-trace-heading"><p class="eyebrow">${copy.traceEyebrow}</p><h4>${copy.traceTitle}</h4><p>${copy.traceIntro}</p></div>
+      <div class="passport-trace-counter" aria-live="polite"><span aria-hidden="true">印</span><strong>${escapeHtml(counterText)}</strong></div>
+      ${traceWall()}
+      <form class="passport-trace-form" data-trace-form>
+        <fieldset><legend class="sr-only">${copy.traceTitle}</legend><div class="passport-trace-marks">${choices}</div></fieldset>
+        <label><span>${copy.traceName}</span><input name="trace-name" maxlength="24" autocomplete="nickname" value="${escapeHtml(trace.name)}"></label>
+        <label><span>${copy.traceMessage}</span><textarea name="trace-message" maxlength="140" rows="3" placeholder="${copy.tracePlaceholder}">${escapeHtml(trace.message)}</textarea></label>
+        <div class="passport-trace-actions"><button type="submit">${state.trace ? copy.traceUpdate : copy.traceSave}</button><small>${traceRemoteReady ? copy.traceLocal : copy.traceLocalFallback}</small></div>
+      </form>`;
+    let chosenMark = selectedMark;
+    traceRoot.querySelector("[data-trace-toggle]")?.addEventListener("click", () => {
+      traceExpanded = !traceExpanded;
+      renderTrace(copy);
+    });
+    traceRoot.querySelectorAll("[data-trace-mark]").forEach((button) => {
+      button.addEventListener("click", () => {
+        chosenMark = button.dataset.traceMark || traceMarks[0];
+        traceRoot.querySelectorAll("[data-trace-mark]").forEach((choice) => {
+          const selected = choice.dataset.traceMark === chosenMark;
+          choice.classList.toggle("is-selected", selected);
+          choice.setAttribute("aria-pressed", String(selected));
+        });
+      });
+    });
+    traceRoot.querySelector("[data-trace-form]")?.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const localTrace = {
+        mark: chosenMark,
+        name: form.elements["trace-name"].value.trim().slice(0, 24),
+        message: form.elements["trace-message"].value.trim().slice(0, 140),
+        createdAt: Date.now(),
+      };
+      state.trace = localTrace;
+      state.traceFeed = [localTrace, ...(Array.isArray(state.traceFeed) ? state.traceFeed : [])];
+      state.traceCount = Math.max(Number(state.traceCount) || 0, state.traceFeed.length);
+      save();
+      render();
+      try {
+        state.trace = await saveTraceRemote(localTrace);
+        traceRemoteReady = true;
+        traceRemoteChecked = false;
+        await loadTraceFeed();
+      } catch {
+        traceRemoteReady = false;
+        traceRemoteChecked = true;
+        renderTrace(currentCopy());
+      } finally {
+        showToast(copy.traceSaved, true);
+      }
+    });
   };
 
   const render = () => {
     const copy = currentCopy();
     const count = unlockedCount();
     root.querySelector("[data-passport-launcher]").textContent = copy.launcher;
+    root.querySelector(".stamp-rally-launcher-mark").textContent = isComplete() ? "間" : "印";
+    headerLauncher.querySelector("span").textContent = isComplete() ? "間" : "印";
     root.querySelector("[data-passport-count]").textContent = `${count}/${stampOrder.length}`;
     headerLauncher.querySelector("[data-passport-header-count]").textContent = `${count}/${stampOrder.length}`;
     minimizeButton.setAttribute("aria-label", copy.minimize);
@@ -2993,7 +3220,8 @@ document.fonts?.ready?.then(syncHeaderHeight);
   root.querySelector("[data-passport-close]").addEventListener("click", () => setOpen(false));
   root.querySelector("[data-passport-reset]").addEventListener("click", () => {
     if (!window.confirm(currentCopy().resetConfirm)) return;
-    state = { unlocked: {}, visited: [], completionSeen: false, launcherMinimized: state.launcherMinimized };
+    state = { unlocked: {}, visited: [], completionSeen: false, launcherMinimized: state.launcherMinimized, trace: null, traceFeed: [], traceCount: 0 };
+    traceRemoteChecked = false;
     save();
     render();
   });
@@ -3004,11 +3232,17 @@ document.fonts?.ready?.then(syncHeaderHeight);
   document.addEventListener("click", (event) => {
     const clickOrigin = event.target instanceof Element ? event.target : event.target?.parentElement;
     const link = clickOrigin?.closest("a[href]");
-    if (!link) return;
-    const href = link.getAttribute("href") || "";
+    const href = link?.getAttribute("href") || "";
+    const opensWritingArticle = Boolean(clickOrigin?.closest(".writing-list article, .writing-excerpt summary"));
+    const opensWritingBook = Boolean(clickOrigin?.closest(".writing-book-entry"));
+    const opensPublicArtifact = Boolean(link && (/achievements\.html(?:#|$)|youtu\.be|youtube\.com|(?:poster|plakat).*\.(?:pdf|jpe?g|png)(?:$|\?)/i.test(href)
+      || link.matches(".video-poster, .video-external, .artifact-item, .course-poster-sheet, .workshop-artifact-image")));
     if (/doi\.org|researchmap\.jp\/.*published_papers/i.test(href)) unlock("evidence-hunter");
-    if (/yF0FeLBleUY|3EGgpnY2BJc|understanding-video-games-(course|information)-poster/i.test(href)) unlock("critical-player");
-    if (/psxextreme|torii\.com\.pl|nagoshi|valkyrie|gamemusic|tokyo-game-show-2011-press/i.test(href)) unlock("field-correspondent");
+    if (opensPublicArtifact) unlock("follow-the-thread");
+    if (/psxextreme|torii\.com\.pl|nagoshi|valkyrie|gamemusic|tokyo-game-show-2011-press|1HZUa_PAf7E|32_fieju3UA/i.test(href)
+      || link?.matches(".psx-movie-card")
+      || opensWritingArticle
+      || opensWritingBook) unlock("field-correspondent");
   }, true);
 
   const pageName = window.location.pathname.split("/").pop() || "index.html";
