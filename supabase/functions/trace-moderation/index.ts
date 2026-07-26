@@ -1,6 +1,6 @@
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "apikey, authorization, content-type",
+  "Access-Control-Allow-Headers": "apikey, authorization, content-type, prefer",
   "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
 };
 

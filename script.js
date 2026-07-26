@@ -2965,7 +2965,7 @@ document.fonts?.ready?.then(syncHeaderHeight);
   const saveTraceRemote = async (trace) => {
     const response = await fetch(traceSupabase.function, {
       method: "POST",
-      headers: traceHeaders({ Prefer: "return=representation" }),
+      headers: traceHeaders(),
       body: JSON.stringify({
         mark: trace.mark,
         name: trace.name || null,
