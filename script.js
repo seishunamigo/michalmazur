@@ -2860,13 +2860,18 @@ document.fonts?.ready?.then(syncHeaderHeight);
     },
   };
 
-  let state = { unlocked: {}, visited: [], completionSeen: false, launcherMinimized: false, trace: null };
+  let state = { unlocked: {}, visited: [], completionSeen: false, launcherMinimized: false, followThreadAction: false, trace: null };
   let traceExpanded = false;
   try {
     const saved = JSON.parse(localStorage.getItem(storageKey) || "null");
     if (saved && typeof saved === "object") state = { ...state, ...saved };
   } catch {
     // The passport remains usable for the current visit if storage is unavailable.
+  }
+  state.unlocked = state.unlocked && typeof state.unlocked === "object" ? state.unlocked : {};
+  if (!state.followThreadAction) {
+    delete state.unlocked["follow-the-thread"];
+    state.completionSeen = false;
   }
 
   const save = () => {
@@ -3235,10 +3240,13 @@ document.fonts?.ready?.then(syncHeaderHeight);
     const href = link?.getAttribute("href") || "";
     const opensWritingArticle = Boolean(clickOrigin?.closest(".writing-list article, .writing-excerpt summary"));
     const opensWritingBook = Boolean(clickOrigin?.closest(".writing-book-entry"));
-    const opensPublicArtifact = Boolean(link && (/achievements\.html(?:#|$)|youtu\.be|youtube\.com|(?:poster|plakat).*\.(?:pdf|jpe?g|png)(?:$|\?)/i.test(href)
+    const opensPublicArtifact = Boolean(link && (/youtu\.be|youtube\.com|(?:poster|plakat).*\.(?:pdf|jpe?g|png)(?:$|\?)/i.test(href)
       || link.matches(".video-poster, .video-external, .artifact-item, .course-poster-sheet, .workshop-artifact-image")));
     if (/doi\.org|researchmap\.jp\/.*published_papers/i.test(href)) unlock("evidence-hunter");
-    if (opensPublicArtifact) unlock("follow-the-thread");
+    if (opensPublicArtifact) {
+      state.followThreadAction = true;
+      unlock("follow-the-thread");
+    }
     if (/psxextreme|torii\.com\.pl|nagoshi|valkyrie|gamemusic|tokyo-game-show-2011-press|1HZUa_PAf7E|32_fieju3UA/i.test(href)
       || link?.matches(".psx-movie-card")
       || opensWritingArticle
