@@ -9,9 +9,9 @@ const json = (body: unknown, status = 200) => new Response(JSON.stringify(body),
   headers: { ...corsHeaders, "Content-Type": "application/json" },
 });
 
-const html = (body: string, status = 200) => new Response(`<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Trace moderation</title><style>body{margin:0;padding:48px 22px;background:#f6f0e7;color:#173c3d;font:16px/1.6 system-ui,sans-serif}main{max-width:620px;margin:auto;padding:32px;background:#fffaf3;border:1px solid #d8c7ad}h1{font:700 32px/1.1 Georgia,serif}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}button,a.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border:1px solid #173c3d;background:#173c3d;color:#fff;font:800 14px/1 system-ui,sans-serif;text-decoration:none;cursor:pointer}.reject{border-color:#a33d35;background:#a33d35}</style></head><body><main>${body}</main></body></html>`, {
+const text = (body: string, status = 200) => new Response(body, {
   status,
-  headers: { "Content-Type": "text/html; charset=utf-8" },
+  headers: { "Content-Type": "text/plain; charset=utf-8" },
 });
 
 const env = (name: string) => {
@@ -58,7 +58,7 @@ const sendModerationEmail = async (trace: { id: number; mark: string; name: stri
       from: sender,
       to: [recipient],
       subject: "Nowy ślad czeka na zatwierdzenie",
-      html: `<h2>Nowy ślad na stronie</h2><p><strong>Znak:</strong> ${escapeHtml(trace.mark)}</p><p><strong>Autor:</strong> ${escapeHtml(trace.name || "Anonim")}</p><p><strong>Treść:</strong><br>${escapeHtml(trace.message || "(bez treści)")}</p><p><a href="${escapeHtml(approveUrl)}">Sprawdź i zatwierdź komentarz</a></p><p><a href="${escapeHtml(rejectUrl)}">Sprawdź i odrzuć komentarz</a></p><p>Link wygasa po 7 dniach.</p>`,
+      html: `<h2>Nowy ślad na stronie</h2><p><strong>Znak:</strong> ${escapeHtml(trace.mark)}</p><p><strong>Autor:</strong> ${escapeHtml(trace.name || "Anonim")}</p><p><strong>Treść:</strong><br>${escapeHtml(trace.message || "(bez treści)")}</p><p><a href="${escapeHtml(approveUrl)}">Zatwierdź komentarz</a></p><p><a href="${escapeHtml(rejectUrl)}">Odrzuć komentarz</a></p><p>Link wygasa po 7 dniach.</p>`,
     }),
   });
   if (!response.ok) throw new Error(`Resend failed: ${response.status}`);
@@ -139,37 +139,22 @@ const moderationParams = async (request: Request) => {
   };
 };
 
-const validModerationRequest = (id: string, token: string, action: string) => (
-  Boolean(id && token && ["approve", "reject"].includes(action))
-);
-
-const moderationConfirmation = async (request: Request) => {
-  const { id, token, action } = await moderationParams(request);
-  if (!validModerationRequest(id, token, action)) return html("<h1>Nieprawidłowy link</h1><p>Ten link moderacyjny jest niekompletny.</p>", 400);
-  const label = action === "approve" ? "Zatwierdź komentarz" : "Odrzuć komentarz";
-  const title = action === "approve" ? "Zatwierdzić ten ślad?" : "Odrzucić ten ślad?";
-  const intro = action === "approve"
-    ? "Kliknij przycisk poniżej, żeby pokazać ten komentarz na stronie."
-    : "Kliknij przycisk poniżej, żeby ukryć ten komentarz i nie pokazywać go na stronie.";
-  return html(`<h1>${title}</h1><p>${intro}</p><form method="post" class="actions"><input type="hidden" name="id" value="${escapeHtml(id)}"><input type="hidden" name="token" value="${escapeHtml(token)}"><input type="hidden" name="action" value="${escapeHtml(action)}"><button class="${action === "reject" ? "reject" : ""}" type="submit">${label}</button></form>`);
-};
-
 const moderateTrace = async (request: Request) => {
   const { id, token, action } = await moderationParams(request);
-  if (!id || !token || !["approve", "reject"].includes(action || "")) return html("<h1>Nieprawidłowy link</h1><p>Ten link moderacyjny jest niekompletny.</p>", 400);
+  if (!id || !token || !["approve", "reject"].includes(action || "")) return text("Nieprawidlowy link moderacyjny.", 400);
   const tokenHash = await hashToken(token);
   const response = await fetch(`${supabaseUrl()}/rest/v1/traces?id=eq.${encodeURIComponent(id)}&moderation_token_hash=eq.${encodeURIComponent(tokenHash)}&select=id,status,moderation_token_expires_at`, { headers: serviceHeaders() });
   const [trace] = await response.json();
-  if (!trace) return html("<h1>Link wygasł</h1><p>Nie znaleziono komentarza albo link został już wykorzystany.</p>", 404);
-  if (new Date(trace.moderation_token_expires_at).getTime() < Date.now()) return html("<h1>Link wygasł</h1><p>Linki moderacyjne działają przez 7 dni.</p>", 410);
+  if (!trace) return text("Link wygasl albo zostal juz wykorzystany.", 404);
+  if (new Date(trace.moderation_token_expires_at).getTime() < Date.now()) return text("Link wygasl. Linki moderacyjne dzialaja przez 7 dni.", 410);
   const status = action === "approve" ? "approved" : "rejected";
   const updateResponse = await fetch(`${supabaseUrl()}/rest/v1/traces?id=eq.${encodeURIComponent(id)}`, {
     method: "PATCH",
     headers: { ...serviceHeaders(), Prefer: "return=minimal" },
     body: JSON.stringify({ status, moderation_token_hash: null, moderation_token_expires_at: null }),
   });
-  if (!updateResponse.ok) return html("<h1>Nie udało się zapisać decyzji</h1><p>Spróbuj ponownie.</p>", 502);
-  return html(`<h1>${status === "approved" ? "Komentarz zatwierdzony" : "Komentarz odrzucony"}</h1><p>Możesz zamknąć tę kartę.</p>`);
+  if (!updateResponse.ok) return text("Nie udalo sie zapisac decyzji. Sprobuj ponownie.", 502);
+  return text(status === "approved" ? "Komentarz zatwierdzony. Mozesz zamknac te karte." : "Komentarz odrzucony. Mozesz zamknac te karte.");
 };
 
 Deno.serve(async (request) => {
@@ -177,7 +162,7 @@ Deno.serve(async (request) => {
   try {
     if (request.method === "POST" && request.headers.get("content-type")?.includes("application/json")) return await submitTrace(request);
     if (request.method === "POST") return await moderateTrace(request);
-    if (request.method === "GET") return await moderationConfirmation(request);
+    if (request.method === "GET") return await moderateTrace(request);
     return json({ error: "Method not allowed" }, 405);
   } catch {
     return json({ error: "Unexpected server error" }, 500);
