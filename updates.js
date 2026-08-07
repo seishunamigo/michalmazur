@@ -2,13 +2,15 @@
 window.identitySiteUpdates = {
   updates: [
     {
-      id: "educational-spaces-2026", date: "2026-08-07", newUntil: "2026-10-07", url: "achievements.html",
+      id: "educational-spaces-2026", date: "2026-08-07", newUntil: "2026-10-07",
+      url: { en: "achievements.html#educational-spaces-2026-en", pl: "achievements.html#educational-spaces-2026-pl", ja: "achievements.html#invitations-ja" },
       category: { en: "Public record", pl: "Dorobek", ja: "活動記録" },
       title: { en: "Invited to present at Educational Spaces", pl: "Zaproszone wystąpienie na Educational Spaces", ja: "Educational Spacesで招待発表" },
       summary: { en: "At Hokkaido University, I presented how classroom design can turn contact across difference into conscious intercultural learning at APU.", pl: "Na Hokkaido University mówiłem o tym, jak projektowanie zajęć może zamieniać kontakt ponad różnicami w świadome uczenie międzykulturowe na APU.", ja: "北海道大学で、授業設計を通して異なる背景を持つ人々の接触を、APUでの意識的な異文化学習へつなげる発表を行いました。" }
     },
     {
-      id: "apu-prefd-spring-2026", date: "2026-08-07", newUntil: "2026-10-07", url: "workshops.html",
+      id: "apu-prefd-spring-2026", date: "2026-08-07", newUntil: "2026-10-07",
+      url: { en: "workshops.html#apu-prefd-spring-2026-en", pl: "workshops.html#apu-prefd-spring-2026-pl", ja: "workshops.html#apu-prefd-spring-2026-ja" },
       category: { en: "Teaching", pl: "Dydaktyka", ja: "教育" },
       title: { en: "Spring 2026 Pre-FD cohort completed", pl: "Wiosenna grupa Pre-FD 2026 ukończyła serię", ja: "2026年春のPre-FDシリーズが修了" },
       summary: { en: "At APU, participants completed the Foundations of Teaching & Learning series, leaving with certificates and classroom designs they had tested and revised.", pl: "Na APU uczestnicy ukończyli serię Foundations of Teaching & Learning, otrzymując certyfikaty oraz przetestowane i poprawione projekty zajęć.", ja: "APUの参加者はFoundations of Teaching & Learningシリーズを修了し、修了証と、試行・改善した授業設計を持ち帰りました。" }
