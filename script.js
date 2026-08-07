@@ -2600,6 +2600,102 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
   updateChapter();
 });
 
+/* Site updates · one data source for the homepage and the complete archive */
+(() => {
+  const latestModules = [...document.querySelectorAll("[data-updates-module]")];
+  const archive = document.querySelector("[data-updates-archive]");
+  if (latestModules.length === 0 && !archive) return;
+
+  const copy = {
+    en: { latestEyebrow: "Recently added", latestTitle: "New paths through the portfolio", viewAll: "View all updates", archiveEyebrow: "Site updates", archiveTitle: "What is new on mazur.jp", archiveDeck: "A chronological record of new teaching materials, research paths, writing, and public work. Every entry leads to the material in its permanent place.", backHome: "Return to the homepage", empty: "No updates have been published yet.", error: "The updates could not be loaded.", newLabel: "New", open: "Open this addition" },
+    pl: { latestEyebrow: "Ostatnio dodane", latestTitle: "Nowe ścieżki przez portfolio", viewAll: "Zobacz wszystkie aktualizacje", archiveEyebrow: "Aktualizacje strony", archiveTitle: "Co nowego na mazur.jp", archiveDeck: "Chronologiczny zapis nowych materiałów dydaktycznych, badań, tekstów i pracy publicznej. Każdy wpis prowadzi do materiału w jego stałym miejscu.", backHome: "Wróć na stronę główną", empty: "Nie opublikowano jeszcze żadnych aktualizacji.", error: "Nie udało się wczytać aktualizacji.", newLabel: "Nowe", open: "Otwórz materiał" },
+    ja: { latestEyebrow: "最近追加したもの", latestTitle: "ポートフォリオへの新しい入口", viewAll: "すべての更新を見る", archiveEyebrow: "サイト更新", archiveTitle: "mazur.jpの新着情報", archiveDeck: "教育資料、研究、執筆、パブリックな活動の新しい追加を時系列で紹介します。各項目は、常設の掲載場所へつながります。", backHome: "トップページへ戻る", empty: "まだ更新はありません。", error: "更新を読み込めませんでした。", newLabel: "新着", open: "追加内容を見る" },
+  };
+  const locale = { en: "en-GB", pl: "pl-PL", ja: "ja-JP" };
+  const language = () => document.documentElement.lang in copy ? document.documentElement.lang : "en";
+  const localText = (value, lang) => value?.[lang] || value?.en || "";
+  const parseDate = (value) => new Date(`${value}T00:00:00`);
+  const isNew = (item) => item.newUntil && parseDate(item.newUntil).getTime() >= Date.now();
+  let updates = [];
+  let loadFailed = false;
+
+  const makeEntry = (item, lang) => {
+    const article = document.createElement("article");
+    article.className = "update-entry";
+    const link = document.createElement("a");
+    link.href = typeof item.url === "string" ? item.url : localText(item.url, lang);
+    const meta = document.createElement("div");
+    meta.className = "update-entry-meta";
+    const time = document.createElement("time");
+    time.dateTime = item.date;
+    time.textContent = new Intl.DateTimeFormat(locale[lang], { year: "numeric", month: "long", day: "numeric" }).format(parseDate(item.date));
+    const category = document.createElement("span");
+    category.textContent = localText(item.category, lang);
+    meta.append(time, category);
+    if (isNew(item)) {
+      const badge = document.createElement("b");
+      badge.textContent = copy[lang].newLabel;
+      meta.append(badge);
+    }
+    const title = document.createElement("h3");
+    title.textContent = localText(item.title, lang);
+    const summary = document.createElement("p");
+    summary.textContent = localText(item.summary, lang);
+    const open = document.createElement("span");
+    open.className = "update-entry-open";
+    open.textContent = `${copy[lang].open} →`;
+    link.append(meta, title, summary, open);
+    article.append(link);
+    return article;
+  };
+
+  const render = () => {
+    const lang = language();
+    document.querySelectorAll("[data-update-label]").forEach((node) => {
+      const value = copy[lang][node.dataset.updateLabel];
+      if (value) node.textContent = value;
+    });
+    latestModules.forEach((module) => {
+      const list = module.querySelector("[data-updates-list]");
+      const limit = Math.max(1, Number(list?.dataset.updatesLimit) || 3);
+      list?.replaceChildren(...updates.slice(0, limit).map((item) => makeEntry(item, lang)));
+      module.hidden = updates.length === 0;
+    });
+    if (!archive) return;
+    archive.replaceChildren();
+    if (loadFailed || updates.length === 0) {
+      const status = document.createElement("p");
+      status.className = "updates-status";
+      status.textContent = loadFailed ? copy[lang].error : copy[lang].empty;
+      archive.append(status);
+      return;
+    }
+    const years = updates.reduce((groups, item) => {
+      const year = item.date.slice(0, 4);
+      if (!groups.has(year)) groups.set(year, []);
+      groups.get(year).push(item);
+      return groups;
+    }, new Map());
+    years.forEach((items, year) => {
+      const section = document.createElement("section");
+      section.className = "updates-year";
+      const heading = document.createElement("h2");
+      heading.textContent = year;
+      const list = document.createElement("div");
+      list.className = "updates-archive-list";
+      list.append(...items.map((item) => makeEntry(item, lang)));
+      section.append(heading, list);
+      archive.append(section);
+    });
+  };
+
+  const data = window.identitySiteUpdates;
+  if (Array.isArray(data?.updates)) updates = [...data.updates].sort((left, right) => right.date.localeCompare(left.date));
+  else loadFailed = true;
+  document.addEventListener("identity:languagechange", render);
+  render();
+})();
+
 syncHeader();
 syncHeaderHeight();
 setLanguage(localStorage.getItem("identity-language") || "en");

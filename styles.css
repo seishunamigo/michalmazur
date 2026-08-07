@@ -14,6 +14,38 @@
   --site-header-height: 74px;
 }
 
+/* Site updates */
+.latest-updates { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; padding: 38px 0 44px; border-bottom: 1px solid var(--line); }
+.latest-updates-heading { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: 24px; }
+.latest-updates-heading .eyebrow { margin-bottom: 8px; }
+.latest-updates-heading h2 { margin: 0; color: var(--teal-deep); font-family: "Source Serif 4", Georgia, serif; font-size: clamp(1.7rem, 3vw, 2.6rem); font-weight: 650; line-height: 1; }
+.latest-updates-heading > .text-link { flex: 0 0 auto; margin-bottom: 4px; }
+.latest-updates-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.update-entry { min-width: 0; }
+.latest-updates-list .update-entry + .update-entry { border-left: 1px solid var(--line); }
+.update-entry > a { display: flex; height: 100%; flex-direction: column; padding: 20px; color: var(--ink); text-decoration: none; transition: background 160ms ease; }
+.update-entry > a:hover, .update-entry > a:focus-visible { background: var(--surface); }
+.update-entry-meta { display: flex; flex-wrap: wrap; gap: 7px 10px; align-items: center; margin-bottom: 17px; color: var(--muted); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.055em; text-transform: uppercase; }
+.update-entry-meta time::after { margin-left: 10px; color: var(--gold); content: "·"; }
+.update-entry-meta b { padding: 3px 6px; border: 1px solid rgba(163, 61, 53, 0.42); color: var(--red); font-size: 0.62rem; letter-spacing: 0.08em; }
+.update-entry h3 { margin: 0 0 10px; color: var(--teal-deep); font-family: "Source Serif 4", Georgia, serif; font-size: 1.32rem; line-height: 1.08; }
+.update-entry p { margin: 0; color: var(--muted); font-size: 0.88rem; line-height: 1.48; }
+.update-entry-open { display: inline-flex; align-self: flex-start; margin-top: auto; padding-top: 18px; color: var(--teal-deep); font-size: 0.75rem; font-weight: 850; }
+.updates-page { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; padding: calc(var(--site-header-height) + 74px) 0 96px; }
+.updates-page-hero { max-width: 850px; padding-bottom: 58px; }
+.updates-page-hero h1 { margin: 0; color: var(--teal-deep); font-family: "Source Serif 4", Georgia, serif; font-size: clamp(3.2rem, 7vw, 6.5rem); font-weight: 650; line-height: 0.92; }
+.updates-page-hero > p:not(.eyebrow) { max-width: 700px; margin: 24px 0; color: var(--muted); font-size: 1.1rem; }
+.updates-archive { border-top: 1px solid var(--line); }
+.updates-year { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 30px; padding: 44px 0; border-bottom: 1px solid var(--line); }
+.updates-year > h2 { margin: 0; color: var(--red); font-family: "Source Serif 4", Georgia, serif; font-size: 2.5rem; font-weight: 650; line-height: 1; }
+.updates-archive-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.updates-archive-list .update-entry { border-bottom: 1px solid var(--line); }
+.updates-archive-list .update-entry:nth-child(2n) { border-left: 1px solid var(--line); }
+.updates-status { margin: 0; padding: 34px 0; color: var(--muted); }
+.achievement-kaizen-cover { width: calc(100% + 48px); max-width: none; aspect-ratio: 16 / 9; margin: -24px -24px 20px; object-fit: cover; object-position: center; border-bottom: 1px solid var(--line); }
+@media (max-width: 780px) { .latest-updates-list, .updates-archive-list { grid-template-columns: 1fr; } .latest-updates-list .update-entry + .update-entry { border-top: 1px solid var(--line); border-left: 0; } .updates-archive-list .update-entry:nth-child(2n) { border-left: 0; } .updates-year { grid-template-columns: 1fr; gap: 20px; } }
+@media (max-width: 520px) { .latest-updates { padding: 30px 0 34px; } .latest-updates-heading { display: grid; align-items: start; gap: 14px; } .latest-updates-heading > .text-link { margin: 0; } .update-entry > a { padding: 18px 0; } .updates-page { padding-top: calc(var(--site-header-height) + 52px); } .updates-page-hero h1 { font-size: clamp(2.8rem, 14vw, 4rem); } }
+
 * {
   box-sizing: border-box;
 }
