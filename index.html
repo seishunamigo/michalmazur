@@ -6,7 +6,7 @@
     <title>Michal Maciej Mazur | Faculty Development and Intercultural Learning</title>
     <meta
       name="description"
-      content="Michal Maciej Mazur is an Assistant Professor at Ritsumeikan Asia Pacific University, an intercultural communication educator, faculty developer, and writer on Japan, games, and media culture."
+      content="Michal Maciej Mazur (Michał Mazur) is an Assistant Professor at Ritsumeikan Asia Pacific University, an intercultural communication educator, faculty developer, and writer on Japan, games, and media culture."
     >
     <meta name="author" content="Michal Maciej Mazur">
     <meta name="robots" content="index,follow">
@@ -20,33 +20,65 @@
     <meta name="twitter:description" content="Assistant Professor, intercultural learning researcher, and Japan-based public writer.">
     <meta name="twitter:image" content="assets/identity-hero.png">
     <link rel="canonical" href="https://mazur.jp/">
+    <link rel="alternate" hreflang="en" href="https://mazur.jp/">
+    <link rel="alternate" hreflang="pl" href="https://mazur.jp/?lang=pl">
+    <link rel="alternate" hreflang="ja" href="https://mazur.jp/?lang=ja">
+    <link rel="alternate" hreflang="x-default" href="https://mazur.jp/">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=116">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Michal Maciej Mazur",
-        "alternateName": "Mazzi",
-        "jobTitle": "Assistant Professor",
-        "description": "Assistant Professor at Ritsumeikan Asia Pacific University, intercultural communication educator, faculty developer, and writer on Japan, games, and media culture.",
-        "affiliation": {
-          "@type": "CollegeOrUniversity",
-          "name": "Ritsumeikan Asia Pacific University"
-        },
-        "knowsAbout": [
-          "Intercultural communication",
-          "Global learning",
-          "Faculty development",
-          "English-medium instruction",
-          "Japanese media culture",
-          "Public communication"
-        ],
-        "sameAs": [
-          "https://researcher.apu.ac.jp/apuhp/KgApp?Language=2&resId=S001740",
-          "https://researchmap.jp/mazzi",
-          "https://scholar.google.com/citations?user=whmY4pYAAAAJ",
-          "https://jp.linkedin.com/in/michalmmazur"
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://mazur.jp/#person",
+            "name": "Michal Maciej Mazur",
+            "alternateName": [
+              "Michał Maciej Mazur",
+              "Michał Mazur",
+              "Michal Mazur",
+              "Mazzi"
+            ],
+            "url": "https://mazur.jp/",
+            "image": "https://mazur.jp/assets/identity-hero.png",
+            "jobTitle": "Assistant Professor",
+            "description": "Assistant Professor at Ritsumeikan Asia Pacific University, intercultural communication educator, faculty developer, and writer on Japan, games, and media culture.",
+            "affiliation": {
+              "@type": "CollegeOrUniversity",
+              "name": "Ritsumeikan Asia Pacific University"
+            },
+            "knowsAbout": [
+              "Intercultural communication",
+              "Global learning",
+              "Faculty development",
+              "English-medium instruction",
+              "Japanese media culture",
+              "Public communication"
+            ],
+            "sameAs": [
+              "https://researcher.apu.ac.jp/apuhp/KgApp?Language=2&resId=S001740",
+              "https://researchmap.jp/mazzi",
+              "https://scholar.google.com/citations?user=whmY4pYAAAAJ",
+              "https://jp.linkedin.com/in/michalmmazur"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://mazur.jp/#website",
+            "url": "https://mazur.jp/",
+            "name": "Michal Maciej Mazur",
+            "description": "Faculty development, intercultural learning, research, and writing by Michal Maciej Mazur.",
+            "inLanguage": ["en", "pl", "ja"],
+            "about": { "@id": "https://mazur.jp/#person" }
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://mazur.jp/#profile",
+            "url": "https://mazur.jp/",
+            "mainEntity": { "@id": "https://mazur.jp/#person" },
+            "isPartOf": { "@id": "https://mazur.jp/#website" }
+          }
         ]
       }
     </script>
@@ -615,6 +647,6 @@
     </footer>
 
     <script src="updates.js?v=6"></script>
-  <script src="script.js?v=113"></script>
+  <script src="script.js?v=114"></script>
   </body>
 </html>

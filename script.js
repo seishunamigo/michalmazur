@@ -6,6 +6,37 @@ const languagePanels = document.querySelectorAll("[data-lang-panel]");
 const personNameNodes = document.querySelectorAll("[data-person-name]");
 const personHeadlineNodes = document.querySelectorAll("[data-person-name-headline]");
 const personHomeLinks = document.querySelectorAll("[data-person-home]");
+const supportedLanguages = new Set(["en", "pl", "ja"]);
+
+const languageFromUrl = () => {
+  const requested = new URLSearchParams(window.location.search).get("lang");
+  return supportedLanguages.has(requested) ? requested : null;
+};
+
+const canonicalUrlForLanguage = (lang) => {
+  const url = new URL(window.location.href);
+  url.hash = "";
+  url.search = "";
+  if (lang !== "en") url.searchParams.set("lang", lang);
+  return url.href;
+};
+
+const syncLanguageMetadata = (lang, updateAddress = false) => {
+  if (updateAddress) {
+    const nextUrl = new URL(window.location.href);
+    if (lang === "en") {
+      nextUrl.searchParams.delete("lang");
+    } else {
+      nextUrl.searchParams.set("lang", lang);
+    }
+    window.history.replaceState({}, "", nextUrl);
+  }
+
+  const canonicalLanguage = languageFromUrl() || "en";
+  const canonicalUrl = canonicalUrlForLanguage(canonicalLanguage);
+  document.querySelector('link[rel="canonical"]')?.setAttribute("href", canonicalUrl);
+  document.querySelector('meta[property="og:url"]')?.setAttribute("content", canonicalUrl);
+};
 
 // Keep visitors inside the portfolio while sending genuinely external sources
 // to a separate browser tab. The explicit target is also applied to any link
@@ -1170,7 +1201,7 @@ const syncHeaderHeight = () => {
   document.documentElement.style.setProperty("--site-header-height", `${height}px`);
 };
 
-const setLanguage = (lang) => {
+const setLanguage = (lang, { updateAddress = false } = {}) => {
   const dictionary = translations[lang] || translations.en;
   const personName = personNames[lang] || personNames.en;
   document.documentElement.lang = lang;
@@ -1202,6 +1233,7 @@ const setLanguage = (lang) => {
   personHomeLinks.forEach((link) => {
     link.setAttribute("aria-label", `${personName} home`);
   });
+  syncLanguageMetadata(lang, updateAddress);
   updateJapanDayCounter();
   document.dispatchEvent(new CustomEvent("identity:languagechange", { detail: { lang } }));
   window.requestAnimationFrame(syncHeaderHeight);
@@ -1209,7 +1241,7 @@ const setLanguage = (lang) => {
 };
 
 languageButtons.forEach((button) => {
-  button.addEventListener("click", () => setLanguage(button.dataset.lang));
+  button.addEventListener("click", () => setLanguage(button.dataset.lang, { updateAddress: true }));
 });
 
 // The compact header becomes two rows on a phone. Native anchor scrolling does
@@ -2698,7 +2730,7 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
 
 syncHeader();
 syncHeaderHeight();
-setLanguage(localStorage.getItem("identity-language") || "en");
+setLanguage(languageFromUrl() || localStorage.getItem("identity-language") || "en");
 window.addEventListener("scroll", syncHeader, { passive: true });
 window.addEventListener("resize", syncHeaderHeight, { passive: true });
 window.addEventListener("load", syncHeaderHeight, { once: true });
