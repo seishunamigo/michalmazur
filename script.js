@@ -13,15 +13,10 @@ const languageFromUrl = () => {
   return supportedLanguages.has(requested) ? requested : null;
 };
 
-const canonicalUrlForLanguage = (lang) => {
-  const url = new URL(window.location.href);
-  url.hash = "";
-  url.search = "";
-  if (lang !== "en") url.searchParams.set("lang", lang);
-  return url.href;
-};
-
-const syncLanguageMetadata = (lang, updateAddress = false) => {
+// The language switcher changes the visitor-facing view, but all language
+// views are intentionally one HTML document. Keep one canonical URL per page
+// instead of presenting query-string views as separate indexable pages.
+const syncLanguageMetadata = (updateAddress = false) => {
   if (updateAddress) {
     const nextUrl = new URL(window.location.href);
     if (lang === "en") {
@@ -32,10 +27,6 @@ const syncLanguageMetadata = (lang, updateAddress = false) => {
     window.history.replaceState({}, "", nextUrl);
   }
 
-  const canonicalLanguage = languageFromUrl() || "en";
-  const canonicalUrl = canonicalUrlForLanguage(canonicalLanguage);
-  document.querySelector('link[rel="canonical"]')?.setAttribute("href", canonicalUrl);
-  document.querySelector('meta[property="og:url"]')?.setAttribute("content", canonicalUrl);
 };
 
 // Keep visitors inside the portfolio while sending genuinely external sources
@@ -1233,7 +1224,7 @@ const setLanguage = (lang, { updateAddress = false } = {}) => {
   personHomeLinks.forEach((link) => {
     link.setAttribute("aria-label", `${personName} home`);
   });
-  syncLanguageMetadata(lang, updateAddress);
+  syncLanguageMetadata(updateAddress);
   updateJapanDayCounter();
   document.dispatchEvent(new CustomEvent("identity:languagechange", { detail: { lang } }));
   window.requestAnimationFrame(syncHeaderHeight);
@@ -2758,7 +2749,7 @@ document.fonts?.ready?.then(syncHeaderHeight);
     "follow-the-thread": { glyph: "糸", icon: "bridge", shape: "arch", tone: "violet", href: "achievements.html#top" },
     "evidence-hunter": { glyph: "証", icon: "evidence", shape: "oval", tone: "blue", href: "research.html#research-projects" },
     "field-correspondent": { glyph: "記", icon: "press", shape: "round", tone: "orange", href: "writing.html#writing-psx" },
-    "across-cultures": { glyph: "間", icon: "bridge", shape: "arch", tone: "green", href: "index.html#top" },
+    "across-cultures": { glyph: "間", icon: "bridge", shape: "arch", tone: "green", href: "/#top" },
   };
   const stampArtwork = {
     classroom: `<svg viewBox="0 0 100 100" role="presentation"><text class="stamp-title" x="50" y="14">授業設計</text><path d="M19 29h50v33H19zM24 34h40M29 42l7 6 10-13M50 43h11m-11 7h8M27 68h34M34 62v6m20-6v6"/><circle cx="76" cy="49" r="7"/><path d="M68 72c1-9 4-15 8-15s8 6 9 15M72 49c0-2 2-4 4-4m11-21 2 4 4 2-4 2-2 4-2-4-4-2 4-2zM14 76c7 4 16 6 25 6"/></svg>`,
