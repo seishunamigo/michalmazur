@@ -418,6 +418,22 @@ const translations = {
     designStudioOutputEyebrow: "Working activity",
     designStudioOutputNote: "A short rehearsal, peer response, or exit note turns this from an idea into evidence you can use.",
     designStudioCopy: "Copy this activity outline",
+    designStudioRemix: "Surprise me",
+    interactiveLabEyebrow: "Interactive portfolio",
+    interactiveLabTitle: "Do not just read about the work. Try the thinking behind it.",
+    interactiveLabDeck: "Three short, replayable experiences turn language learning, teaching design, and field reporting into choices you can make yourself.",
+    interactiveLabComixMeta: "Language learning · 4–6 min",
+    interactiveLabComixTitle: "Co-MIX vocabulary lab",
+    interactiveLabComixBody: "Move from noticing a mixed-language clue to recalling and reusing a new word.",
+    interactiveLabPlay: "Play the experience →",
+    interactiveLabStudioMeta: "Teaching design · 3–5 min",
+    interactiveLabStudioTitle: "Teaching Design Studio",
+    interactiveLabStudioBody: "Turn a real classroom pressure point into a small, workable activity.",
+    interactiveLabBuild: "Build an activity →",
+    interactiveLabGameMeta: "Branching story · 5–8 min",
+    interactiveLabGameTitle: "Tokyo Game Show: Press Pass",
+    interactiveLabGameBody: "Choose a reporting route, manage your energy, gather details, and write a possible opening line.",
+    interactiveLabEnter: "Enter the gamebook →",
   },
   pl: {
     navWork: "Praktyka",
@@ -786,6 +802,22 @@ const translations = {
     designStudioOutputEyebrow: "Robocza aktywność",
     designStudioOutputNote: "Krótka próba, informacja zwrotna od innych albo bilet wyjścia zmieniają pomysł w dowód, z którego można skorzystać.",
     designStudioCopy: "Skopiuj konspekt aktywności",
+    designStudioRemix: "Zaskocz mnie",
+    interactiveLabEyebrow: "Interaktywne portfolio",
+    interactiveLabTitle: "Nie tylko czytaj o tej pracy. Wypróbuj sposób myślenia, który za nią stoi.",
+    interactiveLabDeck: "Trzy krótkie doświadczenia do wielokrotnego przechodzenia zamieniają naukę języka, projektowanie zajęć i reportaż w decyzje, które podejmujesz samodzielnie.",
+    interactiveLabComixMeta: "Nauka języka · 4–6 min",
+    interactiveLabComixTitle: "Laboratorium słownictwa Co-MIX",
+    interactiveLabComixBody: "Przejdź od zauważenia wielojęzycznej wskazówki do przypomnienia i ponownego użycia nowego słowa.",
+    interactiveLabPlay: "Wypróbuj doświadczenie →",
+    interactiveLabStudioMeta: "Projektowanie zajęć · 3–5 min",
+    interactiveLabStudioTitle: "Studio projektowania zajęć",
+    interactiveLabStudioBody: "Zamień realny punkt zapalny z sali w małą, możliwą do przeprowadzenia aktywność.",
+    interactiveLabBuild: "Zbuduj aktywność →",
+    interactiveLabGameMeta: "Opowieść z wyborami · 5–8 min",
+    interactiveLabGameTitle: "Tokyo Game Show: Press Pass",
+    interactiveLabGameBody: "Wybierz trasę reportażową, zarządzaj energią, zbieraj szczegóły i napisz możliwy lead.",
+    interactiveLabEnter: "Wejdź do gamebooka →",
   },
 };
 
@@ -1104,6 +1136,22 @@ translations.ja = {
   designStudioOutputEyebrow: "活動のたたき台",
   designStudioOutputNote: "短いリハーサル、仲間からの応答、または退出時のメモが、アイデアを使える根拠へ変えます。",
   designStudioCopy: "この活動案をコピーする",
+  designStudioRemix: "おまかせで組み合わせる",
+  interactiveLabEyebrow: "インタラクティブ・ポートフォリオ",
+  interactiveLabTitle: "仕事について読むだけでなく、その背景にある考え方を試してみてください。",
+  interactiveLabDeck: "言語学習、授業設計、現場取材を、自分で選択できる3つの短い体験にしました。何度でも別のルートを試せます。",
+  interactiveLabComixMeta: "言語学習・4〜6分",
+  interactiveLabComixTitle: "Co-MIX語彙ラボ",
+  interactiveLabComixBody: "混合言語の手がかりに気づき、新しい語を思い出し、別の文脈で使うところまで進みます。",
+  interactiveLabPlay: "体験を始める →",
+  interactiveLabStudioMeta: "授業設計・3〜5分",
+  interactiveLabStudioTitle: "授業設計スタジオ",
+  interactiveLabStudioBody: "教室の具体的な課題を、小さく実行可能な活動へ変えます。",
+  interactiveLabBuild: "活動を設計する →",
+  interactiveLabGameMeta: "分岐型ストーリー・5〜8分",
+  interactiveLabGameTitle: "東京ゲームショウ：プレスパス",
+  interactiveLabGameBody: "取材ルートを選び、体力を管理し、細部を集めて、記事の書き出しを作ります。",
+  interactiveLabEnter: "ゲームブックへ →",
 };
 
 if (year) {
@@ -1877,6 +1925,7 @@ const teachingDesignStudioCopy = {
     duration: "15-minute activity",
     copySuccess: "Activity outline copied. Adapt it to your own context.",
     copyFallback: "Copying is not available in this browser. Select the outline and copy it manually.",
+    remixStatus: "A fresh combination is ready. Keep it, or change any choice.",
     levers: {
       purpose: { label: "Purpose", choices: ["Notice a pattern", "Compare two interpretations", "Make a justified choice"] },
       task: { label: "Task", choices: ["Annotate a short example", "Sort two possible responses", "Draft a two-sentence explanation"] },
@@ -1917,6 +1966,7 @@ const teachingDesignStudioCopy = {
     duration: "Aktywność na 15 minut",
     copySuccess: "Konspekt aktywności został skopiowany. Dopasuj go do własnego kontekstu.",
     copyFallback: "Ta przeglądarka nie pozwala na kopiowanie. Zaznacz konspekt i skopiuj go ręcznie.",
+    remixStatus: "Nowe połączenie jest gotowe. Zachowaj je albo zmień dowolną decyzję.",
     levers: {
       purpose: { label: "Cel", choices: ["Zauważyć wzorzec", "Porównać dwie interpretacje", "Podjąć uzasadnioną decyzję"] },
       task: { label: "Zadanie", choices: ["Oznaczyć krótki przykład", "Uporządkować dwie możliwe odpowiedzi", "Napisać dwuzdaniowe wyjaśnienie"] },
@@ -1957,6 +2007,7 @@ const teachingDesignStudioCopy = {
     duration: "15分の活動",
     copySuccess: "活動案をコピーしました。自分の文脈に合わせて調整してください。",
     copyFallback: "このブラウザではコピーできません。活動案を選択して手動でコピーしてください。",
+    remixStatus: "新しい組み合わせを作りました。このまま使うことも、一つずつ変更することもできます。",
     levers: {
       purpose: { label: "目的", choices: ["一つのパターンに気づく", "二つの解釈を比べる", "根拠のある判断を行う"] },
       task: { label: "課題", choices: ["短い例に注釈を付ける", "二つの応答を整理する", "二文で説明を書く"] },
@@ -2001,6 +2052,7 @@ document.querySelectorAll("[data-design-studio]").forEach((studio) => {
   const outputSummary = studio.querySelector("[data-design-output-summary]");
   const outputParts = studio.querySelector("[data-design-output-parts]");
   const copyButton = studio.querySelector("[data-design-copy]");
+  const remixButton = studio.querySelector("[data-design-remix]");
   const copyStatus = studio.querySelector("[data-design-copy-status]");
   const requestedChallenge = new URLSearchParams(window.location.search).get("design");
   let selectedChallengeId = ["quiet", "lecture", "emi"].includes(requestedChallenge) ? requestedChallenge : "quiet";
@@ -2109,6 +2161,15 @@ document.querySelectorAll("[data-design-studio]").forEach((studio) => {
     }
   });
 
+  remixButton?.addEventListener("click", () => {
+    const challenges = currentData().challenges;
+    const nextChallenge = challenges[Math.floor(Math.random() * challenges.length)];
+    selectedChallengeId = nextChallenge.id;
+    selections = Object.values(currentData().levers).map((lever) => Math.floor(Math.random() * lever.choices.length));
+    render();
+    if (copyStatus) copyStatus.textContent = currentData().remixStatus;
+  });
+
   document.addEventListener("identity:languagechange", render);
   render();
 });
@@ -2124,7 +2185,15 @@ const writingGamebookCopy = {
     possibleLead: "A possible opening line",
     editorialMove: "What the route taught you",
     restart: "Start with a clean notebook",
-    replay: "Try a different route",
+    replay: "Try a different final choice",
+    back: "Undo last choice",
+    route: "Route so far",
+    discoveries: "Endings found",
+    scorecard: "Reporter scorecard",
+    copyLead: "Copy opening line",
+    copiedLead: "Opening line copied",
+    copyLeadFallback: "Select the line and copy it manually.",
+    scoreLabels: ["Observation", "Access", "Human detail", "Stamina"],
     notes: {
       crowd: "the moving crowd",
       queue: "the queue as ritual",
@@ -2269,6 +2338,13 @@ const writingGamebookCopy = {
       lesson: "Editorial move: allow the logistics of a day to remain in the frame; they are part of how a place is actually experienced.",
       lead: "By the time the Tokyo Game Show day ended, the most ambitious piece of navigation involved",
     },
+    exhaustionEnd: {
+      kind: "Your field note became an honest limit",
+      title: "The hall keeps moving. You do not.",
+      body: "The last reserve disappears somewhere between a queue, a glowing screen, and the next promised story. You sit down, drink water, and read the notebook you already have. It contains enough. The decisive reporting move is no longer chasing another scene; it is recognising the point at which attention has stopped being useful.",
+      lesson: "Editorial move: stamina is part of the method. A smaller, observed story is stronger than a larger one collected after attention has gone.",
+      lead: "Tokyo Game Show finally became legible when I stopped moving and reread",
+    },
   },
   pl: {
     scene: "Scena {step}",
@@ -2280,7 +2356,15 @@ const writingGamebookCopy = {
     possibleLead: "Możliwy lead tekstu",
     editorialMove: "Czego uczy ta trasa",
     restart: "Zacznij z czystym notatnikiem",
-    replay: "Spróbuj innej trasy",
+    replay: "Zmień ostatnią decyzję",
+    back: "Cofnij ostatni wybór",
+    route: "Dotychczasowa trasa",
+    discoveries: "Odkryte zakończenia",
+    scorecard: "Karta reportera",
+    copyLead: "Skopiuj lead",
+    copiedLead: "Lead został skopiowany",
+    copyLeadFallback: "Zaznacz lead i skopiuj go ręcznie.",
+    scoreLabels: ["Obserwacja", "Dostęp", "Ludzki szczegół", "Wytrzymałość"],
     notes: {
       crowd: "ruchomy tłum",
       queue: "kolejka jako rytuał",
@@ -2425,6 +2509,13 @@ const writingGamebookCopy = {
       lesson: "Ruch redakcyjny: nie wycinaj z kadru logistyki dnia; ona też jest częścią realnego doświadczenia miejsca.",
       lead: "Pod koniec dnia na Tokyo Game Show najbardziej ambitną czynnością nawigacyjną było",
     },
+    exhaustionEnd: {
+      kind: "Twoja notatka stała się uczciwą granicą",
+      title: "Hala wciąż się porusza. Ty już nie.",
+      body: "Ostatnia rezerwa znika gdzieś między kolejką, świecącym ekranem i obietnicą następnej historii. Siadasz, pijesz wodę i czytasz notatnik, który już masz. Jest w nim wystarczająco dużo. Najważniejszą decyzją reporterską nie jest pogoń za kolejną sceną, lecz rozpoznanie chwili, w której uwaga przestaje działać.",
+      lesson: "Ruch redakcyjny: wytrzymałość jest częścią metody. Mniejsza, dobrze zaobserwowana historia jest mocniejsza niż większa, zbierana bez uwagi.",
+      lead: "Tokyo Game Show stało się czytelne dopiero wtedy, gdy przestałem biec i ponownie przeczytałem",
+    },
   },
 };
 
@@ -2432,10 +2523,42 @@ document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
   const language = gamebook.dataset.gameLanguage === "pl" ? "pl" : "en";
   const copy = writingGamebookCopy[language];
   const stage = gamebook.querySelector("[data-writing-game-stage]");
+  const endingIds = ["detail", "crowdEnd", "inboxEnd", "redWireEnd", "trainEnd", "exhaustionEnd"];
+  const storageKey = `mazur-writing-gamebook-endings-${language}`;
   let currentId = "start";
   let step = 1;
   let energy = 4;
   let notes = [];
+  let visited = ["start"];
+  let history = [];
+  let discoveredEndings = new Set();
+
+  try {
+    const storedEndings = JSON.parse(window.localStorage.getItem(storageKey) || "[]");
+    discoveredEndings = new Set(storedEndings.filter((id) => endingIds.includes(id)));
+  } catch {
+    discoveredEndings = new Set();
+  }
+
+  const saveDiscoveries = () => {
+    try {
+      window.localStorage.setItem(storageKey, JSON.stringify([...discoveredEndings]));
+    } catch {
+      // The game remains fully playable when local storage is unavailable.
+    }
+  };
+
+  const snapshot = () => ({ currentId, step, energy, notes: [...notes], visited: [...visited] });
+
+  const restore = (state) => {
+    if (!state) return;
+    currentId = state.currentId;
+    step = state.step;
+    energy = state.energy;
+    notes = [...state.notes];
+    visited = [...state.visited];
+    render();
+  };
 
   const createStatus = () => {
     const status = document.createElement("div");
@@ -2446,8 +2569,38 @@ document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
     scene.textContent = copy.scene.replace("{step}", String(step));
     notebook.textContent = `${copy.notebook}: ${notes.length}`;
     fieldEnergy.textContent = `${copy.energy}: ${"●".repeat(energy)}${"○".repeat(4 - energy)}`;
-    status.append(scene, notebook, fieldEnergy);
+    const discoveries = document.createElement("span");
+    discoveries.textContent = `${copy.discoveries}: ${discoveredEndings.size}/${endingIds.length}`;
+    if (energy <= 1) fieldEnergy.classList.add("is-low");
+    status.append(scene, notebook, fieldEnergy, discoveries);
     return status;
+  };
+
+  const createRoute = (allowUndo = false) => {
+    const route = document.createElement("div");
+    const label = document.createElement("strong");
+    const trail = document.createElement("ol");
+    route.className = "writing-gamebook-route";
+    label.textContent = copy.route;
+    visited.forEach((id, index) => {
+      const item = document.createElement("li");
+      const title = copy[id]?.title || id;
+      item.textContent = String(index + 1).padStart(2, "0");
+      item.title = title;
+      item.setAttribute("aria-label", title);
+      if (index === visited.length - 1) item.classList.add("is-current");
+      trail.append(item);
+    });
+    route.append(label, trail);
+    if (allowUndo && history.length) {
+      const undo = document.createElement("button");
+      undo.type = "button";
+      undo.className = "writing-gamebook-undo";
+      undo.textContent = `↶ ${copy.back}`;
+      undo.addEventListener("click", () => restore(history.pop()));
+      route.append(undo);
+    }
+    return route;
   };
 
   const createNotebook = () => {
@@ -2481,7 +2634,37 @@ document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
     step = 1;
     energy = 4;
     notes = [];
+    visited = ["start"];
+    history = [];
     render();
+  };
+
+  const createScorecard = () => {
+    const humanNotes = ["student", "redWire", "player", "crowd"];
+    const accessNotes = ["missingInvite", "quietBooth", "student"];
+    const scores = [
+      Math.max(1, Math.min(4, notes.length)),
+      Math.max(1, Math.min(4, 1 + notes.filter((note) => accessNotes.includes(note)).length * 2)),
+      Math.max(1, Math.min(4, 1 + notes.filter((note) => humanNotes.includes(note)).length)),
+      Math.max(1, energy),
+    ];
+    const scorecard = document.createElement("section");
+    const heading = document.createElement("strong");
+    const grid = document.createElement("div");
+    scorecard.className = "writing-gamebook-scorecard";
+    heading.textContent = copy.scorecard;
+    grid.className = "writing-gamebook-scores";
+    scores.forEach((score, index) => {
+      const item = document.createElement("div");
+      const label = document.createElement("span");
+      const meter = document.createElement("i");
+      label.textContent = copy.scoreLabels[index];
+      meter.textContent = `${"■".repeat(score)}${"□".repeat(4 - score)}`;
+      item.append(label, meter);
+      grid.append(item);
+    });
+    scorecard.append(heading, grid);
+    return scorecard;
   };
 
   const render = () => {
@@ -2506,16 +2689,23 @@ document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
         detail.textContent = choice.detail;
         button.append(label, detail);
         button.addEventListener("click", () => {
-          currentId = choice.next;
+          history.push(snapshot());
           step += 1;
           energy = Math.max(0, Math.min(4, energy + (choice.energy || 0)));
           if (choice.note && !notes.includes(choice.note)) notes = [...notes, choice.note];
+          currentId = energy === 0 && copy[choice.next]?.choices ? "exhaustionEnd" : choice.next;
+          visited = [...visited, currentId];
           render();
         });
         choices.append(button);
       });
-      stage.append(createStatus(), heading, body, createNotebook(), choices);
+      stage.append(createStatus(), createRoute(true), heading, body, createNotebook(), choices);
       return;
+    }
+
+    if (endingIds.includes(currentId)) {
+      discoveredEndings.add(currentId);
+      saveDiscoveries();
     }
 
     const result = document.createElement("div");
@@ -2529,6 +2719,8 @@ document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
     const actions = document.createElement("div");
     const restartButton = document.createElement("button");
     const replayButton = document.createElement("button");
+    const copyLeadButton = document.createElement("button");
+    const copyStatus = document.createElement("span");
     result.className = "writing-gamebook-result";
     kind.textContent = scene.kind;
     heading.textContent = scene.title;
@@ -2547,10 +2739,23 @@ document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
     replayButton.type = "button";
     replayButton.className = "writing-gamebook-restart writing-gamebook-replay";
     replayButton.textContent = copy.replay;
+    copyLeadButton.type = "button";
+    copyLeadButton.className = "writing-gamebook-restart writing-gamebook-copy";
+    copyLeadButton.textContent = copy.copyLead;
+    copyStatus.className = "writing-gamebook-copy-status";
+    copyStatus.setAttribute("aria-live", "polite");
     restartButton.addEventListener("click", restart);
-    replayButton.addEventListener("click", restart);
-    actions.append(replayButton, restartButton);
-    result.append(createStatus(), kind, heading, body, createNotebook(), leadLabel, lead, lessonLabel, lesson, actions);
+    replayButton.addEventListener("click", () => restore(history.pop()));
+    copyLeadButton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(buildLead(scene));
+        copyStatus.textContent = copy.copiedLead;
+      } catch {
+        copyStatus.textContent = copy.copyLeadFallback;
+      }
+    });
+    actions.append(copyLeadButton, replayButton, restartButton);
+    result.append(createStatus(), createRoute(), kind, heading, body, createNotebook(), createScorecard(), leadLabel, lead, lessonLabel, lesson, actions, copyStatus);
     stage.append(result);
   };
 
@@ -2623,35 +2828,86 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
   updateChapter();
 });
 
-/* Site updates · one data source for the homepage and the complete archive */
+/* --------------------------------------------------------------------------
+   Site updates · one data source for the homepage and the complete archive
+   -------------------------------------------------------------------------- */
+
 (() => {
   const latestModules = [...document.querySelectorAll("[data-updates-module]")];
   const archive = document.querySelector("[data-updates-archive]");
   if (latestModules.length === 0 && !archive) return;
 
   const copy = {
-    en: { latestEyebrow: "Recently added", latestTitle: "New paths through the portfolio", viewAll: "View all updates", archiveEyebrow: "Site updates", archiveTitle: "What is new on mazur.jp", archiveDeck: "A chronological record of new teaching materials, research paths, writing, and public work. Every entry leads to the material in its permanent place.", backHome: "Return to the homepage", empty: "No updates have been published yet.", error: "The updates could not be loaded.", newLabel: "New", open: "Open this addition" },
-    pl: { latestEyebrow: "Ostatnio dodane", latestTitle: "Nowe ścieżki przez portfolio", viewAll: "Zobacz wszystkie aktualizacje", archiveEyebrow: "Aktualizacje strony", archiveTitle: "Co nowego na mazur.jp", archiveDeck: "Chronologiczny zapis nowych materiałów dydaktycznych, badań, tekstów i pracy publicznej. Każdy wpis prowadzi do materiału w jego stałym miejscu.", backHome: "Wróć na stronę główną", empty: "Nie opublikowano jeszcze żadnych aktualizacji.", error: "Nie udało się wczytać aktualizacji.", newLabel: "Nowe", open: "Otwórz materiał" },
-    ja: { latestEyebrow: "最近追加したもの", latestTitle: "ポートフォリオへの新しい入口", viewAll: "すべての更新を見る", archiveEyebrow: "サイト更新", archiveTitle: "mazur.jpの新着情報", archiveDeck: "教育資料、研究、執筆、パブリックな活動の新しい追加を時系列で紹介します。各項目は、常設の掲載場所へつながります。", backHome: "トップページへ戻る", empty: "まだ更新はありません。", error: "更新を読み込めませんでした。", newLabel: "新着", open: "追加内容を見る" },
+    en: {
+      latestEyebrow: "Recently added",
+      latestTitle: "New paths through the portfolio",
+      viewAll: "View all updates",
+      archiveEyebrow: "Site updates",
+      archiveTitle: "What is new on mazur.jp",
+      archiveDeck: "A chronological record of new teaching materials, research paths, writing, and public work. Every entry leads to the material in its permanent place.",
+      backHome: "Return to the homepage",
+      loading: "Loading updates…",
+      empty: "No updates have been published yet.",
+      error: "The updates could not be loaded.",
+      newLabel: "New",
+      open: "Open this addition",
+    },
+    pl: {
+      latestEyebrow: "Ostatnio dodane",
+      latestTitle: "Nowe ścieżki przez portfolio",
+      viewAll: "Zobacz wszystkie aktualizacje",
+      archiveEyebrow: "Aktualizacje strony",
+      archiveTitle: "Co nowego na mazur.jp",
+      archiveDeck: "Chronologiczny zapis nowych materiałów dydaktycznych, badań, tekstów i pracy publicznej. Każdy wpis prowadzi do materiału w jego stałym miejscu.",
+      backHome: "Wróć na stronę główną",
+      loading: "Wczytywanie aktualizacji…",
+      empty: "Nie opublikowano jeszcze żadnych aktualizacji.",
+      error: "Nie udało się wczytać aktualizacji.",
+      newLabel: "Nowe",
+      open: "Otwórz materiał",
+    },
+    ja: {
+      latestEyebrow: "最近追加したもの",
+      latestTitle: "ポートフォリオへの新しい入口",
+      viewAll: "すべての更新を見る",
+      archiveEyebrow: "サイト更新",
+      archiveTitle: "mazur.jpの新着情報",
+      archiveDeck: "教育資料、研究、執筆、パブリックな活動の新しい追加を時系列で紹介します。各項目は、常設の掲載場所へつながります。",
+      backHome: "トップページへ戻る",
+      loading: "更新を読み込んでいます…",
+      empty: "まだ更新はありません。",
+      error: "更新を読み込めませんでした。",
+      newLabel: "新着",
+      open: "追加内容を見る",
+    },
   };
+
   const locale = { en: "en-GB", pl: "pl-PL", ja: "ja-JP" };
+  let updates = [];
+  let loadFailed = false;
+
   const language = () => document.documentElement.lang in copy ? document.documentElement.lang : "en";
   const localText = (value, lang) => value?.[lang] || value?.en || "";
   const parseDate = (value) => new Date(`${value}T00:00:00`);
+  const formatDate = (value, lang) => new Intl.DateTimeFormat(locale[lang], {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }).format(parseDate(value));
   const isNew = (item) => item.newUntil && parseDate(item.newUntil).getTime() >= Date.now();
-  let updates = [];
-  let loadFailed = false;
 
   const makeEntry = (item, lang) => {
     const article = document.createElement("article");
     article.className = "update-entry";
+
     const link = document.createElement("a");
     link.href = typeof item.url === "string" ? item.url : localText(item.url, lang);
+
     const meta = document.createElement("div");
     meta.className = "update-entry-meta";
     const time = document.createElement("time");
     time.dateTime = item.date;
-    time.textContent = new Intl.DateTimeFormat(locale[lang], { year: "numeric", month: "long", day: "numeric" }).format(parseDate(item.date));
+    time.textContent = formatDate(item.date, lang);
     const category = document.createElement("span");
     category.textContent = localText(item.category, lang);
     meta.append(time, category);
@@ -2660,6 +2916,7 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
       badge.textContent = copy[lang].newLabel;
       meta.append(badge);
     }
+
     const title = document.createElement("h3");
     title.textContent = localText(item.title, lang);
     const summary = document.createElement("p");
@@ -2672,27 +2929,41 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
     return article;
   };
 
-  const render = () => {
-    const lang = language();
+  const renderLabels = (lang) => {
     document.querySelectorAll("[data-update-label]").forEach((node) => {
       const value = copy[lang][node.dataset.updateLabel];
       if (value) node.textContent = value;
     });
+  };
+
+  const render = () => {
+    const lang = language();
+    renderLabels(lang);
+
     latestModules.forEach((module) => {
       const list = module.querySelector("[data-updates-list]");
       const limit = Math.max(1, Number(list?.dataset.updatesLimit) || 3);
       list?.replaceChildren(...updates.slice(0, limit).map((item) => makeEntry(item, lang)));
       module.hidden = updates.length === 0;
     });
+
     if (!archive) return;
     archive.replaceChildren();
-    if (loadFailed || updates.length === 0) {
+    if (loadFailed) {
       const status = document.createElement("p");
       status.className = "updates-status";
-      status.textContent = loadFailed ? copy[lang].error : copy[lang].empty;
+      status.textContent = copy[lang].error;
       archive.append(status);
       return;
     }
+    if (updates.length === 0) {
+      const status = document.createElement("p");
+      status.className = "updates-status";
+      status.textContent = copy[lang].empty;
+      archive.append(status);
+      return;
+    }
+
     const years = updates.reduce((groups, item) => {
       const year = item.date.slice(0, 4);
       if (!groups.has(year)) groups.set(year, []);
@@ -2712,10 +2983,13 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
     });
   };
 
-  const data = window.identitySiteUpdates;
-  if (Array.isArray(data?.updates)) updates = [...data.updates].sort((left, right) => right.date.localeCompare(left.date));
-  else loadFailed = true;
   document.addEventListener("identity:languagechange", render);
+  const data = window.identitySiteUpdates;
+  if (Array.isArray(data?.updates)) {
+    updates = [...data.updates].sort((left, right) => right.date.localeCompare(left.date));
+  } else {
+    loadFailed = true;
+  }
   render();
 })();
 
