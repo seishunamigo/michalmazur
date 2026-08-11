@@ -16,7 +16,7 @@ const languageFromUrl = () => {
 // The language switcher changes the visitor-facing view, but all language
 // views are intentionally one HTML document. Keep one canonical URL per page
 // instead of presenting query-string views as separate indexable pages.
-const syncLanguageMetadata = (updateAddress = false) => {
+const syncLanguageMetadata = (lang, updateAddress = false) => {
   if (updateAddress) {
     const nextUrl = new URL(window.location.href);
     if (lang === "en") {
@@ -1224,7 +1224,7 @@ const setLanguage = (lang, { updateAddress = false } = {}) => {
   personHomeLinks.forEach((link) => {
     link.setAttribute("aria-label", `${personName} home`);
   });
-  syncLanguageMetadata(updateAddress);
+  syncLanguageMetadata(lang, updateAddress);
   updateJapanDayCounter();
   document.dispatchEvent(new CustomEvent("identity:languagechange", { detail: { lang } }));
   window.requestAnimationFrame(syncHeaderHeight);

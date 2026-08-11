@@ -1,0 +1,571 @@
+/* Readability pass — August 2026
+   A reversible presentation layer: no portfolio content is removed. */
+
+:root {
+  --reading-measure: 70ch;
+  --compact-header-height: 88px;
+}
+
+body {
+  line-height: 1.62;
+}
+
+main p,
+main li,
+main dd,
+main blockquote {
+  line-height: 1.65;
+}
+
+main h1,
+main h2,
+main h3 {
+  hyphens: none;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+  word-break: normal;
+}
+
+.hero-lede,
+.writing-hero p:not(.eyebrow),
+.research-hero p:not(.eyebrow),
+.case-hero p:not(.eyebrow),
+.service-hero p:not(.eyebrow),
+.section-heading > p:not(.eyebrow),
+.research-map-heading > p:last-child,
+.achievement-guide-intro > p:not(.eyebrow) {
+  max-width: var(--reading-measure);
+  line-height: 1.65;
+}
+
+/* Calmer page openings keep the editorial character without consuming
+   almost the entire first viewport. */
+.writing-hero,
+.research-hero,
+.case-hero,
+.service-hero {
+  padding-top: 42px;
+  padding-bottom: 52px;
+}
+
+.writing-hero h1 {
+  max-width: 19ch;
+  font-size: clamp(3.15rem, 5.7vw, 5.45rem);
+  line-height: 0.98;
+  hyphens: none;
+  overflow-wrap: break-word;
+}
+
+.research-hero h1 {
+  max-width: 17ch;
+  font-size: clamp(3.15rem, 5.45vw, 5.35rem);
+  line-height: 0.98;
+}
+
+.case-hero h1 {
+  max-width: 15ch;
+  font-size: clamp(3.15rem, 5.55vw, 5.45rem);
+  line-height: 0.98;
+}
+
+.service-hero h1 {
+  max-width: 18ch;
+  font-size: clamp(3.05rem, 5vw, 4.8rem);
+  line-height: 0.99;
+  hyphens: none;
+  overflow-wrap: break-word;
+}
+
+.updates-page-hero h1 {
+  max-width: 15ch;
+  font-size: clamp(3.05rem, 5.6vw, 5.25rem);
+  line-height: 0.98;
+}
+
+.achievements-hero {
+  width: min(1180px, calc(100% - 40px));
+}
+
+.achievements-page > .portfolio-chapter-nav {
+  margin-inline: 0;
+}
+
+.section {
+  padding-block: 78px;
+}
+
+.section-heading {
+  margin-bottom: 32px;
+}
+
+.section-heading h2,
+.bridge-copy h2,
+.profile-statement h2,
+.writing-publication-heading h2,
+.writing-profile-heading h2,
+.writing-method-heading h2,
+.writing-page-samples-heading h2,
+.writing-field-notes-heading h2,
+.writing-press-interviews-intro h2,
+.research-map-heading h2,
+.video-showcase-heading h2,
+.artifact-heading h2 {
+  max-width: 22ch;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+/* Give repeated cards a clearer reading order and a quieter surface. */
+.feature,
+.media-item,
+.teaching-scope-grid article,
+.course-record-card,
+.workshop-catalog-grid article,
+.writing-list article,
+.case-study,
+.contact-link {
+  border-color: rgba(24, 32, 32, 0.14);
+  box-shadow: 0 8px 24px rgba(24, 32, 32, 0.055);
+}
+
+.feature,
+.media-item,
+.teaching-scope-grid article,
+.course-record-card,
+.workshop-catalog-grid article,
+.writing-list article,
+.contact-link {
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.feature:hover,
+.media-item:hover,
+.media-item:focus-visible,
+.teaching-scope-grid article:hover,
+.course-record-card:hover,
+.workshop-catalog-grid article:hover,
+.writing-list article:hover,
+.contact-link:hover,
+.contact-link:focus-visible {
+  border-color: rgba(214, 166, 76, 0.82);
+  box-shadow: 0 15px 34px rgba(24, 32, 32, 0.09);
+  transform: translateY(-2px);
+}
+
+.media-grid,
+.teaching-scope-grid,
+.course-record-grid,
+.intro-grid {
+  gap: 22px;
+}
+
+.media-item {
+  padding: 26px;
+}
+
+.media-item span {
+  margin-bottom: 14px;
+  line-height: 1.45;
+}
+
+.media-item h3,
+.course-record-copy h3,
+.teaching-scope-grid h3 {
+  line-height: 1.12;
+}
+
+.media-item p,
+.course-record-copy > p,
+.teaching-scope-grid p,
+.feature p,
+.writing-list p {
+  max-width: 66ch;
+  line-height: 1.62;
+}
+
+.teaching-scope-grid h3 {
+  margin-top: 24px;
+}
+
+.teaching-scope-grid article {
+  min-height: 270px;
+}
+
+.course-record-copy {
+  padding: 26px;
+}
+
+.portfolio-chapter-links a {
+  border-radius: 2px;
+}
+
+.portfolio-chapter-links a:hover,
+.portfolio-chapter-links a:focus-visible {
+  background: rgba(255, 253, 248, 0.94);
+  border-color: rgba(214, 166, 76, 0.72);
+  outline: none;
+}
+
+@media (max-width: 860px) {
+  .section {
+    padding-block: 60px;
+  }
+
+  .section-heading {
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .writing-hero h1,
+  .research-hero h1,
+  .case-hero h1,
+  .service-hero h1,
+  .updates-page-hero h1 {
+    max-width: 18ch;
+    font-size: clamp(2.8rem, 8.5vw, 4.4rem);
+    line-height: 1;
+  }
+
+  .video-showcase,
+  .artifact-section,
+  .achievement-section {
+    padding-block: 58px;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --site-header-height: var(--compact-header-height);
+  }
+
+  .site-header {
+    align-items: center;
+    gap: 4px 10px;
+    padding: 8px 14px;
+  }
+
+  .brand-mark,
+  .stamp-rally-header-launcher,
+  .language-switch {
+    height: 38px;
+  }
+
+  .brand-mark {
+    width: 38px;
+  }
+
+  .stamp-rally-header-launcher {
+    min-height: 38px;
+    padding: 3px 6px 3px 3px;
+  }
+
+  .stamp-rally-header-launcher span {
+    width: 29px;
+    height: 29px;
+  }
+
+  .language-switch {
+    padding: 2px;
+  }
+
+  .language-switch button {
+    min-width: 31px;
+    min-height: 0;
+    height: 100%;
+  }
+
+  .nav {
+    display: flex;
+    grid-template-columns: none;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    overflow-x: auto;
+    padding: 0 0 2px;
+    font-size: 0.69rem;
+    scrollbar-width: none;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav a {
+    flex: 0 0 auto;
+    min-height: 26px;
+    padding: 2px 0;
+    overflow-wrap: normal;
+  }
+
+  .hero-content {
+    padding-top: 126px;
+  }
+
+  .achievements-page,
+  .case-page,
+  .research-page,
+  .service-page,
+  .writing-page,
+  .updates-page {
+    padding-top: 20px;
+  }
+
+  .writing-hero,
+  .research-hero,
+  .case-hero,
+  .service-hero {
+    padding-top: 16px;
+    padding-bottom: 40px;
+  }
+
+  .portfolio-chapter-nav {
+    top: calc(var(--site-header-height) + 2px);
+  }
+
+  .stamp-rally-launcher-shell {
+    top: auto;
+    right: 10px;
+    bottom: max(10px, env(safe-area-inset-bottom));
+  }
+
+  .stamp-rally-launcher {
+    grid-template-columns: 28px auto;
+    gap: 5px;
+    min-height: 40px;
+    padding: 4px 6px 4px 4px;
+    box-shadow: 0 8px 24px rgba(11, 39, 37, 0.2);
+  }
+
+  .stamp-rally-launcher-mark {
+    width: 28px;
+    height: 28px;
+  }
+
+  .stamp-rally-minimize {
+    width: 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-content {
+    padding-top: 116px;
+    padding-bottom: 34px;
+  }
+
+  .hero h1 {
+    max-width: 8ch;
+    font-size: clamp(3.25rem, 15vw, 4.25rem);
+    line-height: 0.94;
+  }
+
+  .hero-lede {
+    margin-top: 18px;
+    font-size: 1.02rem;
+    line-height: 1.58;
+  }
+
+  .writing-hero h1,
+  .research-hero h1,
+  .case-hero h1,
+  .service-hero h1,
+  .updates-page-hero h1 {
+    max-width: none;
+    font-size: clamp(2.45rem, 11vw, 3.05rem);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+  }
+
+  .writing-hero p:not(.eyebrow),
+  .research-hero p:not(.eyebrow),
+  .case-hero p:not(.eyebrow),
+  .service-hero p:not(.eyebrow) {
+    font-size: 1rem;
+    line-height: 1.62;
+  }
+
+  .section-heading h2,
+  .bridge-copy h2,
+  .profile-statement h2,
+  .writing-publication-heading h2,
+  .writing-profile-heading h2,
+  .writing-method-heading h2,
+  .writing-page-samples-heading h2,
+  .writing-field-notes-heading h2,
+  .writing-press-interviews-intro h2,
+  .research-map-heading h2,
+  .video-showcase-heading h2,
+  .artifact-heading h2 {
+    font-size: clamp(1.9rem, 9.5vw, 2.55rem);
+    line-height: 1.07;
+  }
+
+  .section,
+  .video-showcase,
+  .artifact-section,
+  .achievement-section {
+    padding-block: 48px;
+  }
+
+  .media-grid,
+  .teaching-scope-grid,
+  .course-record-grid,
+  .intro-grid {
+    gap: 14px;
+  }
+
+  .media-item,
+  .teaching-scope-grid article,
+  .course-record-copy,
+  .workshop-catalog-grid article,
+  .feature {
+    padding: 20px;
+  }
+
+  .media-item h3,
+  .course-record-copy h3,
+  .teaching-scope-grid h3 {
+    font-size: clamp(1.35rem, 6.8vw, 1.65rem);
+  }
+
+  .media-item span,
+  .course-record-copy > span,
+  .teaching-scope-grid span {
+    margin-bottom: 10px;
+    font-size: 0.68rem;
+  }
+
+  .media-item p,
+  .course-record-copy > p,
+  .teaching-scope-grid p,
+  .feature p,
+  .writing-list p {
+    font-size: 0.96rem;
+  }
+
+  .teaching-scope-grid article {
+    min-height: 0;
+  }
+
+  .portfolio-chapter-nav-inner {
+    padding-block: 8px;
+  }
+
+  .portfolio-chapter-label {
+    margin-bottom: 5px;
+  }
+
+  .portfolio-chapter-links a {
+    min-width: min(68vw, 170px);
+    padding: 7px 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature,
+  .media-item,
+  .teaching-scope-grid article,
+  .course-record-card,
+  .workshop-catalog-grid article,
+  .writing-list article,
+  .contact-link {
+    transition: none;
+  }
+}
+
+/* Progressive archives -------------------------------------------------- */
+
+.progressive-archive-control {
+  width: min(100%, 520px);
+  margin: 24px auto 0;
+}
+
+.progressive-archive-control button {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  width: 100%;
+  min-height: 64px;
+  align-items: center;
+  gap: 4px 18px;
+  padding: 13px 58px 13px 18px;
+  border: 1px solid var(--teal-deep);
+  background: var(--surface);
+  color: var(--teal-deep);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(24, 32, 32, 0.055);
+  transition: background 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.progressive-archive-control button:hover,
+.progressive-archive-control button:focus-visible {
+  background: var(--teal-deep);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(24, 32, 32, 0.12);
+  outline: 3px solid rgba(214, 166, 76, 0.52);
+  outline-offset: 3px;
+}
+
+.progressive-archive-control span {
+  grid-column: 1;
+  font-weight: 850;
+  line-height: 1.25;
+}
+
+.progressive-archive-control small {
+  grid-column: 1;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.progressive-archive-control button:hover small,
+.progressive-archive-control button:focus-visible small {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.progressive-archive-control b {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid currentColor;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1;
+  transform: translateY(-50%);
+  transition: transform 180ms ease;
+}
+
+.progressive-archive-control.is-expanded b {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+@media (max-width: 520px) {
+  .progressive-archive-control {
+    margin-top: 18px;
+  }
+
+  .progressive-archive-control button {
+    min-height: 58px;
+    padding: 11px 52px 11px 15px;
+  }
+
+  .progressive-archive-control b {
+    right: 14px;
+    width: 28px;
+    height: 28px;
+  }
+}
