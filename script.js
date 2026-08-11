@@ -2377,6 +2377,18 @@ const writingGamebookCopy = {
       train: "pociąg za Chibą",
       player: "to, co naprawdę robią gracze",
     },
+    leadNotesGenitive: {
+      crowd: "ruchomego tłumu",
+      queue: "kolejki jako rytuału",
+      missingInvite: "zaginionego zaproszenia",
+      quietBooth: "cichego stoiska",
+      water: "bardzo błyszczącej wody",
+      student: "młodego twórcy",
+      redWire: "czerwonego kabla",
+      merch: "kolejki po gadżety",
+      train: "pociągu za Chibą",
+      player: "tego, co naprawdę robią gracze",
+    },
     start: {
       title: "Makuhari Messe. Jedna akredytacja, za dużo historii.",
       body: "Przyjeżdżasz z notatnikiem, identyfikatorem, czterema godzinami i nieracjonalnym przekonaniem, że da się być wszędzie. Wejście dla publiczności przypomina ruchomy mur ludzi. Gdzieś w środku istnieje — albo już nie istnieje — spotkanie z zaproszenia. Na skraju hali niewielkie stoisko wygląda niemal spokojnie.",
@@ -2479,42 +2491,42 @@ const writingGamebookCopy = {
       title: "Przestajesz szukać definitywnej historii i znajdujesz tę, którą da się opowiedzieć.",
       body: "Notatnik zawiera teraz fragmenty zamiast wielkiej teorii: kolejkę, niezręczne zaproszenie, młodego twórcę, absurdalny kabel, zdanie o wodzie. Przy biurku to wystarczy. Praca polega na takim ułożeniu szczegółów, by czytelnik mógł wejść w to miejsce i zrozumieć, dlaczego było ważne.",
       lesson: "Ruch redakcyjny: dobre reporterstwo nie polega na zebraniu wszystkiego. Polega na wybraniu detali, dzięki którym pojawia się większy świat.",
-      lead: "Tokyo Game Show nie zaczął się od zwiastuna. Zaczął się od",
+      lead: "Tokyo Game Show nie zaczął się od zwiastuna. Zaczął się od {detailGenitive}",
     },
     crowdEnd: {
       kind: "Twoja notatka zamieniła się w historię tłumu",
       title: "Właściwie nie wchodzisz do środka. Historia i tak wchodzi do ciebie.",
       body: "Drzwi pozostają gdzieś za ludzkim systemem pogodowym z toreb, znaków i cierpliwej determinacji. Zamiast udawać, że przeszkoda nie istnieje, piszesz właśnie z niej. Skala wydarzenia staje się widoczna dlatego, że odmawia bycia wygodna.",
       lesson: "Ruch redakcyjny: ograniczenie może być uczciwym kątem, jeśli opisujesz to, co odsłania, a nie tylko to, co uniemożliwia.",
-      lead: "Zanim udało się zobaczyć pierwszy ekran, Tokyo Game Show zdążył już stać się",
+      lead: "Zanim udało się zobaczyć pierwszy ekran, Tokyo Game Show miał już swój główny motyw: „{detail}”",
     },
     inboxEnd: {
       kind: "Twoja notatka zamieniła się w komedię porażki",
       title: "Skrzynka odbiorcza wygrywa. I nigdy nie odpisuje.",
       body: "Gdy przyznajesz w końcu, że zaproszenie nie nadejdzie, zdobywasz nową umiejętność zawodową: rozpoznawanie chwili, w której wątek mailowy staje się małą tragikomedią. Nie masz ekskluzywnego dema, ale zostaje precyzyjne wspomnienie o tym, że międzynarodowe wydarzenia czasami działają na optymizmie i wygasłych kontaktach.",
       lesson: "Ruch redakcyjny: zachowaj administracyjny absurd, jeśli mówi coś prawdziwego o pracy wokół wydarzenia.",
-      lead: "Najbardziej ekskluzywny pokój na Tokyo Game Show nie był za aksamitną liną. Był za",
+      lead: "Najbardziej ekskluzywny pokój na Tokyo Game Show nie był za aksamitną liną. W notatniku zastąpił go szczegół: „{detail}”",
     },
     redWireEnd: {
       kind: "Twoja notatka zamieniła się w małą eksplozję",
       title: "Przecinasz czerwony kabel. Para, hałas, brawa.",
       body: "Nie dzieje się nic niebezpiecznego, może poza drobnym uszczerbkiem dla godności. Kartonowe urządzenie działa dokładnie zgodnie z obietnicą, zespół się śmieje, a wielkie stoiska wokół nagle wydają się mniej żywe. Nie znalazłeś największej gry na targach. Znalazłeś powód, dla którego ludzie w ogóle robią gry.",
       lesson: "Ruch redakcyjny: pozwól, by zabawna porażka odsłoniła pracę, ryzyko i hojność stojące za twórczym projektem.",
-      lead: "Najgłośniejsza eksplozja, jaką usłyszałem na Tokyo Game Show, dobiegła z",
+      lead: "Najgłośniejsza eksplozja, jaką usłyszałem na Tokyo Game Show, zaczęła się od notatki: „{detail}”",
     },
     trainEnd: {
       kind: "Twoja notatka zamieniła się w podróż do domu",
       title: "Budzisz się jedną stację za daleko. Potem jeszcze kilka.",
       body: "Pociąg zabrał cię za Chibę, a notatnik zsuwa się z kolan. To nie jest efektowne zakończenie, ale właściwe: reportaż w terenie ma ciało, rozkład jazdy i granice. Jutro w notatkach nadal będzie historia. Dzisiaj jest w nich mapa powrotna.",
       lesson: "Ruch redakcyjny: nie wycinaj z kadru logistyki dnia; ona też jest częścią realnego doświadczenia miejsca.",
-      lead: "Pod koniec dnia na Tokyo Game Show najbardziej ambitną czynnością nawigacyjną było",
+      lead: "Pod koniec dnia na Tokyo Game Show najważniejszą wskazówką nawigacyjną okazała się notatka: „{detail}”",
     },
     exhaustionEnd: {
       kind: "Twoja notatka stała się uczciwą granicą",
       title: "Hala wciąż się porusza. Ty już nie.",
       body: "Ostatnia rezerwa znika gdzieś między kolejką, świecącym ekranem i obietnicą następnej historii. Siadasz, pijesz wodę i czytasz notatnik, który już masz. Jest w nim wystarczająco dużo. Najważniejszą decyzją reporterską nie jest pogoń za kolejną sceną, lecz rozpoznanie chwili, w której uwaga przestaje działać.",
       lesson: "Ruch redakcyjny: wytrzymałość jest częścią metody. Mniejsza, dobrze zaobserwowana historia jest mocniejsza niż większa, zbierana bez uwagi.",
-      lead: "Tokyo Game Show stało się czytelne dopiero wtedy, gdy przestałem biec i ponownie przeczytałem",
+      lead: "Tokyo Game Show stało się czytelne dopiero wtedy, gdy przestałem biec i ponownie przeczytałem notatkę: „{detail}”",
     },
   },
 };
@@ -2626,6 +2638,9 @@ document.querySelectorAll("[data-writing-gamebook]").forEach((gamebook) => {
     const preferredNotes = ["water", "student", "redWire", "queue", "crowd", "merch", "train", "missingInvite", "player", "quietBooth"];
     const firstNote = preferredNotes.find((note) => notes.includes(note));
     const detail = firstNote ? copy.notes[firstNote] : copy.pressPass.toLowerCase();
+    const detailGenitive = firstNote ? copy.leadNotesGenitive?.[firstNote] : copy.pressPass.toLowerCase();
+    if (scene.lead.includes("{detailGenitive}")) return `${scene.lead.replace("{detailGenitive}", detailGenitive || detail)}.`;
+    if (scene.lead.includes("{detail}")) return `${scene.lead.replace("{detail}", detail)}.`;
     return `${scene.lead} ${detail}.`;
   };
 
