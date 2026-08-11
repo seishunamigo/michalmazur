@@ -20,7 +20,7 @@
     <link rel="alternate" hreflang="en" href="https://mazur.jp/research.html">
     <link rel="alternate" hreflang="x-default" href="https://mazur.jp/research.html">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=117">
+    <link rel="stylesheet" href="styles.css?v=118">
   <link rel="stylesheet" href="readability.css?v=2">
   </head>
   <body>
@@ -177,6 +177,20 @@
             <h2 id="comix-demo-title-en">Follow one campus task. Meet a word in context. Use it with purpose.</h2>
             <p>This five-minute Co-MIX illustration follows a learner through an ordinary university morning: finding a room, understanding a task, and asking for help. The story stays readable while a small, human-reviewed set of target nouns returns through recall, feedback, and a second context.</p>
           </div>
+          <div class="comix-quickstart">
+            <div>
+              <span>New to Japanese? Start here.</span>
+              <strong>You do not need to know any Japanese to complete this mini-lesson.</strong>
+              <p>Read the situation, make a guess, and ask for help whenever you need it. Co-MIX reveals support in small steps, so getting stuck is part of the experience.</p>
+            </div>
+            <ol aria-label="Three steps to begin">
+              <li><b>1</b> Read the short scene</li>
+              <li><b>2</b> Guess one highlighted word</li>
+              <li><b>3</b> Use it in a new situation</li>
+            </ol>
+            <button type="button" data-comix-start>Start the guided lesson <span aria-hidden="true">→</span></button>
+            <small data-comix-start-status aria-live="polite"></small>
+          </div>
           <ol class="comix-method-strip" aria-label="Co-MIX method in five moves">
             <li><b>01</b><span>Fit</span><small>Choose direction and support</small></li>
             <li><b>02</b><span>Mix</span><small>Insert a few useful targets</small></li>
@@ -186,6 +200,11 @@
           </ol>
           <div class="comix-demo-shell">
             <div class="comix-demo-controls" aria-label="Co-MIX controls">
+              <div class="comix-mission-card" data-comix-mission aria-live="polite">
+                <span data-comix-mission-kicker>Mission 1 of 3</span>
+                <strong data-comix-mission-title>Find the room</strong>
+                <p data-comix-mission-body>Use the situation to work out the highlighted place word.</p>
+              </div>
               <div>
                 <span>Reading direction</span>
                 <div class="comix-demo-button-row" role="group" aria-label="Reading direction">
@@ -235,6 +254,12 @@
                 <button type="button" data-comix-check>Check</button>
               </div>
               <p class="comix-demo-input-note" data-comix-answer-note></p>
+              <div class="comix-demo-assists">
+                <button type="button" data-comix-hint>Give me a clue</button>
+                <button type="button" data-comix-choice-toggle aria-expanded="false">I prefer choices</button>
+              </div>
+              <p class="comix-demo-hint" data-comix-hint-text aria-live="polite" hidden></p>
+              <div class="comix-demo-answer-choices" data-comix-answer-choices hidden aria-label="Answer choices"></div>
               <p class="comix-demo-feedback" data-comix-feedback aria-live="polite"></p>
               <div class="comix-demo-reuse" data-comix-reuse hidden>
                 <p data-comix-reuse-question></p>
@@ -404,6 +429,20 @@
             <h2 id="comix-demo-title-pl">Wykonaj jedno zadanie na kampusie. Poznaj słowo w kontekście. Użyj go w konkretnym celu.</h2>
             <p>Ta pięciominutowa ilustracja Co-MIX prowadzi przez zwykły poranek na uczelni: znalezienie sali, zrozumienie zadania i poproszenie o pomoc. Historia pozostaje zrozumiała, a niewielki, ręcznie zweryfikowany zestaw rzeczowników docelowych powraca podczas przypominania, informacji zwrotnej i w kolejnym kontekście.</p>
           </div>
+          <div class="comix-quickstart">
+            <div>
+              <span>Nie znasz japońskiego? Zacznij tutaj.</span>
+              <strong>Nie musisz znać ani jednego japońskiego słowa, aby ukończyć tę minilekcję.</strong>
+              <p>Przeczytaj sytuację, spróbuj odgadnąć znaczenie i poproś o pomoc, gdy jej potrzebujesz. Co-MIX odsłania podpowiedzi stopniowo, więc chwila niepewności jest częścią doświadczenia.</p>
+            </div>
+            <ol aria-label="Trzy kroki na początek">
+              <li><b>1</b> Przeczytaj krótką scenę</li>
+              <li><b>2</b> Odgadnij jedno wyróżnione słowo</li>
+              <li><b>3</b> Użyj go w nowej sytuacji</li>
+            </ol>
+            <button type="button" data-comix-start>Rozpocznij prowadzoną lekcję <span aria-hidden="true">→</span></button>
+            <small data-comix-start-status aria-live="polite"></small>
+          </div>
           <ol class="comix-method-strip" aria-label="Metoda Co-MIX w pięciu ruchach">
             <li><b>01</b><span>Dopasuj</span><small>Wybierz kierunek i wsparcie</small></li>
             <li><b>02</b><span>Połącz</span><small>Wstaw kilka użytecznych słów</small></li>
@@ -413,6 +452,11 @@
           </ol>
           <div class="comix-demo-shell">
             <div class="comix-demo-controls" aria-label="Ustawienia Co-MIX">
+              <div class="comix-mission-card" data-comix-mission aria-live="polite">
+                <span data-comix-mission-kicker>Misja 1 z 3</span>
+                <strong data-comix-mission-title>Znajdź salę</strong>
+                <p data-comix-mission-body>Wykorzystaj sytuację, aby rozpoznać wyróżnione słowo oznaczające miejsce.</p>
+              </div>
               <div>
                 <span>Kierunek czytania</span>
                 <div class="comix-demo-button-row" role="group" aria-label="Kierunek czytania">
@@ -462,6 +506,12 @@
                 <button type="button" data-comix-check>Sprawdź</button>
               </div>
               <p class="comix-demo-input-note" data-comix-answer-note></p>
+              <div class="comix-demo-assists">
+                <button type="button" data-comix-hint>Daj mi podpowiedź</button>
+                <button type="button" data-comix-choice-toggle aria-expanded="false">Wolę wybrać odpowiedź</button>
+              </div>
+              <p class="comix-demo-hint" data-comix-hint-text aria-live="polite" hidden></p>
+              <div class="comix-demo-answer-choices" data-comix-answer-choices hidden aria-label="Odpowiedzi do wyboru"></div>
               <p class="comix-demo-feedback" data-comix-feedback aria-live="polite"></p>
               <div class="comix-demo-reuse" data-comix-reuse hidden>
                 <p data-comix-reuse-question></p>
@@ -689,7 +739,7 @@
       <a href="research.html#top" data-i18n="backTop">Back to top</a>
     </footer>
 
-  <script src="script.js?v=118"></script>
+  <script src="script.js?v=119"></script>
   <script src="readability.js?v=2"></script>
   </body>
 </html>

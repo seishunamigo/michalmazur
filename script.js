@@ -1621,6 +1621,27 @@ const coMixCopy = {
       "jp-en": "{count} reviewed English targets sit inside an otherwise Japanese university scene.",
     },
     answerNotes: { "en-ja": "Japanese answers may be typed in kanji, kana, or romaji.", "jp-en": "Type the English target word." },
+    startReady: "Your guided lesson is ready. Begin with the highlighted words in the reading panel.",
+    meaningLabel: "Meaning",
+    exampleLabel: "Example",
+    whyLabel: "Why the context helps",
+    whyGeneric: "The surrounding action gives this word a practical role before you see a definition.",
+    choicesShow: "I prefer choices",
+    choicesHide: "Hide choices",
+    hintButton: "Give me a clue",
+    hintNext: "One more clue",
+    hintFinal: "Show the answer",
+    hints: {
+      context: "Context clue: {clue}",
+      reading: "Sound clue: the target can be read as {reading}.",
+      letters: "Word clue: the English answer begins with {letter} and has {count} letters.",
+      answer: "Full support: the answer is {answer}. Type it or choose it below.",
+    },
+    missions: {
+      arrival: { kicker: "Mission 1 of 3", title: "Find the room", body: "Use the map and destination to work out the highlighted place word.", clue: "Aiko is looking for the place where her seminar will happen." },
+      task: { kicker: "Mission 2 of 3", title: "Understand the task", body: "Follow what the teacher gives the group and identify the work they must do.", clue: "The teacher explains something the students need to complete." },
+      support: { kicker: "Mission 3 of 3", title: "Ask for help", body: "Notice what Aiko needs when part of the task is still unclear.", clue: "Aiko raises her hand because she wants clarification." },
+    },
     correct: "Correct. Now use the word once more in a fresh part of the story.",
     incorrect: "Not quite. Co-MIX now gives you a staged clue: the reading, meaning, and an example sentence. Try the answer again when you are ready.",
     empty: "Type an answer first.",
@@ -1653,6 +1674,27 @@ const coMixCopy = {
       "jp-en": "{count} sprawdzonych angielskich słów docelowych pojawia się w japońskiej scenie z życia uczelni.",
     },
     answerNotes: { "en-ja": "Japońskie odpowiedzi możesz wpisać kanji, kana albo rōmaji.", "jp-en": "Podaj angielskie słowo docelowe." },
+    startReady: "Prowadzona lekcja jest gotowa. Zacznij od wyróżnionych słów w panelu z tekstem.",
+    meaningLabel: "Znaczenie",
+    exampleLabel: "Przykład",
+    whyLabel: "Jak pomaga kontekst",
+    whyGeneric: "Otaczająca słowo czynność nadaje mu konkretną rolę, zanim pojawi się definicja.",
+    choicesShow: "Wolę wybrać odpowiedź",
+    choicesHide: "Ukryj odpowiedzi",
+    hintButton: "Daj mi podpowiedź",
+    hintNext: "Jeszcze jedna podpowiedź",
+    hintFinal: "Pokaż odpowiedź",
+    hints: {
+      context: "Podpowiedź z kontekstu: {clue}",
+      reading: "Podpowiedź dźwiękowa: słowo można przeczytać jako {reading}.",
+      letters: "Podpowiedź dotycząca słowa: angielska odpowiedź zaczyna się od {letter} i ma {count} liter.",
+      answer: "Pełna pomoc: odpowiedź to {answer}. Wpisz ją lub wybierz poniżej.",
+    },
+    missions: {
+      arrival: { kicker: "Misja 1 z 3", title: "Znajdź salę", body: "Skorzystaj z mapy i celu podróży, aby rozpoznać wyróżnione słowo oznaczające miejsce.", clue: "Aiko szuka miejsca, w którym odbędzie się jej seminarium." },
+      task: { kicker: "Misja 2 z 3", title: "Zrozum zadanie", body: "Sprawdź, co nauczyciel przekazuje grupie, i rozpoznaj pracę, którą trzeba wykonać.", clue: "Nauczyciel wyjaśnia coś, co studenci mają wykonać." },
+      support: { kicker: "Misja 3 z 3", title: "Poproś o pomoc", body: "Zauważ, czego potrzebuje Aiko, gdy część zadania pozostaje niejasna.", clue: "Aiko podnosi rękę, ponieważ chce coś wyjaśnić." },
+    },
     correct: "Dobrze. Teraz użyj słowa jeszcze raz w nowym fragmencie historii.",
     incorrect: "Jeszcze nie. Co-MIX uruchamia teraz etapową podpowiedź: zapis, znaczenie i zdanie przykładowe. Gdy będziesz gotowy, spróbuj ponownie.",
     empty: "Najpierw wpisz odpowiedź.",
@@ -1699,17 +1741,31 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
   const completeTitle = demo.querySelector("[data-comix-complete-title]");
   const completeBody = demo.querySelector("[data-comix-complete-body]");
   const nextButton = demo.querySelector("[data-comix-next]");
+  const startButton = demo.querySelector("[data-comix-start]");
+  const startStatus = demo.querySelector("[data-comix-start-status]");
+  const missionKicker = demo.querySelector("[data-comix-mission-kicker]");
+  const missionTitle = demo.querySelector("[data-comix-mission-title]");
+  const missionBody = demo.querySelector("[data-comix-mission-body]");
+  const hintButton = demo.querySelector("[data-comix-hint]");
+  const hintText = demo.querySelector("[data-comix-hint-text]");
+  const choiceToggle = demo.querySelector("[data-comix-choice-toggle]");
+  const answerChoices = demo.querySelector("[data-comix-answer-choices]");
   let mode = "en-ja";
   let scene = "arrival";
   let density = "light";
   let meaningsVisible = false;
   let attempts = 0;
+  let hintLevel = 0;
+  let choicesVisible = false;
   const completedScenes = new Set();
   let learning = { read: true, notice: false, recall: false, reuse: false };
   const sceneOrder = ["arrival", "task", "support"];
 
   const currentMode = () => coMixExamples[mode];
   const currentExample = () => currentMode().scenes[scene];
+  const currentTarget = () => currentExample()[density]
+    .find((part) => typeof part !== "string" && part.word === currentExample().focus)
+    || currentExample().light.find((part) => typeof part !== "string" && part.word === currentExample().focus);
   const normaliseAnswer = (candidate) => candidate
     .normalize("NFKD")
     .replace(/\p{Diacritic}/gu, "")
@@ -1733,15 +1789,16 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
     if (!feedback) return;
     feedback.textContent = message;
     feedback.classList.toggle("is-incorrect", isIncorrect);
+    feedback.classList.toggle("is-correct", Boolean(message) && !isIncorrect);
   };
 
   const showWordCard = (target) => {
     if (!wordCard) return;
     wordCard.hidden = false;
     if (wordTitle) wordTitle.textContent = [target.word, target.reading && `· ${target.reading}`, target.romaji && `(${target.romaji})`].filter(Boolean).join(" ");
-    if (wordMeaning) wordMeaning.textContent = `Meaning: ${target.meaning}`;
-    if (wordExample) wordExample.textContent = target.example ? `${target.example} — ${target.translation}` : "";
-    if (wordWhy) wordWhy.textContent = target.why || "";
+    if (wordMeaning) wordMeaning.textContent = `${ui.meaningLabel}: ${target.meaning}`;
+    if (wordExample) wordExample.textContent = target.example ? `${ui.exampleLabel}: ${target.example} — ${target.translation}` : "";
+    if (wordWhy) wordWhy.textContent = `${ui.whyLabel}: ${demo.dataset.comixUi === "pl" ? ui.whyGeneric : (target.why || ui.whyGeneric)}`;
     learning.notice = true;
     updateProgress();
   };
@@ -1754,6 +1811,43 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
       const item = document.createElement("span");
       item.textContent = `${target.word} · ${target.meaning}`;
       targetList.append(item);
+    });
+  };
+
+  const answerChoiceValues = () => {
+    const values = sceneOrder.map((sceneName) => {
+      const example = currentMode().scenes[sceneName];
+      const target = example.light.find((part) => typeof part !== "string" && part.word === example.focus);
+      return target?.word;
+    }).filter(Boolean);
+    const offset = sceneOrder.indexOf(scene);
+    return [...values.slice(offset), ...values.slice(0, offset)];
+  };
+
+  const renderAnswerChoices = () => {
+    if (!answerChoices || !choiceToggle) return;
+    answerChoices.replaceChildren();
+    answerChoices.hidden = !choicesVisible;
+    choiceToggle.textContent = choicesVisible ? ui.choicesHide : ui.choicesShow;
+    choiceToggle.setAttribute("aria-expanded", String(choicesVisible));
+    if (!choicesVisible) return;
+    answerChoiceValues().forEach((option) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = option;
+      button.addEventListener("click", () => {
+        answer.value = option;
+        checkAnswer();
+        const correct = normaliseAnswer(option) === normaliseAnswer(currentTarget()?.word || "");
+        button.classList.toggle("is-incorrect", !correct);
+        if (correct) {
+          answerChoices.querySelectorAll("button").forEach((item) => {
+            item.disabled = true;
+            item.classList.toggle("is-correct", item === button);
+          });
+        }
+      });
+      answerChoices.append(button);
     });
   };
 
@@ -1778,6 +1872,9 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
           learning.reuse = true;
           completedScenes.add(scene);
           document.dispatchEvent(new CustomEvent("identity:stamp", { detail: { id: "code-mixing" } }));
+          demo.classList.add("is-celebrating");
+          window.setTimeout(() => demo.classList.remove("is-celebrating"), 900);
+          updateButtons();
           reuseOptions.querySelectorAll("button").forEach((item) => { item.disabled = true; });
           if (completePanel) completePanel.hidden = false;
           if (completeTitle) completeTitle.textContent = ui.completeTitle;
@@ -1820,6 +1917,10 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
       passage.append(word);
     });
     question.textContent = ui.questions[mode][scene];
+    const mission = ui.missions[scene];
+    if (missionKicker) missionKicker.textContent = mission.kicker;
+    if (missionTitle) missionTitle.textContent = mission.title;
+    if (missionBody) missionBody.textContent = mission.body;
     if (answerNote) answerNote.textContent = ui.answerNotes[mode];
     if (methodNote) methodNote.textContent = ui.summaries[mode].replace("{count}", String(targets.length));
     answer.value = "";
@@ -1827,7 +1928,13 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
     setFeedback();
     if (wordCard) wordCard.hidden = true;
     if (completePanel) completePanel.hidden = true;
+    if (hintText) {
+      hintText.hidden = true;
+      hintText.textContent = "";
+    }
+    if (hintButton) hintButton.textContent = ui.hintButton;
     renderTargets(targets);
+    renderAnswerChoices();
     renderReuse();
     updateProgress();
   };
@@ -1835,6 +1942,9 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
   const resetLearning = (resetSession = false) => {
     meaningsVisible = false;
     attempts = 0;
+    hintLevel = 0;
+    choicesVisible = false;
+    if (hintButton) hintButton.disabled = false;
     learning = { read: true, notice: false, recall: false, reuse: false };
     if (resetSession) completedScenes.clear();
   };
@@ -1848,6 +1958,7 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
     sceneButtons.forEach((button) => {
       const active = button.dataset.comixScene === scene;
       button.classList.toggle("is-active", active);
+      button.classList.toggle("is-complete", completedScenes.has(button.dataset.comixScene));
       button.setAttribute("aria-pressed", String(active));
     });
     densityButtons.forEach((button) => {
@@ -1864,6 +1975,7 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
     const correct = currentExample().answer.some((accepted) => normaliseAnswer(accepted) === value);
     setFeedback(correct ? ui.correct : ui.incorrect, !correct);
     if (correct) {
+      learning.notice = true;
       learning.recall = true;
       renderReuse();
       updateProgress();
@@ -1896,6 +2008,44 @@ document.querySelectorAll("[data-comix-demo]").forEach((demo) => {
     const target = currentExample()[density].find((part) => typeof part !== "string" && part.word === currentExample().focus);
     if (target) showWordCard(target);
     renderTargets(currentExample()[density].filter((part) => typeof part !== "string"));
+  });
+  startButton?.addEventListener("click", () => {
+    mode = "en-ja";
+    scene = "arrival";
+    density = "light";
+    resetLearning(true);
+    updateButtons();
+    render();
+    if (startStatus) startStatus.textContent = ui.startReady;
+    passage?.scrollIntoView({ behavior: "smooth", block: "center" });
+    window.setTimeout(() => passage?.focus({ preventScroll: true }), 350);
+  });
+  choiceToggle?.addEventListener("click", () => {
+    choicesVisible = !choicesVisible;
+    renderAnswerChoices();
+  });
+  hintButton?.addEventListener("click", () => {
+    const target = currentTarget();
+    if (!target || !hintText) return;
+    hintLevel = Math.min(3, hintLevel + 1);
+    hintText.hidden = false;
+    learning.notice = true;
+    if (hintLevel === 1) {
+      hintText.textContent = ui.hints.context.replace("{clue}", ui.missions[scene].clue);
+      hintButton.textContent = ui.hintNext;
+    } else if (hintLevel === 2) {
+      hintText.textContent = mode === "en-ja"
+        ? ui.hints.reading.replace("{reading}", [target.reading, target.romaji && `(${target.romaji})`].filter(Boolean).join(" "))
+        : ui.hints.letters.replace("{letter}", target.word.charAt(0).toUpperCase()).replace("{count}", String(target.word.length));
+      hintButton.textContent = ui.hintFinal;
+    } else {
+      hintText.textContent = ui.hints.answer.replace("{answer}", target.word);
+      choicesVisible = true;
+      renderAnswerChoices();
+      hintButton.disabled = true;
+      showWordCard(target);
+    }
+    updateProgress();
   });
   check?.addEventListener("click", checkAnswer);
   answer?.addEventListener("keydown", (event) => {
