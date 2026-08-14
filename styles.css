@@ -10945,3 +10945,119 @@ dd {
     font-size: clamp(2.8rem, 14vw, 4rem);
   }
 }
+
+/* Final mobile-fit pass -------------------------------------------------- */
+@media (max-width: 520px) {
+  .research-page,
+  .achievements-page,
+  .case-page,
+  .service-page,
+  .updates-page {
+    width: min(var(--max), calc(100% - 32px));
+  }
+
+  .button {
+    width: 100%;
+    min-height: 48px;
+    height: auto;
+    padding: 10px 14px;
+    line-height: 1.25;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .service-cta-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .workshop-brief-link {
+    display: flex;
+    width: 100%;
+    margin-top: 18px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  .course-poster-feature {
+    margin-inline: -16px;
+    padding-inline: 16px;
+  }
+
+  .course-poster-gallery {
+    margin-inline: -16px;
+    padding-inline: 16px;
+    scroll-padding-inline: 16px;
+  }
+
+  .workshop-evidence-grid article,
+  .case-study,
+  .case-study > *,
+  .case-study-body,
+  .record-copy {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .workshop-evidence-grid article,
+  .case-study {
+    width: 100%;
+  }
+
+  .workshop-evidence-grid article {
+    padding: 20px 18px;
+  }
+
+  .workshop-evidence-grid span,
+  .workshop-evidence-grid h3,
+  .workshop-evidence-grid p,
+  .case-study h2,
+  .case-study-body,
+  .case-study-body * {
+    overflow-wrap: anywhere;
+  }
+
+  .case-study {
+    gap: 20px;
+    padding: 22px 18px;
+  }
+
+  .record-copy {
+    width: 100%;
+    padding: 28px 18px 32px;
+    overflow-x: hidden;
+  }
+
+  .record-copy h3 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(1.78rem, 9.6vw, 2.2rem);
+    line-height: 1;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .service-hero-actions,
+  .service-cta-actions {
+    gap: 8px;
+  }
+
+  .workshop-start {
+    padding: 24px 16px;
+  }
+
+  .workshop-start-steps {
+    padding: 22px 16px;
+  }
+
+  .record-tv {
+    padding-inline: 8px;
+  }
+
+  .record-tv-controls {
+    grid-template-columns: 36px minmax(0, 1fr) 36px;
+  }
+}
