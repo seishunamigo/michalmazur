@@ -5,6 +5,23 @@
 window.identitySiteUpdates = {
   updates: [
     {
+      id: "worlds-without-manuals-essay",
+      date: "2026-08-14",
+      newUntil: "2026-10-14",
+      url: "essay-games-culture-intercultural-learning.html",
+      category: { en: "Writing", pl: "Teksty", ja: "執筆" },
+      title: {
+        en: "Worlds without instruction manuals",
+        pl: "Światy bez instrukcji obsługi",
+        ja: "説明書のない世界を読む"
+      },
+      summary: {
+        en: "An essay about a Tokyo Game Show encounter, games as cultural systems, everyday life in Japan, public writing, and intercultural education.",
+        pl: "Esej o spotkaniu na Tokyo Game Show, grach jako systemach kulturowych, codziennym życiu w Japonii, publicystyce i edukacji międzykulturowej.",
+        ja: "東京ゲームショウでの出会い、文化的システムとしてのゲーム、日本の日常、執筆、異文化教育についてのエッセイです。"
+      }
+    },
+    {
       id: "educational-spaces-2026",
       date: "2026-08-07",
       newUntil: "2026-10-07",
@@ -77,9 +94,9 @@ window.identitySiteUpdates = {
         ja: "拡充した活動記録を見る"
       },
       summary: {
-        en: "A guided record of academic work, invitations, community projects, and public conversations.",
-        pl: "Uporządkowana opowieść o pracy akademickiej, zaproszeniach, projektach społecznych i rozmowach publicznych.",
-        ja: "学術活動、招待、地域プロジェクト、パブリックな対話をたどる記録です。"
+        en: "Academic work, invitations, community projects, interviews, and public conversations.",
+        pl: "Praca akademicka, zaproszenia, projekty społeczne, wywiady i rozmowy publiczne.",
+        ja: "学術活動、招待、地域プロジェクト、インタビュー、公開対話の記録です。"
       }
     },
     {
@@ -93,9 +110,9 @@ window.identitySiteUpdates = {
         ja: "東京ゲームショウの新しいフィールドノート"
       },
       summary: {
-        en: "Press passes, interviews, and the details that turn a crowded show floor into a story.",
-        pl: "Akredytacje, wywiady i szczegóły, które zamieniają zatłoczone hale targowe w opowieść.",
-        ja: "プレスパス、取材、そして混雑した会場を物語へ変える細部をまとめました。"
+        en: "Press passes, interviews, playtests, and photographs from Tokyo Game Show reporting visits.",
+        pl: "Akredytacje, wywiady, testy gier i fotografie z reporterskich wizyt na Tokyo Game Show.",
+        ja: "東京ゲームショウ取材時のプレスパス、インタビュー、試遊、写真を紹介します。"
       }
     }
   ]
