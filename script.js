@@ -8,16 +8,37 @@ const personHeadlineNodes = document.querySelectorAll("[data-person-name-headlin
 const personHomeLinks = document.querySelectorAll("[data-person-home]");
 const supportedLanguages = new Set(["en", "pl", "ja"]);
 
+// Stable language URLs also apply to links rendered by interactive components.
+const portfolioHref = (href, lang = document.documentElement.lang) => {
+  const url = new URL(href, window.location.origin + "/");
+  if (url.origin !== window.location.origin) return href;
+  const file = url.pathname.replace(/^\/(?:pl\/|ja\/)?/, "") || "index.html";
+  const files = new Set(["index.html", "workshops.html", "research.html", "writing.html", "case-studies.html", "achievements.html", "updates.html", "essay-games-culture-intercultural-learning.html", "apu-pre-fd.html", "tokyo-game-show-reporting.html"]);
+  if (!files.has(file)) return url.pathname + url.search + url.hash;
+  if (lang === "ja" && file === "tokyo-game-show-reporting.html") lang = "en";
+  const prefix = lang === "en" ? "/" : `/${lang}/`;
+  return prefix + (file === "index.html" ? "" : file) + url.search + url.hash.replace(/-(en|pl|ja)$/, `-${lang}`);
+};
+
 const languageFromUrl = () => {
   const requested = new URLSearchParams(window.location.search).get("lang");
   return supportedLanguages.has(requested) ? requested : null;
 };
 
-// The language switcher changes the visitor-facing view, but all language
-// views are intentionally one HTML document. Keep one canonical URL per page
-// instead of presenting query-string views as separate indexable pages.
+// Old shared ?lang= links lead to the equivalent static language document.
+const legacyLanguage = languageFromUrl();
+if (legacyLanguage && document.documentElement.dataset.pageLanguage) {
+  const target = new URL(portfolioHref(window.location.pathname + window.location.search + window.location.hash, legacyLanguage), window.location.origin);
+  target.searchParams.delete("lang");
+  window.location.replace(target.href);
+}
+
 const syncLanguageMetadata = (lang, updateAddress = false) => {
   if (updateAddress) {
+    if (document.documentElement.dataset.pageLanguage) {
+      window.location.assign(portfolioHref(window.location.pathname + window.location.search + window.location.hash, lang));
+      return;
+    }
     const nextUrl = new URL(window.location.href);
     if (lang === "en") {
       nextUrl.searchParams.delete("lang");
@@ -1324,16 +1345,24 @@ const setLanguage = (lang, { updateAddress = false } = {}) => {
     node.textContent = personName;
   });
   personHomeLinks.forEach((link) => {
-    link.setAttribute("aria-label", `${personName} home`);
+    link.setAttribute("aria-label", `${personName}: ${{ en: "home", pl: "strona główna", ja: "ホーム" }[lang] || "home"}`);
   });
   syncLanguageMetadata(lang, updateAddress);
   updateJapanDayCounter();
   document.dispatchEvent(new CustomEvent("identity:languagechange", { detail: { lang } }));
   window.requestAnimationFrame(syncHeaderHeight);
-  localStorage.setItem("identity-language", lang);
+  try { localStorage.setItem("identity-language", lang); } catch { /* Reading does not require storage. */ }
 };
 
 languageButtons.forEach((button) => {
+  if (button.tagName === "A") {
+    const target = new URL(button.href);
+    target.search = window.location.search;
+    target.searchParams.delete("lang");
+    target.hash = window.location.hash.replace(/-(en|pl|ja)$/, `-${button.dataset.lang}`);
+    button.href = target.href;
+    return;
+  }
   button.addEventListener("click", () => setLanguage(button.dataset.lang, { updateAddress: true }));
 });
 
@@ -3120,7 +3149,7 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
     article.className = "update-entry";
 
     const link = document.createElement("a");
-    link.href = typeof item.url === "string" ? item.url : localText(item.url, lang);
+    link.href = portfolioHref(typeof item.url === "string" ? item.url : localText(item.url, lang), lang);
 
     const meta = document.createElement("div");
     meta.className = "update-entry-meta";
@@ -3214,7 +3243,7 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
 
 syncHeader();
 syncHeaderHeight();
-setLanguage(languageFromUrl() || localStorage.getItem("identity-language") || "en");
+setLanguage(document.documentElement.dataset.pageLanguage || languageFromUrl() || "en");
 window.addEventListener("scroll", syncHeader, { passive: true });
 window.addEventListener("resize", syncHeaderHeight, { passive: true });
 window.addEventListener("load", syncHeaderHeight, { once: true });
@@ -3512,15 +3541,15 @@ document.fonts?.ready?.then(syncHeaderHeight);
   const traceMarks = ["間", "道", "灯", "波", "山", "星"];
   const ticketImages = {
     en: {
-      src: "assets/story/klamka-ticket-en.png",
+      src: "/assets/story/klamka-ticket-en.png",
       alt: "Boarding pass for Klamka Zapadla Airlines from Krakow to Japan, March 28, 2009",
     },
     pl: {
-      src: "assets/story/klamka-ticket.png?v=2",
+      src: "/assets/story/klamka-ticket.png?v=2",
       alt: "Bilet lotniczy linii Klamka Zapadła z Krakowa do Japonii, 28 marca 2009",
     },
     ja: {
-      src: "assets/story/klamka-ticket-ja.png",
+      src: "/assets/story/klamka-ticket-ja.png",
       alt: "2009年3月28日、クラクフから日本へ向かうKlamka Zapadła航空の搭乗券",
     },
   };
@@ -3695,11 +3724,11 @@ document.fonts?.ready?.then(syncHeaderHeight);
       <article class="stamp-rally-story">
         <div class="stamp-rally-story-gallery">
           <figure class="stamp-rally-story-photo has-ticket">
-            <img src="assets/story/airport-farewell-2009.jpg" alt="${copy.storyPhotoAlt}" loading="lazy">
+            <img src="/assets/story/airport-farewell-2009.jpg" alt="${copy.storyPhotoAlt}" loading="lazy">
             <figcaption>${copy.storyPhotoCaption}</figcaption>
           </figure>
           <figure class="stamp-rally-story-photo">
-            <img src="assets/story/airport-farewell-group-2009.jpg" alt="${copy.storyGroupPhotoAlt}" loading="lazy">
+            <img src="/assets/story/airport-farewell-group-2009.jpg" alt="${copy.storyGroupPhotoAlt}" loading="lazy">
             <figcaption>${copy.storyGroupPhotoCaption}</figcaption>
           </figure>
           <img class="stamp-rally-story-ticket-image" src="${ticket.src}" alt="${ticket.alt}" loading="lazy">
@@ -3816,7 +3845,7 @@ document.fonts?.ready?.then(syncHeaderHeight);
           <i class="stamp-rally-slot-target"></i>
           <div class="stamp-rally-stamp"><small>0${index + 1}</small>${stampArtwork[definition.icon]}<strong>${definition.glyph}</strong><span>MICHAŁ MAZUR</span></div>
         </div>
-        <div class="stamp-rally-item-copy"><span>${unlocked ? copy.unlocked : copy.locked}</span><h3>${title}</h3><p>${description}</p><a href="${definition.href}">${copy.openRoute} <i aria-hidden="true">→</i></a></div>`;
+        <div class="stamp-rally-item-copy"><span>${unlocked ? copy.unlocked : copy.locked}</span><h3>${title}</h3><p>${description}</p><a href="${portfolioHref(definition.href)}">${copy.openRoute} <i aria-hidden="true">→</i></a></div>`;
       grid.append(item);
     });
     renderReward(copy);

@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+Thumbs.db
+
+# Working/export folders that should not be committed from the source root.
+tmp/
+github-site/
+github-site-upload/
+
+# Generated one-off artifacts.
+backpack-whale-run/
+output/

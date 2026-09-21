@@ -1,0 +1,13 @@
+{
+  "name": "mazur-portfolio",
+  "private": true,
+  "scripts": {
+    "images": "node tools/prepare-images.mjs",
+    "build": "node tools/build-seo.mjs",
+    "test": "node --test tools/seo.test.mjs"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.12",
+    "sharp": "0.35.4"
+  }
+}

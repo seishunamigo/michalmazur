@@ -1,0 +1,920 @@
+{
+  "/assets/apu-campus-spring.jpg": {
+    "width": 1600,
+    "height": 949,
+    "variants": [
+      {
+        "src": "/assets/optimized/apu-campus-spring-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/apu-campus-spring-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/apu-campus-spring-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/apu-portrait-environment.jpg": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      {
+        "src": "/assets/optimized/apu-portrait-environment-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/apu-portrait-environment-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/apu-portrait-environment-1800.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/assets/contact-michal-portrait.jpg": {
+    "width": 826,
+    "height": 1100,
+    "variants": [
+      {
+        "src": "/assets/optimized/contact-michal-portrait-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/contact-michal-portrait-826.webp",
+        "width": 826
+      }
+    ]
+  },
+  "/assets/documentary/classroom-evidence.jpg": {
+    "width": 1800,
+    "height": 1202,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/classroom-evidence-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/classroom-evidence-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/classroom-evidence-1800.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/assets/documentary/faculty-ai-lecture.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/faculty-ai-lecture-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/faculty-ai-lecture-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/faculty-ai-lecture-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/documentary/hokkaido-lecture.jpg": {
+    "width": 1490,
+    "height": 1600,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/hokkaido-lecture-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/hokkaido-lecture-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/hokkaido-lecture-1490.webp",
+        "width": 1490
+      }
+    ]
+  },
+  "/assets/documentary/intercultural-research-poster.jpg": {
+    "width": 1200,
+    "height": 1600,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/intercultural-research-poster-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/intercultural-research-poster-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/intercultural-research-poster-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/assets/documentary/iran-fieldwork.jpg": {
+    "width": 340,
+    "height": 360
+  },
+  "/assets/documentary/nagoshi-interview.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/nagoshi-interview-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/nagoshi-interview-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/nagoshi-interview-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/documentary/onsen/beppu-hot-spring-2025.jpg": {
+    "width": 1011,
+    "height": 1400,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/onsen/beppu-hot-spring-2025-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/onsen/beppu-hot-spring-2025-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/onsen/beppu-hot-spring-2025-1011.webp",
+        "width": 1011
+      }
+    ]
+  },
+  "/assets/documentary/onsen/beppu-onsen-monitor-certificate-2025.jpg": {
+    "width": 1054,
+    "height": 1400,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/onsen/beppu-onsen-monitor-certificate-2025-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/onsen/beppu-onsen-monitor-certificate-2025-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/onsen/beppu-onsen-monitor-certificate-2025-1054.webp",
+        "width": 1054
+      }
+    ]
+  },
+  "/assets/documentary/onsen/beppu-onsen-monitoring-2025.jpg": {
+    "width": 1400,
+    "height": 646,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/onsen/beppu-onsen-monitoring-2025-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/onsen/beppu-onsen-monitoring-2025-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/onsen/beppu-onsen-monitoring-2025-1400.webp",
+        "width": 1400
+      }
+    ]
+  },
+  "/assets/documentary/prefd-spring-2026-participants.jpg": {
+    "width": 1196,
+    "height": 896,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/prefd-spring-2026-participants-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/prefd-spring-2026-participants-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/prefd-spring-2026-participants-1196.webp",
+        "width": 1196
+      }
+    ]
+  },
+  "/assets/documentary/presentation-skills-higher-ed-2024.jpg": {
+    "width": 2000,
+    "height": 1500,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/presentation-skills-higher-ed-2024-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/presentation-skills-higher-ed-2024-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/presentation-skills-higher-ed-2024-1920.webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/assets/documentary/ritsumeikan-practical-fd-certificate-2026.jpg": {
+    "width": 1400,
+    "height": 1050,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/ritsumeikan-practical-fd-certificate-2026-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/ritsumeikan-practical-fd-certificate-2026-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/ritsumeikan-practical-fd-certificate-2026-1400.webp",
+        "width": 1400
+      }
+    ]
+  },
+  "/assets/documentary/safe-community-group.jpg": {
+    "width": 1400,
+    "height": 990,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/safe-community-group-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/safe-community-group-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/safe-community-group-1400.webp",
+        "width": 1400
+      }
+    ]
+  },
+  "/assets/documentary/teaching-in-english-workshop.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/teaching-in-english-workshop-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/teaching-in-english-workshop-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/teaching-in-english-workshop-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/documentary/utokyo-prefd-graduates.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/utokyo-prefd-graduates-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/utokyo-prefd-graduates-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/utokyo-prefd-graduates-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/documentary/valkyrie-profile-interview.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/valkyrie-profile-interview-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/valkyrie-profile-interview-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/valkyrie-profile-interview-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/documentary/video-games-course-plan.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      {
+        "src": "/assets/optimized/documentary/video-games-course-plan-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/documentary/video-games-course-plan-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/documentary/video-games-course-plan-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/event-artifacts/ap-house-starting-over-poster.jpg": {
+    "width": 1273,
+    "height": 1800
+  },
+  "/assets/event-artifacts/apu-pre-fd-workshop-poster.jpg": {
+    "width": 1273,
+    "height": 1800
+  },
+  "/assets/event-artifacts/international-project-management-cover.jpg": {
+    "width": 1273,
+    "height": 1800
+  },
+  "/assets/event-artifacts/kaizen-academy-intercultural-communication-2026.png": {
+    "width": 2486,
+    "height": 1388
+  },
+  "/assets/event-artifacts/safe-volunteer-id.png": {
+    "width": 130,
+    "height": 156
+  },
+  "/assets/event-artifacts/university-of-tokyo-workshops-poster-frame.jpg": {
+    "width": 956,
+    "height": 1338
+  },
+  "/assets/identity-hero.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "/assets/optimized/identity-hero-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/identity-hero-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/identity-hero-1672.webp",
+        "width": 1672
+      }
+    ]
+  },
+  "/assets/intercultural-workshop.jpg": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/assets/optimized/intercultural-workshop-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/intercultural-workshop-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/intercultural-workshop-1800.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/assets/japan-mailbox.jpg": {
+    "width": 1200,
+    "height": 1584,
+    "variants": [
+      {
+        "src": "/assets/optimized/japan-mailbox-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/japan-mailbox-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/japan-mailbox-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/assets/mazur-jp-postbox-gold.png": {
+    "width": 812,
+    "height": 1312,
+    "variants": [
+      {
+        "src": "/assets/optimized/mazur-jp-postbox-gold-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/mazur-jp-postbox-gold-812.webp",
+        "width": 812
+      }
+    ]
+  },
+  "/assets/mazur-jp-postmark-gold.png": {
+    "width": 512,
+    "height": 512,
+    "variants": [
+      {
+        "src": "/assets/optimized/mazur-jp-postmark-gold-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/mazur-jp-postmark-gold-512.webp",
+        "width": 512
+      }
+    ]
+  },
+  "/assets/michal-outdoors-background.jpg": {
+    "width": 1200,
+    "height": 1600,
+    "variants": [
+      {
+        "src": "/assets/optimized/michal-outdoors-background-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/michal-outdoors-background-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/michal-outdoors-background-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/assets/public-voice-podcast.jpg": {
+    "width": 1400,
+    "height": 933,
+    "variants": [
+      {
+        "src": "/assets/optimized/public-voice-podcast-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/public-voice-podcast-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/public-voice-podcast-1400.webp",
+        "width": 1400
+      }
+    ]
+  },
+  "/assets/teaching-gallery/hybrid-facilitation.jpg": {
+    "width": 2200,
+    "height": 1650,
+    "variants": [
+      {
+        "src": "/assets/optimized/teaching-gallery/hybrid-facilitation-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/hybrid-facilitation-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/hybrid-facilitation-1920.webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/assets/teaching-gallery/presentation-skills-small-group.jpg": {
+    "width": 2200,
+    "height": 1650,
+    "variants": [
+      {
+        "src": "/assets/optimized/teaching-gallery/presentation-skills-small-group-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/presentation-skills-small-group-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/presentation-skills-small-group-1920.webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/assets/teaching-gallery/presentation-skills-workshop.jpg": {
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "src": "/assets/optimized/teaching-gallery/presentation-skills-workshop-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/presentation-skills-workshop-800.webp",
+        "width": 800
+      }
+    ]
+  },
+  "/assets/teaching-gallery/small-group-dialogue.jpg": {
+    "width": 2200,
+    "height": 1466,
+    "variants": [
+      {
+        "src": "/assets/optimized/teaching-gallery/small-group-dialogue-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/small-group-dialogue-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/small-group-dialogue-1920.webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/assets/teaching-gallery/student-success-group-eg.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      {
+        "src": "/assets/optimized/teaching-gallery/student-success-group-eg-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/student-success-group-eg-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/student-success-group-eg-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/teaching-gallery/student-success-group-eh.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      {
+        "src": "/assets/optimized/teaching-gallery/student-success-group-eh-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/student-success-group-eh-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/student-success-group-eh-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/teaching-gallery/teaching-in-english-2019-gestures.jpg": {
+    "width": 2200,
+    "height": 1466,
+    "variants": [
+      {
+        "src": "/assets/optimized/teaching-gallery/teaching-in-english-2019-gestures-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/teaching-in-english-2019-gestures-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/teaching-in-english-2019-gestures-1920.webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/assets/teaching-gallery/teaching-in-english-2019-participation.jpg": {
+    "width": 2200,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/optimized/teaching-gallery/teaching-in-english-2019-participation-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/teaching-in-english-2019-participation-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/teaching-in-english-2019-participation-1920.webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/assets/teaching-gallery/teaching-with-technology.jpg": {
+    "width": 2200,
+    "height": 1469,
+    "variants": [
+      {
+        "src": "/assets/optimized/teaching-gallery/teaching-with-technology-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/teaching-with-technology-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/teaching-gallery/teaching-with-technology-1920.webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/assets/teaching-materials/activity-design-framework.png": {
+    "width": 1698,
+    "height": 952
+  },
+  "/assets/teaching-materials/mindful-listening-classroom.png": {
+    "width": 1222,
+    "height": 684
+  },
+  "/assets/teaching-materials/presentation-four-part-story.png": {
+    "width": 1544,
+    "height": 868
+  },
+  "/assets/teaching-materials/responsible-ai-decision-flow.png": {
+    "width": 2736,
+    "height": 1540
+  },
+  "/assets/teaching-materials/understanding-video-games-course-poster.jpg": {
+    "width": 1448,
+    "height": 2048
+  },
+  "/assets/teaching-materials/understanding-video-games-information-poster.jpg": {
+    "width": 1448,
+    "height": 2048
+  },
+  "/assets/workshop-context-blurred.jpg": {
+    "width": 1600,
+    "height": 820,
+    "variants": [
+      {
+        "src": "/assets/optimized/workshop-context-blurred-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/workshop-context-blurred-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/workshop-context-blurred-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/writing/cosy-games-psx-327.jpg": {
+    "width": 888,
+    "height": 1183,
+    "variants": [
+      {
+        "src": "/assets/optimized/writing/cosy-games-psx-327-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/writing/cosy-games-psx-327-888.webp",
+        "width": 888
+      }
+    ]
+  },
+  "/assets/writing/editorial-desk-2021.jpg": {
+    "width": 4000,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/assets/optimized/writing/editorial-desk-2021-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/writing/editorial-desk-2021-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/writing/editorial-desk-2021-1920.webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/assets/writing/gracz-w-tokyo-2011.jpg": {
+    "width": 1857,
+    "height": 1302,
+    "variants": [
+      {
+        "src": "/assets/optimized/writing/gracz-w-tokyo-2011-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/writing/gracz-w-tokyo-2011-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/writing/gracz-w-tokyo-2011-1857.webp",
+        "width": 1857
+      }
+    ]
+  },
+  "/assets/writing/press-interviews/ed-boon-midway-chicago.jpg": {
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "src": "/assets/optimized/writing/press-interviews/ed-boon-midway-chicago-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/writing/press-interviews/ed-boon-midway-chicago-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/writing/press-interviews/ed-boon-midway-chicago-1448.webp",
+        "width": 1448
+      }
+    ]
+  },
+  "/assets/writing/press-interviews/mark-turmell-midway.jpg": {
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "src": "/assets/optimized/writing/press-interviews/mark-turmell-midway-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/writing/press-interviews/mark-turmell-midway-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/writing/press-interviews/mark-turmell-midway-1448.webp",
+        "width": 1448
+      }
+    ]
+  },
+  "/assets/writing/press-interviews/piotr-babieno-bloober-team.jpg": {
+    "width": 1253,
+    "height": 832,
+    "variants": [
+      {
+        "src": "/assets/optimized/writing/press-interviews/piotr-babieno-bloober-team-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/writing/press-interviews/piotr-babieno-bloober-team-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/writing/press-interviews/piotr-babieno-bloober-team-1253.webp",
+        "width": 1253
+      }
+    ]
+  },
+  "/assets/writing/press-interviews/square-enix-kitase-toriyama-2011-crop.png": {
+    "width": 1024,
+    "height": 768,
+    "variants": [
+      {
+        "src": "/assets/optimized/writing/press-interviews/square-enix-kitase-toriyama-2011-crop-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/writing/press-interviews/square-enix-kitase-toriyama-2011-crop-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/writing/press-interviews/square-enix-kitase-toriyama-2011-crop-1024.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/assets/writing/press-interviews/toshihiro-nagoshi.jpg": {
+    "width": 3264,
+    "height": 2448,
+    "variants": [
+      {
+        "src": "/assets/optimized/writing/press-interviews/toshihiro-nagoshi-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/writing/press-interviews/toshihiro-nagoshi-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/writing/press-interviews/toshihiro-nagoshi-1920.webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/assets/writing/press-interviews/valkyria-chronicles-sega.jpg": {
+    "width": 3264,
+    "height": 2448,
+    "variants": [
+      {
+        "src": "/assets/optimized/writing/press-interviews/valkyria-chronicles-sega-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/writing/press-interviews/valkyria-chronicles-sega-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/writing/press-interviews/valkyria-chronicles-sega-1920.webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/assets/writing/psx-extreme-the-movie.jpg": {
+    "width": 444,
+    "height": 250
+  },
+  "/assets/writing/tokyo-game-show-2011-press.jpg": {
+    "width": 1800,
+    "height": 1195,
+    "variants": [
+      {
+        "src": "/assets/optimized/writing/tokyo-game-show-2011-press-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/writing/tokyo-game-show-2011-press-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/writing/tokyo-game-show-2011-press-1800.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/assets/writing/tokyo-game-show-2024-press.jpg": {
+    "width": 2200,
+    "height": 1650,
+    "variants": [
+      {
+        "src": "/assets/optimized/writing/tokyo-game-show-2024-press-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/writing/tokyo-game-show-2024-press-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/writing/tokyo-game-show-2024-press-1920.webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/assets/writing/tokyo-game-show-persona.jpg": {
+    "width": 2200,
+    "height": 1650,
+    "variants": [
+      {
+        "src": "/assets/optimized/writing/tokyo-game-show-persona-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/writing/tokyo-game-show-persona-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/writing/tokyo-game-show-persona-1920.webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/assets/writing/tokyo-stories-playtest.jpg": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/assets/optimized/writing/tokyo-stories-playtest-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/writing/tokyo-stories-playtest-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/writing/tokyo-stories-playtest-1800.webp",
+        "width": 1800
+      }
+    ]
+  }
+}

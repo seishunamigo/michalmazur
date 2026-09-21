@@ -1,0 +1,42 @@
+/* Crawlable language links share the existing compact switch layout. */
+.skip-link { position: fixed; top: 12px; left: 12px; z-index: 10000; padding: 12px 20px; background: #fff; color: #163e3b; border: 2px solid currentColor; border-radius: 6px; transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
+main:focus { outline: none; }
+img { height: auto; }
+.start-here-card:is(:hover, :focus-visible) > span:not(.start-here-number):not(.start-here-audience),
+.interactive-lab-card:is(:hover, :focus-visible) > span:not(.interactive-lab-number):not(.interactive-lab-meta) { color: #071f25; }
+.language-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  min-height: 28px;
+  padding: 2px 4px;
+  color: inherit;
+  font: inherit;
+  font-size: .76rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+.language-switch a.is-active { background: #fff; color: var(--teal-deep); }
+.site-header.is-scrolled .language-switch a.is-active { background: var(--teal-deep); color: var(--paper); }
+.language-switch a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.topic-page { max-width: 1100px; margin: auto; padding: 48px 24px 64px; }
+.topic-hero { max-width: 780px; margin: 0 auto 48px; }
+.topic-hero h1 { font-family: "Source Serif 4", Georgia, serif; font-weight: 650; font-size: clamp(2rem, 5vw, 3.7rem); line-height: 1.1; overflow-wrap: anywhere; }
+.topic-hero p, .topic-prose { font-size: 1.08rem; line-height: 1.75; }
+.topic-prose { max-width: 780px; margin: 36px auto; }
+.topic-prose blockquote { margin: 20px 0; padding: 8px 20px; border-left: 3px solid var(--teal-deep); }
+.topic-prose .case-study { display: block; }
+.topic-record { max-width: 780px; margin: auto; }
+.topic-record .course-record-card { display: block; }
+.topic-record img { width: 100%; max-height: 480px; object-fit: cover; }
+.topic-action { max-width: 780px; margin: 32px auto; font-weight: 700; }
+.topic-page img { max-width: 100%; }
+.topic-page .writing-field-notes { padding: 0; margin: 32px 0; }
+.topic-page h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.2; }
+@media (max-width: 600px) {
+  .topic-page { padding-left: 18px; padding-right: 18px; }
+  .language-switch a { min-width: 28px; min-height: 32px; font-size: .7rem; }
+  .topic-page .workshop-artifact { grid-template-columns: 1fr; }
+}
