@@ -5777,6 +5777,15 @@ dd {
   border: 1px solid var(--line);
 }
 
+.workshop-evidence-photo {
+  float: right;
+  width: 112px;
+  height: 84px;
+  object-fit: cover;
+  margin: 0 0 12px 16px;
+  border-radius: 4px;
+}
+
 .workshop-evidence-grid span {
   display: block;
   margin-bottom: 22px;
