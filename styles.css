@@ -10390,6 +10390,7 @@ dd {
 /* Site updates ----------------------------------------------------------- */
 
 .latest-updates {
+  scroll-margin-top: calc(var(--site-header-height) + 20px);
   width: min(var(--max), calc(100% - 40px));
   margin: 0 auto;
   padding: 38px 0 44px;
@@ -10431,6 +10432,26 @@ dd {
 
 .update-entry {
   min-width: 0;
+}
+
+.update-entry-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: contain;
+  margin: 8px 0 12px;
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+@media (max-width: 720px) {
+  .nav:has(.nav-updates-link) {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    overflow: visible;
+    white-space: normal;
+  }
 }
 
 .latest-updates-list .update-entry + .update-entry {
@@ -10879,6 +10900,15 @@ dd {
   margin: 0;
   padding: 34px 0;
   color: var(--muted);
+}
+
+.achievement-lecture-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 16px 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
 }
 
 .achievement-kaizen-cover {

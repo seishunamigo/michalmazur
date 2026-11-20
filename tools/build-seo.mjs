@@ -24,7 +24,12 @@ const sources = Object.fromEntries(Object.keys(pages).filter(f => !['apu-pre-fd.
 const imageManifest = JSON.parse(read('tools/image-manifest.json'));
 
 function updateEntries(lang, items) {
-  return items.map(item => `<article class="update-entry"><a href="${esc(localHref(pick(item.url, lang), lang))}"><div class="update-entry-meta"><time datetime="${item.date}">${esc(new Intl.DateTimeFormat({en:'en-GB',pl:'pl-PL',ja:'ja-JP'}[lang], {dateStyle:'long',timeZone:'UTC'}).format(new Date(item.date)))}</time><span>${esc(pick(item.category, lang))}</span></div><h3>${esc(pick(item.title, lang))}</h3><p>${esc(pick(item.summary, lang))}</p><span class="update-entry-open">${esc(updateCopy[lang].open)} →</span></a></article>`).join('\n');
+  return items.map(item => `<article class="update-entry"><a href="${esc(localHref(pick(item.url, lang), lang))}"><div class="update-entry-meta"><time datetime="${item.date}">${esc(new Intl.DateTimeFormat({en:'en-GB',pl:'pl-PL',ja:'ja-JP'}[lang], {dateStyle:'long',timeZone:'UTC'}).format(new Date(item.date)))}</time><span>${esc(pick(item.category, lang))}</span></div><h3>${esc(pick(item.title, lang))}</h3>${updateImage(item.image, lang)}<p>${esc(pick(item.summary, lang))}</p><span class="update-entry-open">${esc(updateCopy[lang].open)} →</span></a></article>`).join('\n');
+}
+
+function updateImage(image, lang) {
+  if (!image) return '';
+  return `<img class="update-entry-image" src="${esc(image.src)}" width="${esc(image.width)}" height="${esc(image.height)}" alt="${esc(pick(image.alt, lang))}" loading="lazy" decoding="async">`;
 }
 
 function renderUpdates(doc, lang) {
@@ -201,7 +206,10 @@ function transform(html, file, lang) {
   });
   doc.querySelectorAll('link[data-seo-layout]').forEach(n => n.remove());
   doc.head.insertAdjacentHTML('beforeend','<link data-seo-layout rel="stylesheet" href="/seo-layout.css?v=2">');
-  doc.querySelectorAll('script[src*="script.js"]').forEach(n => n.src = '/script.js?v=124');
+  doc.querySelectorAll('script[src*="script.js"]').forEach(n => {
+    n.src = doc.querySelector('[data-updates-module], [data-updates-archive]') ? '/script.js?v=128'
+      : doc.querySelector('[data-i18n="essayBody"], [data-i18n="essayPageDeck"]') ? '/script.js?v=127' : '/script.js?v=124';
+  });
   // Localized documents contain only their language. The English source retains
   // all editorial panels for rebuilding; language links navigate between files.
   if (lang !== 'en') doc.querySelectorAll('[data-lang-panel]').forEach(n => {

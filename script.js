@@ -568,9 +568,9 @@ const translations = {
     identityStrip:
       "Dla centrów dydaktyki · programów międzynarodowych · szkół doktorskich · wielojęzycznych zespołów dydaktycznych",
     startHereEyebrow: "Zacznij tutaj",
-    startHereNavLabel: "Trzy ścieżki przez portfolio",
-    startHereTitle: "Wybierz część mojej pracy najbliższą temu, czego szukasz.",
-    startHereDeck: "Wybierz dydaktykę i rozwój kadry, badania albo publicystykę. Każda ścieżka prowadzi do odpowiednich projektów i materiałów.",
+    startHereNavLabel: "Dydaktyka, badania i teksty",
+    startHereTitle: "Czym się zajmuję",
+    startHereDeck: "Prowadzę zajęcia i warsztaty, zajmuję się badaniami i piszę o grach oraz Japonii.",
     startHereTeachingAudience: "Dla edukatorów i instytucji",
     startHereTeachingTitle: "Dydaktyka i rozwój kadry",
     startHereTeachingBody: "Kursy, warsztaty, materiały i praktyczne narzędzia wspierające wielojęzyczne oraz międzykulturowe uczenie się.",
@@ -581,7 +581,7 @@ const translations = {
     startHereResearchLink: "Poznaj badania →",
     startHereWritingAudience: "Dla czytelników, mediów i projektów kulturalnych",
     startHereWritingTitle: "Japonia, gry i publicystyka",
-    startHereWritingBody: "Reportaże i interpretacja kultury oparte na blisko trzech dekadach pisania jako Mazzi.",
+    startHereWritingBody: "Od blisko trzech dekad piszę jako Mazzi. Tu znajdziesz m.in. moje teksty i reportaże z Japonii.",
     startHereWritingLink: "Przejdź do tekstów →",
     trajectoryEyebrow: "Doświadczenie",
     trajectoryTitle: "Edukacja i praca w Krakowie, na Hokkaido i w Beppu.",
@@ -733,9 +733,9 @@ const translations = {
     identityAxisTerm: "Wybrane tematy",
     identityAxisDesc: "Komunikacja, uczenie się, kultura i tworzenie znaczeń mimo różnic.",
     essayEyebrow: "Esej programowy",
-    essayTitle: "Światy bez instrukcji obsługi.",
+    essayTitle: "Światy bez instrukcji obsługi",
     essayBody:
-      "Esej o grach jako systemach kulturowych, codziennym życiu w Japonii, publicystyce i edukacji międzykulturowej.",
+      "Na Tokyo Game Show zatrzymałem się przy grze Space Smoking, w której cała sztuka polega na tym, żeby nie zgasł papieros. Parę dni później jej twórca napisał do mnie po japońsku i po polsku.",
     essayLink: "Przeczytaj esej",
     writingPageEyebrow: "Portfolio pisarskie",
     writingPageTitle: "Teksty o Japonii, grach i kulturze mediów.",
@@ -841,7 +841,7 @@ const translations = {
     essayPageEyebrow: "Esej programowy",
     essayPageTitle: "Światy bez instrukcji obsługi",
     essayPageDeck:
-      "Esej o grach jako systemach kulturowych, codziennym życiu w Japonii, publicystyce i edukacji międzykulturowej.",
+      "Tutorial w grze szybko się kończy. Potem trzeba samemu rozgryźć, na jakich zasadach działa świat. Piszę o tym, co ten odruch ma wspólnego z życiem w Japonii, pracą nad tekstem i prowadzeniem zajęć w międzynarodowej grupie.",
     backTop: "Do góry",
     designStudioEyebrow: "Wypróbuj metodę",
     designStudioTitle: "Zamień problem dydaktyczny w niewielkie zadanie, które uczestnicy naprawdę mogą wykonać.",
@@ -3088,11 +3088,12 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
   const copy = {
     en: {
       latestEyebrow: "Recently added",
-      latestTitle: "New paths through the portfolio",
+      latestTitle: "Recent talks and achievements",
+      navUpdates: "What’s new",
       viewAll: "View all updates",
       archiveEyebrow: "Site updates",
       archiveTitle: "What is new on mazur.jp",
-      archiveDeck: "A chronological record of new teaching materials, research paths, writing, and public work. Every entry leads to the material in its permanent place.",
+      archiveDeck: "Recent talks and achievements, newest first.",
       backHome: "Return to the homepage",
       loading: "Loading updates…",
       empty: "No updates have been published yet.",
@@ -3102,11 +3103,12 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
     },
     pl: {
       latestEyebrow: "Ostatnio dodane",
-      latestTitle: "Nowe ścieżki przez portfolio",
-      viewAll: "Zobacz wszystkie aktualizacje",
+      latestTitle: "Najnowsze wystąpienia i osiągnięcia",
+      navUpdates: "Co nowego",
+      viewAll: "Zobacz wszystkie aktualności",
       archiveEyebrow: "Aktualizacje strony",
       archiveTitle: "Co nowego na mazur.jp",
-      archiveDeck: "Chronologiczny zapis nowych materiałów dydaktycznych, badań, tekstów i pracy publicznej. Każdy wpis prowadzi do materiału w jego stałym miejscu.",
+      archiveDeck: "Moje wystąpienia i osiągnięcia. Najnowsze wpisy są na górze.",
       backHome: "Wróć na stronę główną",
       loading: "Wczytywanie aktualizacji…",
       empty: "Nie opublikowano jeszcze żadnych aktualizacji.",
@@ -3116,11 +3118,12 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
     },
     ja: {
       latestEyebrow: "最近追加したもの",
-      latestTitle: "ポートフォリオへの新しい入口",
+      latestTitle: "最近の講演と実績",
+      navUpdates: "新着情報",
       viewAll: "すべての更新を見る",
       archiveEyebrow: "サイト更新",
       archiveTitle: "mazur.jpの新着情報",
-      archiveDeck: "教育資料、研究、執筆、パブリックな活動の新しい追加を時系列で紹介します。各項目は、常設の掲載場所へつながります。",
+      archiveDeck: "最近の講演や実績を新しい順に紹介します。",
       backHome: "トップページへ戻る",
       loading: "更新を読み込んでいます…",
       empty: "まだ更新はありません。",
@@ -3172,7 +3175,19 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
     const open = document.createElement("span");
     open.className = "update-entry-open";
     open.textContent = `${copy[lang].open} →`;
-    link.append(meta, title, summary, open);
+    link.append(meta, title);
+    if (item.image) {
+      const image = document.createElement("img");
+      image.className = "update-entry-image";
+      image.src = item.image.src;
+      image.width = item.image.width;
+      image.height = item.image.height;
+      image.alt = localText(item.image.alt, lang);
+      image.loading = "lazy";
+      image.decoding = "async";
+      link.append(image);
+    }
+    link.append(summary, open);
     article.append(link);
     return article;
   };

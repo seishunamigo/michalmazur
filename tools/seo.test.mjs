@@ -54,13 +54,33 @@ test('all internal page/resource links resolve, including fragments', () => {
 });
 
 test('updates and homepage news exist without JavaScript', () => {
+  const dataContext = { window: {} };
+  vm.runInNewContext(read('updates.js'), dataContext);
+  const updates = [...dataContext.window.identitySiteUpdates.updates].sort((a, b) => b.date.localeCompare(a.date));
   for (const lang of ['en','pl','ja']) {
     const prefix = lang === 'en' ? '' : lang + '/';
-    const doc = document(prefix+'updates.html');
-    assert.equal(doc.querySelectorAll('.update-entry').length,8);
-    assert.ok(!doc.querySelector('[data-updates-status]'));
-    assert.equal(document(prefix+'index.html').querySelectorAll('[data-updates-list] .update-entry').length,3);
-    assert.ok(!document(prefix+'index.html').querySelector('[data-updates-module]').hasAttribute('hidden'));
+    const archive = document(prefix+'updates.html');
+    const home = document(prefix+'index.html');
+    const latest = updates[0].url;
+    const expectedHref = localHref(typeof latest === 'string' ? latest : latest[lang] || latest.en, lang);
+    assert.equal(archive.querySelectorAll('.update-entry').length, updates.length);
+    assert.equal(archive.querySelector('.update-entry a').getAttribute('href'), expectedHref);
+    assert.ok(!archive.querySelector('[data-updates-status]'));
+    assert.equal(home.querySelectorAll('[data-updates-list] .update-entry').length, Math.min(3, updates.length));
+    assert.equal(home.querySelector('[data-updates-list] .update-entry a').getAttribute('href'), expectedHref);
+    assert.ok(!home.querySelector('[data-updates-module]').hasAttribute('hidden'));
+    const shortcut = home.querySelector('.nav-updates-link');
+    assert.equal(shortcut.getAttribute('href'), '#latest-updates');
+    assert.ok(home.querySelector('#latest-updates[data-updates-module]'));
+    const image = updates[0].image;
+    if (image) {
+      for (const page of [home, archive]) {
+        const thumb = page.querySelector('.update-entry img');
+        assert.equal(thumb.getAttribute('src'), image.src);
+        assert.equal(thumb.getAttribute('alt'), image.alt[lang]);
+        assert.equal(thumb.getAttribute('loading'), 'lazy');
+      }
+    }
   }
 });
 
