@@ -35,6 +35,36 @@ window.identitySiteUpdates = {
       }
     },
     {
+      id: "apu-edlsc-faculty-award-2026",
+      date: "2026-11-04",
+      image: {
+        src: "/assets/event-artifacts/apu-edlsc-faculty-award-2026-ceremony.webp",
+        width: 1440,
+        height: 810,
+        alt: {
+          en: "Michal Mazur receiving the EDLSC Faculty Award at APU.",
+          pl: "Michał Mazur odbiera EDLSC Faculty Award na APU.",
+          ja: "APUの表彰式でEDLSC Faculty Awardを受け取るマズル ミハウ。"
+        }
+      },
+      url: {
+        en: "achievements.html#apu-edlsc-faculty-award-2026-en",
+        pl: "achievements.html#apu-edlsc-faculty-award-2026-pl",
+        ja: "achievements.html#apu-edlsc-faculty-award-2026-ja"
+      },
+      category: { en: "Teaching award", pl: "Nagroda dydaktyczna", ja: "教育分野の表彰" },
+      title: {
+        en: "APU teaching award: EDLSC Faculty Award",
+        pl: "EDLSC Faculty Award za dydaktykę na APU",
+        ja: "EDLSC Faculty Award（教育分野）を受賞"
+      },
+      summary: {
+        en: "I received the award at APU on 4 November for my teaching work in the 2025 academic year.",
+        pl: "4 listopada odebrałem na APU nagrodę za osiągnięcia dydaktyczne w roku akademickim 2025.",
+        ja: "2025年度の教育活動に対する賞を、11月4日にAPUで受け取りました。"
+      }
+    },
+    {
       id: "educational-spaces-2026",
       date: "2026-08-07",
       newUntil: "2026-10-07",

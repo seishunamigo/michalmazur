@@ -164,11 +164,6 @@ function transform(html, file, lang) {
   }
   addTopicLinks(doc,file);
   renderUpdates(doc,lang);
-  if (file === 'index.html') {
-    const start = doc.querySelector('.start-here');
-    const latest = doc.querySelector('[data-updates-module]');
-    if (start && latest) latest.before(start);
-  }
   doc.querySelectorAll('.language-switch').forEach(n => {
     n.innerHTML = config.langs.map(l => `<a data-lang="${l}" href="${pagePath(file,l)}" hreflang="${l}" lang="${l}" ${l === lang ? 'class="is-active" aria-current="page"' : ''}>${l === 'ja' ? 'JP' : l.toUpperCase()}</a>`).join('');
   });
