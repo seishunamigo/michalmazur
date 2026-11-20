@@ -35,6 +35,26 @@ window.identitySiteUpdates = {
       }
     },
     {
+      id: "sstc-utsunomiya-2026",
+      date: "2026-11-12",
+      url: {
+        en: "research.html#sstc-utsunomiya-2026-en",
+        pl: "research.html#sstc-utsunomiya-2026-pl",
+        ja: "research.html#sstc-utsunomiya-2026-ja"
+      },
+      category: { en: "Research", pl: "Badania", ja: "研究" },
+      title: {
+        en: "Space management education research presented in Utsunomiya",
+        pl: "Badania nad edukacją dla sektora kosmicznego w Utsunomiyi",
+        ja: "宇都宮で宇宙マネジメント教育の研究を発表"
+      },
+      summary: {
+        en: "Mirai Fukudome presented our co-authored study on how the Ritsumeikan Space Management Program assesses what students learn through teamwork and project work.",
+        pl: "Mirai Fukudome przedstawiła nasze badanie o tym, jak Ritsumeikan Space Management Program sprawdza, czego studenci uczą się podczas pracy w zespołach i realizacji projektów.",
+        ja: "福留未来助教が、立命館宇宙マネジメントプログラムでのチーム活動やプロジェクトを通じた学びの評価について、私が共著した研究を発表しました。"
+      }
+    },
+    {
       id: "apu-edlsc-faculty-award-2026",
       date: "2026-11-04",
       image: {
@@ -81,6 +101,42 @@ window.identitySiteUpdates = {
       category: { "en": "Teaching", "pl": "Dydaktyka", "ja": "教育" },
       title: { "en": "Spring 2026 Pre-FD cohort completed", "pl": "Wiosenna grupa Pre-FD 2026 ukończyła cykl", "ja": "2026年春のPre-FDシリーズが修了" },
       summary: { "en": "At APU, participants completed the Foundations of Teaching & Learning series, leaving with certificates and classroom designs they had tested and revised.", "pl": "Na APU uczestnicy ukończyli serię Foundations of Teaching & Learning, otrzymując certyfikaty oraz przetestowane i poprawione projekty zajęć.", "ja": "APUの参加者はFoundations of Teaching & Learningシリーズを修了し、修了証と、試行・改善した授業設計を持ち帰りました。" }
+    },
+    {
+      id: "kaizen-academy-2026",
+      date: "2026-07-29",
+      url: {
+        en: "achievements.html#kaizen-academy-2026-en",
+        pl: "achievements.html#kaizen-academy-2026-pl",
+        ja: "achievements.html#kaizen-academy-2026-ja"
+      },
+      category: { en: "Teaching collaboration", pl: "Współpraca dydaktyczna", ja: "教育連携" },
+      title: {
+        en: "Kaizen Academy summer edition: Why “yes” does not always mean yes",
+        pl: "Letnia edycja Kaizen Academy: Dlaczego „tak” nie zawsze znaczy tak?",
+        ja: "Kaizen Academy夏期プログラム：「はい」はいつも「はい」とは限らない"
+      },
+      summary: {
+        en: "For Kaizen Ads’ summer programme, I designed a Polish–Japanese lesson on how to read a “yes” in context at school, on an internship, or at work.",
+        pl: "Na letnią edycję programu Kaizen Ads przygotowałem polsko-japońską lekcję o tym, jak odczytywać „tak” w zależności od sytuacji: w szkole, na stażu i w pracy.",
+        ja: "Kaizen Adsの夏期プログラム向けに、学校やインターンシップ、職場での「はい」を文脈から読み取るポーランド語・日本語のレッスンを作りました。"
+      }
+    },
+    {
+      id: "resident-evil-raccoon-city-release-2026",
+      date: "2026-05-22",
+      url: "https://www.psxextreme.pl/resident-evil/",
+      category: { en: "Book release", pl: "Premiera książki", ja: "書籍刊行" },
+      title: {
+        en: "Resident Evil: Incydent Raccoon City",
+        pl: "Resident Evil: Incydent Raccoon City",
+        ja: "Resident Evil: Incydent Raccoon City"
+      },
+      summary: {
+        en: "I contributed “Wyspy strachu” (“Islands of Fear”) to this Polish collective volume from PSX Extreme. My essay looks at the Japanese roots of a horror series set in a distinctly American-looking world.",
+        pl: "Do tej książki zbiorowej PSX Extreme napisałem esej „Wyspy strachu”. Przyglądam się w nim japońskim korzeniom serii horrorów, której sceneria na pierwszy rzut oka wygląda po amerykańsku.",
+        ja: "PSX Extremeのポーランド語の共著書に、「Wyspy strachu（恐怖の島々）」を寄稿しました。アメリカ風の舞台を持つホラーシリーズの日本的なルーツを取り上げています。"
+      }
     }
   ]
 };

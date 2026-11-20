@@ -6269,6 +6269,10 @@ dd {
   background: #071e22;
 }
 
+.research-conference {
+  scroll-margin-top: calc(var(--site-header-height) + 20px);
+}
+
 .video-frame iframe {
   position: absolute;
   inset: 0;
