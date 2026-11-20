@@ -6666,9 +6666,18 @@ dd {
   border-top-color: var(--coral);
 }
 
+.achievement-award,
+.achievement-forum {
+  scroll-margin-top: calc(var(--site-header-height) + 20px);
+}
+
 .achievement-award {
   grid-column: 1 / -1;
-  scroll-margin-top: calc(var(--site-header-height) + 20px);
+}
+
+.achievement-forum .video-frame {
+  margin: 14px 0;
+  border-radius: 8px;
 }
 
 .achievement-award-photos {
