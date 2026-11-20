@@ -88,6 +88,21 @@ window.identitySiteUpdates = {
       id: "educational-spaces-2026",
       date: "2026-08-07",
       newUntil: "2026-10-07",
+      image: {
+        src: "/assets/event-artifacts/educational-spaces-proceedings-cover.webp",
+        width: 720,
+        height: 950,
+        alt: {
+          en: "Educational Spaces 2026 proceedings cover with two mountain landscapes.",
+          pl: "Okładka materiałów Educational Spaces 2026 z dwoma górskimi krajobrazami.",
+          ja: "山の風景写真を2枚配したEducational Spaces 2026会議録の表紙。"
+        },
+        credit: {
+          en: "Proceedings cover · Photo credit: Andreas Brugger",
+          pl: "Okładka materiałów konferencyjnych · fot. Andreas Brugger",
+          ja: "会議録の表紙・写真：Andreas Brugger"
+        }
+      },
       url: { "en": "achievements.html#educational-spaces-2026-en", "pl": "achievements.html#educational-spaces-2026-pl", "ja": "achievements.html#educational-spaces-2026-ja" },
       category: { "en": "Public record", "pl": "Dorobek", "ja": "活動記録" },
       title: { "en": "Invited to present at Educational Spaces", "pl": "Zaproszone wystąpienie w ramach Educational Spaces", "ja": "Educational Spacesで招待発表" },

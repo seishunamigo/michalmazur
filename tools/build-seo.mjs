@@ -29,7 +29,10 @@ function updateEntries(lang, items) {
 
 function updateImage(image, lang) {
   if (!image) return '';
-  return `<img class="update-entry-image" src="${esc(image.src)}" width="${esc(image.width)}" height="${esc(image.height)}" alt="${esc(pick(image.alt, lang))}" loading="lazy" decoding="async">`;
+  const img = `<img class="update-entry-image" src="${esc(image.src)}" width="${esc(image.width)}" height="${esc(image.height)}" alt="${esc(pick(image.alt, lang))}" loading="lazy" decoding="async">`;
+  return image.credit
+    ? `<figure class="update-entry-figure">${img}<figcaption>${esc(pick(image.credit, lang))}</figcaption></figure>`
+    : img;
 }
 
 function renderUpdates(doc, lang) {
@@ -202,7 +205,7 @@ function transform(html, file, lang) {
   doc.querySelectorAll('link[data-seo-layout]').forEach(n => n.remove());
   doc.head.insertAdjacentHTML('beforeend','<link data-seo-layout rel="stylesheet" href="/seo-layout.css?v=2">');
   doc.querySelectorAll('script[src*="script.js"]').forEach(n => {
-    n.src = doc.querySelector('[data-updates-module], [data-updates-archive]') ? '/script.js?v=128'
+    n.src = doc.querySelector('[data-updates-module], [data-updates-archive]') ? '/script.js?v=129'
       : doc.querySelector('[data-i18n="essayBody"], [data-i18n="essayPageDeck"]') ? '/script.js?v=127' : '/script.js?v=124';
   });
   // Localized documents contain only their language. The English source retains

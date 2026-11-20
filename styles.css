@@ -10498,6 +10498,22 @@ dd {
   background: var(--surface);
 }
 
+.update-entry-figure {
+  margin: 8px 0 12px;
+}
+
+.update-entry-figure .update-entry-image {
+  width: auto;
+  max-width: 100%;
+  max-height: 260px;
+  margin: 0 0 6px;
+}
+
+.update-entry-figure figcaption {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
 @media (max-width: 720px) {
   .nav:has(.nav-updates-link) {
     display: grid;

@@ -3185,7 +3185,16 @@ document.querySelectorAll("[data-portfolio-chapter-nav]").forEach((chapterNaviga
       image.alt = localText(item.image.alt, lang);
       image.loading = "lazy";
       image.decoding = "async";
-      link.append(image);
+      if (item.image.credit) {
+        const figure = document.createElement("figure");
+        figure.className = "update-entry-figure";
+        const credit = document.createElement("figcaption");
+        credit.textContent = localText(item.image.credit, lang);
+        figure.append(image, credit);
+        link.append(figure);
+      } else {
+        link.append(image);
+      }
     }
     link.append(summary, open);
     article.append(link);
