@@ -205,7 +205,8 @@ function transform(html, file, lang) {
   doc.querySelectorAll('link[data-seo-layout]').forEach(n => n.remove());
   doc.head.insertAdjacentHTML('beforeend','<link data-seo-layout rel="stylesheet" href="/seo-layout.css?v=2">');
   doc.querySelectorAll('script[src*="script.js"]').forEach(n => {
-    n.src = doc.querySelector('[data-updates-module], [data-updates-archive]') ? '/script.js?v=129'
+    n.src = doc.querySelector('[data-i18n="workshopHeroBrief"]') ? '/script.js?v=130'
+      : doc.querySelector('[data-updates-module], [data-updates-archive]') ? '/script.js?v=129'
       : doc.querySelector('[data-i18n="essayBody"], [data-i18n="essayPageDeck"]') ? '/script.js?v=127' : '/script.js?v=124';
   });
   // Localized documents contain only their language. The English source retains
