@@ -2615,8 +2615,22 @@ dd {
   font-weight: 650;
 }
 
+.writing-key-number::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+  vertical-align: middle;
+  background: url("/assets/writing-arcade.svg") var(--sprite-x, 0) center / 400% 100% no-repeat;
+}
+
+.writing-key-card-amiga { --sprite-x: 33.333333%; }
+.writing-key-card-psx { --sprite-x: 66.666667%; }
+.writing-key-card-sfc { --sprite-x: 100%; }
+
 .writing-key-meta {
-  max-width: calc(100% - 70px);
+  max-width: calc(100% - 84px);
   color: color-mix(in srgb, var(--article-accent) 72%, var(--teal-deep));
   font-size: 0.68rem;
   font-weight: 850;
@@ -6273,6 +6287,7 @@ dd {
   scroll-margin-top: calc(var(--site-header-height) + 20px);
 }
 
+
 .video-frame iframe {
   position: absolute;
   inset: 0;
@@ -6625,6 +6640,16 @@ dd {
   grid-template-columns: 1.15fr 1.45fr 0.9fr;
   gap: 8px;
   margin: 36px 0 76px;
+}
+
+@media (min-width: 521px) {
+  .achievement-photo-strip.achievement-photo-strip--intro {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .achievement-photo-strip.achievement-photo-strip--intro figure:first-child {
+    grid-column: auto;
+  }
 }
 
 .achievement-photo-strip img {
