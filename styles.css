@@ -9019,7 +9019,7 @@ dd {
 .contact-social {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 460px);
   gap: 24px;
   align-items: center;
   margin-top: 4px;
@@ -9054,7 +9054,30 @@ dd {
 }
 
 .contact-instagram-button {
+  justify-self: start;
+  margin-top: 8px;
   white-space: nowrap;
+}
+
+.contact-instagram-preview {
+  width: 100%;
+  max-width: 460px;
+  min-width: 0;
+  justify-self: center;
+}
+
+.contact-instagram-preview > blockquote {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.contact-instagram-preview > iframe {
+  display: block;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box;
 }
 
 .contact-link {
