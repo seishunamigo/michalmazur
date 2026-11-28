@@ -3359,26 +3359,14 @@ document.fonts?.ready?.then(syncHeaderHeight);
       storyPhotoCaption: "Kraków, 28 March 2009. A final conversation with my parents before the flight to Japan.",
       storyGroupPhotoAlt: "Michal standing with family and friends outside Kraków airport before departing for Japan in 2009",
       storyGroupPhotoCaption: "The wider farewell: the people who came to see me off before the one-way journey.",
-      traceEyebrow: "A place for fellow explorers",
-      traceTitle: "Leave your mark",
-      traceIntro: "Choose a small sign, add a name if you wish, and leave one short thought. It is a quiet record of having made the whole journey.",
-      traceName: "Name or initials (optional)",
-      traceMessage: "One short thought (optional)",
-      tracePlaceholder: "I found the thread…",
-      traceSave: "Add my mark",
-      traceUpdate: "Update my mark",
-      traceSaved: "Your mark has been added.",
-      tracePending: "Sent for review. It will appear after approval.",
-      traceError: "The mark could not be submitted. Please try again.",
-      traceLocal: "Saved to the shared wall.",
-      traceLocalFallback: "Saved privately here until the shared wall is ready.",
-      traceYours: "Your mark",
-      traceAnonymous: "Anonymous explorer",
-      traceRecent: "Recent marks",
-      traceShowMore: "Show all marks",
-      traceShowLess: "Show fewer marks",
-      traceCounter: "{count} marks left so far",
-      traceLoading: "Checking the shared wall…",
+      traceTitle: "The visitors’ stamp",
+      traceSave: "Leave a mark",
+      traceSaved: "Your mark is here.",
+      traceCounter: "Marks left here: {count}",
+      traceLoading: "Checking the count…",
+      traceSaving: "Stamping…",
+      traceError: "Couldn’t confirm your mark. Please try again.",
+      traceReadError: "The counter is temporarily unavailable.",
     },
     pl: {
       launcher: "Paszport",
@@ -3433,26 +3421,14 @@ document.fonts?.ready?.then(syncHeaderHeight);
       storyPhotoCaption: "Kraków, 28 marca 2009. Ostatnia rozmowa z rodzicami przed wylotem do Japonii.",
       storyGroupPhotoAlt: "Michał z rodziną i przyjaciółmi przed lotniskiem w Krakowie, przed wyjazdem do Japonii w 2009 roku",
       storyGroupPhotoCaption: "Szerszy kadr pożegnania: osoby, które przyszły odprowadzić mnie przed podróżą w jedną stronę.",
-      traceEyebrow: "Miejsce dla innych odkrywców",
-      traceTitle: "Zostaw swój ślad",
-      traceIntro: "Wybierz mały znak, podpisz się — jeśli chcesz — i zostaw jedną krótką myśl. To cichy zapis tego, że przeszedłeś całą drogę.",
-      traceName: "Imię lub inicjały (opcjonalnie)",
-      traceMessage: "Jedna krótka myśl (opcjonalnie)",
-      tracePlaceholder: "Udało mi się odnaleźć nić…",
-      traceSave: "Dodaj mój ślad",
-      traceUpdate: "Zmień mój ślad",
-      traceSaved: "Twój ślad został dodany.",
-      tracePending: "Ślad czeka na zatwierdzenie. Pojawi się po akceptacji.",
-      traceError: "Nie udało się wysłać śladu. Spróbuj ponownie.",
-      traceLocal: "Twój ślad został zapisany na wspólnej ścianie.",
-      traceLocalFallback: "Twój ślad został zapisany prywatnie w tej przeglądarce, dopóki wspólna ściana nie będzie gotowa.",
-      traceYours: "Twój ślad",
-      traceAnonymous: "Anonimowy odkrywca",
-      traceRecent: "Najnowsze ślady",
-      traceShowMore: "Pokaż wszystkie ślady",
-      traceShowLess: "Pokaż mniej śladów",
-      traceCounter: "Liczba pozostawionych śladów: {count}",
-      traceLoading: "Sprawdzam wspólną ścianę…",
+      traceTitle: "Pieczęć odwiedzających",
+      traceSave: "Zostaw ślad",
+      traceSaved: "Twój ślad został zapisany.",
+      traceCounter: "Pozostawione ślady: {count}",
+      traceLoading: "Sprawdzam licznik…",
+      traceSaving: "Odbijam pieczątkę…",
+      traceError: "Nie udało się potwierdzić zapisu. Spróbuj ponownie.",
+      traceReadError: "Licznik jest chwilowo niedostępny.",
     },
     ja: {
       launcher: "パスポート",
@@ -3507,31 +3483,18 @@ document.fonts?.ready?.then(syncHeaderHeight);
       storyPhotoCaption: "2009年3月28日、クラクフ。日本へ出発する前、両親と交わした最後の会話。",
       storyGroupPhotoAlt: "2009年、日本へ出発する前にクラクフ空港で家族や友人と並ぶミハウ",
       storyGroupPhotoCaption: "片道の旅へ出る私を見送りに来てくれた人たちとの、もう一つの別れの風景。",
-      traceEyebrow: "旅を終えた人のための場所",
-      traceTitle: "あなたの印を残す",
-      traceIntro: "小さな印を選び、よければ名前と短い一言を残してください。この旅を最後まで歩いた、静かな記録です。",
-      traceName: "名前・イニシャル（任意）",
-      traceMessage: "短いひとこと（任意）",
-      tracePlaceholder: "つながる糸を見つけました…",
+      traceTitle: "旅人の印",
       traceSave: "印を残す",
-      traceUpdate: "印を更新する",
       traceSaved: "あなたの印を残しました。",
-      tracePending: "確認のため送信しました。承認後に表示されます。",
-      traceError: "印を送信できませんでした。もう一度お試しください。",
-      traceLocal: "共有の壁に保存されます。",
-      traceLocalFallback: "共有の壁が準備できるまで、このブラウザに保存されます。",
-      traceYours: "あなたの印",
-      traceAnonymous: "匿名の探検者",
-      traceRecent: "新しい印",
-      traceShowMore: "すべての印を見る",
-      traceShowLess: "表示を減らす",
-      traceCounter: "これまでに {count} 件の印",
-      traceLoading: "共有の壁を確認しています…",
+      traceCounter: "ここに残された印：{count}",
+      traceLoading: "集計中…",
+      traceSaving: "印を押しています…",
+      traceError: "保存を確認できませんでした。もう一度お試しください。",
+      traceReadError: "現在、印の数を表示できません。",
     },
   };
 
-  let state = { unlocked: {}, visited: [], completionSeen: false, launcherMinimized: false, followThreadAction: false, trace: null };
-  let traceExpanded = false;
+  let state = { unlocked: {}, visited: [], completionSeen: false, launcherMinimized: false, followThreadAction: false };
   try {
     const saved = JSON.parse(localStorage.getItem(storageKey) || "null");
     if (saved && typeof saved === "object") state = { ...state, ...saved };
@@ -3543,14 +3506,14 @@ document.fonts?.ready?.then(syncHeaderHeight);
     delete state.unlocked["follow-the-thread"];
     state.completionSeen = false;
   }
-  const traceOwnerStorageKey = `${storageKey}-trace-owner-v1`;
-  let traceOwnerToken = "";
+  const markKey = storageKey + "-visitor-mark";
+  let visitorId;
+  let marked = false;
   try {
-    traceOwnerToken = localStorage.getItem(traceOwnerStorageKey) || crypto.randomUUID();
-    localStorage.setItem(traceOwnerStorageKey, traceOwnerToken);
-  } catch {
-    traceOwnerToken = crypto.randomUUID();
-  }
+    visitorId = localStorage.getItem(markKey + "-id");
+    marked = localStorage.getItem(markKey + "-saved") === "yes";
+  } catch { /* Visitors can still stamp once during this session. */ }
+  for (const key of ["trace", "traceCount", "traceApproved", "traceFeed"]) delete state[key];
 
   const save = () => {
     try { localStorage.setItem(storageKey, JSON.stringify(state)); } catch { /* local-only enhancement */ }
@@ -3561,7 +3524,6 @@ document.fonts?.ready?.then(syncHeaderHeight);
   const currentCopy = () => passportCopy[currentLanguage()];
   const unlockedCount = () => stampOrder.filter((id) => state.unlocked[id]).length;
   const isComplete = () => unlockedCount() === stampOrder.length;
-  const traceMarks = ["間", "道", "灯", "波", "山", "星"];
   const ticketImages = {
     en: {
       src: "/assets/story/klamka-ticket-en.png",
@@ -3576,72 +3538,49 @@ document.fonts?.ready?.then(syncHeaderHeight);
       alt: "2009年3月28日、クラクフから日本へ向かうKlamka Zapadła航空の搭乗券",
     },
   };
-  const traceSupabase = {
-    url: "https://nznypktoifwbrskklrmz.supabase.co",
-    key: "sb_publishable_VkdJeKSZyGd3_jLNOlEhDw_cPvaJKR6",
-    table: "traces",
-    function: "https://nznypktoifwbrskklrmz.supabase.co/functions/v1/trace-moderation",
-  };
-  let traceLoading = false;
-  let traceRemoteReady = false;
-  let traceRemoteChecked = false;
-  const escapeHtml = (value = "") => String(value).replace(/[&<>'\"]/g, (character) => ({
-    "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", "\"": "&quot;",
-  }[character]));
-  const normalizeTrace = (entry = {}) => ({
-    id: entry.id,
-    mark: traceMarks.includes(entry.mark) ? entry.mark : traceMarks[0],
-    name: String(entry.name || "").trim().slice(0, 24),
-    message: String(entry.message || "").trim().slice(0, 140),
-    createdAt: entry.created_at ? Date.parse(entry.created_at) : (entry.createdAt || Date.now()),
-  });
-  const traceHeaders = (extra = {}) => ({
-    apikey: traceSupabase.key,
-    "Content-Type": "application/json",
-    ...extra,
-  });
-  const loadTraceFeed = async () => {
-    if (traceLoading || !isComplete()) return;
-    traceLoading = true;
+  const markEndpoint = "https://nznypktoifwbrskklrmz.supabase.co/functions/v1/passport-stamp";
+  let markCount = null;
+  let readingCount = false;
+  let savingMark = false;
+  let markError = "";
+  async function requestCount(visitor) {
+    const options = visitor ? {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ visitor }),
+    } : {};
+    const response = await fetch(markEndpoint, { ...options, cache: "no-store", signal: AbortSignal.timeout(15000) });
+    if (!response.ok) throw new Error("Counter unavailable");
+    const { count } = await response.json();
+    if (!Number.isSafeInteger(count) || count < 0) throw new Error("Invalid stamp count");
+    markCount = Math.max(count, markCount ?? 0);
+  }
+
+  async function refreshMarkCount() {
+    if (!isComplete() || readingCount) return;
+    readingCount = true;
+    if (markError === "traceReadError") markError = "";
+    renderTrace(currentCopy());
+    try { await requestCount(); }
+    catch { if (markCount === null && !markError) markError = "traceReadError"; }
+    finally { readingCount = false; renderTrace(currentCopy()); }
+  }
+
+  async function leaveMark() {
+    if (!isComplete() || savingMark || marked) return;
+    savingMark = true;
+    markError = "";
     renderTrace(currentCopy());
     try {
-      const response = await fetch(`${traceSupabase.url}/rest/v1/${traceSupabase.table}?select=id,mark,name,message,created_at&order=created_at.desc&limit=100`, {
-        headers: traceHeaders({ Prefer: "count=exact" }),
-      });
-      if (!response.ok) throw new Error(`Trace feed unavailable: ${response.status}`);
-      const contentRange = response.headers.get("content-range") || "";
-      const remoteCount = Number(contentRange.split("/").pop());
-      const data = await response.json();
-      state.traceFeed = Array.isArray(data) ? data.map(normalizeTrace) : [];
-      state.traceCount = Number.isFinite(remoteCount) ? remoteCount : state.traceFeed.length;
-      traceRemoteReady = true;
-    } catch {
-      state.traceFeed = state.traceApproved ? [state.trace] : [];
-      state.traceCount = state.traceFeed.length;
-      traceRemoteReady = false;
-    } finally {
-      traceRemoteChecked = true;
-      traceLoading = false;
-      save();
-      renderTrace(currentCopy());
-    }
-  };
-  const saveTraceRemote = async (trace) => {
-    const response = await fetch(traceSupabase.function, {
-      method: "POST",
-      headers: traceHeaders(),
-      body: JSON.stringify({
-        mark: trace.mark,
-        name: trace.name || null,
-        message: trace.message || null,
-        website: trace.website || "",
-        id: trace.id || null,
-        ownerToken: traceOwnerToken,
-      }),
-    });
-    if (!response.ok) throw new Error(`Trace save failed: ${response.status}`);
-    return response.json();
-  };
+      try { visitorId = localStorage.getItem(markKey + "-id") || visitorId; } catch {}
+      visitorId ||= crypto.randomUUID();
+      try { localStorage.setItem(markKey + "-id", visitorId); } catch {}
+      await requestCount(visitorId);
+      marked = true;
+      try { localStorage.setItem(markKey + "-saved", "yes"); } catch {}
+    } catch { markError = "traceError"; }
+    finally { savingMark = false; renderTrace(currentCopy()); }
+  }
+
   const routeStarted = () => {
     const candidates = [
       ["teaching", state.unlocked["classroom-architect"]],
@@ -3718,6 +3657,7 @@ document.fonts?.ready?.then(syncHeaderHeight);
     drawer.classList.toggle("is-open", open);
     scrim.hidden = !open;
     root.classList.toggle("is-open", open);
+    if (open && isComplete()) refreshMarkCount();
     if (open) drawer.querySelector("[data-passport-close]")?.focus({ preventScroll: true });
   };
 
@@ -3760,80 +3700,25 @@ document.fonts?.ready?.then(syncHeaderHeight);
       </article>
       <section class="passport-trace" data-passport-trace></section>`;
     renderTrace(copy);
-    if (!traceRemoteChecked) loadTraceFeed();
+
   };
 
   const renderTrace = (copy) => {
-    const trace = state.trace || {};
-    const selectedMark = trace.mark || traceMarks[0];
-    const traceRoot = reward.querySelector("[data-passport-trace]");
-    if (!traceRoot) return;
-    const choices = traceMarks.map((mark) => `<button class="passport-trace-mark${mark === selectedMark ? " is-selected" : ""}" type="button" data-trace-mark="${mark}" aria-pressed="${mark === selectedMark}">${mark}</button>`).join("");
-    const traces = (Array.isArray(state.traceFeed) ? state.traceFeed : (state.traceApproved && state.trace ? [state.trace] : []))
-      .slice()
-      .sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
-    const traceWall = () => {
-      if (!traces.length) return "";
-      const displayed = traceExpanded ? traces : traces.slice(0, 6);
-      const cards = displayed.map((entry) => `<div class="passport-trace-card"><b>${escapeHtml(entry.mark)}</b><div><strong>${escapeHtml(entry.name || copy.traceAnonymous)}</strong>${entry.message ? `<p>${escapeHtml(entry.message)}</p>` : ""}</div></div>`).join("");
-      const toggle = traces.length > 6 ? `<button class="passport-trace-toggle" type="button" data-trace-toggle>${traceExpanded ? copy.traceShowLess : copy.traceShowMore}</button>` : "";
-      return `<div class="passport-trace-wall" aria-label="${copy.traceRecent}"><span class="passport-trace-wall-label">${copy.traceRecent}</span><div class="passport-trace-list">${cards}</div>${toggle}</div>`;
-    };
-    const traceCount = Number.isFinite(state.traceCount) ? state.traceCount : traces.length;
-    const counterText = traceLoading ? copy.traceLoading : copy.traceCounter.replace("{count}", String(traceCount));
-    traceRoot.innerHTML = `
-      <div class="passport-trace-heading"><p class="eyebrow">${copy.traceEyebrow}</p><h4>${copy.traceTitle}</h4><p>${copy.traceIntro}</p></div>
-      <div class="passport-trace-counter" aria-live="polite"><span aria-hidden="true">印</span><strong>${escapeHtml(counterText)}</strong></div>
-      ${traceWall()}
-      <form class="passport-trace-form" data-trace-form>
-        <fieldset><legend class="sr-only">${copy.traceTitle}</legend><div class="passport-trace-marks">${choices}</div></fieldset>
-        <label><span>${copy.traceName}</span><input name="trace-name" maxlength="24" autocomplete="nickname" value="${escapeHtml(trace.name)}"></label>
-        <label><span>${copy.traceMessage}</span><textarea name="trace-message" maxlength="140" rows="3" placeholder="${copy.tracePlaceholder}">${escapeHtml(trace.message)}</textarea></label>
-        <label class="sr-only">Leave blank<input name="website" tabindex="-1" autocomplete="off"></label>
-        <div class="passport-trace-actions"><button type="submit">${state.trace ? copy.traceUpdate : copy.traceSave}</button><small>${traceRemoteReady ? copy.traceLocal : copy.traceLocalFallback}</small></div>
-      </form>`;
-    let chosenMark = selectedMark;
-    traceRoot.querySelector("[data-trace-toggle]")?.addEventListener("click", () => {
-      traceExpanded = !traceExpanded;
-      renderTrace(copy);
-    });
-    traceRoot.querySelectorAll("[data-trace-mark]").forEach((button) => {
-      button.addEventListener("click", () => {
-        chosenMark = button.dataset.traceMark || traceMarks[0];
-        traceRoot.querySelectorAll("[data-trace-mark]").forEach((choice) => {
-          const selected = choice.dataset.traceMark === chosenMark;
-          choice.classList.toggle("is-selected", selected);
-          choice.setAttribute("aria-pressed", String(selected));
-        });
-      });
-    });
-    traceRoot.querySelector("[data-trace-form]")?.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const form = event.currentTarget;
-      const localTrace = {
-        mark: chosenMark,
-        name: form.elements["trace-name"].value.trim().slice(0, 24),
-        message: form.elements["trace-message"].value.trim().slice(0, 140),
-        website: form.elements.website.value,
-        createdAt: Date.now(),
-      };
-      const submitButton = form.querySelector("button[type=submit]");
-      if (submitButton) submitButton.disabled = true;
-      try {
-        const savedTrace = await saveTraceRemote(localTrace);
-        state.trace = { ...localTrace, id: savedTrace.id };
-        state.traceApproved = false;
-        traceRemoteReady = true;
-        traceRemoteChecked = false;
-        save();
-        render();
-        await loadTraceFeed();
-        showToast(copy.tracePending, true);
-      } catch {
-        showToast(copy.traceError);
-        renderTrace(currentCopy());
-      }
-    });
+    const section = reward.querySelector("[data-passport-trace]");
+    if (!section) return;
+    if (!section.firstElementChild) {
+      section.innerHTML = `<h4></h4>
+        <button type="button" class="passport-visitor-stamp"><span aria-hidden="true">印</span> <strong></strong></button>
+        <p role="status" aria-live="polite"></p>`;
+      section.querySelector("button").addEventListener("click", leaveMark);
+    }
+    section.querySelector("h4").textContent = copy.traceTitle;
+    const button = section.querySelector("button");
+    button.disabled = marked || savingMark;
+    button.classList.toggle("is-stamped", marked);
+    button.querySelector("strong").textContent = marked ? copy.traceSaved : (savingMark ? copy.traceSaving : copy.traceSave);
+    const count = markCount === null ? "" : copy.traceCounter.replace("{count}", markCount.toLocaleString(currentLanguage()));
+    section.querySelector("[role=status]").textContent = [count || (readingCount ? copy.traceLoading : ""), copy[markError]].filter(Boolean).join(" ");
   };
 
   const render = () => {
@@ -3907,8 +3792,7 @@ document.fonts?.ready?.then(syncHeaderHeight);
   root.querySelector("[data-passport-close]").addEventListener("click", () => setOpen(false));
   root.querySelector("[data-passport-reset]").addEventListener("click", () => {
     if (!window.confirm(currentCopy().resetConfirm)) return;
-    state = { unlocked: {}, visited: [], completionSeen: false, launcherMinimized: state.launcherMinimized, trace: null, traceFeed: [], traceCount: 0 };
-    traceRemoteChecked = false;
+    state = { unlocked: {}, visited: [], completionSeen: false, launcherMinimized: state.launcherMinimized };
     save();
     render();
   });

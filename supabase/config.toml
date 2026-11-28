@@ -1,2 +1,5 @@
 [functions.trace-moderation]
 verify_jwt = false
+
+[functions.passport-stamp]
+verify_jwt = false
