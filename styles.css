@@ -4692,127 +4692,24 @@ dd {
   border-top: 1px solid rgba(18, 63, 61, 0.25);
 }
 
-.passport-trace-heading { max-width: 52ch; }
-.passport-trace-heading .eyebrow { margin: 0 0 5px; color: var(--passport-red); }
-.passport-trace-heading h4 { margin: 0; font-size: 1.65rem; line-height: 1.03; }
-.passport-trace-heading > p:last-child { margin: 10px 0 0; color: rgba(18, 63, 61, 0.78); font-size: 0.9rem; line-height: 1.52; }
-
-.passport-trace-counter {
-  display: inline-grid;
-  grid-template-columns: 39px minmax(0, 1fr);
+.passport-visitor-stamp {
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  max-width: 100%;
-  margin-top: 16px;
-  padding: 7px 12px 7px 7px;
-  border: 1px solid rgba(167, 59, 49, 0.44);
-  background: linear-gradient(135deg, rgba(255, 250, 240, 0.95), rgba(211, 154, 49, 0.12));
-  box-shadow: 0 10px 22px rgba(18, 63, 61, 0.08);
-}
-.passport-trace-counter span {
-  display: grid;
-  place-items: center;
-  width: 39px;
-  height: 39px;
-  border: 2px double var(--passport-red);
-  border-radius: 49% 51% 45% 55%;
-  color: var(--passport-red);
-  font: 800 1.1rem/1 var(--font-serif);
-  transform: rotate(-6deg);
-}
-.passport-trace-counter strong {
-  min-width: 0;
-  color: var(--passport-ink);
-  font: 800 0.76rem/1.25 var(--font-sans);
-  overflow-wrap: anywhere;
-}
-
-.passport-trace-wall {
-  margin-top: 18px;
-  padding: 13px;
-  border: 1px dashed rgba(18, 63, 61, 0.38);
-  background: rgba(211, 154, 49, 0.08);
-}
-
-.passport-trace-wall-label {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--passport-red);
-  font: 800 0.62rem/1 var(--font-sans);
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.passport-trace-list { display: grid; gap: 9px; }
-.passport-trace-card { display: grid; grid-template-columns: 45px 1fr; gap: 11px; align-items: center; padding: 8px 0; }
-.passport-trace-card + .passport-trace-card { border-top: 1px solid rgba(18, 63, 61, 0.14); }
-.passport-trace-card > b {
-  display: grid;
-  place-items: center;
-  width: 43px;
-  height: 43px;
-  border: 2px double var(--passport-red);
-  border-radius: 48% 52% 46% 54%;
-  color: var(--passport-red);
-  font: 800 1.25rem/1 var(--font-serif);
-  transform: rotate(-4deg);
-}
-.passport-trace-card strong { display: block; font: 800 0.8rem/1.2 var(--font-sans); }
-.passport-trace-card p { margin: 4px 0 0; color: rgba(18, 63, 61, 0.78); font-size: 0.84rem; line-height: 1.35; }
-.passport-trace-toggle {
-  margin-top: 10px;
-  padding: 0;
-  border: 0;
-  border-bottom: 1px solid currentColor;
-  background: transparent;
-  color: var(--passport-ink);
-  cursor: pointer;
-  font: 800 0.68rem/1.4 var(--font-sans);
-}
-
-.passport-trace-form { display: grid; gap: 12px; margin-top: 18px; }
-.passport-trace-form fieldset { margin: 0; padding: 0; border: 0; }
-.passport-trace-marks { display: flex; flex-wrap: wrap; gap: 8px; }
-.passport-trace-mark {
-  display: grid;
-  place-items: center;
-  width: 39px;
-  height: 39px;
-  border: 1px solid rgba(18, 63, 61, 0.48);
-  border-radius: 50% 48% 52% 47%;
+  gap: .65rem;
+  padding: .65rem .95rem;
+  border: 3px double var(--passport-red);
+  border-radius: .4rem;
   background: #fffaf0;
-  color: var(--passport-ink);
+  color: var(--passport-red);
+  font: inherit;
   cursor: pointer;
-  font: 800 1.05rem/1 var(--font-serif);
-  transition: transform 150ms ease, background 150ms ease, color 150ms ease;
 }
-.passport-trace-mark:hover, .passport-trace-mark:focus-visible { transform: translateY(-2px) rotate(-3deg); }
-.passport-trace-mark.is-selected { border-color: var(--passport-red); background: var(--passport-red); color: #fffaf0; }
-.passport-trace-form label { display: grid; gap: 5px; }
-.passport-trace-form label > span { color: rgba(18, 63, 61, 0.75); font: 800 0.68rem/1.2 var(--font-sans); }
-.passport-trace-form input, .passport-trace-form textarea {
-  width: 100%;
-  box-sizing: border-box;
-  border: 1px solid rgba(18, 63, 61, 0.4);
-  border-radius: 0;
-  background: #fffdf7;
-  color: var(--passport-ink);
-  font: 0.9rem/1.4 var(--font-sans);
-}
-.passport-trace-form input { height: 40px; padding: 8px 10px; }
-.passport-trace-form textarea { padding: 9px 10px; resize: vertical; }
-.passport-trace-form input:focus, .passport-trace-form textarea:focus { outline: 2px solid rgba(167, 59, 49, 0.35); outline-offset: 2px; }
-.passport-trace-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
-.passport-trace-actions button {
-  padding: 10px 14px;
-  border: 1px solid var(--passport-red);
-  background: var(--passport-red);
-  color: #fffaf0;
-  cursor: pointer;
-  font: 800 0.72rem/1 var(--font-sans);
-}
-.passport-trace-actions button:hover, .passport-trace-actions button:focus-visible { background: #87342e; }
-.passport-trace-actions small { color: rgba(18, 63, 61, 0.62); font: 700 0.68rem/1.3 var(--font-sans); }
+.passport-visitor-stamp span { font-size: 1.6rem; }
+.passport-visitor-stamp:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.passport-visitor-stamp.is-stamped { transform: rotate(-2deg); background: var(--passport-red); color: #fffaf0; }
+.passport-visitor-stamp:disabled { cursor: default; }
+.passport-trace > h4 { margin: 0 0 .7rem; }
+.passport-trace > [role="status"] { min-height: 1.4em; margin: .85rem 0 0; }
 
 .stamp-rally-story {
   margin-top: 30px;
